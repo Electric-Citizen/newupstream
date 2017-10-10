@@ -1,0 +1,24 @@
+uuid: b9e25bed-367f-4627-85ad-8467ca96b9df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_rule.field_layout
+    - paragraphs.paragraphs_type.horizontal_rule
+  module:
+    - options
+_core:
+  default_config_hash: t6otQCKPzPAgpEGYtfDn8FMhw2ivuCcn1Pz8Z9EMLEs
+id: paragraph.horizontal_rule.default
+targetEntityType: paragraph
+bundle: horizontal_rule
+mode: default
+content:
+  field_layout:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

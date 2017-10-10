@@ -1,0 +1,21 @@
+uuid: 1b6f55a7-c121-4e47-af5d-40193d8d1425
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_first_
+_core:
+  default_config_hash: mY3qwW0zsFz1IrkCBw9LNyJjbdtDBYLqIlrFi7oWzVk
+id: contact_message.personal.field_first_
+field_name: field_first_
+entity_type: contact_message
+bundle: personal
+label: 'First name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

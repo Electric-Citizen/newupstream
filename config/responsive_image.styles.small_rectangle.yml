@@ -1,0 +1,26 @@
+uuid: daf509a2-16b2-43e1-b6d5-f21a56cdcf3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.small_rectangle_300x200
+    - image.style.small_rectangle_300x200_2x
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: 5DpE7dsr2gUQuIbMYA6jEr2b4fszZ4fZRagsVkUhsw8
+id: small_rectangle
+label: 'Small Rectangle'
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: small_rectangle_300x200
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: small_rectangle_300x200_2x
+breakpoint_group: oc_patterns
+fallback_image_style: small_rectangle_300x200_2x

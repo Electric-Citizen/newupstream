@@ -1,0 +1,26 @@
+uuid: bc52667c-6324-4881-bd68-186cdbede7fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.reveal_group.field_admin_description
+    - field.field.paragraph.reveal_group.field_reveal_sections
+    - paragraphs.paragraphs_type.reveal_group
+_core:
+  default_config_hash: 4Mq4DJVjGeRFdgVOwCfoti7c0BYXnZvjrHKwJ2OnJZc
+id: paragraph.reveal_group.preview
+targetEntityType: paragraph
+bundle: reveal_group
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_reveal_sections: true

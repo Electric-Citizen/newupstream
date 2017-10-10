@@ -1,0 +1,11 @@
+uuid: eb7dea87-a707-4ed4-bd62-de2f9d05986c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aWm9rXQcD3sX-b8_W2-sPPitWdJvXhVsGjSnpFQzHik
+name: Tags
+vid: tags
+description: 'Tags for blog posts'
+hierarchy: 0
+weight: 0

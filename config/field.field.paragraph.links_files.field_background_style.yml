@@ -1,0 +1,23 @@
+uuid: 73296ecd-9a64-42f4-badb-4d4c2245232a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_style
+    - paragraphs.paragraphs_type.links_files
+  module:
+    - options
+_core:
+  default_config_hash: LDlG8zOJWji2eGPHnqezirlgMRqsitJAqfnQim1LEbs
+id: paragraph.links_files.field_background_style
+field_name: field_background_style
+entity_type: paragraph
+bundle: links_files
+label: 'Background Style'
+description: 'Select a background style for this widget.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

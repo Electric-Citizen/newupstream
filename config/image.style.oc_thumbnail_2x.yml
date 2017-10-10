@@ -1,0 +1,18 @@
+uuid: f97e338f-4b6e-427b-87c5-1e84b3c0ff6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: GhMo7MwpYO0Q3hH-tDpfgV6Rpb45ntg521gbbVrmXzM
+name: oc_thumbnail_2x
+label: 'OC Thumbnail 2x'
+effects:
+  1f04c4fd-1cd2-46af-885e-f8b8c48cbee3:
+    uuid: 1f04c4fd-1cd2-46af-885e-f8b8c48cbee3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200

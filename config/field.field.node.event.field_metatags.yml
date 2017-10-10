@@ -1,0 +1,25 @@
+uuid: 7b69f4b5-1fcb-4848-9bad-a07c4c77ed2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.event
+  module:
+    - metatag
+_core:
+  default_config_hash: 7IkwYIphA40ONXFenmg96X60npanxqyZEB4RFXwPGTs
+id: node.event.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: event
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

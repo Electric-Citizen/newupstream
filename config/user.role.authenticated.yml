@@ -1,0 +1,45 @@
+uuid: 050becef-cb9c-4384-b573-776dd6cd5ea4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ht97Ia9VKPm6Gw6sMXrORIEzPOgp6sXbCNdqa-fEXb8
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access toolbar'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view disqus comments'
+  - 'view media'
+  - 'view paragraph content accordion_group'
+  - 'view paragraph content accordion_item'
+  - 'view paragraph content admin_view_placer'
+  - 'view paragraph content buttons'
+  - 'view paragraph content call_to_action'
+  - 'view paragraph content event_by_category'
+  - 'view paragraph content form'
+  - 'view paragraph content horizontal_rule'
+  - 'view paragraph content image'
+  - 'view paragraph content lightbox_gallery'
+  - 'view paragraph content links_files'
+  - 'view paragraph content map'
+  - 'view paragraph content mosaic_gallery'
+  - 'view paragraph content news_by_category'
+  - 'view paragraph content pullquote'
+  - 'view paragraph content reveal_group'
+  - 'view paragraph content reveal_section'
+  - 'view paragraph content slideshow'
+  - 'view paragraph content social_media'
+  - 'view paragraph content social_platform'
+  - 'view paragraph content text'
+  - 'view paragraph content tile_image'
+  - 'view paragraph content video'

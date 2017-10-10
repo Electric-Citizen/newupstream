@@ -1,0 +1,21 @@
+uuid: 6554dade-1854-46f6-8012-ccdaaf46f1eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget_title
+    - paragraphs.paragraphs_type.links_files
+_core:
+  default_config_hash: vbvBDb87HuZib6PeyKGDywHpgI9GjPwNzC_UQ561ZzY
+id: paragraph.links_files.field_widget_title
+field_name: field_widget_title
+entity_type: paragraph
+bundle: links_files
+label: 'Widget Title'
+description: 'This field will be displayed above the widget in H2 format.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

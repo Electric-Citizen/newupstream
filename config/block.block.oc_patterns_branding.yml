@@ -1,0 +1,25 @@
+uuid: 97d2899a-2a3c-4384-9d6d-a9dca901bb4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: 7GmkZFxF8OfPIs2aNkve5uhX_A2PA_bM4fOQE6NhJwE
+id: oc_patterns_branding
+theme: oc_patterns
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

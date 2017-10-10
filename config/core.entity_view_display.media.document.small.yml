@@ -1,0 +1,29 @@
+uuid: b3ba112c-bbe1-44e3-ab53-fb31e9a38520
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.small
+    - field.field.media.document.field_media_file
+    - media_entity.bundle.document
+  module:
+    - file
+_core:
+  default_config_hash: cxFCCnNVKFpeNMkFB4trJS1bSnsMWv-H8eegZdQvT8Q
+id: media.document.small
+targetEntityType: media
+bundle: document
+mode: small
+content:
+  field_media_file:
+    type: file_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

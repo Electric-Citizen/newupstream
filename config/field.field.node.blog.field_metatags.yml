@@ -1,0 +1,25 @@
+uuid: edf7e7a3-9edc-46ba-8288-bff711078a8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.blog
+  module:
+    - metatag
+_core:
+  default_config_hash: JcL2GQ_P9FOcDuWTVIw-yAnXW3Wa_O-XGAjuD6TrPNs
+id: node.blog.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: blog
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

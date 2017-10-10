@@ -1,0 +1,28 @@
+uuid: 482f7a62-f709-44b1-bf3a-fd1cfefb5c1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.mosaic_gallery.field_admin_description
+    - field.field.paragraph.mosaic_gallery.field_mosaic_tiles
+    - field.field.paragraph.mosaic_gallery.field_widget_title
+    - paragraphs.paragraphs_type.mosaic_gallery
+_core:
+  default_config_hash: vLbvD9IV-DNe_2WUc4D1PVJLkKCZ3CDTNOmWKfFIjiE
+id: paragraph.mosaic_gallery.preview
+targetEntityType: paragraph
+bundle: mosaic_gallery
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_mosaic_tiles: true
+  field_widget_title: true

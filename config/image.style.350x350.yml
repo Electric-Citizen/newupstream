@@ -1,0 +1,18 @@
+uuid: 758cd2aa-9f8b-4075-b7a8-0a553c000aae
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: FrBnLcGsRstAjMuzj6Q9wCasKKd3aPAy4PhcjWf-xlc
+name: 350x350
+label: 350x350
+effects:
+  4eacf54c-5ef7-4582-8299-4f19f39fc395:
+    uuid: 4eacf54c-5ef7-4582-8299-4f19f39fc395
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 350

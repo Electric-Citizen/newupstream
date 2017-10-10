@@ -1,0 +1,25 @@
+uuid: ab678b5d-0ee8-49aa-a6e4-5fe255ae5e05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_link
+    - paragraphs.paragraphs_type.tile_image
+  module:
+    - link
+_core:
+  default_config_hash: iPImXXoe-CGewtbQB3xAPrOSo3PQ4jrCt3L_J_FVirU
+id: paragraph.tile_image.field_oc_link
+field_name: field_oc_link
+entity_type: paragraph
+bundle: tile_image
+label: 'Tile Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

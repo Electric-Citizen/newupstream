@@ -1,0 +1,30 @@
+uuid: c3135f87-c5e9-4f51-b3a4-3961f1fcd716
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_category
+    - paragraphs.paragraphs_type.news_by_category
+    - taxonomy.vocabulary.categories
+_core:
+  default_config_hash: yeKdZ6eEdljiaeuZ5n6sQ8e0vlW43OGLb6v7hvXNtFg
+id: paragraph.news_by_category.field_category
+field_name: field_category
+entity_type: paragraph
+bundle: news_by_category
+label: Category
+description: 'Limit allowed items by category. <strong>NOTE:</strong>REQUIRED.  May select more than one.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,10 @@
+uuid: 7bbbb1d6-e10d-46da-8109-176a0adf3650
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7VxvvH7fS1NOCpx6AyZKeqNslanPsHUls9JqQQSLgLE
+id: oc_date_day_long
+label: 'OC Date Day Long'
+locked: false
+pattern: 'l, F j, Y'

@@ -1,0 +1,25 @@
+uuid: e3aca162-a7dc-46a3-9b7d-4173719f782f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_span
+    - paragraphs.paragraphs_type.tile_image
+  module:
+    - options
+_core:
+  default_config_hash: Raqw5p6AgxUvgAGYZXNWu9AMZqW8bbjMzYJeE5Y-sAU
+id: paragraph.tile_image.field_column_span
+field_name: field_column_span
+entity_type: paragraph
+bundle: tile_image
+label: 'Column span'
+description: 'Select the numbers of columns this image will span when on desktop. <strong>NOTE:</strong>There are four total columns in the gallery.'
+required: true
+translatable: false
+default_value:
+  -
+    value: one
+default_value_callback: ''
+settings: {  }
+field_type: list_string

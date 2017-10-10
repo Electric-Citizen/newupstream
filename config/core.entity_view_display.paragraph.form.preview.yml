@@ -1,0 +1,40 @@
+uuid: bbb15f0e-efea-44b9-9f12-7232d61c6389
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.form.field_admin_description
+    - field.field.paragraph.form.field_layout
+    - field.field.paragraph.form.field_oc_form
+    - field.field.paragraph.form.field_oc_long_text
+    - field.field.paragraph.form.field_widget_title
+    - paragraphs.paragraphs_type.form
+  module:
+    - options
+_core:
+  default_config_hash: RvbKJrdbeXbNPfaZiJOs4EumMNVWVi-D-u6qJLv0aP0
+id: paragraph.form.preview
+targetEntityType: paragraph
+bundle: form
+mode: preview
+content:
+  field_admin_description:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_oc_form: true
+  field_oc_long_text: true
+  field_widget_title: true

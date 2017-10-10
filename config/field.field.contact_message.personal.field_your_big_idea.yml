@@ -1,0 +1,23 @@
+uuid: 0e9bffc0-50dd-401b-b021-a51e01389382
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_your_big_idea
+  module:
+    - text
+_core:
+  default_config_hash: i3Ngq1Xr3kdl0IVgfkpuMUliLESxAAFn0bACZ8O_sK8
+id: contact_message.personal.field_your_big_idea
+field_name: field_your_big_idea
+entity_type: contact_message
+bundle: personal
+label: 'Your big idea'
+description: 'What do you think about MeowMix? Please tell us.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

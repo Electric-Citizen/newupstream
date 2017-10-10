@@ -1,0 +1,24 @@
+uuid: 3943ac88-a4a3-461d-921b-470209361ad6
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.footer_address
+  module:
+    - simple_block
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: POgzSC2Z9Ne-akFy8-pbBc-Sos6CfFg-RyLIZf0oLBA
+id: footeraddress
+theme: oc_patterns
+region: footer
+weight: -5
+provider: null
+plugin: 'simple_block:footer_address'
+settings:
+  id: 'simple_block:footer_address'
+  label: 'Footer Address'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

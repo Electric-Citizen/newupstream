@@ -1,0 +1,30 @@
+uuid: 52ebad51-4110-4f99-b627-0f59f95bcde0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.event
+    - taxonomy.vocabulary.categories
+_core:
+  default_config_hash: j54Xop2RQkutMIIAZtgXlhLkCYK_pQVpyA5aDgyFVYM
+id: node.event.field_category
+field_name: field_category
+entity_type: node
+bundle: event
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

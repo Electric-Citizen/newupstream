@@ -1,0 +1,26 @@
+uuid: e81c23d8-45dc-4901-baae-76f89ecfc2fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.oc_thumbnail_large
+    - image.style.oc_thumbnail_large_2x
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: 3dLu1NEJQiraA4R4NTEo8ZUpqiy1DwA6MKV86L1X4XA
+id: oc_large_thumb
+label: 'OC Large Thumb'
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: oc_thumbnail_large
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: oc_thumbnail_large_2x
+breakpoint_group: oc_patterns
+fallback_image_style: oc_thumbnail_large_2x

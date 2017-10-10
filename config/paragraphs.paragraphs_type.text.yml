@@ -1,0 +1,9 @@
+uuid: 6484c86d-61f4-4f6e-bcfb-1624fb49d99c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c0pgHhzfGVGySPInyvr5fhglEJi830XG2zN5MWbOCGw
+id: text
+label: Text
+behavior_plugins: {  }

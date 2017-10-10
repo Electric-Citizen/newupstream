@@ -1,0 +1,24 @@
+uuid: 71849106-4aba-47ac-bf76-9ca6aca9bbb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.profiles
+  module:
+    - text
+_core:
+  default_config_hash: FbvxJVzLZEh1Vg7BFgOIpC8E5kutC5nP_Y0sJamSgMU
+id: node.profiles.body
+field_name: body
+entity_type: node
+bundle: profiles
+label: Bio
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

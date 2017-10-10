@@ -1,0 +1,36 @@
+uuid: 7cf1575d-f4bf-4df8-94e9-4f2cbea22cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.reveal_section.field_admin_description
+    - field.field.paragraph.reveal_section.field_background_image
+    - field.field.paragraph.reveal_section.field_background_style
+    - field.field.paragraph.reveal_section.field_column_style
+    - field.field.paragraph.reveal_section.field_oc_long_text
+    - field.field.paragraph.reveal_section.field_reveal_widgets
+    - field.field.paragraph.reveal_section.field_widget_title
+    - paragraphs.paragraphs_type.reveal_section
+_core:
+  default_config_hash: 4nnl77hbxJ2L_niELsaLwbqIqspRrsPNtZhBA4u5fDc
+id: paragraph.reveal_section.preview
+targetEntityType: paragraph
+bundle: reveal_section
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_background_image: true
+  field_background_style: true
+  field_column_style: true
+  field_oc_long_text: true
+  field_reveal_widgets: true
+  field_widget_title: true

@@ -1,0 +1,12 @@
+uuid: 6fe48503-9e68-487e-a918-65d1d68f0216
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+_core:
+  default_config_hash: XMX5uVgaCkVngEsfSaEAjKD6OGTO4UFk33yHLx0cWw0
+id: media.xl_rectangle
+label: 'XL Rectangle'
+targetEntityType: media
+cache: true

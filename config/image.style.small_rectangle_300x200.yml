@@ -1,0 +1,18 @@
+uuid: 09b2a59f-ce10-4135-9ec5-915d493b2f92
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: AE7fRcOrYQjGyRXjsIUUMpKngVm4cKZ0-CTDKGNdfK4
+name: small_rectangle_300x200
+label: 'Small Rectangle 300x200'
+effects:
+  fc3f5381-a062-4a62-9610-d5e39a806c5f:
+    uuid: fc3f5381-a062-4a62-9610-d5e39a806c5f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200

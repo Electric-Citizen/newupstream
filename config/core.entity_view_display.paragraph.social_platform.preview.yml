@@ -1,0 +1,26 @@
+uuid: 1769c2eb-027b-4507-834c-6e0a99feb569
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.social_platform.field_account_platform
+    - field.field.paragraph.social_platform.field_oc_link
+    - paragraphs.paragraphs_type.social_platform
+_core:
+  default_config_hash: mRTgJXTIMXAQ6ZwsVacopsX5tYWPkqwMvxa3WPmZp98
+id: paragraph.social_platform.preview
+targetEntityType: paragraph
+bundle: social_platform
+mode: preview
+content:
+  field_account_platform:
+    weight: 0
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_oc_link: true

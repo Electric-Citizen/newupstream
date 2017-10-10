@@ -1,0 +1,35 @@
+uuid: 2348217a-39d4-4080-9e91-304ff34414e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_platform.field_account_platform
+    - field.field.paragraph.social_platform.field_oc_link
+    - paragraphs.paragraphs_type.social_platform
+  module:
+    - link
+_core:
+  default_config_hash: WKiwEtH5Xp4uQDrsjTpeLKrMA6iSWc8UYvqXsCVUZ7w
+id: paragraph.social_platform.default
+targetEntityType: paragraph
+bundle: social_platform
+mode: default
+content:
+  field_account_platform:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oc_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

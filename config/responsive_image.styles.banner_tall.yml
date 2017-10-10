@@ -1,0 +1,50 @@
+uuid: 26cc45ca-348d-4620-870f-81a413dad6ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.banner_big_desk_tall
+    - image.style.banner_desk_tall
+    - image.style.banner_mobile
+    - image.style.banner_mobile_2x
+    - image.style.banner_tablet
+    - image.style.banner_tablet_2x
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: AY9HPRp5JhYZRTZnB6GkRtSs9Kiy7AwZ9WqgMdq7bnM
+id: banner_tall
+label: 'Banner Tall'
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.bigdesk
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: banner_big_desk_tall
+  -
+    breakpoint_id: oc_patterns.images.desk
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: banner_desk_tall
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: banner_tablet
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: banner_tablet_2x
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: banner_mobile
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: banner_mobile_2x
+breakpoint_group: oc_patterns
+fallback_image_style: banner_big_desk_tall

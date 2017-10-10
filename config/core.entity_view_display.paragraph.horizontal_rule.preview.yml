@@ -1,0 +1,25 @@
+uuid: e8150e17-edad-483d-ad11-cee8536c40a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.horizontal_rule.field_layout
+    - paragraphs.paragraphs_type.horizontal_rule
+  module:
+    - options
+_core:
+  default_config_hash: poC50Nk_Na8LklcqAmN7Zokmq3bGGF9kA2YZc2MDdbw
+id: paragraph.horizontal_rule.preview
+targetEntityType: paragraph
+bundle: horizontal_rule
+mode: preview
+content:
+  field_layout:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

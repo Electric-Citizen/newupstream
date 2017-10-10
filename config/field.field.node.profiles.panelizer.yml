@@ -1,0 +1,23 @@
+uuid: 16ed6266-281f-4852-ac66-c496c87b688b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.profiles
+  module:
+    - panelizer
+_core:
+  default_config_hash: '-RXuzmkG2b5YjFfNsrSvkDEC-x26uVlrdOg5-8R0DzU'
+id: node.profiles.panelizer
+field_name: panelizer
+entity_type: node
+bundle: profiles
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

@@ -1,0 +1,30 @@
+uuid: 0b0ea3d0-215b-44e1-8877-8d9e97e72485
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_image_multi
+    - media_entity.bundle.image
+    - paragraphs.paragraphs_type.slideshow
+_core:
+  default_config_hash: p2LPhL-29bTfYNxhLixNx6LAf8bq_BoMLxbPCNWjcMU
+id: paragraph.slideshow.field_oc_image_multi
+field_name: field_oc_image_multi
+entity_type: paragraph
+bundle: slideshow
+label: Images
+description: 'Upload new images or add existing ones from the media library. <strong>NOTE: </strong>Minimum image width should be 1200px;'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

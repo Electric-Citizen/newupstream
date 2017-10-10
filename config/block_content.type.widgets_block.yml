@@ -1,0 +1,10 @@
+uuid: 895a4dc8-e722-4c9f-9f10-885ad7975785
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8VJK1jBSHwIQr-jgewGmt2suHWy71AYKb4o4YOfn3jw
+id: widgets_block
+label: 'Widgets Block'
+revision: 0
+description: 'Add a block of widgets.'

@@ -1,0 +1,21 @@
+uuid: ed7fd99d-17fa-4ae5-a5e3-9f0e5ee870e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget_title
+    - paragraphs.paragraphs_type.pullquote
+_core:
+  default_config_hash: jcxf0RL_Zmo-Y9L11jz4e7qh8JogQ0bmnmkpMo8Ns4k
+id: paragraph.pullquote.field_widget_title
+field_name: field_widget_title
+entity_type: paragraph
+bundle: pullquote
+label: 'Widget Title'
+description: 'This field will be displayed above the widget in H2 format.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

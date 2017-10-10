@@ -1,0 +1,21 @@
+uuid: 4f1ac2aa-2831-463e-898c-7d8916fd03fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.profiles
+_core:
+  default_config_hash: 3Q08j0Fz1XpKn_GYaMQmhokrdg-4LL714p9g-gYr3Fo
+id: node.profiles.field_email
+field_name: field_email
+entity_type: node
+bundle: profiles
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

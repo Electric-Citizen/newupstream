@@ -1,0 +1,12 @@
+uuid: a05c1e7b-014b-4bc0-867d-55d32b894a7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+_core:
+  default_config_hash: lsTYZ2NQVxcQzUuj2PETSES29L8bbeEgidH3730ZUYc
+id: media.background_image
+label: 'Background Image'
+targetEntityType: media
+cache: true

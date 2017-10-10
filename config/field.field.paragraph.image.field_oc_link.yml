@@ -1,0 +1,25 @@
+uuid: 1447031a-0f02-4195-bdb1-4f3c03b5e646
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_link
+    - paragraphs.paragraphs_type.image
+  module:
+    - link
+_core:
+  default_config_hash: YFnS_dVT1NGyFphf49A91QoeXm9NLlEerRrqdypTGvQ
+id: paragraph.image.field_oc_link
+field_name: field_oc_link
+entity_type: paragraph
+bundle: image
+label: Link
+description: 'Turn this image into a link.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

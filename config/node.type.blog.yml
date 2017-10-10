@@ -1,0 +1,19 @@
+uuid: 4ca05536-e003-44cd-9504-de48596d5f28
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: xKsY75fseUtqFo7T5cg1v3XxksirLH2IaVvJw_ev84M
+name: Blog
+type: blog
+description: 'Add a blog post.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

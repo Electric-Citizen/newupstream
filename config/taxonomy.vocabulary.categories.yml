@@ -1,0 +1,11 @@
+uuid: 0a1bebc2-1ef5-40a9-a46f-f5c145997f6f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dv3X2515fWtFUhL7ltNsAn4P2q2pBnOhOsx8gJga9GM
+name: Categories
+vid: categories
+description: 'General content categories'
+hierarchy: 0
+weight: 0

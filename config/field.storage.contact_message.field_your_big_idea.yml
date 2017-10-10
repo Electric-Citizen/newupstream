@@ -1,0 +1,21 @@
+uuid: 85d486b0-15c2-4bef-ba8a-10d03dc5cdf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - text
+_core:
+  default_config_hash: ienSHtH3k2zq4FT1g4g_sl9bkwrLSlea7JDF1OQAsIE
+id: contact_message.field_your_big_idea
+field_name: field_your_big_idea
+entity_type: contact_message
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

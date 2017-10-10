@@ -1,0 +1,23 @@
+uuid: 21b2b1ad-3dc2-4062-ba75-46379e38f8de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_options
+    - paragraphs.paragraphs_type.event_by_category
+  module:
+    - options
+_core:
+  default_config_hash: EERRhkIwk-sakx8d-5-kAJd11VRIUT1NN0pPP4kRxt4
+id: paragraph.event_by_category.field_display_options
+field_name: field_display_options
+entity_type: paragraph
+bundle: event_by_category
+label: 'Display Fields'
+description: 'Choose additional fields you wish to display for this item. <strong>NOTE:</strong> The title field will always be displayed.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

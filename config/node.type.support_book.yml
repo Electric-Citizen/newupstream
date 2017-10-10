@@ -1,0 +1,19 @@
+uuid: b2552514-8a79-4bf6-9476-89c631636627
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: ji4pL4xruOxfrgS7781kaPIt0nOX9e6KBPJH8XTWxwU
+name: 'Support Book'
+type: support_book
+description: 'Add support pages.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

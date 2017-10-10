@@ -1,0 +1,23 @@
+uuid: 2c4d74b6-30d4-4a1f-9b20-9d89e03dd511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_options
+    - paragraphs.paragraphs_type.news_by_category
+  module:
+    - options
+_core:
+  default_config_hash: B_LzpntXJ8QGfU40Q_1T4Wg6hgUmhvkhyDzbtES-ois
+id: paragraph.news_by_category.field_display_options
+field_name: field_display_options
+entity_type: paragraph
+bundle: news_by_category
+label: 'Display Fields'
+description: 'Choose additional fields you wish to display for this item. <strong>NOTE:</strong> The title field will always be displayed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,16 @@
+uuid: 479093ad-0fd8-4524-ab08-7403678fa201
+langcode: en
+status: true
+dependencies:
+  module:
+    - video_embed_media
+_core:
+  default_config_hash: BtmkOtsieYk-q1T0mbx0Nc7a0BuVA5eRyu91BF94fTg
+id: video
+label: Video
+description: ''
+type: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }

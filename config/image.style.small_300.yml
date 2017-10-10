@@ -1,0 +1,17 @@
+uuid: 923d289c-daa2-463f-8768-70bda6561b7a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: XLkDo-4h12GZyxyURylyAoxMjNBH2FCF0if-ws8brIA
+name: small_300
+label: 'Small (300)'
+effects:
+  c4e5aea0-1b10-4fed-9b9f-e514c9b33aac:
+    uuid: c4e5aea0-1b10-4fed-9b9f-e514c9b33aac
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: true

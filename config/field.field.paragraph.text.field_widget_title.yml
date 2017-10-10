@@ -1,0 +1,21 @@
+uuid: 5859c8ec-643f-450f-8875-05d3c9fb72fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget_title
+    - paragraphs.paragraphs_type.text
+_core:
+  default_config_hash: lIG5f3B704A3CdeEqxCCM8wktRKFT5BY1iKMRuVvPKo
+id: paragraph.text.field_widget_title
+field_name: field_widget_title
+entity_type: paragraph
+bundle: text
+label: 'Widget Title'
+description: 'This field will be displayed above the widget in H2 format.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

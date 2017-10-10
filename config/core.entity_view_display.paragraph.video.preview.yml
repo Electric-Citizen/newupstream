@@ -1,0 +1,40 @@
+uuid: ebe538a7-b20c-4fef-b17c-806de72fe3d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.video.field_admin_description
+    - field.field.paragraph.video.field_layout
+    - field.field.paragraph.video.field_oc_long_text
+    - field.field.paragraph.video.field_oc_video
+    - field.field.paragraph.video.field_widget_title
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+_core:
+  default_config_hash: gOEuoE3eaaQcbVOWLLGr7fk37_B1WOrmGKaiM2W8EC0
+id: paragraph.video.preview
+targetEntityType: paragraph
+bundle: video
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_oc_long_text: true
+  field_oc_video: true
+  field_widget_title: true

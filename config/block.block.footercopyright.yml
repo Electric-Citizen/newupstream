@@ -1,0 +1,24 @@
+uuid: 0a4bb083-d456-4ec4-93c3-72b487c449f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.footer_copyright
+  module:
+    - simple_block
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: lYdcSL-soP8re_kRsN5LBOEPzOMaSg_saZBkKFK30bs
+id: footercopyright
+theme: oc_patterns
+region: footer
+weight: -3
+provider: null
+plugin: 'simple_block:footer_copyright'
+settings:
+  id: 'simple_block:footer_copyright'
+  label: 'Footer Copyright'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

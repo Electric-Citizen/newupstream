@@ -1,0 +1,21 @@
+uuid: 02a6078b-aeb4-4b50-9470-1b1d9897d648
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_document
+third_party_settings:
+  crop:
+    image_field: field_media_file
+_core:
+  default_config_hash: 0EyMcZZRUQbX_MNjMFXt0zRIqf52DJKGc6Gipjn714Y
+id: document
+label: Document
+description: ''
+type: document
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_media_file
+field_map: {  }

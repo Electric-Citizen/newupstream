@@ -1,0 +1,9 @@
+scheme_whitelist:
+  - http
+  - https
+  - files
+  - internal
+protocol_style: full
+local_paths: "http://oc8-base.dd:8083/\r\nhttp://dev-oc8-base.pantheonsite.io/"
+_core:
+  default_config_hash: AIOyhrFNbAt8fgqcQo7SXC1uH2FYwvishxDGRoWfq7I

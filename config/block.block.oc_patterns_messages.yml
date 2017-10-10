@@ -1,0 +1,22 @@
+uuid: 2425ad40-5f21-487f-b171-f13c2c213ac3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: psgE0SDIZ6onpRJppjdVSm4mXmrQJHBMrw9LQCwMij0
+id: oc_patterns_messages
+theme: oc_patterns
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

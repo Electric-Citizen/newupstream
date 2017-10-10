@@ -1,0 +1,23 @@
+uuid: 513238ce-3709-46c7-bcd8-b7c87e814b7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_long_text
+    - paragraphs.paragraphs_type.form
+  module:
+    - text
+_core:
+  default_config_hash: Hk4JgJSuaIix3Tsds9r5heEi-5WF2gMwlPBDIueveJw
+id: paragraph.form.field_oc_long_text
+field_name: field_oc_long_text
+entity_type: paragraph
+bundle: form
+label: Description/Instructions
+description: 'Add a form description or instructions that will be displayed before the form.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 90f73db0-f2ab-4252-b28c-1a8d80f895b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: 75RlKNsVP2-1VHtaMrwDMg1Sqh4uq4RlmxtgnEcvn_g
+id: paragraph.field_pin_info
+field_name: field_pin_info
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

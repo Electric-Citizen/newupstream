@@ -1,0 +1,35 @@
+uuid: 0eab4f7c-b345-432c-9466-bff95fa1b35a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: _Bk6g5FLrF-59HA47c63ZjQR97JMBxCV0KX15PHsl48
+id: paragraph.field_background_style
+field_name: field_background_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grey
+      label: grey
+    -
+      value: blue
+      label: blue
+    -
+      value: orange
+      label: orange
+    -
+      value: image
+      label: image
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

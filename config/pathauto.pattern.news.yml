@@ -1,0 +1,24 @@
+uuid: 458bb472-712d-4279-97c5-8d4fb950f51a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: O0dsmsTlnmQDJ872FkmcXNDrCvTA9FhRDpbrbPc_paE
+id: news
+label: News
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  46cceeb5-d1a0-47c9-9ea1-341d694757df:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 46cceeb5-d1a0-47c9-9ea1-341d694757df
+selection_logic: and
+weight: -5
+relationships: {  }

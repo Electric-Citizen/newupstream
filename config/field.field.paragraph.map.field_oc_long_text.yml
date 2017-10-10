@@ -1,0 +1,23 @@
+uuid: 30ba8921-7b71-462b-9d1c-c37dcdea820d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_long_text
+    - paragraphs.paragraphs_type.map
+  module:
+    - text
+_core:
+  default_config_hash: 11-KFKoWUcAg6yexxccHbKH2NczpLalQnC2U278cVN0
+id: paragraph.map.field_oc_long_text
+field_name: field_oc_long_text
+entity_type: paragraph
+bundle: map
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: e7d6e9c8-e3d0-4848-b68b-dd66c7c136bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: mWwihqswUrSDfOjloyrpvFefIFKeR7Ubak6YFwmev4E
+name: Profiles
+type: profiles
+description: 'Add profile nodes.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

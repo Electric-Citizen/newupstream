@@ -1,0 +1,35 @@
+uuid: 610e6bf3-8021-47e4-82b4-698c5eff8ff3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: wFO37IvoFsdqLCrLlsh3Iu0kzil-29qmRVZaaiZ5A9Y
+id: paragraph.field_button_color
+field_name: field_button_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Link
+    -
+      value: blue
+      label: Blue
+    -
+      value: orange
+      label: Orange
+    -
+      value: dark-grey
+      label: 'Dark Grey'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

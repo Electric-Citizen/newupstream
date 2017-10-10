@@ -1,0 +1,18 @@
+uuid: bfd044e0-77b2-4282-bac5-28788518f2a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: KNNoyfiiJo06M2n_1FBWjXqdJEvWpmsvruZvh9m_Wtk
+name: banner_mobile_2x
+label: 'Banner Mobile 2x'
+effects:
+  1e5752a4-6674-4cb3-9855-84de44444528:
+    uuid: 1e5752a4-6674-4cb3-9855-84de44444528
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 600

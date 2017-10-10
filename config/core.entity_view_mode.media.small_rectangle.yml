@@ -1,0 +1,12 @@
+uuid: 4819af8e-a925-4ad0-9772-82340c8fde40
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+_core:
+  default_config_hash: 25NBSPoArjP2Nkv07Mq7oZhvnscEsLpY_fUudj1kahc
+id: media.small_rectangle
+label: 'Small Rectangle'
+targetEntityType: media
+cache: true

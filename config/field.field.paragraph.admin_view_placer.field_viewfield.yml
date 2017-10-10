@@ -1,0 +1,25 @@
+uuid: cd43cb90-0da6-4e61-b20d-3acbcca71412
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_viewfield
+    - paragraphs.paragraphs_type.admin_view_placer
+  module:
+    - options
+_core:
+  default_config_hash: VAOKgtIwPy9pYrit8XlYks52NCYD9WuKcN12RaAqRWs
+id: paragraph.admin_view_placer.field_viewfield
+field_name: field_viewfield
+entity_type: paragraph
+bundle: admin_view_placer
+label: Viewfield
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: view
+default_value_callback: ''
+settings: {  }
+field_type: list_string

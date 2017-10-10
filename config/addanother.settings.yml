@@ -1,0 +1,42 @@
+default_button: false
+default_message: true
+default_tab: false
+default_tab_edit: false
+button:
+  page: false
+  event: false
+  news: false
+  profiles: false
+  webforms: false
+  support_book: false
+  blog: false
+  landing_page: false
+message:
+  page: false
+  event: false
+  news: false
+  profiles: false
+  webforms: true
+  support_book: false
+  blog: false
+  landing_page: false
+tab:
+  page: true
+  event: true
+  news: true
+  profiles: true
+  webforms: false
+  support_book: true
+  blog: true
+  landing_page: true
+tab_edit:
+  page: false
+  event: false
+  news: false
+  profiles: false
+  webforms: false
+  support_book: false
+  blog: false
+  landing_page: false
+_core:
+  default_config_hash: g2fkTjrvlyS3orVjGWsZNyZn-pVUCwiLuWtl15oB0dY

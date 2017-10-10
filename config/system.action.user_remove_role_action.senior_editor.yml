@@ -1,0 +1,16 @@
+uuid: 7586b100-3622-4c33-b9d7-06c67a25673f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.senior_editor
+  module:
+    - user
+_core:
+  default_config_hash: 958ISdktFEPfAksdjCXeJ3zf5vjbkyIIa-VfOOjWdZg
+id: user_remove_role_action.senior_editor
+label: 'Remove the Senior Editor role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: senior_editor

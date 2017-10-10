@@ -1,0 +1,23 @@
+uuid: 44572830-b9ba-4abb-aefd-4e1d03306e70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_style
+    - paragraphs.paragraphs_type.text
+  module:
+    - options
+_core:
+  default_config_hash: qckMws_sw8JmSkVeIf5mOVsd5QMyML6_6GerVVBApos
+id: paragraph.text.field_background_style
+field_name: field_background_style
+entity_type: paragraph
+bundle: text
+label: 'Background Style'
+description: 'Select a background style for this widget.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

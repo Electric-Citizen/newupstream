@@ -1,0 +1,20 @@
+uuid: d25808f7-8cc1-4e03-adea-5adaabc1c727
+langcode: en
+status: true
+dependencies:
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: PmnIbG5xqKopVIejW-q8GfaQIfxwhA6-AYr8oTSAU2Y
+id: oc_patterns_local_actions
+theme: oc_patterns
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

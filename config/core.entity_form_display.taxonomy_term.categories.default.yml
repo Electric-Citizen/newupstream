@@ -1,0 +1,24 @@
+uuid: 8de3e415-01d0-4057-9f7e-b700470dccaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categories
+_core:
+  default_config_hash: uOWigVkv-g71HZe94D5ap1HClbnESDn2cPTZeX_fvBA
+id: taxonomy_term.categories.default
+targetEntityType: taxonomy_term
+bundle: categories
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true
+  path: true

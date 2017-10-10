@@ -1,0 +1,19 @@
+uuid: 8c4d3cc5-4872-4cc7-8aa4-b8f68eeb1f99
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+_core:
+  default_config_hash: L_AjN7AIbs4CLrtnPlkUyx_1gDbfkgqy4TeqETVknPA
+id: image
+label: Image
+description: ''
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_media_image
+  gather_exif: false
+field_map:
+  mime: field_media_image

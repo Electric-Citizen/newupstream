@@ -1,0 +1,29 @@
+uuid: 1be6ab0f-0241-4529-b816-89ff40d10213
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: QxcxkZ05D5cKPBSuNWdV7a_Sap1QOm7b2Z9drdSXom4
+id: paragraph.field_display_style
+field_name: field_display_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: three-column
+      label: 'Horizontal Columns'
+    -
+      value: horizontal
+      label: 'Vertical List'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

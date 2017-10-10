@@ -1,0 +1,25 @@
+uuid: bedd33e4-8812-47e3-b0a1-8a37c7286757
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_two_column
+    - paragraphs.paragraphs_type.text
+_core:
+  default_config_hash: p9nec4wEKhe7zOmpCZRvpJ8NFeuoUk0Y1XlI2cBqNsY
+id: paragraph.text.field_two_column
+field_name: field_two_column
+entity_type: paragraph
+bundle: text
+label: Two-Column
+description: 'Split the text field into two columns.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: two-column
+  off_label: one-column
+field_type: boolean

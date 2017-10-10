@@ -1,0 +1,17 @@
+uuid: 91199b76-e7c2-48d7-9eac-88cd029d309f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HF6ctDHGX3XijCev6VIVZ66czT10rxSCkfxiUtaLdGU
+name: large_800
+label: 'Large (800)'
+effects:
+  98c0afc3-6d68-4d2c-ab95-c94536261339:
+    uuid: 98c0afc3-6d68-4d2c-ab95-c94536261339
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: true

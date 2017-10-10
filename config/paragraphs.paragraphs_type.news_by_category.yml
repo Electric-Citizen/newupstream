@@ -1,0 +1,9 @@
+uuid: 39c350cc-73d0-437a-adb6-27ceb12166a2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sS8VxXXJh6OaC9yc1bQfDn9JM8ySAsP7MpECMSUHOWs
+id: news_by_category
+label: 'News by Category'
+behavior_plugins: {  }

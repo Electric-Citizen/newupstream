@@ -1,0 +1,30 @@
+uuid: b5972e93-3dbc-4b28-8cf6-faf33628b419
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_account_platform
+    - paragraphs.paragraphs_type.social_platform
+    - taxonomy.vocabulary.social_media
+_core:
+  default_config_hash: Fd-UuFbpCJy9u__49jpas_xo4XtIg7B38tDKOhRgme8
+id: paragraph.social_platform.field_account_platform
+field_name: field_account_platform
+entity_type: paragraph
+bundle: social_platform
+label: 'Account Platform'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      social_media: social_media
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

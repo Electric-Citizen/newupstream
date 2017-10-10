@@ -1,0 +1,23 @@
+uuid: 623d4c77-50ff-4909-baba-ee67c403a7d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_style
+    - paragraphs.paragraphs_type.pullquote
+  module:
+    - options
+_core:
+  default_config_hash: gChk60sG6FEufL4T6eXJfOOxLysruZZWKlZRKGQ8JEo
+id: paragraph.pullquote.field_background_style
+field_name: field_background_style
+entity_type: paragraph
+bundle: pullquote
+label: 'Background Style'
+description: 'Select a background style for this widget.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

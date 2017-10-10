@@ -1,0 +1,9 @@
+uuid: cb23e398-02c9-4b72-a99a-d706de11ec1f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zGqfAFPQBfgjng3C0UOH7mT8uu89Op4BrsqBr_FR2v8
+id: tile_image
+label: 'Tile Image'
+behavior_plugins: {  }

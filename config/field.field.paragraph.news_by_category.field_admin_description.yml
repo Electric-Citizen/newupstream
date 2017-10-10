@@ -1,0 +1,21 @@
+uuid: 9e3e804c-2d73-4326-91fe-fb7a92d7e1d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_admin_description
+    - paragraphs.paragraphs_type.news_by_category
+_core:
+  default_config_hash: 5i1eAnODIPTdK8-lHTTuwDgOpHJxgS7_WTidQwSJ7WE
+id: paragraph.news_by_category.field_admin_description
+field_name: field_admin_description
+entity_type: paragraph
+bundle: news_by_category
+label: 'Admin Description'
+description: 'This is description will help identify the widget to editors and will not be show anywhere except for in the editing environment.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

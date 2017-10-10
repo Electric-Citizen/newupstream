@@ -1,0 +1,12 @@
+uuid: 69ca5c20-1f52-49f3-a519-bec0916d7551
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+_core:
+  default_config_hash: bH-ucMunlUZwkXKdSDrC5h8C2qcRh0TrnUtvHIn_QWg
+id: media.large_rectangle
+label: 'Large Rectangle'
+targetEntityType: media
+cache: true
