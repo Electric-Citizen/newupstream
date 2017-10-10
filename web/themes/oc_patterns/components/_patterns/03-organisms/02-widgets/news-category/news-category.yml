@@ -1,0 +1,159 @@
+widget_title:
+  "News by Category"
+
+#Available styles: three-column, vertical
+display_style:
+  "three-column"
+
+#Available options: image, date, body (one per number)
+display_options:
+  1:
+    "image"
+  2:
+    "body"
+  3: 
+   "date"
+
+  
+
+#Available categories: puppies, pablo escobar, da pope
+categories:
+  "pablo escobar"
+
+news:
+  1:
+    title: 
+      "News Article 1"
+    tag:
+      "puppies"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/people
+    date:
+      "July 27, 2017"
+    body:
+      "Duo Reges: constructio interrete. Quam ob rem tandem, inquit, non satisfacit? An quod ita callida est, ut optime possit architectari voluptates?"    
+  2:
+    title: 
+      "News Article 2"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/architecture
+    date:
+      "Janury 1, 2016"
+    body:
+      "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
+  3:
+    title: 
+      "News Article 3"
+    tag:
+      "da pope"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/nature
+    date:
+      "May 5, 2015"
+    body:
+      "Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Traditur, inquit, ab Epicuro ratio neglegendi doloris."
+  4:
+    title: 
+      "News Article 4"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/animals
+    date:
+      "October 31, 2009"
+    body:
+      "Quis hoc dicit? Ita fit cum gravior, tum etiam splendidior oratio."
+  5:
+    title: 
+      "News Article 5"
+    tag:
+      "da pope"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/tech
+    date:
+      "February 14, 2002"
+    body:
+      
+  6:
+    title: 
+      "News Article 6"
+    tag:
+      "puppies"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/people
+    date:
+      "September 11, 2001"
+    body:
+      "Nam illud vehementer repugnat, eundem beatum esse et multis malis oppressum. Hoc loco tenere se Triarius non potuit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius."
+  7:
+    title: 
+      "News Article 7"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/architecture
+    date:
+      "January 1, 2000"
+    body:
+      "Propter nos enim illam, non propter eam nosmet ipsos diligimus. Ego vero volo in virtute vim esse quam maximam; Qui autem de summo bono dissentit de tota philosophiae ratione dissentit."
+  8:
+    title: 
+      "News Article 8"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/nature
+    date:
+      "September 24, 1979"
+    body:
+      "Ad corpus diceres pertinere-, sed ea, quae dixi, ad corpusne refers? Nescio quo modo praetervolavit oratio."
+  9:
+    title: 
+      "New Article 9"
+    tag:
+      "puppies"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/animals
+    date:
+      "July 4, 1776"
+    body:
+      "Quia dolori non voluptas contraria est, sed doloris privatio. Quae quo sunt excelsiores, eo dant clariora indicia naturae"
+  10:
+    title: 
+      "News Article 10"
+    tag:
+      "da pope"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/tech
+    date:
+      "December 25, 0000"
+    body:
+      "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
+
+
+news_category_instructions:
+  "STYLEGUIDE ONLY: This template is not carried into Drupal, but the News by Category OC Widgets view is
+  customized to work with the widget display settings fields."
+

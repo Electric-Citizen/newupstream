@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.350x350
+    - image.style.350x350_2x
+  theme:
+    - oc_patterns
+id: 350x350
+label: 350x350
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 350x350
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 350x350_2x
+breakpoint_group: oc_patterns
+fallback_image_style: 350x350_2x

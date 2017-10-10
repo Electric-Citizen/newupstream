@@ -1,0 +1,33 @@
+/* ==================
+   FOOTER ADDRESS 
+==================== */
+
+.footer-address{
+	flex: 0 0 100%;
+	order: 2;
+	text-align: center;
+	margin-bottom: 1.5em;
+	//change the footer block order at tab and align left
+	@include tab{
+		flex: 0 0 30%;
+		order: 1;
+		text-align: left;
+		margin-bottom: 0;
+	}
+	h2{
+		display: none;
+	}
+	.field.body ul{
+		padding-left: 0;
+		//from 01-mixins.scss
+		@include list-reset;
+		@include tab{
+			margin-bottom: 0;
+		}
+		li{
+			list-style: none;
+			font-size: 16px;
+			color: $transparent-white;
+		}
+	}
+}//end footer-address

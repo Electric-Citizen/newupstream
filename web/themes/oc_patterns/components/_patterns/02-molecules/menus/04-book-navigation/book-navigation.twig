@@ -1,0 +1,24 @@
+{#
+  STYLEGUIDE ONLY: This template is not used in Drupal but the Drupal book block template is customized to link the block title to the parent book node.
+#}
+{{ book_instructions }}
+
+{% block bookOpen %}
+<div class="block block-book-navigation pl-spacer">
+{% endblock %}
+
+  {% block bookTitle %}
+  <h2 class="block-title"><a href="{{ book_parent_url }}">{{ book_parent }}</a></h2>
+  {% endblock %}
+
+  {% block bookContent %}
+  <ul>
+    {% for link in book_nav %}
+      <li><a href="{{ link.book_link_url }}">{{ link.book_link }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endblock %}
+
+{% block bookEnd %}
+</div>
+{% endblock %}

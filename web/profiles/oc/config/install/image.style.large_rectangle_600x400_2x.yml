@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+    - image_style_quality
+name: large_rectangle_600x400_2x
+label: 'Large Rectangle 600x400 2x'
+effects:
+  95bbe75c-5c37-49fd-9ef5-4cb64010a098:
+    uuid: 95bbe75c-5c37-49fd-9ef5-4cb64010a098
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 800
+  ae63e89c-82d2-445b-bc56-c061edb13520:
+    uuid: ae63e89c-82d2-445b-bc56-c061edb13520
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 30

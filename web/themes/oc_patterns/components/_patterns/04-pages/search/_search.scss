@@ -1,0 +1,108 @@
+/* ===============
+   SEARCH 	
+================= */
+
+/* SEARCH PAGE FORM (404 & DEFAULT)
+----------------- */
+.search-page-form{
+	margin-bottom: 3em;
+	//keyword
+	.form-item-keys{
+		label{
+			display: block;
+		}
+		input.form-search{
+			//from forms.scss
+			@include textInput;
+			display: inline-block;
+			max-width: 300px;
+		}
+	}
+	input.form-submit{
+		background: $link;
+		padding: 9px 3em 11px;
+		color: $white;
+		&:hover,&:focus{
+			background: $hover-link;
+		}
+	}
+	a.search-help-link{
+		display: none;
+	}
+}//end form
+
+
+/* SEARCH PAGE
+------------------ */
+.path-search{
+	//search results
+	h2{
+		font-size: 32px;
+		text-transform: none;
+		text-align: left;
+		border-bottom:1px solid $light-grey;
+		padding-bottom:3px;
+		&:after{
+			width: 100%;
+			left: 0;
+		}
+	}
+	ol{
+		//from 01-mixins.scss
+		@include list-reset;
+		li{
+			margin-bottom: 2em;
+			a:hover{
+				//from 03-animations.scss
+				@include transThreeAll;
+			}
+		}
+	}
+	//no results
+	.no-results{
+		ul{
+			padding-left: 30px;
+			margin: 0 0 2em;
+			& > li{
+				list-style: disc;
+				ul{
+					padding: 0 0 0 1em;
+				}
+				ol{
+					padding: 0 0 0 1em;
+					list-style: decimal;
+				}
+			}
+		}
+	}
+	
+
+}//end search page
+
+
+/* 404 SEARCH
+----------------- */
+ol.search-results{
+	//from 01-mixins.scss
+	@include list-reset;
+	li{
+		margin-bottom: 2em;
+		a:hover,a:focus{
+			//from 03-animations.scss
+			@include transThreeAll;
+		}
+	}
+}
+
+
+/* PATTERN LAB ONLY
+------------------ */
+.pl .search-header a{
+	&:hover,&:focus{
+		//from 03-animations.scss
+		@include transThreeAll;
+	}
+}
+
+
+

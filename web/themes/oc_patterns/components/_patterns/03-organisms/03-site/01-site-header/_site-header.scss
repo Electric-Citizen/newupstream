@@ -1,0 +1,112 @@
+/* =================
+   SITE HEADER
+=================== */
+
+.layout-container > header {
+	background: $gold;
+	& > div{
+		padding: 10px 20px;
+		font-size: 0;
+		//from 01-mixins.scss
+		@include paddedContent;
+		//from 01-mixins.scss
+		@include auto;
+		position: relative;
+	}
+}//end layout container
+
+
+/* BRANDING BLOCK PLACEMENT
+------------------- */
+.block--system-branding{
+	//leave room for search toogle and menu hamburger on mobile
+	//from 01-mixins.scss
+	@include calc(width, "100% - 70px");
+	position: relative;
+	z-index: 10;
+
+	//set width at desktop
+	@include deskmenu{
+		width: 300px;
+	}
+
+	a{
+		img{
+			max-width: 160px;
+			margin-right: 5px;
+			@include deskmenu{
+				max-width: 200px;
+			}
+		}
+	}
+}//end branding block
+
+
+/* SEARCH BLOCK PLACEMENT
+------------------- */
+.block-search-form-block{
+	position: static;
+	@include inline-block;
+	text-align: right;
+
+	//set width at desktop
+	@include deskmenu{
+		//from 01-mixins.scss
+		@include calc(width, "100% - 300px");
+	}
+
+	//search toggler
+	.t-search{
+		position: absolute;
+      	top: 17px;
+      	right: 20px;
+      	@include deskmenu{
+		    right: 25px;
+		    top: 13px;
+		}
+	}
+}//end search block
+
+
+/* MAIN NAVIGATION BLOCK
+------------------------ */
+.block-superfishmain{
+	//from 01-mixins.scss
+	@include inline-setup;
+	text-align: right;
+
+	//desktop position
+	@include deskmenu{
+		width: 100%;
+		margin: 10px 0 0 -10px;
+		vertical-align: middle;
+		text-align: left;
+
+		//when menu alignment right variable is used
+		&.right{
+			//from 01-mixins.scss
+			@include calc(width, "100% - 300px");
+			position: absolute;
+			bottom: 0;
+			right: 30px;
+			text-align: right;
+			margin: 10px -15px 0 0;
+		}
+
+		//when menu alignment center variable is used
+		&.center{
+			width: 100%;
+			text-align: center;
+			position: static;
+			margin: 0;
+		}
+	}//end deskmenu
+	
+}//end main nav
+
+
+/* PATTERN LAB ONLY
+------------------- */
+.pl header .block-superfishmain .sf-hidden{
+	display: none;
+}

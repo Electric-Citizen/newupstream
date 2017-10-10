@@ -1,0 +1,104 @@
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: all_the_things
+title: 'All the Things'
+description: ''
+category: ''
+elements: "text_field:\n  '#type': textfield\n  '#title': 'Text Field'\ntext_area:\n  '#type': textarea\n  '#title': 'Text Area'\nemail:\n  '#type': email\n  '#title': Email\nconfirm_email:\n  '#type': webform_email_confirm\n  '#title': 'Confirm Email'\nrate_this:\n  '#type': webform_rating\n  '#title': 'Rate this'\n  '#min': '1'\n  '#max': '5'\n  '#step': '1'\nphone:\n  '#type': tel\n  '#title': Phone\naddress:\n  '#type': webform_address\n  '#title': Address\nname_element:\n  '#type': webform_name\n  '#title': 'Name Element'\nstatus_message:\n  '#type': webform_message\n  '#message_message': 'This is a custom status / internal message'\n  '#message_close': true\n  field_attached_to_status_message:\n    '#type': textfield\n    '#title': 'Field attached to status message'\ndo_you_like_ice_cream:\n  '#type': webform_buttons_other\n  '#title': 'Do You Like Ice Cream'\n  '#description': 'These are buttons.'\n  '#options':\n    vanilla: 'Vanilla is Good'\n    chocolate: 'Chocolate is Better'\ndays:\n  '#type': checkboxes\n  '#title': Days\n  '#options': days\n  '#options_display': side_by_side\ndate:\n  '#type': datetime\n  '#title': Date\n  '#date_date_format': m/d/Y\n  '#date_time_format': 'g:i A'\npassword:\n  '#type': password\n  '#title': Password"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.tile_image.field_admin_description
+    - field.field.paragraph.tile_image.field_column_span
+    - field.field.paragraph.tile_image.field_oc_image
+    - field.field.paragraph.tile_image.field_oc_link
+    - field.field.paragraph.tile_image.field_oc_long_text
+    - paragraphs.paragraphs_type.tile_image
+id: paragraph.tile_image.preview
+targetEntityType: paragraph
+bundle: tile_image
+mode: preview
+content:
+  field_admin_description:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_column_span: true
+  field_oc_image: true
+  field_oc_link: true
+  field_oc_long_text: true

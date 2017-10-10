@@ -1,0 +1,30 @@
+/* ===============
+   SOCIAL MEDIA WIDGDET
+====================== */
+
+.paragraph--type--social-media{
+	text-align: center;
+	.wrapper{
+		//from 01-mixins.scss
+		@include paddedText;
+		//from 01-mixins.scss
+		@include auto;
+	}
+	.field-social-media{
+		& > div{
+			//from 01-mixins.scss
+			@include inline-block;
+			padding: 0 10px;
+		}
+		//icon styling (size set in @atoms/images/icon/icons.scss)
+		a{
+			color: $link;
+			&:hover,&:focus{
+				color: $hover-link;
+				//from 02-animations.scss
+				@include transThreeAll;
+			}
+		}
+	}
+}//end social media
+

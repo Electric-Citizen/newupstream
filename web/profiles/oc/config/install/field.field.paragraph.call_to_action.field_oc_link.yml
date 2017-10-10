@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_link
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - link
+id: paragraph.call_to_action.field_oc_link
+field_name: field_oc_link
+entity_type: paragraph
+bundle: call_to_action
+label: Button
+description: 'Add a button to this call to action. <strong>NOTE:</strong> The link text will be the button text. Add a button will also transform the title into a link (with the same url).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

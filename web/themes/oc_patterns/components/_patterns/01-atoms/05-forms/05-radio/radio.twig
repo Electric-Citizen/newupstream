@@ -1,0 +1,19 @@
+{#
+  STYLEGUIDE ONLY: This template is not brought into to Drupal, but the macros used to define checkbox styles are used Pattern Lab and Drupal.
+#}
+
+{% import "@base/global/04-macros/macros.twig" as styles %}
+
+{% if not attributes %}
+<div class="form-item js-webform-radios {{styles.radioElements}}">
+{% endif %}
+    {% for key, listItem in listItems.four %}
+      {% include "@atoms/05-forms/05-radio/_radio-item.twig"
+        with {
+          "radio_item": listItem.shortTitle
+        }
+      %}
+    {% endfor %}
+{% if not attributes %}
+</div>
+{% endif %}

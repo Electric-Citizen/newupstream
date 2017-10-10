@@ -1,0 +1,35 @@
+{#
+ 	DRUPAL: This template is embedded into the Drupal lightbox gallery paragraph template.
+#}
+{{lightbox_instructions}}
+
+{% block plwidgetopen %}
+<div class="flex-wrap pl-spacer">
+	<div class="paragraph--type--lightbox-gallery">
+{% endblock %}
+
+		{% block widgetTitle %}
+			{% if widget_title %}
+				<h2 class="widget-title">{{widget_title}}</h2>
+			{% endif %}
+		{% endblock %}
+		
+		<div class="wrapper">
+			{% block lightImages %}
+				{% for image in images %}
+					{% block lightItem %}
+						<a class="swipebox" href="#item{{image.id}}" rel="gallery">
+							<img src="{{image.src}}" />
+						</a>
+						<div class="swipe-hidden" id="item{{image.id}}">
+							<img src="{{image.src}}" />
+						</div>
+					{% endblock %}
+				{% endfor %}
+			{% endblock %}
+		</div>
+
+{% block plwidgetclose %}
+	</div>
+</div>
+{% endblock %}

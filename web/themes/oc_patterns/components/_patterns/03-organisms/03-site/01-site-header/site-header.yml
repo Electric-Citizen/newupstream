@@ -1,0 +1,14 @@
+#this is the site logo from the main theme folder
+header_logo:
+  "../../../../logo.svg"
+header_sitename:
+  "OC Patterns"
+header_tagline:
+
+#remove yes if you don't want a header search block. (You will need to manually remove the block in drupal)
+header_search:
+ "yes"
+
+header_instructions:
+  "STYLEGUIDE ONLY: This template is not embedded into Drupal, but header blocks are embedded from molecules/blocks both here and in Drupal. Changing a variable at the blocks level changes both.
+  See the blocks twig files for available variables for search and superfish."

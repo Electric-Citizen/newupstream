@@ -1,0 +1,22 @@
+/* ==================
+   FOOTER COPYRIGHT
+==================== */
+
+#block-footercopyright{
+	flex: 0 0 100%;
+	order: 3;
+	text-align: center;
+	//change the footer block order at tab and align rigth and bottom
+	@include tab{
+		flex: 0 0 50%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		text-align: right;
+	}
+	p{
+		margin:0;
+		font-size: 14px;
+		color: $transparent-white;
+	}
+}//end footer-copyright

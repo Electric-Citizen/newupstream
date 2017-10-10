@@ -1,0 +1,130 @@
+/* ===============
+   MOSAIC GALLERY WIDGET
+================== */
+
+.paragraph--type--mosaic-gallery{
+	& > .wrapper{
+		max-width: $max-width !important;
+	}
+	.field-mosaic-tiles{
+		.grid-sizer{
+			width: 100%;
+			@include smalltab{
+				width: 50%;
+			}
+			@include tab{
+				width: 33.3%;
+			}
+			@include deskmenu{
+				width: 25%;
+			}
+		}
+	}
+	
+	.field-oc-long-text{
+		padding: 1em;
+		text-align: center;
+		position: absolute;
+		display: none;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.paragraph--type--tile-image{
+		width: 100%;
+		&:hover{
+			.field-oc-long-text{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				& > *{
+					color: $white !important;
+					text-shadow: 1px 1px 1px $dark-grey;
+				}
+			}
+			//hover colors
+			&:nth-of-type(4n+1){
+				.field-oc-long-text{
+					background: $red-85;
+				}
+			}
+			&:nth-of-type(4n+2){
+				.field-oc-long-text{
+					background: $gold-85;
+				}
+			}
+			&:nth-of-type(4n+3){
+				.field-oc-long-text{
+					background: $blue-85;
+				}
+			}
+			&:nth-of-type(4n+4){
+				.field-oc-long-text{
+					background: $green-85;
+				}
+			}
+		}
+		@include smalltab{
+			&.one{
+				width: 50%;
+			}
+			&.two,&.three{
+				width: 100%;
+				.field-oc-long-text{
+					padding: 1em 2em;
+					p{
+						@include larger;
+					}
+				}
+			}
+		}
+		@include tab{
+			&.one{
+				width: 33.3%;
+			}
+			&.two{
+				width: 66.7%;
+			}
+			&.three{
+				width: 66.7%;
+			}
+		}
+		@include deskmenu{
+			&.one{
+				width: 25%;
+			}
+			&.two{
+				width: 50%;
+				.field-oc-long-text{
+					& > *{
+						max-width: 70%;
+						@include auto;
+					}
+				}
+			}
+			&.three{
+				width: 75%;
+				.field-oc-long-text{ 
+					& > *{
+						max-width: 60%;
+						@include auto;
+					}
+					p{
+						font-size: 150%;
+					}
+				}
+			}
+		}
+		.media-image{
+			max-width: 100% !important;
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
+	}//end paragraph-tile-image
+}//end news by category
+

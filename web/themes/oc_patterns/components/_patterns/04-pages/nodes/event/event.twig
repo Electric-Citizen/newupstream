@@ -1,0 +1,92 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ event_instructions }}
+
+
+{% embed "@pages/layouts/03-bunsen/bunsen.twig" %}
+{% block placeholderOpen %}
+	<article class="node--type-event pl-spacer">
+{% endblock %}
+	{% block top %}
+		<div class="block-region-top">
+			{% if banner_img %}
+	  		<div class="block-entity-fieldnodefield-banner">
+	  			<div class="field field-banner">
+	  				<article class="media media-image view-mode-banner">
+	  					<div class="field field-media-image">
+	  						<picture>
+	  							<img src="{{ banner_img }}" />
+	  						</picture>
+	  					</div>
+	  				</article>
+	  			</div>
+	  		</div>
+	  		{% endif %}
+
+	  		<div class="block block-system-breadcrumb-block">
+	  			<nav class="breadcrumb" role="navigation">
+	  				<ol>
+	  					<li><a href="#">Home</a></li>
+	  					<li>Event Example</li>
+	  				</ol>
+	  			</nav>
+	  		</div>
+	  		<div class="block block-entity-fieldnodetitle">
+	  			<h1>{{ event_title }}</h1>
+	  		</div>
+  		</div>
+  	{% endblock %}
+
+  	{% block main %}
+  		<div class="block-region-main">
+  			<div class="block block-entity-fieldnodebody">
+  				<div class="field body">
+  				    {% for text in body %}
+  				    	<p>{{ text }}</p>
+  				    {% endfor %}
+  				</div>
+  			</div>
+  		</div>
+  	{% endblock %}
+
+  	{% block sidebar %}
+		<div class="block-region-sidebar">
+			{% if event_date %}
+	          <div class="block block-entity-fieldnodefield-oc-date">
+	            <div class="field field-oc-date">
+	              <time>{{ event_date }}</time>
+	            </div>
+	          </div>
+	        {% endif %}
+			{% if event_location %}
+				<div class="block block-entity-fieldnodefield-event-pin-info">
+					<div class="field field-event-pin-info">
+						<p>
+	  					{% for line in event_location %}
+	  						{{ line }}</br>	
+	  					{% endfor %}
+						</p>
+					</div>
+				</div>
+			{% endif %}
+	        {% if event_map %}
+	          <div class="block block-entity-fieldnodefield-event-location">
+	            <div class="field field-event-location">
+	              <div class="geolocation-formatter-map-wrapper">
+	                <img src="{{ event_map }}" />
+	              </div>
+	            </div>
+	          </div>
+	        {% endif %}
+  		</div>
+  	{% endblock %}
+
+  	{% block bottom %}
+
+  	{% endblock %}
+{% block placeholderColse %}
+	</article>
+{% endblock %}
+{% endembed %}

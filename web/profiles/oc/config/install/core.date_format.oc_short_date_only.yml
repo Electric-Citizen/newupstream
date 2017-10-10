@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oc_short_date_only
+label: 'OC Short Date Only'
+locked: false
+pattern: n/j/y

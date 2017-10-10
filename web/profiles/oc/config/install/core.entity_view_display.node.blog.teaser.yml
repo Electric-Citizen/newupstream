@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_banner
+    - field.field.node.blog.field_metatags
+    - field.field.node.blog.field_oc_widgets
+    - field.field.node.blog.field_tags
+    - field.field.node.blog.panelizer
+    - node.type.blog
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 140
+    third_party_settings: {  }
+    region: content
+  field_author:
+    type: entity_reference_label
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_banner: true
+  field_metatags: true
+  field_oc_widgets: true
+  field_tags: true
+  flippy_pager: true
+  links: true
+  panelizer: true

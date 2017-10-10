@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.blog
+    - node.type.profiles
+id: node.blog.field_author
+field_name: field_author
+entity_type: node
+bundle: blog
+label: Author
+description: 'Add the author for this post. <strong>NOTE:</strong> If you do not see the author you wish to select in the list, you must add them as a published profile node <a href="/node/add/profiles">here</a>.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profiles: profiles
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

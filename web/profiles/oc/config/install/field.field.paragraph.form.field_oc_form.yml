@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_form
+    - paragraphs.paragraphs_type.form
+  module:
+    - webform
+id: paragraph.form.field_oc_form
+field_name: field_oc_form
+entity_type: paragraph
+bundle: form
+label: Form
+description: 'Select the form you wish to add. <strong>NOTE:</strong> If you don''t see the form you wish to add in the list, you may create it <a href="/admin/structure/webform">here</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: open
+  open: ''
+  close: ''
+field_type: webform

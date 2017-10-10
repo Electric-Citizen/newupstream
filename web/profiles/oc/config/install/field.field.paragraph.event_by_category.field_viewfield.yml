@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_viewfield
+    - paragraphs.paragraphs_type.event_by_category
+  module:
+    - options
+id: paragraph.event_by_category.field_viewfield
+field_name: field_viewfield
+entity_type: paragraph
+bundle: event_by_category
+label: Viewfield
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: view
+default_value_callback: ''
+settings: {  }
+field_type: list_string

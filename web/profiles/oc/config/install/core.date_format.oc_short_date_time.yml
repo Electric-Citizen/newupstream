@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oc_short_date_time
+label: 'OC Short Date Time'
+locked: false
+pattern: 'n/d/y - g:ia'

@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * EC template for a custom two column panel layout.
+ *
+ * This file is extended from pattern lab. Region classes are set there.
+#}
+{% extends "themes/oc_patterns/components/_patterns/04-pages/layouts/03-bunsen/bunsen.twig" %}
+
+{% block top %}
+  {{ content.top }}
+{% endblock %}
+
+{% block main %}
+  {{ content.main }}
+{% endblock %}
+
+{% block sidebar %}
+  {{ content.sidebar }}
+{% endblock %}
+
+{% block bottom %}
+  {{ content.bottom }}
+{% endblock %}

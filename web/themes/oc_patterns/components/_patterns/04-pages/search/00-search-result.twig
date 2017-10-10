@@ -1,0 +1,17 @@
+{#
+	DRUPAL: This file is embedded in the Drupal search-result template.
+#}
+
+{{ search_instructions }}
+{% block searchStart %}
+	<div class="pl-spacer">
+{% endblock %}
+
+	<h3 class="search-header"><a href="{{ search_url }}">{{ search_title }}</a></h3>
+	{% block searchText %}
+	 	<p>{{ search_text }}</p>
+	{% endblock %}
+
+{% block searchEnd %}
+	</div>
+{% endblock %}

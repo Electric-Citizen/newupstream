@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: admin_view_placer
+label: 'Admin View Placer'
+behavior_plugins: {  }

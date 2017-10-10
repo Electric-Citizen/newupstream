@@ -1,0 +1,15 @@
+#number of elements shown
+items:
+  1:
+
+#modifiers change the widget (backless is also used for non-colored)
+flex_modifiers:
+  1:
+    single
+
+#set example background color & style)
+background_modifiers:
+  1:
+    widget-color
+  2:
+    orange

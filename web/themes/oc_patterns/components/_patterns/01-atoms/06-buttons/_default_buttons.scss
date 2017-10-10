@@ -1,0 +1,68 @@
+/* ==============
+   BUTTONS
+================== */
+
+/* BUTTON MIXINS
+------------------ */
+
+///mixin - button
+@mixin button{
+  background-color: $black;
+  border:none;
+  color: $white;
+  line-height: 1.4;
+  padding: .5em 2em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: $header;
+  font-weight: $heavy;
+  margin-bottom: .5em;
+  &:visited {
+    color: $white;
+  }
+  &:hover,&:focus {
+    background-color: $mid-grey;
+    //from 02-animations.scss
+    @include transThreeAll;
+  }
+}
+
+///mixin - outline-button
+@mixin outline-button{
+  @include button;
+  background: transparent;
+  border: 2px solid $white;
+  color: $white;
+  &:hover,&:focus{
+    background: $transparent-white;
+    color: $black;
+    border-color: $black;
+    //from 02-animations.scss
+    @include transThreeAll;
+  }
+}
+
+
+//button class
+.button {
+  @include button;
+}
+
+//outline-buttons
+.button-outline{
+  @include outline-button;
+}
+
+
+/* PATTERN LAB ONLY
+--------------- */
+
+//background for outline-button example
+.pl.background{
+  padding: 2em 3em;
+  width: 100%;
+  background: $warmgrey;
+}

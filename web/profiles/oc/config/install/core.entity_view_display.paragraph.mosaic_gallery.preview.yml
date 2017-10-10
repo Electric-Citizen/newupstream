@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.mosaic_gallery.field_admin_description
+    - field.field.paragraph.mosaic_gallery.field_mosaic_tiles
+    - field.field.paragraph.mosaic_gallery.field_widget_title
+    - paragraphs.paragraphs_type.mosaic_gallery
+id: paragraph.mosaic_gallery.preview
+targetEntityType: paragraph
+bundle: mosaic_gallery
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_mosaic_tiles: true
+  field_widget_title: true

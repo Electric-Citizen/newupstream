@@ -1,0 +1,53 @@
+{#
+	STYLEGUIDE ONLY: This template is not embedded into Drupal, but the style macros for flexslider nav arrow theming are used in both Pattern Lab and Drupal. Available variables: large-caret, small-caret, triangle.
+#}
+
+{{ slider_instructions }}
+{% import "@base/global/04-macros/macros.twig" as styles %}
+
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--slideshow">
+
+			{% if widget_title %}
+				<h2 class="widget-title">{{widget_title}}</h2>
+			{% endif %}
+	
+			<div class="wrapper">
+				<div class="views-element-container">
+					<div class="view oc-widgets-slideshow">
+						<div class="view-content">
+							<div>
+								<div class="flexslider optionset-default {{ styles.sliderArrow }}">
+									<div class="flex-viewport" style="overflow: hidden; position: relative;">
+										<ul class="slides">
+											<li class="flex-active-slide">
+												<div class="views-field views-field-field-oc-image-multi">
+													<div class="field-content">
+														<article class="media media-image view-mode-default">
+															<div class="field field-media-image">
+																<img src="{{slider_image}}" />
+															</div>
+															<figcaption>{{slider_caption}}</figcaption>
+														</article>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<ul class="flex-direction-nav">
+										<li class="flex-nav-prev">
+											<a class="flex-prev" href="#">Previous</a>
+										</li>
+										<li class="flex-nav-next">
+											<a class="flex-next" href="#">Next</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+	</div>
+</div>

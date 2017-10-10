@@ -1,0 +1,76 @@
+/* ===============
+   LIGHTBOX GALLERY WIDGET
+==================== */
+.paragraph--type--lightbox-gallery{
+	.wrapper{
+		max-width: $max-width !important;
+		text-align: center;
+	}
+	//thumbnail images
+	a.swipebox{
+		margin: 0 10px 20px;
+		max-width: 250px;
+		//from 01-mixins.scss
+		@include inline-block-top;
+		overflow: hidden;
+		img{
+			width: 100%;
+			//from 01-mixins.scss
+			@include imageHover;
+		}
+	}
+	//hide the larger images before lightbox
+	.swipe-hidden{
+		display: none;
+	}
+}//end lightbox
+
+//lightbox overlay
+#swipebox-overlay{
+	figcaption{
+		color: $off-white;
+		margin-top: 1em;
+
+	}
+}
+
+/* random entrance scripts (lightbox.js) */
+.paragraph--type--lightbox-gallery{
+	a.swipebox{
+		.view-mode-large-thumb{
+			//from 01-mixins.scss
+			@include opacity(0);
+		}
+		&:nth-of-type(4n+1){
+			.view-mode-large-thumb.randomEntrance{
+				//from 02-animations.scss
+				@include animation('fadeIn .1s .9s forwards');
+			}
+		}
+		&:nth-of-type(4n+2){
+			.view-mode-large-thumb.randomEntrance{
+				//from 02-animations.scss
+				@include animation('fadeIn 1.3s .9s forwards');
+			}
+		}
+		&:nth-of-type(4n+3){
+			.view-mode-large-thumb.randomEntrance{
+				//from 02-animations.scss
+				@include animation('fadeIn .7s .9s forwards');
+			}
+		}
+		&:nth-of-type(4n+4){
+			.view-mode-large-thumb.randomEntrance{
+				//from 02-animations.scss
+				@include animation('fadeIn 1.8s .9s forwards');
+			}
+		}
+	}//end a.swipebox
+}//end random entrance lightbox gallery
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl a.swipebox{
+	max-width: 250px;
+}
+

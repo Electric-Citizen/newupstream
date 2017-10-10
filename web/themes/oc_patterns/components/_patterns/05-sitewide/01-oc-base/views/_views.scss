@@ -1,0 +1,112 @@
+/* ==================
+    DEFAULT VIEWS
+==================== */
+
+
+/* BLOGS
+------------- */
+.blog.all-posts{
+	.view-widget &{
+		//from 01-mixins.scss 
+		@include paddedText;
+		//from 01-mixins.scss 
+		@include auto;
+	}
+
+	.view-content{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.views-row{
+		width: 100%;
+		flex: 0 0 auto;
+		margin-bottom: 2em;
+		@include tab{
+			width: 50%;
+			&:nth-child(odd){
+				padding-right: 15px;
+			}
+			&:nth-child(even){
+				padding-left: 15px;
+			}
+		}
+	}
+
+	.views-field-field-banner{
+		margin-bottom: 1em;
+		img{
+			display: block;
+		}
+	}
+
+	//date and author
+	.views-field-nothing{
+		.metatext{
+			//from 01-text.scss 
+			@include text-date;
+			margin-bottom: 1em;
+		}
+	}
+}//end all posts
+
+
+/* EVENTS
+------------- */
+.events.all-upcoming-events{
+	.view-widget &{
+		//from 01-mixins.scss 
+		@include paddedText;
+		//from 01-mixins.scss 
+		@include auto;
+	}
+	.view-content{
+		display: flex;
+		flex-flow: row wrap;
+	}
+}
+
+
+/* NEWS
+------------- */
+.news.all-news{
+	.view-widget &{
+		//from 01-mixins.scss 
+		@include paddedText;
+		//from 01-mixins.scss 
+		@include auto;
+	}
+	.view-content{
+		display: flex;
+		flex-flow: row wrap;
+	}
+}
+
+
+/* PROFILES
+------------- */
+.profiles.all-staff{
+	.view-widget &{
+		//from 01-mixins.scss 
+		@include paddedText;
+		//from 01-mixins.scss 
+		@include auto;
+	}
+	.view-content{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.views-field-title{
+		h3{
+			font-size: 20px;
+		}
+	}	
+	.views-field-field-profile-image{
+		.view-mode-square{
+			//from 01-mixins.scss 
+			@include auto;
+			img{
+				display: block;
+			}
+		}
+	}
+}//end profiles

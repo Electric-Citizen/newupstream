@@ -1,0 +1,86 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oc_widgets
+    - node.type.support_book
+    - paragraphs.paragraphs_type.accordion_group
+    - paragraphs.paragraphs_type.admin_view_placer
+    - paragraphs.paragraphs_type.buttons
+    - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.horizontal_rule
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.lightbox_gallery
+    - paragraphs.paragraphs_type.links_files
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.support_book.field_oc_widgets
+field_name: field_oc_widgets
+entity_type: node
+bundle: support_book
+label: Widgets
+description: 'Add widgets to this node. Use the layout option on each widget to set it''s width and use the draggable handles to set the order to create custom layout grids. <strong>NOTE:</strong> When using Manage Content through IPE, you will not be able to re-order widgets, just this entire field itself.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_group: accordion_group
+      admin_view_placer: admin_view_placer
+      buttons: buttons
+      call_to_action: call_to_action
+      horizontal_rule: horizontal_rule
+      image: image
+      lightbox_gallery: lightbox_gallery
+      links_files: links_files
+      text: text
+      video: video
+    target_bundles_drag_drop:
+      accordion_group:
+        enabled: true
+        weight: 15
+      accordion_item:
+        weight: 16
+        enabled: false
+      admin_view_placer:
+        enabled: true
+        weight: 17
+      buttons:
+        enabled: true
+        weight: 18
+      call_to_action:
+        enabled: true
+        weight: 19
+      form:
+        weight: 20
+        enabled: false
+      horizontal_rule:
+        enabled: true
+        weight: 21
+      image:
+        enabled: true
+        weight: 22
+      lightbox_gallery:
+        enabled: true
+        weight: 23
+      links_files:
+        enabled: true
+        weight: 24
+      map:
+        weight: 25
+        enabled: false
+      slideshow:
+        weight: 26
+        enabled: false
+      text:
+        enabled: true
+        weight: 27
+      video:
+        enabled: true
+        weight: 28
+field_type: entity_reference_revisions

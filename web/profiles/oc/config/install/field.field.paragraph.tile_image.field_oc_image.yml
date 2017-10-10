@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_image
+    - media_entity.bundle.image
+    - paragraphs.paragraphs_type.tile_image
+id: paragraph.tile_image.field_oc_image
+field_name: field_oc_image
+entity_type: paragraph
+bundle: tile_image
+label: Image
+description: 'Minimum image width should be 800px. The image will not be cropped. <strong>NOTE:</strong> If overlay text is used, this image will be a background to the text and therefore may be cropped from the center depending on the length of text.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

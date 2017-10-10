@@ -1,0 +1,84 @@
+/* ================
+   KERMIT
+=================== */
+
+.kermit{
+	.top{
+		//from layouts.scss
+		@include top;
+	}
+	.main{
+		width: 100%;
+		padding: 2em 20px 3em;
+		max-width: $max-width;
+		//from 01-mixins.scss
+		@include auto;
+	}
+	.bottom{
+		width: 100%;
+	}
+}
+
+.kermit.hasReveal{
+	.logged-in &{
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			z-index: -1;
+			background: $site-background;
+			height: 300px;
+			width: 100%;
+		}
+	}
+	.block-region-top{
+		background: $site-background;
+		&.background{
+			margin-bottom: 0;
+			padding-bottom: 2em;
+		}
+	}
+
+	& > .main{
+		max-width: 100%;
+		padding: 0;
+		
+		.block-region-main{
+			margin-top: 0;
+		}
+		.block-entity-fieldnodebody{
+			max-width: 100%;
+			margin-bottom: 0;
+			background: $site-background;
+			.body{
+				//from 01-mixins.scss
+				@include paddedText;
+				@include auto;
+				padding: 2em 20px 5em;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+	}//end main
+}//end kermit reveal
+
+
+/* PATTERN LAB SPECIFIC
+------------------ */
+.sg-pattern-example > .kermit{
+	.top{
+		height: 100px;
+		margin-bottom: 1em;
+	}
+	.main{
+		height: 300px;
+		margin-bottom: 1em;
+	}
+	.bottom{
+		height: 100px;
+	}
+}
+

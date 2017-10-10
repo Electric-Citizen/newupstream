@@ -1,0 +1,168 @@
+/* ============
+PAGERS
+================= */
+
+
+/* MIXINS
+------------- */
+
+$pager-line: 24px;
+
+///mixin - pagerTiemStyle
+@mixin pagerItemStyle{
+  color: $mid-teal;
+  display: block;
+  width: 26px;
+  height: 26px;
+  line-height: $pager-line;
+  border: 1px solid $mid-teal;
+  text-align: center;
+  border-radius: 6px;
+  &:hover,&:focus{
+    color: $white;
+    background: $mid-teal;
+    text-decoration: none;
+    //form 01-mixins.scss
+    @include transThreeAll;
+  }
+}
+
+
+///mixin - pagerControl
+@mixin pagerControl{
+  color: $mid-teal;
+  &:hover,&:focus{
+    color: $black;
+    //from 02-animations.scss
+    @include transThreeAll;
+  }
+}
+
+
+/* GLOBAL PAGER STYLING
+-------------------- */
+.js-pager__items{
+  //form 01-mixins.scss
+  @include list-reset;
+  text-align: center;
+  li{
+    //form 01-mixins.scss
+    @include inline-block-top;
+    *{
+      line-height: $pager-line;
+    }
+    &:not(:first-child):not(:last-child){
+      margin: 0 .25em;
+    }
+  }
+}
+
+/* FULL PAGER
+---------------- */
+.pager{
+  //page number styling;
+  .pager__item:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last){
+    a{
+      @include pagerItemStyle;
+    }
+    &.is-active{
+      a{
+        color: $white;
+        background: darken($mid-teal, 12%);
+        &:hover,&:focus{
+          background: $mid-teal;
+        }
+      }
+    }
+  }//end page number items
+
+  //first styling
+  .pager__item--first{
+    a{
+      @include pagerControl;
+    }
+  }
+
+  //previous styling
+  .pager__item--previous{
+    a{
+      @include pagerControl;
+      margin-right: .5em;
+    }
+  }
+
+  //next styling
+  .pager__item--next{
+    a{
+      @include pagerControl;
+      margin-left: .5em;
+    }
+  }
+
+  //last styling
+  .pager__item--last{
+    a{
+      @include pagerControl;
+    }
+  }
+
+}//end full .pager
+
+
+/* MINI PAGER 
+---------------- */
+nav:not(.pager){
+  .js-pager__items{
+    li{
+      color: $black;  
+      margin: 0 .5em;
+      //from text.scss
+      @include larger;
+      line-height: 26px;
+    }
+    //pager controls
+    li a{
+      @include pagerItemStyle;
+      span{
+        position: relative;
+        top: -1px;
+      }
+    }
+  }//end js-pager-items
+}//end mini pager
+
+
+/* FLIPPY PAGER
+------------------- */
+ul.flippy{
+  @include list-reset;
+  font-size: 0;
+  li{
+    //form 01-mixins.scss
+    @include inline-block-top;
+    //from text.scss
+    @include base-font-size;
+    padding: 15px 0;
+    width: 50%;
+    a{
+      color: $mid-teal;
+      &:hover,&:focus{
+        color: $black;
+        //from 02-animations.scss
+        @include transThreeAll;
+      }
+    }
+    &.flippy-next{
+      text-align: right;
+    }
+  }
+}//end flippy
+
+
+/* PATTERN LAB ONLY
+----------------- */
+.pl{
+  .block-flippy-block{
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,67 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ news_instructions }}
+
+{% embed "@pages/layouts/03-bunsen/bunsen.twig" %}
+{% block placeholderOpen %}
+	<article class="node--type-news pl-spacer">
+{% endblock %}
+	{% block top %}
+		<div class="block-region-top">
+			{% if banner_img %}
+	  		<div class="block-entity-fieldnodefield-banner">
+	  			<div class="field field-banner">
+	  				<article class="media media-image view-mode-banner">
+	  					<div class="field field-media-image">
+	  						<picture>
+	  							<img src="{{ banner_img }}" />
+	  						</picture>
+	  					</div>
+	  				</article>
+	  			</div>
+	  		</div>
+	  		{% endif %}
+
+	  		<div class="block block-system-breadcrumb-block">
+	  			<nav class="breadcrumb" role="navigation">
+	  				<ol>
+	  					<li><a href="#">Home</a></li>
+	  					<li>News Example</li>
+	  				</ol>
+	  			</nav>
+	  		</div>
+	  		<div class="block block-entity-fieldnodetitle">
+	  			<h1>{{ news_title }}</h1>
+	  		</div>
+  		</div>
+  	{% endblock %}
+
+  	{% block main %}
+  		<div class="block-region-main">
+  			<div class="block block-entity-fieldnodebody">
+  				<div class="field body">
+  				    {% for text in body %}
+  				    	<p>{{ text }}</p>
+  				    {% endfor %}
+  				</div>
+  			</div>
+  		</div>
+  	{% endblock %}
+
+  	{% block sidebar %}
+		<div class="block-region-sidebar">
+			<div class="block block-entity-fieldnodecreated">
+				<span>{{ news_date }}</span>
+			</div>
+		</div>
+  	{% endblock %}
+
+  	{% block bottom %}
+
+  	{% endblock %}
+{% block placeholderColse %}
+	</article>
+{% endblock %}
+{% endembed %}

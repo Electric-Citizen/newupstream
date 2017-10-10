@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media.field_admin_description
+    - field.field.paragraph.social_media.field_layout
+    - field.field.paragraph.social_media.field_social_media
+    - field.field.paragraph.social_media.field_widget_title
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.social_media.default
+targetEntityType: paragraph
+bundle: social_media
+mode: default
+content:
+  field_layout:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_social_media:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_widget_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_admin_description: true

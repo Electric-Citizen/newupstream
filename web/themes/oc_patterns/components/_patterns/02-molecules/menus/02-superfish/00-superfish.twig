@@ -1,0 +1,53 @@
+{#
+  STYLEGUIDE ONLY": This template is not embedded into Drupal but is used in the Pattern Lab superfish-block template.
+#}
+
+{% block superhide_start %}
+<div class="pl notes">Superfish desktop main level link and dropdown. Theming example only.</div>
+<div class="flex-holder">
+  <div class="flex-half sf-desk">
+  <div class="pl notes">Main Level (with header background color)</div>
+    <div class="pl faux-header">
+{% endblock %}
+      {% block superfish_main %}
+        {% block superfish_content %}
+      <ul id="#superfish-main" class="sf-menu sf-main sf-horizontal">
+        <li class="sf-depth-1 sf-no-children">
+          <a href="#" class="sf-depth-1">Main Link 1</a>
+        </li>
+        <li class="sf-depth-1 menuparent">
+          <a href="#" class="sf-depth-1 menuparent">Main Link 2</a>
+          <ul class="sf-hidden">
+            <li class="sf-depth-2 sf-no-children">
+              <a href="#" class="sf-depth2">Link 1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sf-depth-1 sf-no-children active-trail">
+          <a href="#" class="sf-depth-1 is-active">Main Link 3</a>
+        </li>
+      </ul>
+        {% endblock %}
+      {% endblock %}
+{% block superhide_end %}
+      </div>
+    </div>
+  <div class="flex-half sf-dropdown">
+    <div class="pl notes">Dropdown</div>
+    <ul id="#superfish-main" class="sf-menu sf-main sf-horizontal">
+        <li class="sf-depth-1 menuparent">
+          <a href="#" class="sf-depth-1 menuparent active-trail">Main Link</a>
+          <ul>
+            <li class="sf-depth-2 sf-no-children">
+              <a class="sf-depth-2">Drop Link 1</a>
+            </li>
+            <li class="sf-depth-2 sf-no-children active-trail">
+              <a class="sf-depth-2 is-active">Drop Link 2</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+    
+  </div>
+</div>
+{% endblock %}

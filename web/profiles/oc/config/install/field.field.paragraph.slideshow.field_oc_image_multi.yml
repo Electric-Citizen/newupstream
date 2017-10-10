@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_image_multi
+    - media_entity.bundle.image
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.field_oc_image_multi
+field_name: field_oc_image_multi
+entity_type: paragraph
+bundle: slideshow
+label: Images
+description: 'Upload new images or add existing ones from the media library. <strong>NOTE: </strong>Minimum image width should be 1200px;'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

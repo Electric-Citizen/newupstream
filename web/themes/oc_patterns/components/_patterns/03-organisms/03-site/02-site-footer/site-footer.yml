@@ -1,0 +1,42 @@
+footer_fixed_alert:
+  "The footer is currenty fixed at the bottom of the screen."
+
+copyright:
+  "©2017 Electric Citizen LLC, All Rights Reserved."
+
+address:
+  1:
+    address_line:
+      "Electric Citizen"
+  2:
+    address_line:
+      "2822 Lyndale Ave S,"
+  3:
+    address_line:
+      "Minneapolis, MN 55408"
+  4:
+    address_line:
+      "612-466-0020"
+
+menu:
+  1:
+    link_text:
+      "Contact"
+    link_url:
+      "#"
+  2:
+    link_text:
+      "Directions"
+    link_url:
+      "#"
+  3:
+    link_text:
+      "Policies"
+    link_url:
+      "#"
+
+footer_instructions:
+  "STYLEGUIDE ONLY: This template is not embedded into Drupal, but the footer macro variables will work in both. 
+   Available variables are: fixed, non-fixed."
+
+  

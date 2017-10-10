@@ -1,0 +1,27 @@
+{#
+  STYLEGUIDE ONLY: This template is not used in drupal, but the menu block for the main menu is customized in Drupal to add the page-menu class that theming and menu scripts depend upon.
+#}
+
+{{ sidebar_instructions }}
+<div class="block-region-sidebar pl-spacer">
+  <nav role="navigation" class="block--system-menu main-navigation main-menu page-menu" aria-labelledby="main-menu">
+    <h2 class="block-title">{{ menu_title }}</h2>
+    <ul>
+      {% for link in sidebar_menu %}
+        {% if link.active %}
+          {% set active = 'class="is-active"' %}
+        {% endif %}
+        {% if link.link_parent == 'yes' %}
+          <li>
+            <a href="{{ link.link_url }}" {{ active }}>{{ link.link_text }}</a>
+            <ul>
+              <li><a href="#">Sub Link</a></li>
+            </ul>
+          </li>
+        {% else %}
+          <li><a href="{{ link.link_url }}" {{ active }}>{{ link.link_text }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

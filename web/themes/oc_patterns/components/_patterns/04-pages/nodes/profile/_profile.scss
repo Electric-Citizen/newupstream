@@ -1,0 +1,66 @@
+/* =============
+   PROFILE NODE
+================== */
+.node--type-profiles{
+
+	.block-region-top{
+		margin-bottom: 2em;
+	}
+
+	.block-region-main{
+		.block-entity-fieldnodetitle{
+			h1{
+				margin-bottom: 10px;
+				font-size: 32px;
+				@include tab{
+					font-size: 48px;
+				}
+			}
+		}
+		.block-entity-fieldnodefield-position{
+			margin-bottom: 1.5em;
+			.field-position{
+				font-size: 21px;
+				@include tab{
+					font-size: 24px;
+				}
+			}
+		}
+
+		.block-entity-fieldnodebody{
+			@include onlysmall{
+				margin-bottom: 2em;
+			}
+		}
+
+	}//end block region main
+
+
+	.block-region-sidebar{
+		text-align: center;
+		@include tab{
+			margin-top: .5em;
+		}
+		.block-entity-fieldnodefield-profile-image{
+			.field-profile-image{
+				.media-image{
+					//from 01-mixins.scss
+					@include auto;
+					max-width: 250px;
+				}
+				img{
+					border-radius: 50%;
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}//end sidebar
+
+	.field-email,.field-phone{
+		a{
+			//from 03-animations.scss
+			@include transThreeAll;
+		}
+	}
+
+}//end news

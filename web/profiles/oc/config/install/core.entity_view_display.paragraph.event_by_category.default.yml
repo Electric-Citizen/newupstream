@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_by_category.field_admin_description
+    - field.field.paragraph.event_by_category.field_category
+    - field.field.paragraph.event_by_category.field_display_options
+    - field.field.paragraph.event_by_category.field_display_style
+    - field.field.paragraph.event_by_category.field_layout
+    - field.field.paragraph.event_by_category.field_number_of_items
+    - field.field.paragraph.event_by_category.field_viewfield
+    - field.field.paragraph.event_by_category.field_widget_title
+    - paragraphs.paragraphs_type.event_by_category
+  module:
+    - options
+id: paragraph.event_by_category.default
+targetEntityType: paragraph
+bundle: event_by_category
+mode: default
+content:
+  field_layout:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_viewfield:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_widget_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_admin_description: true
+  field_category: true
+  field_display_options: true
+  field_display_style: true
+  field_number_of_items: true

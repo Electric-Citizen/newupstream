@@ -1,0 +1,39 @@
+{#
+STYLEGUIDE ONLY: This template is not embedded into Drupal.
+NOTE: The blocks below are meant to simulate common drupal footer blocks.
+If there are different blocks in the Drupal footer, or they are named differently,
+that markup will need be changed in their pl twig files.
+Available macro variables: fixed, non-fixed.
+#}
+
+{% import "@base/global/04-macros/macros.twig" as styles %}
+
+{% block footerStart %}
+{{ footer_instructions }}
+
+{% if styles.fixedFooter == 'fixed' %}
+	<div class="pl-alert">
+		{{footer_fixed_alert }}
+	</div>
+{% endif %}
+{% endblock %}
+
+{% block footerContent %}
+<footer role="contentinfo" class="pl-spacer">
+  <div class="footer-inner {{ styles.fixedFooter }}">	
+    <div>
+  	{% if address %}
+  		{% include "@molecules/blocks/footer-address/_footer-address.twig" %}
+  	{% endif %}
+
+  	{% if menu %}
+  		{% include "@molecules/blocks/footer-menu/_footer-menu.twig" %}
+  	{% endif %}
+
+  	{% if copyright %}
+	  	{% include "@molecules/blocks/footer-copyright/_footer-copyright.twig" %}
+  	{% endif %}
+    </div>
+  </div>
+</footer>
+{% endblock %}

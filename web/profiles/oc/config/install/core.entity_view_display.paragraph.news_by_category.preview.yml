@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.news_by_category.field_admin_description
+    - field.field.paragraph.news_by_category.field_category
+    - field.field.paragraph.news_by_category.field_display_options
+    - field.field.paragraph.news_by_category.field_layout
+    - field.field.paragraph.news_by_category.field_number_of_items
+    - field.field.paragraph.news_by_category.field_viewfield
+    - field.field.paragraph.news_by_category.field_widget_title
+    - paragraphs.paragraphs_type.news_by_category
+  module:
+    - options
+id: paragraph.news_by_category.preview
+targetEntityType: paragraph
+bundle: news_by_category
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    type: list_default
+    weight: 1
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  field_display_options: true
+  field_number_of_items: true
+  field_viewfield: true
+  field_widget_title: true

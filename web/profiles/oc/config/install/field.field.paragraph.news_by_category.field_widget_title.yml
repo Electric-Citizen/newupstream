@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget_title
+    - paragraphs.paragraphs_type.news_by_category
+id: paragraph.news_by_category.field_widget_title
+field_name: field_widget_title
+entity_type: paragraph
+bundle: news_by_category
+label: 'Widget Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

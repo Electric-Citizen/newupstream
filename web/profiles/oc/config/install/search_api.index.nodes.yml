@@ -1,0 +1,164 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.paragraph.field_widget_title
+    - field.storage.paragraph.field_accordion_header
+    - field.storage.paragraph.field_oc_long_text
+    - field.storage.paragraph.field_oc_link_multi
+    - field.storage.paragraph.field_oc_file_multi
+    - search_api.server.local
+  module:
+    - search_api
+    - node
+    - paragraphs
+    - taxonomy
+id: nodes
+name: Content
+description: 'Search settings for nodes, paragraphs, terms.'
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+  field_widget_title:
+    label: 'Widget Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_widget_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_widget_title
+  field_accordion_header:
+    label: 'Accordion Header'
+    datasource_id: 'entity:paragraph'
+    property_path: field_accordion_header
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordion_header
+  field_oc_long_text:
+    label: 'Accordion Content'
+    datasource_id: 'entity:paragraph'
+    property_path: field_oc_long_text
+    type: text
+    boost: !!float 0
+    dependencies:
+      config:
+        - field.storage.paragraph.field_oc_long_text
+  field_oc_link_multi:
+    label: Buttons
+    datasource_id: 'entity:paragraph'
+    property_path: field_oc_link_multi
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_oc_link_multi
+  field_oc_link_multi_1:
+    label: Buttons
+    datasource_id: 'entity:paragraph'
+    property_path: field_oc_link_multi
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_oc_link_multi
+  field_oc_file_multi:
+    label: Files
+    datasource_id: 'entity:paragraph'
+    property_path: field_oc_file_multi
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_oc_file_multi
+  name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:paragraph':
+    bundles:
+      default: true
+      selected:
+        - admin_view_placer
+        - buttons
+        - form
+        - horizontal_rule
+        - image
+        - lightbox_gallery
+        - map
+        - slideshow
+        - social_media
+        - social_platform
+        - video
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected:
+        - position
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  html_filter:
+    fields:
+      - title
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+      em: 1
+      u: 1
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  ignorecase:
+    fields:
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  rendered_item: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: local

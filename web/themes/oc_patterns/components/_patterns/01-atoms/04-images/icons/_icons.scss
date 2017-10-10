@@ -1,0 +1,46 @@
+/* ===============
+   ICONS
+================== */
+
+
+//svg icon color
+svg{
+	use{
+    	fill: currentColor;
+	}
+}
+
+//default icon links
+a.icon{
+	color: $link;
+	height: 50px;
+	width: 50px;
+	display: block;
+	&:hover,&:focus{
+		color: $hover-link;
+		//from 02-animations.scss
+		@include transThreeAll;
+	}
+	svg{
+		width: 50px;
+		height: 50px;
+	}
+}
+
+
+/* PATTERN LAB ONLY
+----------------- */
+.pl.sprite-icon{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	//from 03-background-sizes.scss
+	@include plIconSize;
+}
+.pl .icons-demo > div{
+	//from 01-amixins.scss
+	@include inline-block-top;
+	text-align: center;
+	width: 240px;
+}
+

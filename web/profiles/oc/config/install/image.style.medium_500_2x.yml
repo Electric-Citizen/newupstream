@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: medium_500_2x
+label: 'Medium (500) 2x'
+effects:
+  671b062d-3658-4107-9455-655e41a70ad6:
+    uuid: 671b062d-3658-4107-9455-655e41a70ad6
+    id: image_scale
+    weight: 1
+    data:
+      width: 1000
+      height: null
+      upscale: true
+  60948ef7-c7d2-470f-8761-bcb359a23ca3:
+    uuid: 60948ef7-c7d2-470f-8761-bcb359a23ca3
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 35

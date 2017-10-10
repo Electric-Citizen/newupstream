@@ -1,0 +1,244 @@
+/**
+ * @file
+ * Visual styles for a resizable textarea.
+ */
+
+
+/* USED WHEN SHOWING LAYOUTS GRID ON ADMIN SIDE (NEEEDS JS ENABLED) */
+/*
+.flextable .draggable.grid{
+  	display: inline-block;
+  	font-size: 0;
+  	width: 100%;
+  	border-top: 1px solid #ddd;
+  	border-left: 1px solid #ddd;
+  	border-right: 1px solid #ddd;
+}
+.flextable .draggable.grid td{
+	display: inline-block;
+	font-size: 12px;
+}
+.flextable .draggable.grid td:not(.field-multiple-drag){
+	width: calc(100% - 32px);
+	width: -moz-calc(100% - 32px);
+	width: -web-calc(100% - 32px);
+	text-align: right;
+}
+
+@media screen and (min-width: 760px){
+	.flextable .draggable.grid.auto{
+		width: auto;
+	}
+  	.flextable .draggable.grid.quarter{
+    	width: 50%;
+  	}
+}
+@media screen and (min-width: 1200px){
+  	.flextable .draggable.grid.half{
+    	width: 50%;
+  	}
+  	.flextable .draggable.grid.third{
+    	width: 33.333%;
+  	}
+  	.flextable .draggable.grid.quarter{
+    	width: 25%;
+  	}
+}
+
+*/
+
+
+/* style media image fields inside admin widgets */
+.field--widget-entity-reference-paragraphs img{
+  max-width: 100%;
+  height: auto;
+}
+
+.field--widget-entity-reference-paragraphs .item-container.rendered-entity{
+  width: 100%;
+}
+.field--widget-entity-reference-paragraphs .item-container > input{
+  display: inline-block;
+}
+.field--widget-entity-reference-paragraphs .view-mode-media-thumbnail{
+  width: 100%;
+
+}
+
+
+
+
+/*  ADMIN REMINDERS
+------------------- */
+.reminder{
+  position: fixed;
+  bottom: 50px;
+  right: -350px;
+  background: #02acd7;
+  color: #fff;
+  z-index: 20;
+  box-shadow: 3px 3px 0 #d2d2d2;
+  padding: 10px 20px;
+  max-width: 300px;
+}
+.reminder .close{
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: url(../../images/reminder-close.png) no-repeat center center;
+  background-size: 12px 12px;
+}
+.reminder .close:hover{
+  background: url(../../images/reminder-close-hover.png) no-repeat center center;
+}
+
+
+/* paragraph add buttons 
+------------------------- */
+.field--widget-entity-reference-paragraphs:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input.field-add-more-submit{
+  padding-left: 30px;
+  border: 2px solid #02acd7;
+  color: #535353;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #d2d2d2;
+  float: left;
+  background-position: 2px 0 !important;
+  margin-right: 15px;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input.field-add-more-submit:hover{
+  border-color: #005b8a !important;
+  background-color: rgba(205,232,246,0.3) !important;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Admin View Placer"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Admin View Placer"]:hover{
+  background: url(../icons/svg/view-placer.svg) no-repeat;
+  
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Accordion Group"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Accordion Group"]:hover{
+  background: url(../icons/svg/accordion.svg) no-repeat;
+  
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Accordion Item"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Accordion Item"]:hover{
+  background: url(../icons/svg/accordion.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Buttons"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Buttons"]:hover{
+  background: url(../icons/svg/button.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Call to Action"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Call to Action"]:hover{
+  background: url(../icons/svg/cta.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Content Item"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Content Item"]:hover{
+  background: url(../icons/svg/content.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Contact Info"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Contact Info"]:hover{
+  background: url(../icons/svg/contact.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Events by Category"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Events by Category"]:hover{
+  background: url(../icons//svg/events.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Form"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Form"]:hover{
+  background: url(../icons/svg/form.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Horizontal Rule"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Horizontal Rule"]:hover{
+  background: url(../icons/svg/hr.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Image"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Image"]:hover{
+  background: url(../icons/svg/image.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Links & Files"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Links & Files"]:hover{
+  background: url(../icons/svg/link.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Lightbox Gallery"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Lightbox Gallery"]:hover{
+  background: url(../icons/svg/gallery.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Map"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Map"]:hover{
+  background: url(../icons//svg/map.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Mosaic Gallery"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Mosaic Gallery"]:hover{
+  background: url(../icons//svg/mosaic.svg) no-repeat;
+}
+
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add News by Category"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add News by Category"]:hover{
+  background: url(../icons//svg/news.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Pullquote"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Pullquote"]:hover{
+  background: url(../icons/svg/pullquote.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Reveal Group"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Reveal Group"]:hover{
+  background: url(../icons/svg/reveal.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Reveal Section"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Reveal Section"]:hover{
+  background: url(../icons/svg/reveal.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Slideshow"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Slideshow"]:hover{
+  background: url(../icons/svg/slider.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Social Media"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Social Media"]:hover{
+  background: url(../icons/svg/social-media.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Social Platform"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Social Platform"]:hover{
+  background: url(../icons/svg/social-media.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Text"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Text"]:hover{
+  background: url(../icons/svg/text.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Tile Image"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Tile Image"]:hover{
+  background: url(../icons//svg/mosaic.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Video"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Video"]:hover{
+  background: url(../icons/svg/video.svg) no-repeat;
+}
+
+
+
+/* WIDGET ADMIN DESCRIPTION */
+.field--name-field-admin-description .field-item{
+  color: #ec2f10;
+}
+ 
+/* GENERAL */
+.fieldset-wrapper .fieldset-description{
+  margin-bottom: 1em;
+}
+
+
+
+
+
+ 
+ 

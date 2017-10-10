@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large_rectangle_600x400
+    - image.style.large_rectangle_600x400_2x
+    - image.style.small_rectangle_300x200
+    - image.style.small_rectangle_300x200_2x
+  theme:
+    - oc_patterns
+id: large_rectangle
+label: 'Large Rectangle'
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: large_rectangle_600x400
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: large_rectangle_600x400_2x
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: small_rectangle_300x200
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: small_rectangle_300x200_2x
+breakpoint_group: oc_patterns
+fallback_image_style: large_rectangle_600x400_2x

@@ -1,0 +1,37 @@
+sidebar_instructions:
+  "STYLEGUIDE ONLY: This template is not brought into Drupal, but the drupal template is customized to add the page-menu class that the script and theming is dependent on."
+
+menu_title:
+  "Page Menu"
+
+sidebar_menu:
+  1:
+    link_text:
+      "Main Menu 1"
+    link_url:
+      "#"
+    link_parent:
+      "no"
+  2:
+    link_text:
+      "Main Menu Two"
+    link_url:
+      "#"
+    link_parent:
+      "yes"
+  3:
+    link_text:
+      "Main Menu Three"
+    link_url:
+      "#"
+    link_parent:
+      "no"
+    active:
+      "yes"
+  4:
+    link_text:
+      "Main Menu Four"
+    link_url:
+      "#"
+    link_parent:
+      "no"

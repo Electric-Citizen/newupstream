@@ -1,0 +1,85 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ profile_instructions }}
+
+{% embed "@pages/layouts/02-beaker/beaker.twig" %}
+{% block placeholderOpen %}
+	<article class="node--type-profiles pl-spacer">
+{% endblock %}
+	{% block top %}
+		<div class="block-region-top">
+	  		<div class="block block-system-breadcrumb-block">
+	  			<nav class="breadcrumb" role="navigation">
+	  				<ol>
+	  					<li><a href="#">Home</a></li>
+	  					<li>Profile Example</li>
+	  				</ol>
+	  			</nav>
+	  		</div>
+	  		
+  		</div>
+  	{% endblock %}
+
+  	{% block main %}
+  		<div class="block-region-main">
+  			<div class="block block-entity-fieldnodetitle">
+	  			<h1>{{ profile_title }}</h1>
+	  		</div>
+	  		{% if position %}
+	  			<div class="block block-entity-fieldnodefield-position">
+	  				<div class="field field-position">
+	  					{{ position }}
+	  				</div>
+	  			</div>
+	  		{% endif %}
+  			<div class="block block-entity-fieldnodebody">
+  				<div class="field body">
+  				    {% for text in body %}
+  				    	<p>{{ text }}</p>
+  				    {% endfor %}
+  				</div>
+  			</div>
+  		</div>
+  	{% endblock %}
+
+  	{% block sidebar %}
+		<div class="block-region-sidebar">
+			{% if profile_pic %}
+				<div class="block block-entity-fieldnodefield-profile-image">
+					<div class="field-profile-image">
+						<article class="media media-image view-mode-square">
+							<div class="field field-media-image">
+								<picture>
+									<img src="{{ profile_pic }}" />
+								</picture>
+							</div>
+						</article>
+					</div>
+				</div>
+			{% endif %}
+			{% if email %}
+				<div class="block block-entity-fieldnodefield-email">
+					<div class="field field-email">
+						<a href="mailto:{{ email }}">{{ email }}</a>
+					</div>
+				</div>
+			{% endif %}
+			{% if phone %}
+				<div class="block block-entity-fieldnodefield-phone">
+					<div class="field field-phone">
+						<a href="tel:{{ phone }}">{{ phone }}</a>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+  	{% endblock %}
+
+  	{% block bottom %}
+
+  	{% endblock %}
+	{% block placeholderColse %}
+		</article>
+	{% endblock %}
+{% endembed %}

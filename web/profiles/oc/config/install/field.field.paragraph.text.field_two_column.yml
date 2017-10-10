@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_two_column
+    - paragraphs.paragraphs_type.text
+id: paragraph.text.field_two_column
+field_name: field_two_column
+entity_type: paragraph
+bundle: text
+label: Two-Column
+description: 'Split the text field into two columns.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: two-column
+  off_label: one-column
+field_type: boolean

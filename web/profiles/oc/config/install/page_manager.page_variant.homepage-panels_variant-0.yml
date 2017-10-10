@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+  module:
+    - panels
+id: homepage-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  uuid: 91d850e5-bf3c-4541-a259-855061a136e1
+  label: null
+  weight: 0
+  layout: kermit
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: ipe
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

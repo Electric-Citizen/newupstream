@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: banner_tablet_2x
+label: 'Banner Tablet 2x'
+effects:
+  f55272bb-1d14-422d-b15b-5dd7176d1e2e:
+    uuid: f55272bb-1d14-422d-b15b-5dd7176d1e2e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 900

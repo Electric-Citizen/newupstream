@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.oc_thumbnail_large
+    - image.style.oc_thumbnail_large_2x
+  theme:
+    - oc_patterns
+id: oc_large_thumb
+label: 'OC Large Thumb'
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: oc_thumbnail_large
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: oc_thumbnail_large_2x
+breakpoint_group: oc_patterns
+fallback_image_style: oc_thumbnail_large_2x

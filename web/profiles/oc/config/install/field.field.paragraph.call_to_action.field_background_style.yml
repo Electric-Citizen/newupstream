@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_style
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - options
+id: paragraph.call_to_action.field_background_style
+field_name: field_background_style
+entity_type: paragraph
+bundle: call_to_action
+label: 'Background Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

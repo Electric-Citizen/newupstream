@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reveal_widgets
+    - paragraphs.paragraphs_type.admin_view_placer
+    - paragraphs.paragraphs_type.buttons
+    - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.horizontal_rule
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.reveal_section
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: paragraph.reveal_section.field_reveal_widgets
+field_name: field_reveal_widgets
+entity_type: paragraph
+bundle: reveal_section
+label: 'Reveal Widgets'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      admin_view_placer: admin_view_placer
+      buttons: buttons
+      call_to_action: call_to_action
+      horizontal_rule: horizontal_rule
+      image: image
+      map: map
+      slideshow: slideshow
+      text: text
+      video: video
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 21
+        enabled: false
+      accordion_item:
+        weight: 22
+        enabled: false
+      admin_view_placer:
+        enabled: true
+        weight: 23
+      buttons:
+        enabled: true
+        weight: 24
+      call_to_action:
+        enabled: true
+        weight: 25
+      event_by_category:
+        weight: 26
+        enabled: false
+      form:
+        weight: 27
+        enabled: false
+      horizontal_rule:
+        enabled: true
+        weight: 28
+      image:
+        enabled: true
+        weight: 29
+      lightbox_gallery:
+        weight: 30
+        enabled: false
+      links_files:
+        weight: 31
+        enabled: false
+      map:
+        enabled: true
+        weight: 32
+      news_by_category:
+        weight: 33
+        enabled: false
+      pullquote:
+        weight: 34
+        enabled: false
+      reveal_section:
+        weight: 35
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 36
+      social_media:
+        weight: 37
+        enabled: false
+      social_platform:
+        weight: 38
+        enabled: false
+      text:
+        enabled: true
+        weight: 39
+      video:
+        enabled: true
+        weight: 40
+field_type: entity_reference_revisions

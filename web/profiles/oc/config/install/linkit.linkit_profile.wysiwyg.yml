@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.linkit_result_thumbnail
+  module:
+    - file
+    - image
+    - node
+id: wysiwyg
+label: WYSIWYG
+description: ''
+attributes:
+  relationship:
+    id: relationship
+    weight: 0
+    settings: {  }
+  title:
+    id: title
+    weight: 0
+    settings:
+      automatic_title: false
+  target:
+    id: target
+    weight: 0
+    settings:
+      widget_type: simple_checkbox
+matchers:
+  50988d03-448b-43e9-926e-fe6f6a804bd6:
+    uuid: 50988d03-448b-43e9-926e-fe6f6a804bd6
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false
+  0295521d-abea-485f-b0b2-02d7de94a6c2:
+    uuid: 0295521d-abea-485f-b0b2-02d7de94a6c2
+    id: 'entity:file'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: null
+      group_by_bundle: null
+      images:
+        show_dimensions: false
+        show_thumbnail: true
+        thumbnail_image_style: linkit_result_thumbnail

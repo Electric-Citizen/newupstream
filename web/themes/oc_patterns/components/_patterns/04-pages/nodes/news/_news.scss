@@ -1,0 +1,31 @@
+/* =============
+   NEWS NODE
+================ */
+.node--type-news{
+
+	.field-banner{
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.block-entity-fieldnodecreated{
+		//from text.scss
+		@include styled-date;
+		margin-bottom: 1.5em;
+	}
+
+	//move sidebar to first in bunsen
+	.bunsen{
+		@include onlysmall{
+			.sidebar{
+				order: 1;
+			}
+			.main{
+				order: 2;
+			}
+		}
+	}
+
+}//end news

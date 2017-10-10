@@ -1,0 +1,68 @@
+/* ================
+   CARD THEMING 
+=================== */
+//(views row and other elements with .image and .text wrappers)
+
+
+/* GENERAL VIEWS
+------------------------ */
+.item-list > ul{
+	@include list-reset;
+}
+.view-content a,.card a{
+	//from 02-animations.scss
+	@include transThreeAll;
+}
+
+
+// card image (class added at view-field level)
+.card-image{
+	margin-bottom: 1em;
+	a img{
+		//from 01-mixins.scss
+		@include imageHover;
+	}
+}//end card-image
+
+//round card image (class added at view-row level)
+.round{
+	text-align: center;
+	.card-image{
+		img{
+			width: 200px;
+			height: auto;
+			border-radius: 50%;
+			display: block;
+			//from 01-mixins.scss
+			@include auto;
+		}
+	}
+}//end round style
+
+// card text (class added at view-custom-field level)
+.card-text{
+	&.center{
+		text-align: center;
+	}
+	h3{
+		margin-top: 0;
+	}
+	.date{
+		//from text.scss
+		@include text-date;
+		margin-bottom: .5em;
+	}
+
+}//end card-text
+
+
+/* PATTERN LAB ONLY
+------------------ */
+.pl{
+	#molecules-card{
+		.views-row{
+			max-width: 600px;
+			list-style: none;
+		}
+	}
+}

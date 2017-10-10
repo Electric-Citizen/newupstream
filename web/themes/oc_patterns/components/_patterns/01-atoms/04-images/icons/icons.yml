@@ -1,0 +1,82 @@
+#In order for an icon added to the sprite to show up in the icons list it must be added here
+#The value should match the svg file name
+items:
+  1:
+    name: "Hamburger"
+    value: "hamburger"
+  2:
+    name: "Menu Desk Item Open"
+    value: "menu-desk-item-open"
+  3:
+    name: "Menu Desk Item Active"
+    value: "menu-desk-item-active"
+  4:
+    name: "Mobile Menu Item Open"
+    value: "menu-item-toggle-open"
+  5:
+    name: "Mobile Menu Item Active"
+    value: "menu-item-toggle-active"
+  6:
+    name: "Mobile Menu Item Close"
+    value: "menu-item-toggle-close"
+  7:
+    name: "Accordion Shut"
+    value: "accordion-shut"
+  8:
+    name: "Accordion Shut Red"
+    value: "accordion-shut-red"
+  9:
+    name: "Accordion Shut Black"
+    value: "accordion-shut-black"
+  10:
+    name: "Drop Arrow"
+    value: "drop-arrow"
+  11:
+    name: "Drop Arrow Active"
+    value: "drop-arrow-active"
+  12:
+    name: "Drop Arrow White"
+    value: "drop-arrow-white"
+  13:
+    name: "Drop Arrow Active White"
+    value: "drop-arrow-active-white"
+  14:
+    name: "Search Toggle"
+    value: "search-toggle"
+  15:
+    name: "Search Submit"
+    value: "search-submit"
+  16:
+    name: "Search Submit Hover"
+    value: "search-submit-hover"
+  17:
+    name: "Close Cirle (hamburger & search)"
+    value: "close-circle-punchout"
+  18:
+    name: "Drupal"
+    value: "drupal"
+  19:
+    name: "Facebook"
+    value: "facebook"
+  20:
+    name: "Twitter"
+    value: "twitter"
+  21:
+    name: "LinkedIn"
+    value: "linkedin"
+  22:
+    name: "YouTube"
+    value: "youtube"
+  23:
+    name: "PDF"
+    value: "file-pdf"
+  24:
+    name: "Word"
+    value: "file-word"
+  25:
+    name: "Excel"
+    value: "file-xls"
+  26:
+    name: "Powerpoint"
+    value: "file-ppt"
+  

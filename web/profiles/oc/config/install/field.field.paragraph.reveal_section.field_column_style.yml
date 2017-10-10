@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_style
+    - paragraphs.paragraphs_type.reveal_section
+  module:
+    - options
+id: paragraph.reveal_section.field_column_style
+field_name: field_column_style
+entity_type: paragraph
+bundle: reveal_section
+label: 'Column Style'
+description: 'Choose your column layout. Two column option will put the title in one column and the content in another column.'
+required: true
+translatable: false
+default_value:
+  -
+    value: single
+default_value_callback: ''
+settings: {  }
+field_type: list_string

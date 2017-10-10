@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.widgets_block
+    - field.field.block_content.widgets_block.field_block_widgets
+  module:
+    - entity_reference_revisions
+id: block_content.widgets_block.default
+targetEntityType: block_content
+bundle: widgets_block
+mode: default
+content:
+  field_block_widgets:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

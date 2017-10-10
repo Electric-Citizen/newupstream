@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reveal_group.field_admin_description
+    - field.field.paragraph.reveal_group.field_reveal_sections
+    - paragraphs.paragraphs_type.reveal_group
+  module:
+    - paragraphs
+id: paragraph.reveal_group.default
+targetEntityType: paragraph
+bundle: reveal_group
+mode: default
+content:
+  field_admin_description:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_reveal_sections:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: reveal_section
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

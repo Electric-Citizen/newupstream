@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor
+format: basic_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - media
+        -
+          name: Miscellaneous
+          items:
+            - Table
+            - HorizontalRule
+            - Linkit
+            - DrupalUnlink
+            - Maximize
+        -
+          name: Tools
+          items:
+            - Source
+            - RemoveFormat
+            - Undo
+            - Redo
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+        -
+          name: Custom
+          items:
+            - Styles
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "span.highlight|Highlight\r\ndiv.warning|Warning\r\nsmall|Small"
+    linkit:
+      linkit_profile: wysiwyg
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

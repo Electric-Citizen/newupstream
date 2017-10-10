@@ -1,0 +1,45 @@
+card_grid_items:
+  1:
+    #set at views-row or paragraph item level, variables: three-column, four-column, round
+    card_modifiers:
+      1:
+        four-column
+      2: 
+        round
+
+    card_img_src:
+      "http://placeimg.com/350/350/people"
+    card_img_url:
+      "#"
+
+
+    #Text div
+    card_text_modifiers:
+      1:
+        center
+
+    # Title
+    card_title:
+      "Round Image Example"
+    card_title_link: 
+      "#"
+
+    # Extra Line (date, subtitle, etc)
+    card_line:
+     
+    # Modifiers will be added as classes to the card line wrapper div
+    card_line_modifiers:
+
+    # Body
+    card_body:
+      "Pellentesque in ipsum id orci porta dapibus."
+    # Modifiers will be added as classes to the card body wrapper div
+    card_body_modifiers:
+
+    # Link
+    card_link_url:
+
+    card_link_text:
+   
+    card_link_modifiers:
+

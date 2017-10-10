@@ -1,0 +1,220 @@
+/* ===============
+   ACCORDION WIDGET
+================= */
+
+/* COLOR MIXINS
+------------------ */
+//red set in macros.twig
+@mixin red{
+	.accordion-header{
+		border-color: $red;
+		color: $red;
+		&:hover{
+			background: $red; 
+			color: $white;
+		}
+	}
+	.field-oc-long-text{
+		background: $off-white;
+	}
+	&.accord-active{ 
+		.accordion-header{
+			background: $red; 
+			color: $white;
+		}
+	}
+}//end red
+
+//black set in macros.twig
+@mixin black{
+	.accordion-header{
+		border-color: $black;
+		color: $black;
+		&:hover{
+			background: $black; 
+			color: $white;
+		}
+	}
+	.field-oc-long-text{
+		background: $off-white;
+	}
+	&.accord-active{ 
+		.accordion-header{
+			background: $black; 
+			color: $white;
+		}
+	}
+}//end black
+
+
+/* ITEM STYLING
+------------------- */
+.accordion-item{
+
+	//accordion header bar
+	.accordion-header{
+		border: 1px solid;
+		border-color: $mid-grey;
+		color: $mid-grey;
+		margin-bottom: 0;
+		position: relative;
+		padding: 10px 10px 10px 30px;
+		display: block;
+		margin-top: -1px;
+		cursor: pointer;
+		&:after{
+			position: absolute;
+			right: 30px;
+			top: 10px;
+			z-index: 2;
+		}
+		&:after{
+			content: "+";
+		}
+		&:hover,&:focus{
+			background: $mid-grey;
+			color: $white;
+			//from animations.scss
+			@include transThreeAll;
+		}
+	}
+
+	//accordion content
+	.field-oc-long-text{
+		position: relative;
+		top: 0;
+		height: 0;
+		overflow: hidden;
+		background: $off-white;
+		padding: 0 2em;
+		//from 02-animations.scss
+		@include transTwoAll;	
+	}
+
+	//active accordion
+	&.accord-active{
+		.accordion-header{
+			background: $mid-grey;
+			color: $white;
+			border-bottom: 0;
+			&:after{
+				content: "–";
+			}
+		}
+		.field-oc-long-text{
+			padding: 2em;
+			height: 100%;
+		}
+	}//end active
+
+	//no-js fallback
+	.no-js &{
+		&:hover,&:focus{
+			.field-oc-long-text{
+				padding: 2em;
+				height: 100%;
+			}
+		}
+	}
+	
+	/* VARIABLE CHANGES (set in macros.twig)
+	---------------- */
+	&.red{
+		@include red;
+	}
+
+	&.black{
+		@include black;
+	}
+
+	&.caret{
+		.accordion-header{
+			&:after{
+				content:'';
+				display: block;
+				width: 20px;
+				height: 20px;
+				//from icon_sprite.scss
+				@include sprite-accordion-shut;
+				//from 03-background-sizes.scss
+				@include accordcaretSize;
+			}
+			&:hover:after,&:focus:after{
+				content: '';
+				//from 03-background-sizes.scss
+				@include accordcaretShutHover;
+			}
+		}
+		&.accord-active .accordion-header:after{
+			content: '';
+			//from 03-background-sizes.scss
+			@include accordcaretOpen;
+		}
+
+		//red caret
+		&.red{
+			.accordion-header{
+				&:after{
+					//from icon_sprites.scss
+					@include sprite-accordion-shut-red;
+					//from 03-background-sizes.scss
+					@include accordcaretSize;
+				}
+				&:hover:after,&:focus:after{
+					content: '';
+					//from 03-background-sizes.scss
+					@include accordcaretShutHover;
+				}
+			}
+			&.accord-active .accordion-header:after{
+				content: '';
+				//from 03-background-sizes.scss
+				@include accordcaretOpen;
+			}
+		}//end caret-red
+
+		//black caret
+		&.black{
+			.accordion-header{
+				&:after{
+					//from icon_sprites.scss
+					@include sprite-accordion-shut-black;
+					//from 03-background-sizes.scss
+					@include accordcaretSize;
+				}
+				&:hover:after,&:focus:after{
+					content: '';
+					//from 03-background-sizes.scss
+					@include accordcaretShutHover;
+				}
+			}
+			&.accord-active .accordion-header:after{
+				content: '';
+				//from 03-background-sizes.scss
+				@include accordcaretOpen;
+			}
+		}//end caret-black
+
+	}//end caret
+
+}//end accordion-item
+
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl{
+	.accordion-item{
+		max-width: 800px;
+		margin: 2em auto 0;
+	}
+}
+.pl #organisms-accordion-group .sg-pattern-example > .flex-wrap{
+	padding: 1em 0;
+	.accordion-item{
+		margin: 0 auto;
+	}
+}
+
+
+
+

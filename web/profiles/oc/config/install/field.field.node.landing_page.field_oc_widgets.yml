@@ -1,0 +1,131 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oc_widgets
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.accordion_group
+    - paragraphs.paragraphs_type.admin_view_placer
+    - paragraphs.paragraphs_type.buttons
+    - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.event_by_category
+    - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.horizontal_rule
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.lightbox_gallery
+    - paragraphs.paragraphs_type.links_files
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.mosaic_gallery
+    - paragraphs.paragraphs_type.news_by_category
+    - paragraphs.paragraphs_type.pullquote
+    - paragraphs.paragraphs_type.reveal_group
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.social_media
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_oc_widgets
+field_name: field_oc_widgets
+entity_type: node
+bundle: landing_page
+label: Widgets
+description: 'Add widgets to this node. Use the layout option on each widget to set it''s width and use the draggable handles to set the order to create custom layout grids. <strong>NOTE:</strong> When using Manage Content through IPE, you will not be able to re-order widgets, just this entire field itself.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_group: accordion_group
+      admin_view_placer: admin_view_placer
+      buttons: buttons
+      call_to_action: call_to_action
+      event_by_category: event_by_category
+      form: form
+      horizontal_rule: horizontal_rule
+      image: image
+      lightbox_gallery: lightbox_gallery
+      links_files: links_files
+      map: map
+      mosaic_gallery: mosaic_gallery
+      news_by_category: news_by_category
+      pullquote: pullquote
+      slideshow: slideshow
+      social_media: social_media
+      text: text
+      video: video
+      reveal_group: reveal_group
+    target_bundles_drag_drop:
+      accordion_group:
+        enabled: true
+        weight: -47
+      accordion_item:
+        weight: -46
+        enabled: false
+      admin_view_placer:
+        enabled: true
+        weight: -45
+      buttons:
+        enabled: true
+        weight: -44
+      call_to_action:
+        enabled: true
+        weight: -43
+      event_by_category:
+        enabled: true
+        weight: -42
+      form:
+        enabled: true
+        weight: -41
+      horizontal_rule:
+        enabled: true
+        weight: -40
+      image:
+        enabled: true
+        weight: -39
+      lightbox_gallery:
+        enabled: true
+        weight: -38
+      links_files:
+        enabled: true
+        weight: -37
+      map:
+        enabled: true
+        weight: -36
+      mosaic_gallery:
+        enabled: true
+        weight: -35
+      news_by_category:
+        enabled: true
+        weight: -34
+      pullquote:
+        enabled: true
+        weight: -33
+      slideshow:
+        enabled: true
+        weight: -32
+      social_media:
+        enabled: true
+        weight: -31
+      social_platform:
+        weight: -30
+        enabled: false
+      text:
+        enabled: true
+        weight: -29
+      video:
+        enabled: true
+        weight: -28
+      reveal_group:
+        enabled: true
+        weight: -27
+      reveal_section:
+        weight: -26
+        enabled: false
+      tile_image:
+        weight: -25
+        enabled: false
+field_type: entity_reference_revisions

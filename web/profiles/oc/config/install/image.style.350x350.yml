@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 350x350
+label: 350x350
+effects:
+  4eacf54c-5ef7-4582-8299-4f19f39fc395:
+    uuid: 4eacf54c-5ef7-4582-8299-4f19f39fc395
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 350

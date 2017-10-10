@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_layout
+field_name: field_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: single
+      label: Full-width
+    -
+      value: three-quarter
+      label: 75%
+    -
+      value: two-thirds
+      label: 66%
+    -
+      value: half
+      label: 50%
+    -
+      value: third
+      label: 33%
+    -
+      value: quarter
+      label: 25%
+    -
+      value: fill
+      label: 'Fill Remainder'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

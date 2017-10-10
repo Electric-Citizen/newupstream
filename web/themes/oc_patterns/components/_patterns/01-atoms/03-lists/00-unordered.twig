@@ -1,0 +1,18 @@
+{#
+ STYLEGUIDE ONLY: Not carried into Drupal.
+#}
+
+<div class="body field-oc-long-text">
+	<ul>
+	  {% for list_ul_item in list_ul_items %}
+	    {% include "@atoms/03-lists/_list-item.twig" 
+	      with {
+	        "list_item_content": list_ul_item.content
+	      }
+	    %}
+	  {% endfor %}
+	</ul>
+</div>
+
+
+<strong>NOTE:</strong> This list styling is usually just used in wysiwyg fields.

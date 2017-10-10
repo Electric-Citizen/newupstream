@@ -1,0 +1,27 @@
+results:
+  1:
+    search_title:
+      "Little Indians"
+    search_url:
+      "#"
+    search_text:
+      "One little, two little, three little indigenous peoples who were divested of their land by white oppression."
+  2:
+    search_title:
+      "Peter Piper"
+    search_url:
+      "#"
+    search_text:
+      "Peter Piper pick a peck of pickeled peppers. Way easier to type than to say."
+  3:
+    search_title:
+      "Three blind Mice"
+    search_url:
+      "#"
+    search_text:
+      "Three blind mice. Three blind mice. Wandered into a bar..."
+
+search_page_instructions:
+  "STYLEGUIDE ONLY: This page is not brought into Drupal."
+
+  

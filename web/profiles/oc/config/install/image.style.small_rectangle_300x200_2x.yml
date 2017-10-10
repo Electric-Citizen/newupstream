@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+    - image_style_quality
+name: small_rectangle_300x200_2x
+label: 'Small Rectangle 300x200 2x'
+effects:
+  28ca9ffa-38ec-4bc2-8595-24bbd3587e57:
+    uuid: 28ca9ffa-38ec-4bc2-8595-24bbd3587e57
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+  4d44583d-0b65-40f3-ae46-5c18181ce5bf:
+    uuid: 4d44583d-0b65-40f3-ae46-5c18181ce5bf
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 35

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_admin_description
+    - paragraphs.paragraphs_type.social_media
+id: paragraph.social_media.field_admin_description
+field_name: field_admin_description
+entity_type: paragraph
+bundle: social_media
+label: 'Admin Description'
+description: 'This is description will help identify the widget to editors and will not be show anywhere except for in the editing environment.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

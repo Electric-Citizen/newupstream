@@ -1,0 +1,31 @@
+widget_title:
+  "Lightbox Widget"
+
+#images thumb_src and large_src will be replaced with drupal images and need to have their sizes set manually
+images:
+  1:
+    id:
+      "one"
+    src:
+      http://placeimg.com/800/640/people
+  2:
+    id:
+      "two"
+    src:
+      http://placeimg.com/800/640/nature
+  3:
+    id:
+      "three"
+    src:
+      http://placeimg.com/800/640/architecture
+  4:
+    id:
+      "four"
+    src:
+      http://placeimg.com/800/640/tech
+
+
+lightbox_instructions:
+  "DRUPAL: This template is embedded in the drupal lightbox gallery paragraph template. 
+
+  

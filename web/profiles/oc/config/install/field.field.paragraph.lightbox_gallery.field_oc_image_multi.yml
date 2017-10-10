@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_image_multi
+    - media_entity.bundle.image
+    - paragraphs.paragraphs_type.lightbox_gallery
+id: paragraph.lightbox_gallery.field_oc_image_multi
+field_name: field_oc_image_multi
+entity_type: paragraph
+bundle: lightbox_gallery
+label: Images
+description: 'Upload a new image or add an existing image from the media library. <strong>NOTE:<strong> The image will be cropped into a thumbnail until it is opened in the lightbox. Use the focal point tool (crosshairs) to ensure that most important part of the image will be preserved in the crop area.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

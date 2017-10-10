@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pin_info
+    - paragraphs.paragraphs_type.map
+  module:
+    - text
+id: paragraph.map.field_pin_info
+field_name: field_pin_info
+entity_type: paragraph
+bundle: map
+label: 'Pin Info'
+description: 'Enter the information you wish to show on the map pin.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_long_text
+    - paragraphs.paragraphs_type.tile_image
+  module:
+    - text
+id: paragraph.tile_image.field_oc_long_text
+field_name: field_oc_long_text
+entity_type: paragraph
+bundle: tile_image
+label: 'Overlay Text'
+description: 'This text will be shown when the mouse is hovered over the image (first tap on mobile). <strong>NOTE: <strong> This text is best limited to 1-2 sentences.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

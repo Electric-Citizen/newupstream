@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_rule.field_layout
+    - paragraphs.paragraphs_type.horizontal_rule
+  module:
+    - options
+id: paragraph.horizontal_rule.default
+targetEntityType: paragraph
+bundle: horizontal_rule
+mode: default
+content:
+  field_layout:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

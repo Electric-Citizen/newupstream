@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.oc_media
+  module:
+    - entity_browser_entity_form
+    - views
+name: embedded_browser
+label: 'Embedded Browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '500'
+  link_text: 'Select Media'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  c8d6a021-b87e-4250-91f1-b64982adedf5:
+    settings:
+      view: oc_media
+      view_display: embed_browser
+      submit_text: Place
+      auto_select: false
+    uuid: c8d6a021-b87e-4250-91f1-b64982adedf5
+    weight: 1
+    label: Library
+    id: view
+  c90fe4ec-0deb-4d9d-bbb7-6942fe3d86e7:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: media_browser
+      submit_text: Insert
+    uuid: c90fe4ec-0deb-4d9d-bbb7-6942fe3d86e7
+    weight: 2
+    label: 'Upload Image'
+    id: entity_form
+  ad75d27c-c660-4f2b-b074-d5107f5b760c:
+    settings:
+      entity_type: media
+      bundle: document
+      form_mode: media_browser
+      submit_text: Insert
+    uuid: ad75d27c-c660-4f2b-b074-d5107f5b760c
+    weight: 3
+    label: 'Upload File'
+    id: entity_form
+  dab0585e-0719-4dda-8d29-0cfc36a55793:
+    settings:
+      entity_type: media
+      bundle: video
+      form_mode: media_browser
+      submit_text: Insert
+    uuid: dab0585e-0719-4dda-8d29-0cfc36a55793
+    weight: 4
+    label: 'Upload Video'
+    id: entity_form

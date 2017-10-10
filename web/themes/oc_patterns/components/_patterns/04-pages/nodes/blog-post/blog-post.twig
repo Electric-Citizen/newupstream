@@ -1,0 +1,144 @@
+{#
+STYLEGUIDE ONLY: This template is not used in Drupal, however, the Drupal blog node title field template is customized to add the necessary wrappers and elements for the title, author, date overlay.
+#}
+
+{{ blog_post_instructions }}
+
+{% embed "@pages/layouts/01-kermit/kermit.twig" %}
+{% block placeholderOpen %}
+	<article class="node--type-blog pl-spacer">
+{% endblock %}
+	{% block top %}
+		<div class="block-region-top">
+
+        <div class="block block-entity-fieldnodefield-banner">
+          <div class="field field-banner">
+            <article class="media media-image view-mode-banner">
+              <div class="field field-media-image">
+                <picture>
+                  <img src="{{ banner_img }}" />
+                </picture>
+              </div>
+            </article>
+          </div>
+        </div>
+
+	  		<div class="block block-system-breadcrumb-block">
+	  			<nav class="breadcrumb" role="navigation">
+	  				<ol>
+	  					<li><a href="#">Home</a></li>
+	  					<li>Blog Post Example</li>
+	  				</ol>
+	  			</nav>
+	  		</div>
+
+        <div class="block block-entity-fieldnodetitle">
+          <div class="text-wrapper">
+            <h1>{{ post_title }}</h1>
+            <div class="metatext">
+              <span class="date">{{ post_date }}</span>
+              <span class="author"> by {{ post_author }}</span>
+            </div>
+          </div>
+        </div>
+
+        {% if addtoany %}
+          <div class="block block-addtoany-block">
+            <span>
+              <span class="facebook addtoany_list">
+                <a href="#" class="icon sprite-facebook"></a>
+              </span>
+              <span class="twitter addtoany_list">
+                <a href="#" class="icon sprite-twitter"></a>
+              </span>
+              <span class="linkedin addtoany_list">
+                <a href="#" class="icon sprite-linkedin"></a>
+              </span>
+            </span>
+          </div>
+        {% endif %}
+
+  		</div>
+  	{% endblock %}
+
+  	{% block main %}
+  		<div class="block-region-main">
+  			<div class="block block-entity-fieldnodebody">
+  				<div class="field body">
+  				    {% for text in body %}
+  				    	<p>{{ text }}</p>
+  				    {% endfor %}
+  				</div>
+  			</div>
+
+  		{% if cta_text %}
+  			<div class="block block-entity-fieldnodefield-oc-widgets">
+  				<div class="field--name-field-oc-widgets">
+		  			{% include "@organisms/02-widgets/call-to-action/call_to_action.twig"%}
+		  		</div>
+  			</div>
+  		{% endif %}
+
+  		<div class="block block-entity-fieldnodefield-author">
+  			<div class="field field-author">
+  				<div class="profile-teaser">
+  					<div class="field field-profile-image">
+  						<article class="media media-image view-mode-square">
+  							<div class="field field-media-image">
+  								<picture>
+  									<img src="{{ profile_img }}" />
+  								</picture>
+  							</div>
+  						</article>
+  					</div>
+  					<div class="info">
+  						<h4>
+  							<a href="{{ profile_url }}">About the Author:</a>
+  						</h4>
+  						<div class="body">
+  							{{ profile_bio }}
+  							<a href="{{ profile_url }}">More »</a>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+
+  		<div class="block block-entity-fieldnodefield-tags">
+  			<div class="field field-tags">
+  				<span class="label">Tags:</span>
+  				<div>
+  					{% for tag in tags %}
+  						<div>	
+  							<a href="{{ tag.tag_url }}">{{ tag.tag_text }}</a>
+  						</div>
+  					{% endfor %}
+  				</div>
+  			</div>
+  		</div>
+
+    </div>
+
+  	{% endblock %}
+
+  	{% block bottom %}
+  		<div class="block-region-bottom">
+  			<div class="block block-flippy-block">
+  				<ul class="flippy">
+  					<li class="flippy-previous">
+  						<a href="#">Previous Article</a>
+  					</li>
+  					<li class="flippy-next">
+  						<a href="#">Next Article</a>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  	{% endblock %}
+
+	{% block placeholderColse %}
+		</article>
+	{% endblock %}
+{% endembed %}
+
+

@@ -1,0 +1,23 @@
+widget_title:
+  "Text Widget w/ Two Column Option"
+
+#to add backgrounds, use either text_back_image or text_back color. Allowed colors are orange, blue, grey
+#additional colors must be added in the drupal background style field.
+text_back_color:
+
+text_back_img:
+  http://placeimg.com/1600/800/nature
+
+
+text:
+  "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
+text_two:
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Ut id aliis narrare gestiant? Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster?"
+
+#break text using css columns on larger screens. Available variables: two-column
+columns:
+  two-column
+
+text_instructions:
+  "DRUPAL: This template is embedded into the Drupal text paragraph template."
+

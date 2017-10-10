@@ -1,0 +1,48 @@
+/* ================
+    MEDIA
+============== */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+//constrain images with smaller sizes (commonly embedded)
+.view-modemediasmall,.view-mode-small{
+  max-width: 300px;
+}
+.view-modemediamedium,.view-mode-medium{
+  max-width: 500px;
+}
+.view-modemediasquare,.view-mode-square{
+  max-width: 350px;
+}
+.view-modemedialarge,.view-mode-large{
+  max-width: 800px;
+}
+
+/* MEDIA IN WYSIWYG 
+------------------- */
+.oc-media{
+  margin-bottom: 2em;
+
+  //embedded alignment (images only )
+  &.right:not(.has-video){
+    @include tab {
+      float: right;
+      margin-left: 1em;
+    }
+  }
+  &.left:not(.has-video){
+    @include tab {
+      float: left;
+      margin-right: 2em;
+    }
+  }
+
+  &.center{
+    //from 01-mixins.scss 
+    @include auto;
+  }
+  
+}//end oc-media

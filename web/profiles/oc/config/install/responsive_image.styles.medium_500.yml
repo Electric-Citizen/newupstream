@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.medium_500
+    - image.style.medium_500_2x
+    - image.style.small_300
+    - image.style.small_300_2x
+  theme:
+    - oc_patterns
+id: medium_500
+label: 'Medium (500)'
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium_500
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: medium_500_2x
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: small_300
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: small_300_2x
+breakpoint_group: oc_patterns
+fallback_image_style: medium_500_2x

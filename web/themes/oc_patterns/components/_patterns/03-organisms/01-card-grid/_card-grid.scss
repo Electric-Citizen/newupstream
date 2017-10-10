@@ -1,0 +1,42 @@
+/* =============
+   CARD GRID
+=================== */
+
+//(views row and other elements with .image and .text wrappers)
+
+/* STYLES */
+.views-row,.card,.view .item-list > ul > li{
+	width: 100%;
+	margin-bottom: 1.5em;
+	&.three-column{
+		//from 01-mixins.scss
+		@include three-column;
+	}
+	&.four-column{
+		//from 01-mixins.scss
+		@include four-column;
+	}
+	&.horizontal{
+		border-bottom: 1px solid $grey;
+		padding-bottom: 1.5em;
+		&:last-of-type{
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+		@include smalltab{
+			display: flex;
+			align-items: flex-start;
+			.card-image{
+				flex: 0 0 250px;
+				margin-right: 20px;
+			}
+			.card-text{
+				h3{
+					margin-top: 0;
+				}
+			}
+		}
+	}//end horizontal
+}//end views row
+
+

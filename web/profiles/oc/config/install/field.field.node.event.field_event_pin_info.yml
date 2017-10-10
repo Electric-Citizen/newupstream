@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_pin_info
+    - node.type.event
+  module:
+    - text
+id: node.event.field_event_pin_info
+field_name: field_event_pin_info
+entity_type: node
+bundle: event
+label: 'Event Pin Info'
+description: 'Add the information you wish to show on the map pin.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

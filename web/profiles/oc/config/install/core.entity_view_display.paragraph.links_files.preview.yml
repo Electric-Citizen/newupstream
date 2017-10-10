@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.links_files.field_admin_description
+    - field.field.paragraph.links_files.field_background_image
+    - field.field.paragraph.links_files.field_background_style
+    - field.field.paragraph.links_files.field_layout
+    - field.field.paragraph.links_files.field_oc_file_multi
+    - field.field.paragraph.links_files.field_oc_link_multi
+    - field.field.paragraph.links_files.field_oc_long_text
+    - field.field.paragraph.links_files.field_widget_title
+    - paragraphs.paragraphs_type.links_files
+  module:
+    - options
+id: paragraph.links_files.preview
+targetEntityType: paragraph
+bundle: links_files
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_background_image: true
+  field_background_style: true
+  field_oc_file_multi: true
+  field_oc_link_multi: true
+  field_oc_long_text: true
+  field_widget_title: true

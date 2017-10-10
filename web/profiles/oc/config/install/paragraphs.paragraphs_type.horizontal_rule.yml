@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: horizontal_rule
+label: 'Horizontal Rule'
+behavior_plugins: {  }

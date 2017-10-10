@@ -1,0 +1,20 @@
+{# 
+STYLEGUIDE ONLY: This template gives examples of flex layout styles (mostly used for widgets). It is not used in Drupal.
+#}
+
+{% if flex_label %}
+{% include "@atoms/02-text/00-headings/heading-2/heading-2.twig"
+  with {
+    "heading": flex_label,
+  }
+%}
+{% endif %}
+<div class="field--name-field-oc-widgets">
+  {% block grid_content %}
+    {% for item in items %}
+    <div class="pl flex-wrap{% for modifier in flex_modifiers %} {{ modifier }}{% endfor %}">
+      <div class="paragraph"><div class="{% for modifier in background_modifiers %} {{ modifier }}{% endfor %}"><div class="wrapper">{{ item }}</div></div></div>
+    </div>
+    {% endfor %}
+  {% endblock %}
+</div>

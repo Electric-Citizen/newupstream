@@ -1,0 +1,35 @@
+{#
+	DRUPAL:  This template is embedded into the Drupal paragraphs tile-image template.
+#}
+
+<div class="paragraph paragraph--type--tile-image {{column}}">
+
+	{% if tile_link %}
+		<a href="{{ tile_link }}">
+	{% endif %}
+
+			{% if tile_text %}
+				<div class="field field-oc-long-text">
+					{% block tileText %}
+						<p>{{ tile_text }}</p>
+					{% endblock %}
+				</div>
+			{% endif %}
+
+			{% if tile_image %}
+				<div class="field field-oc-image">
+					{% block tileImage %}
+						<article class="media media-image">
+							<div class="field field-media-image">
+								<img src="{{ tile_image }}" />
+							</div>
+						</article>
+					{% endblock %}
+				</div>
+			{% endif %}
+
+	{% if tile_link %}
+		</a>
+	{% endif %}
+
+</div>

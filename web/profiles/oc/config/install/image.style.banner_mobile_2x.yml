@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: banner_mobile_2x
+label: 'Banner Mobile 2x'
+effects:
+  1e5752a4-6674-4cb3-9855-84de44444528:
+    uuid: 1e5752a4-6674-4cb3-9855-84de44444528
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 600

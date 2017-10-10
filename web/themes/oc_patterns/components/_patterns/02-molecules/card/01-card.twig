@@ -1,0 +1,51 @@
+{#
+  STYLEGUIDE ONLY: This template is used as an example for views-rows or content widgets in Drupal, but is not embedded into Drupal.
+  Modifier variables can change the card styling but must be manually added as class in Drupal.
+  #}
+    <li class="card views-row{% for modifier in card_modifiers %} {{ modifier }}{% endfor %}">
+      {% if card_img_src %}
+        <div class="views-field card-image pl">
+          <div class="field-content">
+            {% if card_img_url %}
+              <a href="{{card_img_url}}">
+                <img src="{{card_img_src}}" />
+              </a>
+            {% else %}
+              <img src="{{card_img_src}}" />
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+      <div class="views-field views-field-nothing card-text{% for modifier in card_text_modifiers %} {{ modifier }}{% endfor %}">
+        <div class="field-content">
+          {% if card_title %}
+            {% include "@atoms/02-text/00-headings/heading-3/heading-3.twig"
+              with {
+                "heading": card_title,
+                "heading_url": card_title_link,
+              }
+            %}
+            {{ title_suffix }}
+          {% endif %}
+          {% if card_line %}
+              <div class="{% for modifier in card_line_modifiers %}{{ modifier }} {% endfor %}">
+                {{ card_line }}
+              </div>
+          {% endif %}
+          {% if card_body %}
+            <div class="body{% for modifier in card_body_modifiers %} {{ modifier }}{% endfor %}">
+              {{ card_body }}
+              {% if card_link_url %}
+              {% include "@atoms/01-links/link/link.twig"
+                with {
+                  "link_content": card_link_text,
+                  "link_url": card_link_url,
+                  "link_modifiers": card_link_modifiers,
+                }
+              %}
+              {% endif %}
+            </div>
+          {% endif %}  
+        </div>
+      </div>
+    </li>

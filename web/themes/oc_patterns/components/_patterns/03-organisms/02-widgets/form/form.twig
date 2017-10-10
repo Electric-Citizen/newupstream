@@ -1,0 +1,46 @@
+{#
+	STYLEGUIDE ONLY: This template is not included in Drupal.
+#}
+{{ form_instructions }}
+
+<div class="flex-wrap single">
+	<div class="paragraph paragraph--type--form">
+		<h2 class="widget-title">Form</h2>
+		<div class="wrapper">
+			<div class="field field-oc-long-text">{{ form_text }}</div>
+			<div class="field field-oc-form">
+				<form class="webform-submission-form">
+					<div class="webform-element--title-inline js-form-item js-form-type-textfield form-item-name">
+						<label for="edit-name" class="js-form-required form-required">
+							Name
+						</label>
+						<input data-drupal-selector="edit-name" type="text" class="form-text required" aria-reuiqred="true">
+					</div>
+					<div class="webform-element--title-inline js-form-item js-form-type-email form-item-email">
+						<label for="edit-email" class="js-form-required form-required">
+							Your Email
+						</label>
+						<input data-drupal-selector="edit-email" type="email" class="form-email required" aria-reuiqred="true">
+					</div>
+					<div class="webform-element--title-inline js-form-item js-form-type-textfield form-item-subject">
+						<label for="edit-subject" class="js-form-required form-required">
+							Subject
+						</label>
+						<input data-drupal-selector="edit-subject" type="text" class="form-text required" aria-reuiqred="true">
+					</div>
+					<div class="webform-element--title-inline js-form-item js-form-type-textarea form-item-message">
+						<label for="edit-message">
+							Message
+						</label>
+						<div>
+						<textarea data-drupal-selector="edit-message" id="edit-message" name="message" class="form-textarea"></textarea>
+						</div>
+					</div>
+					<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper">
+						<input class="webform-buton--submit button button--primary js-form-submit form-submit" type="submit" id="edit-submit" value="Send Message">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

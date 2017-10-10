@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:5f1a7629-2f9c-4257-a0b1-6027d71e574c'
+  module:
+    - entity_embed
+    - media_entity
+  config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.large
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
+label: Media
+id: media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles: {  }
+  display_plugins:
+    - 'view_mode:media.full'
+    - 'view_mode:media.large'
+    - 'view_mode:media.medium'
+    - 'view_mode:media.small'
+  entity_browser: embedded_browser
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

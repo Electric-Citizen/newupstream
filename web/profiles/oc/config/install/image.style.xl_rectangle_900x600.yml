@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: xl_rectangle_900x600
+label: 'XL Rectangle 900x600'
+effects:
+  008eaa17-1d9c-473b-8f4d-250ea3d7095c:
+    uuid: 008eaa17-1d9c-473b-8f4d-250ea3d7095c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 900
+      height: 600

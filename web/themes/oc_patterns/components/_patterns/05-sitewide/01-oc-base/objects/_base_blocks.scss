@@ -1,0 +1,17 @@
+/* ============
+    BASE BLOCKS
+================ */
+
+/* ADD TO ANY
+---------------- */
+.block-addtoany-block{
+	.addtoany_list > a{
+		padding: 0 1px;
+		&:hover,&:focus{
+			//from 01-mixins.scss 
+			@include opacity(.7);
+			//from 02-animations.scss 
+			@include transThreeAll;
+		}
+	}
+}

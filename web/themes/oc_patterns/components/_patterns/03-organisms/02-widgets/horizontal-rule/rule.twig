@@ -1,0 +1,20 @@
+{#
+	DRUPAL: This template is embedded in the Drupal horizontal rule paragraph template.
+#}
+
+{{ rule_instructions }}
+{% block plwidgetopen %}
+	<div class="flex-wrap single backless pl-spacer">
+		<div class="paragraph paragraph--type--horizontal-rule">
+			<div class="wrapper">
+{% endblock %}
+
+				{% block rule %}
+					<hr width="100%" align="center">
+				{% endblock %}
+				
+{% block plwidgetclose %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

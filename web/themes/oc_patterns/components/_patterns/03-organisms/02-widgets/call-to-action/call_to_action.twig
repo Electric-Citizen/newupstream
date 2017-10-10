@@ -1,0 +1,39 @@
+{#
+  DRUPAL: This template is embedded into the Drupal Call To Action paragraph template.
+#}
+
+{{ cta_instructions }}
+
+{% block plwidgetopen %}
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--call-to-action">
+		{% if cta_back_img %}
+			<div class="image" style="background:url({{cta_back_img}}) no-repeat">
+		{% elseif cta_back_color %}
+			<div class="widget-color {{cta_back_color}}">
+		{% endif %}
+{% endblock %}
+				<h2 class="widget-title">
+					{% if cta_url %}
+						<a href="{{cta_url}}">{{ widget_title }}</a>
+					{% else %}
+						{{ widget_title }}
+					{% endif %}
+				</h2>
+
+				<div class="wrapper">
+					{% block cta %}
+						<div class="field field-oc-long-text">{{ cta_text }}</div>
+						<div class="field field-oc-link">
+							<a href="{{ cta_url }}">{{ cta_link_text }}</a>
+						</div>
+					{% endblock %}
+				</div>
+
+{% block plwidgetclose %}				
+		{% if cta_back_img or cta_back_color %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

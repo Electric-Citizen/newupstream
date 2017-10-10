@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_first_
+id: contact_message.personal.field_first_
+field_name: field_first_
+entity_type: contact_message
+bundle: personal
+label: 'First name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

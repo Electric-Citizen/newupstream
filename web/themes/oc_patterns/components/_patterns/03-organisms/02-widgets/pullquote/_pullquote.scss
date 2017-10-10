@@ -1,0 +1,57 @@
+/* ================
+   PULLQUOTE WIDGET
+======================= */
+.paragraph--type--pullquote{
+
+	//quote text
+	.field-oc-long-text{
+		position: relative;
+		max-width: 740px;
+		font-family: $serif;
+		font-style: italic;
+		font-size: 28px;
+    	padding-bottom:10px;
+    	@include tab{
+    		font-size: 42px;
+    		padding-bottom:0;
+    	}
+    	//opening quotation mark
+		&:before{
+			color: $transparent-black;
+	   		content: "“";
+	    	font-size: 3em;
+	    	line-height: 0.1em;
+	    	margin-right: 0.25em;
+	    	vertical-align: -0.4em;
+		}
+		//colsing quotation mark
+		&:after{
+			color: $transparent-black;
+	   		content: "”";
+	    	font-size: 3em;
+	    	line-height: 0.1em;
+	    	margin-right: 0.25em;
+	    	vertical-align: -0.44em;
+		}
+		p{
+			//paragraphs must be inline to allow for before & after quotes
+			display: inline;
+		}
+	}//end long text
+
+	//source
+	.field-oc-short-text{
+		text-align: right;
+		position: relative;
+		font-weight: bold;
+    	text-transform: uppercase;
+		&:before{
+			content: '–';
+			left: -1.25em;
+		}
+		@include tab{
+			font-size: 18px;
+		}
+	}
+}//end pullquote widget
+

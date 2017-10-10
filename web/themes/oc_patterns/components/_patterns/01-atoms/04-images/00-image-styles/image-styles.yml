@@ -1,0 +1,127 @@
+images:
+  1:
+    wrapperSize:
+      "third"
+    style:
+      "OC Thumbnail"
+    styleMachine:
+      "oc_thumb"
+    img:
+      http://placeimg.com/100/100/architecture
+    effects:
+      "100x100 – Focal Point – 2x"
+  2:
+    wrapperSize:
+      "third"
+    style:
+      "OC Large Thumb"
+    styleMachine:
+      "large-thumb"
+    img:
+      http://placeimg.com/250/200/people
+    effects:
+      "250x200 – Focal Point – 2x"
+  3:
+    wrapperSize:
+      "third"
+    style:
+      "Square 350x350"
+    styleMachine:
+      "square"
+    img:
+      http://placeimg.com/350/350/nature
+    effects:
+      "350x350 – Focal Point – 2x"
+  4:
+    style:
+      "Large Rectangle"
+    styleMachine:
+      "large-rectangle"
+    img:
+      http://placeimg.com/600/435/animals
+    effects:
+      "600x435 – Focal Point – 2x"
+  5:
+    style:
+      "Small 300"
+    styleMachine:
+      "small"
+    img:
+      http://placeimg.com/300/200/tech
+    effects:
+      "300 – No Crop - 2x"
+  6:
+    style:
+      "Medium 500"
+    styleMachine:
+      "medium"
+    img:
+      http://placeimg.com/500/333/architecture
+    effects:
+      "500 – No Crop - 2x"
+  7:
+    style:
+      "Large 800"
+    styleMachine:
+      "large"
+    img:
+      http://placeimg.com/800/533/nature
+    effects:
+      "500 – No Crop"
+  8:
+    style:
+      "Banner Mobile"
+    styleMachine:
+      "banner-mobile"
+    img:
+      http://placeimg.com/400/300/people
+    effects:
+      "400x300 - Focal Point - 2x"
+  8:
+    style:
+      "Banner Tablet (400-760)"
+    styleMachine:
+      "banner-tablet"
+    img:
+      http://placeimg.com/800/450/people
+    effects:
+      "800x450 - Focal Point - 2x"
+  9:
+    style:
+      "Banner Desk (760-1200)"
+    styleMachine:
+      "banner-desk"
+    img:
+      http://placeimg.com/1000/450/people
+    effects:
+      "1000x450 - Focal Point"
+  10:
+    style:
+      "Banner Big Desk (1200+)"
+    styleMachine:
+      "banner-big-desk"
+    img:
+      http://placeimg.com/1600/550/people
+    effects:
+      "1600x550 - Focal Point"
+  11:
+    style:
+      "Banner Narrow"
+    styleMachine:
+      "banner-narrow"
+    img:
+      http://placeimg.com/1600/300/people
+    effects:
+      "1600x300 - Focal Point"
+  12:
+    style:
+      "Banner Tall"
+    styleMachine:
+      "banner-tall"
+    img:
+      http://placeimg.com/1600/750/people
+    effects:
+      "1600x750 - Focal Point"
+
+    
+

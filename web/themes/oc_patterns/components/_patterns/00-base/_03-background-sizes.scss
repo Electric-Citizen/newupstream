@@ -1,0 +1,120 @@
+/* =====================
+BACKGROUND SIZE MIXINS
+====================== */
+//This file holds all background size mixins so they can be easily changed if the sprite is changed.
+//background size is the icons row and column position in the sprite multipled by the intended size.
+
+
+/// used in ICONS.SCSS
+@mixin plIconSize{
+    @include backgroundSize(360px,300px);
+}
+
+
+/// used in SELECT.SCSS 
+@mixin dropArrow{
+    @include sprite-drop-arrow;
+    @include backgroundSize(90px,75px);
+}
+@mixin dropArrowActive{
+    @include sprite-drop-arrow-active;
+    @include backgroundSize(90px,75px);
+}
+
+
+/// used in SEARCH-BLOCK.SCSS 
+@mixin searchOpenToggle{
+  @include sprite-search-toggle;
+  @include backgroundSize(132px,110px);
+}
+@mixin searchCloseToggle{
+  @include sprite-close-circle-punchout;
+  @include backgroundSize(132px,110px);
+}
+@mixin searchSubmitMobile{
+  @include sprite-search-submit;
+  @include backgroundSize(144px,120px);
+}
+@mixin searchSubmitMobileHover{
+  @include sprite-search-submit-hover;
+  @include backgroundSize(144px,120px);
+}
+@mixin searchSubmitTabSize{
+  @include backgroundSize(120px,100px);
+}
+
+
+/// used in SUPERFISH-BLOCK.SCSS
+@mixin hamburger{
+  @include sprite-hamburger;
+  @include backgroundSize(150px,125px);
+}
+@mixin hamburger-expanded{
+  @include sprite-close-circle-punchout;
+  @include backgroundSize(150px,125px);
+}
+
+
+/// used in PAGE-MENU.SCSS 
+@mixin sideDropArrow{
+  @include sprite-drop-arrow-white;
+  @include backgroundSize(120px, 100px);
+}
+@mixin sideDropArrowActive{
+  @include sprite-drop-arrow-active-white;
+  @include backgroundSize(120px, 100px);
+}
+
+
+/// used in SUPERFISH.SCSS
+@mixin deskmenuArrow{
+  @include sprite-menu-desk-item-open;
+  @include backgroundSize(108px,90px);
+}
+@mixin deskmenuArrowActive{
+  @include sprite-menu-desk-item-active;
+  @include backgroundSize(108px,90px);
+}
+@mixin deskSubSize{
+  @include backgroundSize(90px,75px);
+}
+@mixin mobilemenuOpen{
+  @include sprite-menu-item-toggle-open;
+  @include backgroundSize(108px, 90px);
+}
+@mixin mobilemenuActive{
+  @include sprite-menu-item-toggle-active;
+  @include backgroundSize(108px, 90px);
+}
+@mixin mobilemenuClose{
+  @include sprite-menu-item-toggle-close;
+  @include backgroundSize(108px, 90px);
+}
+
+
+/// used in ACCORDION.SCSS 
+@mixin accordcaretSize{
+  @include backgroundSize(120px,100px);
+}
+@mixin accordcaretShutHover{
+  @include sprite-accordion-shut-hover;
+  @include backgroundSize(120px,100px);
+}
+@mixin accordcaretOpen{
+  @include sprite-accordion-open;
+  @include backgroundSize(120px,100px);
+}
+
+
+/* PATTERN LAB ONLY
+---------------- */
+/// used in BLOG-POST.SCSS
+@mixin a2aSize{
+  @include backgroundSize(192px,160px);
+}
+
+/// used in SITEWIDE GLOBAL-STYLES.SCSS 
+@mixin iconSize{
+  @include backgroundSize(108px,90px);
+}
+

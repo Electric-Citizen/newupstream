@@ -1,0 +1,13 @@
+{#
+ Drupal: This file is embedded in the site-footer.twig pattern lab file and in the footer-menu Drupal block. The variables are placeholders for those files.
+#}
+
+<div class="block block--system-menu footer-menu">
+	{% block footer_menu %}
+		<ul>
+			{% for link in menu %}
+				<li><a href="{{ link_url }}">{{ link.link_text }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endblock %}
+</div>

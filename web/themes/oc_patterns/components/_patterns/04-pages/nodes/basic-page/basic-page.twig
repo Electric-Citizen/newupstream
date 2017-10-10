@@ -1,0 +1,98 @@
+{#
+ STYLEGUIDE ONLY: This template is not used in Drupal. However, the Drupal basic-page page template is customized to attach the node.js script file.
+#}
+
+{{ basic_page_instructions }}
+
+{% embed "@pages/layouts/02-beaker/beaker.twig" %}
+{% block placeholderOpen %}
+	<article class="node--type-page pl-spacer">
+{% endblock %}
+	{% block top %}
+		<div class="block-region-top {{ banner_style }}">
+			{% if banner_img %}
+	  		<div class="block-entity-fieldnodefield-banner">
+	  			<div class="field field-banner">
+	  				<article class="media media-image view-mode-banner">
+	  					<div class="field field-media-image">
+	  						<picture>
+	  							<img src="{{ banner_img }}" />
+	  						</picture>
+	  					</div>
+	  				</article>
+	  			</div>
+	  		</div>
+	  		{% endif %}
+
+	  		<div class="block block-system-breadcrumb-block">
+	  			<nav class="breadcrumb" role="navigation">
+	  				<ol>
+	  					<li><a href="#">Home</a></li>
+	  					<li>Basic Page Example</li>
+	  				</ol>
+	  			</nav>
+	  		</div>
+	  		<div class="block block-entity-fieldnodetitle">
+	  			<h1>{{ basic_page_title }}</h1>
+	  		</div>
+  		</div>
+  	{% endblock %}
+
+  	{% block main %}
+  		<div class="block-region-main">
+  			<div class="block block-entity-fieldnodebody">
+  				<div class="field body">
+  				    {% for text in body %}
+  				    	<p>{{ text }}</p>
+  				    {% endfor %}
+  				</div>
+  			</div>
+  		</div>
+  		{% if video %}
+  			<div class="block block-entity-fieldnodefield-oc-widgets">
+          <div class="field--name-field-oc-widgets">
+            {% include "@organisms/02-widgets/video/video.twig"
+              with{
+                widget_title: widget_title,
+                video_summary: video_summary
+              }
+            %}
+          </div>
+        </div>
+  		{% endif %}
+  	{% endblock %}
+
+  	{% block sidebar %}
+  		{% if sidebar_menu %}
+  			<div class="block-region-sidebar">
+  				<nav role="navigation" class="block--system-menu main-navigation main-menu page-menu" aria-labelledby="main-menu">
+            <h2 class="block-title">{{ menu_title }}</h2>
+            <ul>
+              {% for link in sidebar_menu %}
+                {% if link.active %}
+                  {% set active = 'class="is-active"' %}
+                {% endif %}
+                {% if link.link_parent == 'yes' %}
+                  <li>
+                    <a href="{{ link.link_url }}" {{ active }}>{{ link.link_text }}</a>
+                    <ul>
+                      <li><a href="#">Sub Link</a></li>
+                    </ul>
+                  </li>
+                {% else %}
+                  <li><a href="{{ link.link_url }}" {{ active }}>{{ link.link_text }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+  			</div>
+  		{% endif %}
+  	{% endblock %}
+
+  	{% block bottom %}
+
+  	{% endblock %}
+	{% block placeholderColse %}
+		</article>
+	{% endblock %}
+{% endembed %}

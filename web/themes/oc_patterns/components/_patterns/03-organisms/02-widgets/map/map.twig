@@ -1,0 +1,26 @@
+{#
+	STYLEGUIDE ONLY: This template is not sued in Drupal.
+#}
+
+{{ map_instructions }}
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--map">
+
+		{% if widget_title %}
+			<h2 class="widget-title">{{widget_title}}</h2>
+		{% endif %}
+	
+		<div class="wrapper">
+
+			<img class="placeholder" src="{{map_placeholder}}" />
+
+			{% if map_summary %}
+				<div class="field field-oc-long-text">
+					{{ map_summary }}
+				</div>
+			{% endif %}
+				
+		</div>
+		
+	</div>
+</div>

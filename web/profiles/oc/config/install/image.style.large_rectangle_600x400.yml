@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_rectangle_600x400
+label: 'Large Rectangle 600x400'
+effects:
+  889b28d6-30ca-4aeb-b06c-8716cfca06be:
+    uuid: 889b28d6-30ca-4aeb-b06c-8716cfca06be
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400

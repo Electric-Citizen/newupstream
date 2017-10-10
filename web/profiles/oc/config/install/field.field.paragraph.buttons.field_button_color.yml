@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_color
+    - paragraphs.paragraphs_type.buttons
+  module:
+    - options
+id: paragraph.buttons.field_button_color
+field_name: field_button_color
+entity_type: paragraph
+bundle: buttons
+label: 'Button Color'
+description: 'Choose a button color.  <strong>NOTE:</strong>This button color will apply to all buttons added in this widget. ''Link'' will make the buttons the same color as in-text links.'
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,10 @@
+
+link_attributes:
+  target:
+    _blank
+
+link_url:
+  https://github.com/fourkitchens/emulsify
+
+link_content:
+  "This is my link text."

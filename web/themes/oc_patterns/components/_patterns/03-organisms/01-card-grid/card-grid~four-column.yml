@@ -1,0 +1,172 @@
+#card items are coming from card.yml to change those variables, copy whats there and alter
+card_grid_items:
+  1:
+    #set at views-row or paragraph item level, variables: three-column, four-column, round
+    card_modifiers:
+      1:
+        four-column
+
+    card_img_src:
+      "http://placeimg.com/1280/720/nature"
+    card_img_url:
+      "#"
+
+    #Text div
+    card_text_modifiers:
+
+    # Title
+    card_title:
+      "This is the Title"
+    card_title_link: 
+      "#"
+
+    # Extra Line (date, subtitle, etc)
+    card_line:
+      "July 4, 1776"
+    # Modifiers will be added as classes to the card line wrapper div
+    card_line_modifiers:
+      1:
+        "date"
+
+    # Body
+    card_body:
+      "Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+    # Modifiers will be added as classes to the card body wrapper div
+    card_body_modifiers:
+
+    # Link
+    card_link_url:
+      "#"
+    card_link_text:
+      'Read more »'
+    card_link_modifiers:
+      1:
+        more-link
+  
+  2:
+    #set at views-row or paragraph item level, variables: three-column, four-column, round
+    card_modifiers:
+      1:
+        four-column
+
+    card_img_src:
+      "http://placeimg.com/1280/720/animals"
+    card_img_url:
+
+
+    #Text div
+    card_text_modifiers:
+
+    # Title
+    card_title:
+      "Another Card"
+    card_title_link: 
+      "#"
+
+    # Extra Line (date, subtitle, etc)
+    card_line:
+      "Sept 24, 1979"
+    # Modifiers will be added as classes to the card line wrapper div
+    card_line_modifiers:
+      1:
+        "date"
+
+    # Body
+    card_body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prodest, inquit, mihi eo esse animo. Quorum sine causa fieri nihil putandum est. "
+    # Modifiers will be added as classes to the card body wrapper div
+    card_body_modifiers:
+
+    # Link
+    card_link_url:
+
+    card_link_text:
+
+    card_link_modifiers:
+ 
+  3:
+    #set at views-row or paragraph item level, variables: three-column, four-column, round
+    card_modifiers:
+      1:
+        four-column
+
+    card_img_src:
+      "http://placeimg.com/1280/720/architecture"
+    card_img_url:
+      "#"
+
+
+    #Text div
+    card_text_modifiers:
+
+    # Title
+    card_title:
+      "Unlinked Title"
+    card_title_link: 
+
+
+    # Extra Line (date, subtitle, etc)
+    card_line:
+      "May 23, 1002"
+    # Modifiers will be added as classes to the card line wrapper div
+    card_line_modifiers:
+      1:
+        "date"
+
+    # Body
+    card_body:
+      "Quo modo autem philosophus loquitur? Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Sed in rebus apertissimis nimium longi sumus."
+    # Modifiers will be added as classes to the card body wrapper div
+    card_body_modifiers:
+
+    # Link
+    card_link_url:
+      "#"
+    card_link_text:
+      'Read more »'
+    card_link_modifiers:
+      1:
+        more-link
+  4:
+    #set at views-row or paragraph item level, variables: three-column, four-column, round
+    card_modifiers:
+      1:
+        four-column
+
+    card_img_src:
+      "http://placeimg.com/1280/720/tech"
+    card_img_url:
+      "#"
+
+
+    #Text div
+    card_text_modifiers:
+
+    # Title
+    card_title:
+      "A fourth card"
+    card_title_link: 
+      "#"
+
+    # Extra Line (date, subtitle, etc)
+    card_line:
+      "May 23, 1002"
+    # Modifiers will be added as classes to the card line wrapper div
+    card_line_modifiers:
+      1:
+        "date"
+
+    # Body
+    card_body:
+      "Quo modo autem philosophus loquitur? Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Sed in rebus apertissimis nimium longi sumus."
+    # Modifiers will be added as classes to the card body wrapper div
+    card_body_modifiers:
+
+    # Link
+    card_link_url:
+      "#"
+    card_link_text:
+      'Read more »'
+    card_link_modifiers:
+      1:
+        more-link

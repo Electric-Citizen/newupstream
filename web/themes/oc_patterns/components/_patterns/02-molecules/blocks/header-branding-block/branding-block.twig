@@ -1,0 +1,14 @@
+{#
+ STYLEGUIDE ONLY: This file is not used in Drupal but helps to build the site-header.twig Pattern Lab file. The variables are placeholders for that file.
+#}
+
+<div id="block-oc-patterns-branding" class="contextual-region block--system-branding block block-system-branding-block">
+	<a href="#" title="home" rel="home">
+		{% if logo %}
+			<img class="logo" src="{{logo}}" />
+		{% endif %}
+		{% if sitename %}
+			<span class="site-name">{{sitename}}</span>
+		{% endif %}
+	</a>
+</div>

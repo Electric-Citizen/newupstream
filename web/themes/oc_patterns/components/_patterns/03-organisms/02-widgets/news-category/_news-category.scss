@@ -1,0 +1,27 @@
+/* ===============
+   NEWS BY CATEGORY WIDGET
+================== */
+
+.paragraph--type--news-by-category{
+
+	//add a bit more space before start of view if there is a title
+	h2.widget-title{
+		margin-bottom: 1.5em;
+	}
+
+	.view-content{
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	//override normal 250px image width to allow shrinkage when in smaller spaces
+	.views-row.horizontal{
+		.card-image{
+			@include tab{
+				flex: 0 0 30%;
+			}
+		}
+	}
+	
+}//end news by category
+

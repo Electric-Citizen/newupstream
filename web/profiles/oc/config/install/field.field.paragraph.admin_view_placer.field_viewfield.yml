@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_viewfield
+    - paragraphs.paragraphs_type.admin_view_placer
+  module:
+    - options
+id: paragraph.admin_view_placer.field_viewfield
+field_name: field_viewfield
+entity_type: paragraph
+bundle: admin_view_placer
+label: Viewfield
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: view
+default_value_callback: ''
+settings: {  }
+field_type: list_string

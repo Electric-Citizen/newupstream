@@ -1,0 +1,97 @@
+/* =============
+   SITE FOOTER
+=============== */
+footer {
+
+	//need a min-height so fixed footer script can pickup offset
+	@include tab{
+		min-height: 1px;
+	}
+
+	//set style for footer (need inner for fixed footer script)
+	.footer-inner{
+		background: $dark-grey;
+		color: $off-white;
+		min-height: 260px;
+		padding: 30px 20px 30px;
+		box-sizing: border-box;
+		@include tab{
+			padding: 30px 20px 50px;
+			min-height: 0;
+		}
+
+		//limit footer content to max-width and set flex parenting
+		& > div{
+			position: relative;
+			max-width: $max-width;
+			@include auto;
+			display: flex;
+			flex-flow: row wrap;
+			align-content: center;
+		}
+
+		//add a top border when not fixed
+		&:not(.isFixed){
+			& > div{
+				border-top: 1px solid $off-white;
+				padding-top: 1em;
+			}
+		}
+
+		//styling when fixed
+		&.isFixed{
+			@include tab{
+				border-top: 1px solid $off-white;
+				position: fixed;
+				//negative bottom to hide non-important footer items when fixed
+				bottom: -135px;	
+				left: 0;
+				z-index: 999;
+				width: 100%;
+				#block-footeraddress{
+					order: 2;
+				}
+				.footer-menu{
+					flex: 0 0 100%;
+					order: 1;
+					text-align: center;
+				}
+
+				//show bulk of fixed footer on hover
+				&:hover,&:focus{
+					bottom: 0;
+					#block-footeraddress{
+						order: 1;
+					}
+					.footer-menu{
+						flex: 0 0 70%;
+						order: 2;
+						text-align: right;
+					}
+				}
+			}//end tab
+		}//end fixed
+
+	}//end footer-inner
+
+}//end footer
+
+
+/* LAYOUT CONTAINER > MAIN
+------------------ */
+//set spacing for the main layout container to position footer at bottom on shorter pages
+//(min height to 100vh - header and footer)
+
+.layout-container > main{
+	//from 01-mixins.scss
+	@include calc(min-height, "100vh - 349px");
+	@include tab{
+		//from 01-mixins.scss
+		@include calc(min-height, "100vh - 258px");
+	}
+	@include deskmenu{
+		//from 01-mixins.scss
+		@include calc(min-height, "100vh - 275px");
+	}
+}
+

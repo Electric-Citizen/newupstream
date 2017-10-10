@@ -1,0 +1,124 @@
+/* =================
+    GLOBAL BASE
+============= */
+
+html{
+  font-kerning: normal; // Set the default for kerning
+  font-synthesis: none; // Dont allow the font to create synthetic bold/italic
+}
+
+body{
+  margin: 0;
+}
+
+div{
+  box-sizing: border-box;
+  
+  *{
+    box-sizing: inherit;
+  }
+}
+
+/* CLEAR FLOATS IN COMMON LONG TEXT */
+.field.body,.field-oc-long-text{
+  & + *{
+    clear: both;
+  }
+}
+
+/* MAP PINS
+-------------- */
+//google api map pins
+.gm-style-iw{
+  strong{
+    font-weight: $heavy;
+  }
+  em{
+    font-style: italic;
+  }
+  h2{
+    font-size: 16px;
+  }
+  h3{
+    font-size: 14px;
+  }
+}
+
+
+/* PANELS-IPE
+------------------- */
+//save buttons
+#panels-ipe-tray{
+   z-index: 1000;
+   a{
+    padding: 5px 10px;
+    border: 1px solid;
+    &.panelizer-ipe-save-custom{
+      border-color: $green-good;
+      background: $green-good;
+      color: $white;
+      &:hover,&:focus{
+        background: transparent;
+        color: darken($green-good, 10%);
+      }
+    }
+    &.panelizer-ipe-save-default{
+      border-color: $red-bad;
+      background: $red-bad;
+      color: $white;
+      &:hover,&:focus{
+        background: transparent;
+        color: darken($red-bad, 10%);
+      }
+    }
+  }
+}
+.ipe-category-picker-bottom{
+  white-space: initial;
+}
+
+
+/* BACK TO TOP
+-------------------- */
+#backtotop{
+  height: 50px;
+  width: 50px;
+  background-size: 100%;
+  z-index: 500;
+}
+
+
+/* ADMIN NODE EDIT TABS
+----------------- */
+.block-local-tasks-block{
+  //from 01-mixins.scss 
+  @include paddedContent;
+  //from 01-mixins.scss 
+  @include auto;
+  margin-top: 2em;
+  .tabs {
+    margin: 1em 0;
+    border-bottom:1px solid $mid-grey;
+
+    ul {
+      padding-left:0;
+      margin:0;
+    }
+    li {
+      margin:0 2px 0 0;
+      background: $white;
+      display: inline-block;
+    }
+
+    a {
+      display: block;
+      padding: 0.2em 1em;
+      &.is-active {
+        background-color: $light-grey;
+      }
+      &:focus,&:hover {
+        background-color: $off-white;
+      }
+    }
+  }
+}//end local tasks

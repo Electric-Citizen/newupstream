@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.oc_media
+  module:
+    - entity_browser_entity_form
+    - views
+name: video_browser
+label: 'Video Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: '500'
+  link_text: 'Select Video'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  9f6d24ed-5cba-42f9-a129-d2326022b7e0:
+    settings:
+      view: oc_media
+      view_display: video_browser
+      submit_text: Place
+      auto_select: false
+    uuid: 9f6d24ed-5cba-42f9-a129-d2326022b7e0
+    weight: 1
+    label: Library
+    id: view
+  bcf9b0ce-5910-4939-9959-cdd1c1d9d091:
+    settings:
+      entity_type: media
+      bundle: video
+      form_mode: media_browser
+      submit_text: Save
+    uuid: bcf9b0ce-5910-4939-9959-cdd1c1d9d091
+    weight: 2
+    label: 'Add From Web'
+    id: entity_form

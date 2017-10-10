@@ -1,0 +1,45 @@
+{#
+ 	STYLEGUIDE ONLY: This template is not carried into Drupal and Reveal functionality is not shown in patternlab.
+#}
+{% block revealInstruct %}
+	<div class="reveal-instruct">{{reveal_instructions}}</div>
+{% endblock %}
+
+{% block plwidgetopen %}
+<div class="flex-wrap">
+	<div class="paragraph paragraph--type--reveal-group">
+{% endblock %}
+		
+		<div class="wrapper">
+			<div class="field field-reveal-sections">
+				{% for section in reveal_sections %}
+				<div>
+					{% set color = section.reveal_back_color %}
+					{% set image = section.reveal_back_image %}
+					{% set title = section.reveal_title %}
+					{% set columns = section.reveal_columns %}
+					{% embed "@organisms/02-widgets/reveal/_reveal-section.twig" 
+						with{
+							reveal_back_img: image,
+							reveal_back_color: color,
+							widget_title: title,
+							reveal_columns: columns
+						}
+					%}
+
+					{% block sectionContent %}
+						{% for item in section.reveal_content %}
+							<p>{{ item }}</p>
+						{% endfor %}
+					{% endblock %}
+
+				{% endembed %}
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+
+{% block plwidgetclose %}
+	</div>
+</div>
+{% endblock %}

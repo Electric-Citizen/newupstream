@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: support
+label: Support
+type: 'canonical_entities:node'
+pattern: 'support/[node:title]'
+selection_criteria:
+  657038de-a936-4c6d-92e9-622fc5239e94:
+    id: node_type
+    bundles:
+      support_book: support_book
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 657038de-a936-4c6d-92e9-622fc5239e94
+selection_logic: and
+weight: -5
+relationships: {  }

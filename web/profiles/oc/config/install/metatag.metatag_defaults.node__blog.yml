@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__blog
+label: 'Content: Blog'
+tags:
+  canonical_url: '[current-page:url:absolute]'
+  content_language: '[current-page:url:unaliased]'
+  description: '[node:summary]'
+  image_src: '[node:field_banner:entity:field_media_image]'
+  title: '[node:title] | [site:name]'
+  article_modified_time: '[node:changed:custom:c]'
+  article_published_time: '[node:created:custom:c]'
+  article_section: blog
+  og_description: '[node:summary]'
+  og_image: '[node:field_banner:entity:field_media_image]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  og_type: Blog
+  og_url: '[current-page:url:absolute]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: '[node:field_banner:entity:field_media_image]'
+  twitter_cards_image_alt: '[node:field_banner:entity:field_media_image]:alt'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary

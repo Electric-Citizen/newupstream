@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.image
+  module:
+    - options
+id: paragraph.image.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: image
+label: Layout
+description: 'Select a grid width for this widget. <strong>NOTE:</strong> Fill Remainder will set the widget width to the remainder of the space in the row (if it is the only item in the row it will be full width). If using fixed percentage widgets and the total is more than 100%, the widgets will wrap to a new line.  Fill Remainder widgets will be full width in older IE versions.'
+required: true
+translatable: true
+default_value:
+  -
+    value: single
+default_value_callback: ''
+settings: {  }
+field_type: list_string

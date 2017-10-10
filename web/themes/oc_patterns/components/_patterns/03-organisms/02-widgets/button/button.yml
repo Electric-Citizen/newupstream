@@ -1,0 +1,37 @@
+widget_title:
+  "Button Widget"
+button_items:
+  1:
+    button_color:
+      "link"
+    button_text:
+      "Default Color"
+    button_link:
+      "http://www.google.com"
+  2:
+    button_color:
+      "blue"
+    button_text:
+      "Blue"
+    button_link:
+      "http://www.google.com"
+  3:
+    button_color:
+      "orange"
+    button_text:
+      "Orange"
+    button_link:
+      "http://www.google.com"
+  4:
+    button_color:
+      "dark-grey"
+    button_text:
+      "Dark Grey"
+    button_link:
+      "http://www.google.com"
+
+
+button_instructions:
+  "DRUPAL: The button widget template is embedded in the button widget drupal template. 
+
+  

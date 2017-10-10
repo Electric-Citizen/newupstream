@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.blog_author
+label: 'Blog Author'
+targetEntityType: node
+cache: true

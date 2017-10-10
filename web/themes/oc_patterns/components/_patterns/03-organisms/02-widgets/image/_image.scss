@@ -1,0 +1,61 @@
+/* =================
+   IMAGE WIDGET
+==================== */
+
+.paragraph--type--image{
+
+	//Wrapper sizing (needs to be changed when image styles are changed or added to widget)
+	.image-wrapper{
+		max-width: $max-width;
+		//from 01-mixins.scss
+		@include auto;
+		&.small{
+			max-width: 300px;
+		}
+		&.square{
+			max-width: 350px;
+		}
+		&.medium{
+			max-width: 500px;
+		}
+		&.large{
+			max-width: 800px;
+			.beaker .main &,.bunsen .main &{
+				max-width: 100%;
+			}
+		}
+	}
+	
+	figcaption{
+		text-align: center;
+		cursor: default;
+	}
+
+	//override layout padding on mobile
+	img{
+		@include onlysmall{
+			//from 01-mixins.scss
+			@include edge-to-edge;
+			//from 01-mixins.scss
+			@include calc(max-width, "100% + 40px");
+		}
+	}
+
+	//hover action when link
+	a:hover{
+		text-decoration: none;
+		img{
+			//from 01-mixins.scss
+			@include imageHover;
+		}
+	}
+
+	//image summary field
+	.field-oc-long-text{
+		margin: 1em auto 0;
+		text-align: left;
+		max-width: $max-width-text;
+	}
+	
+}//end image widget
+

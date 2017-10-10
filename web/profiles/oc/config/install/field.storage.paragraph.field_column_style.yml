@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_column_style
+field_name: field_column_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: single
+      label: Single
+    -
+      value: two-left
+      label: 'Two Column Title Left'
+    -
+      value: two-right
+      label: 'Two Column Title Right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

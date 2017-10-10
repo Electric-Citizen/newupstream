@@ -1,0 +1,12 @@
+widget_title:
+  "Slideshow"
+slider_image:
+  http://placeimg.com/1500/700/architecture
+slider_caption:
+  "Slideshow image caption."
+
+slider_instructions:
+  "STYLEGUIDE ONLY: This template is not embedded into Drupal, 
+  but the style macros for flexslider nav arrow theming are used in both Pattern Lab and Drupal. 
+  Available variables: large-caret, small-caret, triangle."
+

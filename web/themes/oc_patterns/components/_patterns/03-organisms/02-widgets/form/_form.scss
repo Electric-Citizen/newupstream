@@ -1,0 +1,19 @@
+/* ============
+   FORM WIDGET
+================ */
+
+.paragraph--type--form{
+	.field-oc-long-text{
+		margin-bottom: 1em;
+	}
+	form{
+		& > .js-form-item{
+			margin-bottom: 1em;
+			label{
+				margin-bottom: .25em;
+				display: inline-block;
+				font-weight: $heavy;
+			}
+		}
+	}//end form
+}//end form widget

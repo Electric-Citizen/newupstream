@@ -1,0 +1,42 @@
+/* ==============
+   MAP WIDGET
+================ */
+
+.paragraph--type--map{
+	//override default text width wrapper sizing
+	.wrapper{
+		max-width: $max-width !important;
+	}
+	//map summary
+	.field-oc-long-text{
+		margin-top: 1em;
+		max-width: $max-width-text;
+		@include auto;
+	}
+	//allow map to override layout margins on mobile
+	.field-location{
+		@include onlysmall{
+			//from 01-mixins.scss
+			@include edge-to-edge;
+			//from 01-mixins.scss
+			@include calc(max-width, "100% + 40px");
+		}
+	}
+}//end map widget
+
+
+/* PATTERN LAB ONLY
+--------------------- */
+.pl .paragraph--type--map{
+	padding: 0 20px;
+	img.placeholder{
+		width: 100%;
+		max-width: 200%;
+		@include onlysmall{
+			//from 01-mixins.scss
+			@include edge-to-edge;
+			//from 01-mixins.scss
+			@include calc(width, "100% + 40px");
+		}
+	}
+}

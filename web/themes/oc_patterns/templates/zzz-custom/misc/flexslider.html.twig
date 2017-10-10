@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default output for a FlexSlider object.
+ *
+ * Available variables:
+ * - attributes: An array of attributes to apply to the element.
+ * - content.list: A renderable array of the flexslider list
+ * - settings: An array containing the given settings.
+ *
+ * @see template_preprocess_flexslider()
+ */
+#}
+
+{% import "@base/global/04-macros/macros.twig" as styles %}
+
+<div{{ attributes.addClass(styles.sliderArrow) }}>
+ {{ content.list }}
+</div>

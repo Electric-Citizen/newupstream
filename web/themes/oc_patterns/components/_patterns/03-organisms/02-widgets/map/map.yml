@@ -1,0 +1,15 @@
+widget_title:
+  "Map"
+
+#placeholderr screenshot to show map colors-stored in components/images
+map_placeholder:
+  "../../images/mapstyle.png"
+
+map_summary:
+  "Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum."
+
+
+map_instructions: 
+  "STYLEGUIDE ONLY: This template is not used in Drupal.
+  Map colors come from Snazzy Maps and are set in the Drupal manage display for the widget."
+

@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+{# NOTES
+------------
+	This is the parent paragraphs template. Other paragraphs templates can extend this template as needed by
+	inheriting and altering the blocks defined here.
+	Field templates can also overview content set here (example: field--paragraph--field-widget-title.html.twig which sets all titles h2.pane-title)
+#}
+
+
+{# define default paragraphs classes #}
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+'paragraphs-item-' ~ paragraph.id.value
+]
+%}
+
+{# find the selected layout key string and flex-wrap class (and backless if there is no widget style background) #}
+{% if (content.field_background_style|render) %}
+	{% set flex = 'flex-wrap ' ~ content.field_layout['#items'].getString()|clean_class %}
+
+{% else %}
+	{% set flex = 'flex-wrap ' ~ content.field_layout['#items'].getString()|clean_class ~ ' backless' %}
+{% endif %}
+
+{# find the value of the background style and image to be used on extended templates that need it #}
+{% set special = content.field_background_style[0]['#markup'] %}
+{% set bgImage = file_url(content.field_background_image[0]['#media'].field_media_image.entity.fileuri) %}
+
+<div class="{{flex}}"> 
+	{% block widget %}
+		
+		{# set the default paragraph classes #}
+		<div{{ attributes.addClass(classes,view)  }}>
+			
+			{# print the content without the styling fields #}
+    		{% block widgetContent %}
+    			{{content.field_widget_title}}
+    			<div class="wrapper">
+					{# print the content without the styling fields #}
+    				{{ content|without('field_layout','field_widget_title') }}
+    			</div>
+    		{% endblock %}
+		
+		</div>
+
+	{% endblock %}
+
+</div>

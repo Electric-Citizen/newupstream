@@ -1,0 +1,107 @@
+/* ============
+   HEADINGS
+============== */
+
+/* HEADING MIXINS
+------------------ */
+@mixin header-globals{
+	line-height: 1.15em;
+	margin-bottom: .5em;
+	margin-top: 0;
+	font-weight: $heavy;
+	font-family: $header;
+	font-feature-settings: "liga", "dlig";
+}
+
+
+@mixin heading-1{
+	@include header-globals;
+	font-family: $display-header;
+	font-size: 32px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	@include tab{
+		font-size: 60px;
+	}
+}
+
+@mixin heading-2 {
+	@include header-globals;
+	font-size: 32px;
+}
+
+@mixin heading-3{
+	@include header-globals;
+	font-size: 23px;
+}
+
+@mixin heading-4{
+	@include header-globals;
+	font-size: 22px;
+}
+
+@mixin heading-5{
+	@include header-globals;
+	font-size: 20px;
+}
+
+@mixin heading-6{
+	@include header-globals;
+	font-size: 18px;
+}
+
+@mixin block-title{
+	@include header-globals;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	max-width: $max-width;
+	//from 01-mixins.scss
+	@include auto;
+}
+
+
+/* HEADING STYLING
+------------------- */
+h1 {
+  @include heading-1;
+}
+
+h2:not(.block-title):not(.widget-title){
+	@include heading-2;
+}
+
+h3{
+	@include heading-3;
+}
+
+h4{
+	@include heading-4;
+}
+
+h5{
+	@include heading-5;
+}
+
+h6{
+	@include heading-6;
+}
+
+h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
+  margin-top: 0;
+}
+
+
+/* BLOCK AND WIDGET HEADINGS
+-------------------------- */
+.block-title,.widget-title{
+	@include block-title;
+	.block-region-sidebar &{
+		text-align: left;
+		max-width: 100%;
+	}
+}
+
+
+

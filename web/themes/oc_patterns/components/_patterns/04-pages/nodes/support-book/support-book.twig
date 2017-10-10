@@ -1,0 +1,70 @@
+{#
+  STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ support_book_instructions }}
+
+{% embed "@pages/layouts/02-beaker/beaker.twig" %}
+{% block placeholderOpen %}
+	<article class="node--type-support_book pl-spacer">
+{% endblock %}
+	{% block top %}
+		<div class="block-region-top">
+
+	  		<div class="block block-system-breadcrumb-block">
+	  			<nav class="breadcrumb" role="navigation">
+	  				<ol>
+	  					<li><a href="#">Home</a></li>
+	  					<li>Support Book Example</li>
+	  				</ol>
+	  			</nav>
+	  		</div>
+	  		
+  		</div>
+  	{% endblock %}
+
+  	{% block main %}
+  		<div class="block-region-main">
+  			<div class="block block-entity-fieldnodetitle">
+	  			<h1>{{ support_title }}</h1>
+	  		</div>
+  			<div class="block block-entity-fieldnodebody">
+  				<div class="field body">
+  				    {% for text in body %}
+  				    	<p>{{ text }}</p>
+  				    {% endfor %}
+  				</div>
+  			</div>
+  		</div>
+  	{% endblock %}
+
+  	{% block sidebar %}
+  		{% if book_nav %}
+  			<div class="block-region-sidebar">
+  				{% embed "@molecules/menus/04-book-navigation/book-navigation.twig" 
+            with{
+              book_parent: book_parent,
+              book_parent_url: book_parent_url
+            }
+          %}
+
+            {% block bookContent %}
+              <ul>
+                {% for page in book_nav %}
+                  <li><a href="{{ page.link_url }}">{{ page.link_text }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endblock %}
+
+          {% endembed %}
+  			</div>
+  		{% endif %}
+  	{% endblock %}
+
+  	{% block bottom %}
+
+  	{% endblock %}
+	{% block placeholderColse %}
+		</article>
+	{% endblock %}
+{% endembed %}

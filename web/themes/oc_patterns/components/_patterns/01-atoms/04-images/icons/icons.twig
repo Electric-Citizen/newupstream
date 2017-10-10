@@ -1,0 +1,17 @@
+{#
+	STYLEGUIDE ONLY: This template is not brought into to Drupal, but the macros that define viewBox position are used in both Pattern Lab and Drupal.
+#}
+<p>The icon sprite is generated from all individual svg files in /theme_name/images/icons/src and output in /dist/svg/.sprite.css.svg. <strong>ALL ICON FILES MUST BE THE SAME SIZE (currently 80x80 pixels).</strong> Size for individual icons can adjusted with theming later.</p>
+
+{% import "@base/global/04-macros/macros.twig" as styles %}
+<div class="icons-demo pl-spacer" id="icons">
+
+  {% for item in items %}
+    <div><span class="pl sprite-{{ item.value }} sprite-icon"></span><p>{{ item.name }}</p></div>
+  {% endfor %}
+
+</div>
+</br>
+<h4>SVG NOTES:</h4>
+<p>Icons can be used as backgrounds using either the generated sass mixin or css class. Icons are generated as a canvas and gulp will automagically provide the correct background position %. To set the size, simply set the width and height and adjust the background size to be the width and heigh multiplied by the number of rows and columns in the sprite.</p>
+<p>Icons can also be added directly in html using the 'svg use' code setup. The 'use' path should be: /theme_name/dist/svg/sprite.css.svg and the 'use' #id is the svg icon's individual file name ('facebook'). The 'svg' class is the file name again. <strong>Since we are using a generated sprite html svg's need to have the viewBox property added. ViewBox positions should be defined as macros in macros.twig so they can be easily altered and used globally.</strong> The view box should be set to the icon's x y width and height in the sprite(viewBox="80 00 80 80"). Height and width can be set on the svg tag with theming.  NOTE: To find the position look in the /dist/svg/sprite.css.svg file for the icon and copy its x and y position (no x or y value = 00).</p><a class="icon"><svg class="facebook" viewBox="{{ styles.facebook }}"><desc>Facebook</desc><use xlink:href="../../../../../dist/svg/sprite.css.svg#facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>

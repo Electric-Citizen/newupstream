@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: widgets_block
+label: 'Widgets Block'
+revision: 0
+description: 'Add a block of widgets.'

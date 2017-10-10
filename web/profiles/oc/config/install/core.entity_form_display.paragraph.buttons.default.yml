@@ -1,0 +1,57 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.buttons.field_admin_description
+    - field.field.paragraph.buttons.field_button_color
+    - field.field.paragraph.buttons.field_layout
+    - field.field.paragraph.buttons.field_oc_link_multi
+    - field.field.paragraph.buttons.field_widget_title
+    - paragraphs.paragraphs_type.buttons
+  module:
+    - link
+id: paragraph.buttons.default
+targetEntityType: paragraph
+bundle: buttons
+mode: default
+content:
+  field_admin_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_layout:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oc_link_multi:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_widget_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,475 @@
+{#
+ #  This files used as a quick reference for theme mixins.  Mixins used for theming in a sass file should also be included here.
+#}
+
+<p>This reference sheet defines commonly used mixins.</p>
+
+{# BREAKPOINTS #}
+<h3 class="mixin-group">Breakpoint Mixins</h3>
+<p>Defined in: breakpoints.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Smalltab</strong></li>
+    <li class="include-tag">@include smalltab{}</li>
+    <li>Creates a breakpoint at 500px</li>
+  </ul>
+</div>
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Tab</strong></li>
+    <li class="include-tag">@include tab{}</li>
+    <li>Creates a breakpoint at 760px</li>
+  </ul>
+</div>
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Desk</strong></li>
+    <li class="include-tag">@include desk{}</li>
+    <li>Creates a breakpoint at 900px</li>
+  </ul>
+</div>
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Max Width</strong></li>
+    <li class="include-tag">@include max-width{}</li>
+    <li>Creates a breakpoint at 1200px</li>
+  </ul>
+</div>
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Only Tab</strong></li>
+    <li class="include-tag">@include onlytab{}</li>
+    <li>Creates a breakpoint between 760px and 899px</li>
+  </ul>
+</div>
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Only Small</strong></li>
+    <li class="include-tag">@include onlysmall{}</li>
+    <li>Creates a breakpoint from 0 to 499px</li>
+  </ul>
+</div>
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Deskmenu</strong></li>
+    <li class="include-tag">@include deskmenu{}</li>
+    <li>Creates a breakpoint at 980px</li>
+  </ul>
+</div>
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Mobile Menu</strong></li>
+    <li class="include-tag">@include mobilemenu{}</li>
+    <li>Creates a breakpoint from 0 to 979px</li>
+  </ul>
+</div>
+
+{# Helper MIXINS #}
+<h3 class="mixin-group">Helper Mixins</h3>
+<p>Defined in: mixins.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Translate</strong></li>
+    <li class="include-tag">@include translate(x, y);</li>
+    <li>Sets translate x and y values.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include translateX(x);</br>@include translateY(y);</br>@include translate3D(x, y, z);</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Skew</strong></li>
+    <li class="include-tag">@include skew(x, y);</li>
+    <li>Skews element using x or y. Values should be degree numbers.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Scale</strong></li>
+    <li class="include-tag">@include scale(x, y);</li>
+    <li>Sets scale x and y values.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include scale3D(x, y, z);</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Rotate</strong></li>
+    <li class="include-tag">@include rotate(deg);</li>
+    <li>Rotates and element. Value should be degree number.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include rotate3D(x, y, z, deg);</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Perspective</strong></li>
+    <li class="include-tag">@include perspective(px);</li>
+    <li>Sets element perspective.</br>Example: @include prespective(500px);</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Transform Origin</strong></li>
+    <li class="include-tag">@include transform-origin(value);</li>
+    <li>Sets the transform origin. Values should be top, right, center, etc. Multiple values allowed.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Backface Visibility</strong></li>
+    <li class="include-tag">@include backface-visiblity(value);</li>
+    <li>Sets the backface visiblity value. Allowed values: hidden, visible</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Background Size</strong></li>
+    <li class="include-tag">@include backgroundSize(px,px);</li>
+    <li>Sets background size.</br>Example: @include backgroundSize(20px,20px);</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Opacity</strong></li>
+    <li class="include-tag">@include opacity(value);</li>
+    <li>Sets opacity. Value should be in decimals up to 1.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Column Count</strong></li>
+    <li class="include-tag">@include column-count(value);</li>
+    <li>Defines css columns column count. Values are whole numbers. Should be used on parent element.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Column Gap</strong></li>
+    <li class="include-tag">@include column-gap(value);</li>
+    <li>Sets css column gap. Values can be percents, ems, vw, pixels.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Calc</strong></li>
+    <li class="include-tag">@include calc(property, expression);</li>
+    <li>Sets calculations.</br>Example: @include calc(width, "100% - 40px);</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include calcForce();</li>
+  </ul>
+</div>
+
+
+{# Layout MIXINS #}
+<h3 class="mixin-group">Layout Mixins</h3>
+<p>Defined in: mixins.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Auto</strong></li>
+    <li class="include-tag">@include auto;</li>
+    <li>Center content using auto left and right margins.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Edge to Edge</strong></li>
+    <li class="include-tag">@include edge-to-edge;</li>
+    <li>Add -20px left and right margins to override padding.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Clearfix</strong></li>
+    <li class="include-tag">@include clearfix;</li>
+    <li>Creates a psuedo :after element to clear all floats</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Padded Content</strong></li>
+    <li class="include-tag">@include paddedContent;</li>
+    <li>Set max-width to $max-width variable + 40px with 20px left and right padding.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Padded Text</strong></li>
+    <li class="include-tag">@include paddedText;</li>
+    <li>Set max-width to $text-width variable + 40px with 20px left and right padding.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Inline Block</strong></li>
+    <li class="include-tag">@include inline-block;</li>
+    <li>Set display to inline-block and vertical to middle.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include inline-block-top;</br>@include inline-block-bottom;</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Inline Setup</strong></li>
+    <li class="include-tag">@include inline-setup;</li>
+    <li>Used after font-size: 0 parent for pixel perfect inline widths. Resets font-size to initial, display to inline-block, width to 100%, and vertical-align to top.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include inline-setup-center;</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Three Column</strong></li>
+    <li class="include-tag">@include three-column;</li>
+    <li>Sets percentage widths and margins for three column elements. Should be used on child elements.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include four-column;</li>
+  </ul>
+</div>
+
+
+{# General Style MIXINS #}
+<h3 class="mixin-group">General Style Mixins</h3>
+<p>Defined in: mixins.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Overlay</strong></li>
+    <li class="include-tag">@include overlay;</li>
+    <li>Creates a psuedo :before element with absolute positioning from the top left that covers 100% width and height and has a semi-transparent background set to the $image-overlay color value.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Browser Wipe</strong></li>
+    <li class="include-tag">@include browserWipe;</li>
+    <li>Removes all default browser theming by setting appearance: none;</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>List Reset</strong></li>
+    <li class="include-tag">@include list-reset;</li>
+    <li>Removes default margin, padding and list styles on ul and ol lists.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Faux List</strong></li>
+    <li class="include-tag">@include faux-list;</li>
+    <li>Creates a horizontal list of elements using inline-block and right and bottom margins.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>More Link</strong></li>
+    <li class="include-tag">@include more-link;</li>
+    <li>Styles Read More links.</li>
+  </ul>
+</div>
+
+
+{# Animation MIXINS #}
+<h3 class="mixin-group">Animation Mixins</h3>
+<p>Defined in: animations.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>.2 second transition</strong></li>
+    <li class="include-tag">@include transTwoAll;</li>
+    <li>Creates two-hundreths of s second transtion of all properties and ease.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include transThreeAll;</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Transition Clear</strong></li>
+    <li class="include-tag">@include transClear;</li>
+    <li>Clears all inherited transitions.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Custom Animation</strong></li>
+    <li class="include-tag">@include animation('type, duration, delay, iteration, easing, endstyle');</li>
+    <li>Sets animation keyframes for advanced custom animations.</li>
+    <li class="similar">Important Notes:</li>
+    <li>Not all values need to be used. Type must have defined keyframes in animations.scss. Allowed types:</br>
+      <em>slideInUp, expandDown, slideInRight, zoomIn, fadeInDelay, flipY</em>.</br>Example: @include animation('fadeInDelay, 2s, 1 ease-in, forwards').</li>
+  </ul>
+</div>
+
+{# Type MIXINS #}
+<h3 class="mixin-group">Type Mixins</h3>
+<p>Defined in: headings.scss, text.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Heading 1</strong></li>
+    <li class="include-tag">@include heading-1;</li>
+    <li>Sets h1 theming.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include heading-2 thru @include heading-6 (each header has a style mixin).</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Block Title</strong></li>
+    <li class="include-tag">@include block-title;</li>
+    <li>Sets special h2 theming.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Base Font Size</strong></li>
+    <li class="include-tag">@include base-font-size;</li>
+    <li>Sets the base font size.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Larger</strong></li>
+    <li class="include-tag">@include larger;</li>
+    <li>Increase the font-size by 120%;</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include x-smaller; (80%)</br>@include smaller; (90%)</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Text Date</strong></li>
+    <li class="include-tag">@include text-date;</li>
+    <li>Sets the style for dates.</li>
+  </ul>
+</div>
+
+{# Icons MIXINS #}
+<h3 class="mixin-group">Icon Mixins</h3>
+<p>Defined in: icon_sprite.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>All Icons in sprite by name</strong></li>
+    <li class="include-tag">@include sprite-icon-name;</li>
+    <li>Any svg icons in the /dist/svg/sprite.css.svg file will automatically have a mixin. Just include the mixin and background size to use.</br>Example: @include sprite-search-toggle; @include backgroundSize(20px, 20px);</li>
+  </ul>
+</div>
+
+{# Form Elements MIXINS #}
+<h3 class="mixin-group">Form Element Mixins</h3>
+<p>Defined in: forms.scss, select.scss, file.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Placeholder</strong></li>
+    <li class="include-tag">@include placeholder;</li>
+    <li>Sets theming for input placeholders.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include placeholderFocus</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Text Input</strong></li>
+    <li class="include-tag">@include textInput;</li>
+    <li>Sets theming for text (and similiar) inputs.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Required</strong></li>
+    <li class="include-tag">@include required;</li>
+    <li>Adds the red 'required' asterisk.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Form Submit</strong></li>
+    <li class="include-tag">@include form-submit;</li>
+    <li>Styles submit input.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>File Upload</strong></li>
+    <li class="include-tag">@include file-upload;</li>
+    <li>Defines file upload element theming.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Custom Options</strong></li>
+    <li class="include-tag">@include customOptions;</li>
+    <li>Custom checkbox & radio button.</li>
+  </ul>
+</div>
+
+
+{# Buttons & widgets #}
+<h3 class="mixin-group">Buttons & Widgets</h3>
+<p>Defined in: buttons.scss, widgets.scss</p>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Solid Button</strong></li>
+    <li class="include-tag">@include button;</li>
+    <li>Defines solid button style.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Outline Button</strong></li>
+    <li class="include-tag">@include outline-button;</li>
+    <li>Defines outline button style.</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Light back</strong></li>
+    <li class="include-tag">@include light-back;</li>
+    <li>Use darker text and links on light backgrounds.</li>
+    <li class="similar">Similar:</li>
+    <li class="include-tag">@include dark-back;</li>
+  </ul>
+</div>
+
+

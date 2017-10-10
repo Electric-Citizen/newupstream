@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - field.field.node.page.field_banner
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_oc_widgets
+    - field.field.node.page.field_use_as_background
+    - field.field.node.page.panelizer
+    - node.type.page
+  module:
+    - text
+    - user
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  addtoany:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 100
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden:
+  field_banner: true
+  field_metatags: true
+  field_oc_widgets: true
+  field_use_as_background: true
+  panelizer: true

@@ -1,0 +1,192 @@
+/* ===============
+   FORMS
+================= */
+
+/* FORMS MIXINS
+----------------- */
+
+///mixin placholder
+@mixin placeholder{
+	$place-tint: .4;
+	$place-color: $body;
+	&::-webkit-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+	&::-moz-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+	&:-ms-input-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $place-tint;
+		color: $place-color;
+	}
+}
+
+///mixin - placeholderFocus
+@mixin placeholderFocus{
+	$place-focus-tint: .2;
+	$place-focus-color: $body;
+	&::-webkit-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+	&::-moz-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+	&:-ms-input-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $place-focus-tint;
+		color: $place-focus-color;
+	}
+}
+
+///mixin textInput
+@mixin textInput{
+	border: 1px solid $dark-grey;
+	font-size: 15px;
+	padding: 10px 6px 11px;
+	width: 100%;
+	@include placeholder;
+	&:focus{
+		@include placeholderFocus;
+	}
+}
+
+///mixin - required
+@mixin required{
+	&:after{
+		content: '*';
+		color: $red-bad;
+		position: relative;
+		top: -1px;
+		right: -.25em;
+		//from text.scss
+		@include x-smaller;
+	}
+}
+
+///mixin - form-submit
+@mixin form-submit{
+	//from 01-mixins.scss
+	@include browserWipe;
+	background: $button-back;
+	font-weight: $heavy;
+	font-family: $header;
+	text-transform: uppercase;
+	padding: .75em 3em;
+	width: auto;
+	border-radius: 0;
+	border: 0;
+	color: $black;
+	&:hover,&:focus{
+		background: $button-back-hover;
+		//from 02-animations.scss
+		@include transThreeAll;
+		color: $white;
+	}
+}
+
+///mixins - customOptions
+@mixin customOptions{
+	input{
+		//hide the normal inputs
+		display: none;
+		&:checked{
+			+ label:before{
+				background: $red-30;
+				border-color: darken($link, 5%);
+			}
+		}
+	}
+	label{
+		@include inline-block;
+		width: 100%;
+		padding-left: 26px;
+		position: relative;
+		margin-bottom: 10px;
+		//create custom boxes before the label
+		&:before{
+			content: '';
+			@include inline-block;
+			width: 16px;
+			height: 16px;
+			border: 2px solid $link;
+			cursor: pointer;
+			position: absolute;
+			top: 3px;
+			left: 0;
+			z-index: 20;
+			margin-right: .5em;
+		}
+	}
+}//end custom options
+
+
+/* FORM ITEM STYLING
+-------------------- */
+//wipe browser appearance from inputs
+input[type=text], input[type=search], input[type=url], input[type=number], textarea, input[type="search"] {
+	//from 01-mixins.scss
+	@include browserWipe;
+}
+
+//validation
+.has-error {
+	border-color: $red-bad;
+}
+
+
+// generic form-item
+.form-item{
+	width: 100%;
+	margin-bottom: 1.5em;
+	label{
+		font-weight: $heavy;
+		display: block;
+		margin-bottom: .5em;
+		padding-bottom: 0;
+	}
+}//end form item
+
+
+// required items
+.form-required,.js-form-required{
+	position: relative;
+	@include required;
+}
+
+
+//descriptions
+.description{
+	//from text.scss
+	@include smaller;
+}
+input + .description{
+	padding-top: .5em;
+}
+
+
+//fieldsets
+fieldset{
+	border: none;
+	padding: 0;
+	margin: 0;
+	legend{
+		font-weight: $heavy;
+		//from text.scss
+		@include larger;
+		margin-bottom: .5em;
+	}
+	.fieldset-wrapper{
+		margin: 0 1em;
+	}
+}

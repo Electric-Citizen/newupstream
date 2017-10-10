@@ -1,0 +1,5 @@
+name: OC Custom
+type: module
+description: Custom glue module for Open Citizen sites
+core: 8.x
+package: Custom

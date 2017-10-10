@@ -1,0 +1,39 @@
+{#
+ 	DRUPAL: This template is embedded into the Drupal lightbox gallery paragraph template.
+#}
+
+{% block plwidgetopen %}
+<div class="flex-wrap">
+	<div class="paragraph paragraph--type--reveal-section">
+		{% if reveal_back_img %}
+			<div class="image" style="background:url({{reveal_back_img}}) no-repeat">
+		{% elseif reveal_back_color %}
+			<div class="widget-color {{reveal_back_color}}">
+		{% endif %}
+{% endblock %}
+		
+		<div class="wrapper {{reveal_columns}}">
+
+			{% block widgetTitle %}
+				{% if widget_title %}
+					<div class="title-wrap"><h2 class="widget-title">{{widget_title}}</h2></div>
+				{% endif %}
+			{% endblock %}
+
+			<div class="field field-oc-long-text">
+				{% block sectionContent %}
+					{% for item in reveal_content %}
+						<p>{{item}}</p>
+					{% endfor %}
+				{% endblock %}
+			</div>
+
+		</div>
+
+{% block plwidgetclose %}
+		{% if reveal_back_img or reveal_back_color %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

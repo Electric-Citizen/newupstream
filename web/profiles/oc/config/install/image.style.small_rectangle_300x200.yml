@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_rectangle_300x200
+label: 'Small Rectangle 300x200'
+effects:
+  fc3f5381-a062-4a62-9610-d5e39a806c5f:
+    uuid: fc3f5381-a062-4a62-9610-d5e39a806c5f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200

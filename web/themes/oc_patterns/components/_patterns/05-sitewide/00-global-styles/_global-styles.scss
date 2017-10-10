@@ -1,0 +1,288 @@
+/* ==============
+   GLOBAL STYLES
+================= */
+body {
+  background: $off-white;
+  overflow-x: hidden;
+}
+p{
+  margin-top: 0;
+}
+
+.container-inline div{
+  display: inline;
+}
+
+
+/*  FLEXSLIDER
+-------------------------------- */
+
+/* FLEXSLIDER MIXINS
+------------- */
+
+/// LARGE CARET ARROWS
+@mixin largeCaret{
+  a{
+    &:before{
+      font-family: arial;
+      font-size: 50px;
+      color: $white;
+      @include tab{
+        font-size: 80px;
+      }
+    }
+    &:hover,&:focus{
+      &:before{
+        color: $link;
+        //from 01-mixins.scss 
+        @include transition(color, .3s, ease);
+      }
+    }
+  }
+}//end large caret
+
+/// SMALL CARET ARROWS
+@mixin smallCaret{
+  a{
+    &:before{
+      font-size: 32px;
+      font-family: $header;
+      color: $white;
+      top: 55% !important;
+      text-shadow: 2px 2px 10px rgba(0,0,0,.5);
+      //from 01-mixins.scss 
+      @include transition(color, .3s, ease);
+      @include tab{
+        font-size: 50px;
+      }
+    }
+    &:hover,&:focus{
+      &:before{
+        color: $link;
+      }
+    }
+  }
+}//END SMALL CARET
+
+/// TRIANGLE ARROWS
+@mixin triangle{
+  a{
+    &:before{
+      content: '' !important;
+      //set helpers for smooth border triangles
+      -webkit-transform: rotate(0.05deg);
+      -moz-transform: scale(1.1);
+      transform: rotate(0.05deg);
+      top: 55% !important;
+    }
+    &.flex-prev:before{
+      border-right: 12px solid $white;
+      border-top: 12px double transparent;
+      border-bottom: 12px double transparent;
+      @include tab{
+        border-right: 20px solid $white;
+        border-top: 20px double transparent;
+        border-bottom: 20px double transparent;
+      }
+    }
+    &.flex-next:before{
+      border-left: 12px solid $white;
+      border-top: 12px double transparent;
+      border-bottom: 12px double transparent;
+      @include tab{
+        border-left: 20px solid $white;
+        border-top: 20px double transparent;
+        border-bottom: 20px double transparent;
+      }
+    }
+    &.flex-next:hover,&.flex-next:focus{
+      &:before{
+        border-left-color: $link;
+        //from 01-mixins.scss 
+        @include transition(border-left-color, .3s, ease);
+      }
+    }
+    &.flex-prev:hover,&.flex-prev:focus{
+      &:before{
+        border-right-color: $link;
+        //from 01-mixins.scss 
+        @include transition(border-right-color, .3s, ease);
+      }
+    }
+  }//end a
+}//end triangle
+
+
+/* FLEXSLIDER STYLING
+-------------- */
+.flexslider{
+  	position: relative;
+  	margin: 0 !important;
+  	border: 0;
+
+    .slides{
+      //from 01-mixins.scss 
+      @include list-reset;
+    }
+
+    // ARROW VARIATIONS
+    &.large-caret{
+      @include largeCaret;
+    }
+    &.small-caret{
+      @include smallCaret;
+    }
+    &.triangle{
+      @include triangle;
+    }
+
+
+  	//ARROW STYLING
+  	.flex-direction-nav{
+      min-width: 40px;
+      min-height: 50px;
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      //from 01-mixins.scss 
+      @include translateY(-50%);
+      //from 01-mixins.scss 
+      @include list-reset;
+
+      a{
+      	height: 100%;
+        position: absolute;
+        top: 0;
+        display: block;
+        //from 01-mixins.scss 
+        @include opacity(1);
+        margin: 0;
+        text-indent: -9000px;
+        font-size: 0;
+        &:before{
+          //from 01-mixins.scss 
+          @include opacity(1);
+          display: inline-block;
+          text-align: center;
+          font-weight: normal;
+          line-height: 1;
+          position: absolute;
+          top: 50%;
+          text-indent: 0;
+          //from 01-mixins.scss 
+          @include translateY(-50%);
+        }
+        &.flex-prev {
+          left: 15px !important;
+          &:before{
+            content: "‹";
+            left: 0;
+          }
+        }
+        &.flex-next {
+          right: 15px !important;
+          &:before {
+            content: "›";
+            right: 0;
+          }
+        }
+      }//END A
+
+    }//end flex direciton nav
+
+}//end flexslider
+
+
+/*  FILE ICONS
+--------------- */
+//pdf
+a[href$='.pdf']{
+  position: relative;
+  padding-left: 22px;
+  &:before{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 15px;
+    height: 18px;
+    //from icon_sprite.scss 
+    @include sprite-file-pdf;
+    //from 03-background-sizes.scss
+    @include iconSize;
+  }
+  &:hover:before,&:focus:before{
+    //from 01-mixins.scss 
+    @include opacity(.7);
+  }
+}
+//word
+a[href$='.doc'],a[href$=".docx"]{
+  position: relative;
+  padding-left: 22px;
+  &:before{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 15px;
+    height: 18px;
+    //from icon_sprite.scss 
+    @include sprite-file-word;
+    //from 03-background-sizes.scss 
+    @include iconSize;
+  }
+  &:hover:before,&:focus:before{
+    //from 01-mixins.scss 
+    @include opacity(.7);
+  }
+}
+//excel
+a[href$='.xls'],a[href$=".xlsx"]{
+  position: relative;
+  padding-left: 22px;
+  &:before{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 15px;
+    height: 18px;
+    //from icon_sprite.scss 
+    @include sprite-file-xls;
+    //from 03-background-sizes.scss 
+    @include iconSize;
+  }
+  &:hover:before,&:focus:hover{
+    //from 01-mixins.scss 
+    @include opacity(.7);
+  }
+}
+//powerpoint
+a[href$='.ppt'],a[href$=".pptx"]{
+  position: relative;
+  padding-left: 22px;
+  &:before{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 15px;
+    height: 18px;
+    //from icon_sprite.scss 
+    @include sprite-file-ppt;
+    //from 03-background-sizes.scss 
+    @include iconSize;
+  }
+  &:hover:before,&:focus:hover{
+    //from 01-mixins.scss 
+    @include opacity(.7);
+  }
+}
+

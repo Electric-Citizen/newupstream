@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_options
+    - paragraphs.paragraphs_type.news_by_category
+  module:
+    - options
+id: paragraph.news_by_category.field_display_options
+field_name: field_display_options
+entity_type: paragraph
+bundle: news_by_category
+label: 'Display Fields'
+description: 'Choose additional fields you wish to display for this item. <strong>NOTE:</strong> The title field will always be displayed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

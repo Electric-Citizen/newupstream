@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.senior_editor
+  module:
+    - user
+id: user_add_role_action.senior_editor
+label: 'Add the Senior Editor role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: senior_editor

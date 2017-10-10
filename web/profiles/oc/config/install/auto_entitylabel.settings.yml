@@ -1,0 +1,8 @@
+node_type_profiles_status: '1'
+node_type_profiles_pattern: '[node:field_first_name] [node:field_last_name]'
+node_type_profiles_php: 0
+submit: 'Save configuration'
+form_build_id: form-qnY10FRmyjTbxI_zMwkbOzGPrAwFhqU0K-vy29k4gpQ
+form_token: Z3Tk5VEaf6ZnPxVQpq2G0XjV-Xa10hp1AhDjtrnEjRk
+form_id: auto_entitylabel_settings_form
+op: 'Save configuration'

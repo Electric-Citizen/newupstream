@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * @file
+ * Contains oc_custom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function oc_custom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the oc_custom module.
+    case 'help.page.oc_custom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom glue module for Open Citizen sites') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function oc_custom_theme() {
+  return [
+    'oc_custom' => [
+      'template' => 'oc_custom',
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Preprocess function for grid views of the media library.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function oc_custom_preprocess_views_view_grid__media(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    foreach ($item['content'] as &$column) {
+      $column['attributes']['data-selectable'] = 'true';
+    }
+  }
+}
+
+//attach eb library everywhere
+// function oc_custom_page_attachments(array &$attachments){
+//   $attachments['#attached']['library'][] = 'oc_custom/eb_browser';
+// }
+
+
+/*
+ * attach css and custom.js to node form only
+ */
+function oc_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    $form['#attached']['library'][] = 'oc_custom/custom';
+}
+
+/*
+ * attach SELECT2 globally
+ */
+function oc_custom_page_attachments(array &$attachments){
+    $attachments['#attached']['library'][] = 'oc_custom/custom-global';
+}
+
+/* SEARCH FORM
+----------------- */
+/*
+ * attach css and custom.js to node form only
+ */
+function oc_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = t('enter keywords');
+  }
+}
+
+
+/*
+ *  VIEWS EXPOSED FILTERS ALTER
+ */
+/*
+function oc_custom_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  //set date fields to be date pickers manually for now
+  if ($form['#id'] == 'views-exposed-form-events-upcoming-events'){
+    $form['field_oc_date_value_1']['#type'] = 'date';
+    $form['field_oc_date_value_2']['#type'] = 'date';
+  } 
+  if ($form['#id'] == 'views-exposed-form-news-all-news'){
+    $form['created']['#type'] = 'date';
+    $form['created_1']['#type'] = 'date';
+  } 
+
+  //set placeholders
+  //$form['combine']['#attributes']['placeholder'] = 'Keyword(s)';
+}
+*/

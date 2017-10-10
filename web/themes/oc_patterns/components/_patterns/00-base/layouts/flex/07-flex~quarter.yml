@@ -1,0 +1,13 @@
+#number of elements shown
+items:
+  1:
+  2:
+  3:
+  4:
+
+#modifiers change the widget (backless is also used for non-colored)
+flex_modifiers:
+  1:
+    quarter
+  2:
+    backless

@@ -1,0 +1,34 @@
+/* =============
+   BREADCRUMBS
+------------------- */
+
+.breadcrumb{
+  max-width: $max-width;
+  //from 01-mixins.scss
+  @include auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1em;
+  ol {
+    //from 01-mixins.scss
+    @include list-reset;
+  }
+
+  li{
+    display: inline-block;
+    color: $mid-grey;
+    //from text.scss
+    @include x-smaller;
+    a{
+      padding-right: .25em;
+      //from 02-animations.scss
+      @include transThreeAll;
+    }
+    &:not(:last-of-type){
+      &:after{
+        content: "\00BB";
+      }
+    }
+  }
+
+}//end breadcrumb 

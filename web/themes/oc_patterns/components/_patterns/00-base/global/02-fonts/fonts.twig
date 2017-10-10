@@ -1,0 +1,11 @@
+<p>Fonts are automatically pulled from fonts.scss on npm start.</p>
+<ul class="fonts pl-spacer">
+  {% for item in items %}
+    <li>
+      <div class="font-info">
+        <strong><code>{{item.name}}</code>:</strong>
+        <span style="font-family: {{item.value}}; font-size: 24px;">{{item.value}}</span> <br/>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

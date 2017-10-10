@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_file_multi
+    - media_entity.bundle.document
+    - paragraphs.paragraphs_type.links_files
+id: paragraph.links_files.field_oc_file_multi
+field_name: field_oc_file_multi
+entity_type: paragraph
+bundle: links_files
+label: Files
+description: 'Add new files or select existing files from the media library.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

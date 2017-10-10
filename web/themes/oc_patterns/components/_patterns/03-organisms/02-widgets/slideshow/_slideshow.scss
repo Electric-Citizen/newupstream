@@ -1,0 +1,23 @@
+/* ================
+   Slideshow
+=================== */
+
+//Flexsider arrows style in @Sitewide/global-styles  (set in macros.twig)
+
+.paragraph--type--slideshow{
+	.wrapper{
+		max-width: $max-width !important;
+	}
+	
+	//slider container overrides layout padding on mobile
+	.views-element-container{
+		@include onlysmall{
+			//from 01-mixins.scss
+			@include edge-to-edge;
+			//from 01-mixins.scss
+			@include calc(max-width, "100% + 40px");
+		}
+	}
+	
+}//end slideshow widget
+

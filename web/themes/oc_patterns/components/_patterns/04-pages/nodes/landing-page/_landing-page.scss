@@ -1,0 +1,48 @@
+/* ===============
+   LANDING PAGE NODE
+==================== */
+
+.node--type-landing_page{
+	.block-region-top{
+		//from node.scss
+		@include background-banner;
+		&.background{
+			.field-banner{
+				opacity: 0;
+				//from 02-animations.scss
+				@include animation('fadeIn 1.2s 1 forwards');
+			}
+		}
+	}
+
+	.field-banner{
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.block-region-main{
+		//from node.scss
+		@include main-content;
+		.field.body{
+			margin: 2em 0 5em;
+			p{
+				&:first-child{
+					font-size: 22px;				
+				}
+			}
+		}
+	}
+}//end landing-page
+
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl .node--type-landing_page{
+	.field--name-field-oc-widgets{
+		.pl-spacer{
+			margin-top: 0;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_group.field_accordion_item
+    - field.field.paragraph.accordion_group.field_admin_description
+    - field.field.paragraph.accordion_group.field_layout
+    - field.field.paragraph.accordion_group.field_widget_title
+    - paragraphs.paragraphs_type.accordion_group
+  module:
+    - paragraphs
+id: paragraph.accordion_group.default
+targetEntityType: paragraph
+bundle: accordion_group
+mode: default
+content:
+  field_accordion_item:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: accordion_item
+    third_party_settings: {  }
+    region: content
+  field_admin_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_layout:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_widget_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_view_placer.field_admin_description
+    - field.field.paragraph.admin_view_placer.field_display_machine_name
+    - field.field.paragraph.admin_view_placer.field_layout
+    - field.field.paragraph.admin_view_placer.field_view_machine_name
+    - field.field.paragraph.admin_view_placer.field_viewfield
+    - field.field.paragraph.admin_view_placer.field_widget_title
+    - paragraphs.paragraphs_type.admin_view_placer
+id: paragraph.admin_view_placer.default
+targetEntityType: paragraph
+bundle: admin_view_placer
+mode: default
+content:
+  field_admin_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_display_machine_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_layout:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_view_machine_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_widget_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_viewfield: true
+  status: true
+  uid: true

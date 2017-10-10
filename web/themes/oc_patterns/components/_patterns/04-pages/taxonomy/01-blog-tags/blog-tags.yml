@@ -1,0 +1,44 @@
+blog_tags_instructions:
+  "STYLEGUIDE ONLY: This template is not carried into Drupal. 
+  However, the Drupal taxonomy tags term page template is customized to match this breadcrumb and title structure." 
+  
+term:
+  "Pablo Escobar"
+
+items:
+  1:
+    title:
+      "Got a Bad Rap"
+    date:
+      "7/14/17"
+    author:
+      "Ben Franklin"
+    text:
+      "Shizz fo shizzle mah nizzle fo rizzle, mah home g-dizzle, gravida vizzle, arcu. Pellentesque crunk tortizzle."
+  2:
+    title:
+      "Makes a Great Secret Santa"
+    date:
+      "12/21/16"
+    author:
+      "Little Suzie"
+    text:
+      "Izzle crazy tempizzle sizzle. We gonna chung gangsta get down get down fo shizzle turpizzle."
+  3:
+    title:
+      "Was Always Picked Last in Gym"
+    date:
+      "4/5/50"
+    author:
+      "Coach Bob"
+    text:
+      "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle."
+  4:
+    title:
+      "Father of Modern Importing"
+    date:
+      "7/4/17"
+    author:
+      "Bill Gates"
+    text:
+      "Curabitizzle fo shizzle diam quizzle nisi nizzle mollizzle. Suspendisse boofron. Morbi odio. Sure pizzle."

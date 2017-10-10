@@ -1,0 +1,269 @@
+/* ===============
+   REVEAL GROUP AND SECTION WIDGETS
+==================== */
+@mixin columns{
+	flex: 0 0 50%;
+	overflow: hidden;
+	& > p,& > h3,& > h4,& > h5,& > h6,& > h2.widget-title{
+		max-width: 70%;
+		@include auto;
+	}
+	.widget-color,.image{
+		margin-left: -50px !important;
+		margin-right: -50px !important;
+		& > .wrapper{
+			width: 100%;
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}
+
+/* REVEAL GROUP
+------------------ */
+.paragraph--type--reveal-group{
+	padding: 0 !important;
+	@include calc(width, "100vw + 40px");
+	@include breakpoint (1240px, true){
+		@include calc(margin-left, "-50vw + 620px");
+		@include calc(margin-right, "-50vw + 620px");
+		width: 100vw;
+	}
+	
+	& > .wrapper{
+		max-width: 100vw !important;
+	}
+	.field-reveal-sections > div > .backless{
+		background: $off-white;
+	}
+
+	.field-reveal-sections > div{
+		position: relative;
+		z-index: 20;
+		@include breakpoint ($tab, true){
+			&.prep{
+				margin-bottom: 100vh;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			&.fixed{
+				position: fixed;
+				z-index: -2;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				width: 100vw;
+				.paragraph--type--reveal-section > .wrapper,.paragraph--type--reveal-section > div > .wrapper{
+					height: 100vh;
+					align-content: flex-start;
+				}
+			}
+		}
+	}
+	
+}//end reveal group
+
+
+/* REVEAL SECTION
+------------------ */
+.paragraph--type--reveal-section,.paragraph--type--reveal-section > div{
+	& > .wrapper{
+		max-width: 1200px !important;
+		padding-top: 15vh;
+		padding-bottom: 15vh;
+		@include tab{
+			display: flex;
+			flex-flow: row wrap;
+			align-items: stretch;
+		}
+		& > .title-wrap,& > .field-oc-long-text,& > .field-reveal-widgets{
+			flex: 0 0 100%;
+		}
+		.title-wrap > h2.widget-title{
+			font-size: 26px;
+			
+		}
+		.field-oc-long-text > *{
+			max-width: $textW;
+			@include auto;
+		}
+		.field-reveal-widgets{
+			max-width: 1200px;
+			@include auto;
+			.widget-title:after{
+				content: none !important;
+			}
+		}
+		//two columns
+		&.two-left{
+			& > .title-wrap{
+				@include tab{
+					@include columns;
+					h2.widget-title{
+						font-size: 32px;
+						&:after{
+							content: none;
+						}
+					}
+				}
+				@include desk{
+					h2.widget-title{
+						font-size: 48px;
+					}
+				}
+				@include max-width{
+					h2.widget-title{
+						font-size: 56px;
+					}
+				}
+			}
+			& > .field-oc-long-text,& > .field-reveal-widgets{
+				@include tab{
+					@include columns;
+				}
+			}
+		}//end two-left
+		&.two-right{
+			& > .title-wrap{
+				@include breakpoint ($tab, true){
+					@include columns;
+					order: 2;
+					h2.widget-title{
+						font-size: 32px;
+						&:after{
+							content: none;
+						}
+					}
+				}
+				@include tab{
+					h2.widget-title{
+						font-size: 48px;
+					}
+				}
+				@include max-width{
+					h2.widget-title{
+						font-size: 56px;
+					}
+				}
+			}
+			& > .field-oc-long-text, & > .field-reveal-widgets{
+				@include tab{
+					@include columns;
+					order: 1
+				}
+			}
+		}//end two-column
+	}//end wrapper
+
+	& > .widget-color{
+		padding: 2em 40px;
+	}
+
+	//image sections
+	& > .image{
+		padding-top: 15vh;
+		padding-bottom: 15vh;
+		& > .wrapper{
+			background: $transparent-white;
+			padding-top: 60px;
+			padding-bottom: 60px;
+			.title-wrap{
+				padding-left: 20px;
+				padding-right: 20px;
+				& > h2.widget-title{
+					color: $black;
+					&:after{
+						background: $black;
+					}
+				}
+			}
+			& > .field-oc-long-text{ 
+				padding-left: 20px;
+				padding-right: 20px;
+				*:not(a){
+					color: $black;
+				}
+			} 
+			.backless *:not(a){
+				color: $black !important;
+			}
+			&.two-left,&.two-right{
+				@include breakpoint ($tab, true){
+					background: none;
+					padding-top: 0;
+					padding-bottom: 0;
+					.title-wrap{	
+						h2.widget-title{
+							background: $transparent-white;
+							padding: 60px 40px;
+							&:after{
+								content: none;
+							}
+						}
+					}
+					& > .field-oc-long-text,.field-reveal-widgets{
+						background: $transparent-white;
+						padding: 60px 0;
+					}
+				}
+			} //end tab
+
+			//sub-widget special needs
+			.paragraph--type--horizontal-rule > .wrapper{
+				background: $black;
+			}
+			.video-embed-field-responsive-video{
+				iframe{
+					position: absolute;
+				}
+			}
+		}//end wrapper
+	}//end image
+
+	//sub widget special needs
+	.paragraph--type--image{
+		.oc-media{
+			margin-bottom: 0;
+			img{
+				display: block;
+			}
+		}
+	}
+}//end reveal section
+
+
+/* PATTERN LAB ONLY
+------------------ */
+.pl{
+	#organisms-reveal-group{
+		.sg-pattern-head{
+			background: $site-background;
+			margin-left: -0.5em;
+			margin-right: -0.5em;
+			padding-left: .5em;
+			padding-right: .5em;
+		}
+		.sg-pattern-extra{
+			margin-bottom: 0;
+		}
+		.sg-pattern-example{
+			max-width: 1240px;
+			@include auto;
+		}
+		.paragraph--type--reveal-group{
+			@include calc(margin-left, "-50vw + 593px");
+			@include calc(margin-right, "-50vw + 593px");
+			@include calc(width, "100vw + 40px");
+		}
+	}
+	.reveal-instruct{
+		background: $site-background;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		margin-left: -0.5em;
+		margin-right: -0.5em;
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+}

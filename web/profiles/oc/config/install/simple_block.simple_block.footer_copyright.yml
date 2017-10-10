@@ -1,0 +1,11 @@
+uuid: e3737181-8f30-4cf2-a76f-45b181a42c58
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: footer_copyright
+title: 'Footer Copyright'
+content:
+  value: "<p>©2017 Electric Citizen LLC, All Rights Reserved.</p>\r\n"
+  format: basic_html

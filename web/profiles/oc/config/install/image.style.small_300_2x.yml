@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: small_300_2x
+label: 'Small (300) 2x'
+effects:
+  5c235cd3-cab5-44f6-a9f7-0276c56d5c49:
+    uuid: 5c235cd3-cab5-44f6-a9f7-0276c56d5c49
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: true

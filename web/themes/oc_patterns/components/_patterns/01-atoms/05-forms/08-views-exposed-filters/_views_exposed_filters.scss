@@ -1,0 +1,44 @@
+/* ================
+   VIEWS EXPOSED FILTERS
+======================= */
+
+.views-exposed-form{
+	.form-item{
+		max-width: 250px;
+		display: inline-block;
+		&:nth-last-child(n+3){
+			margin-right: 1em;
+		}
+	}
+	input.form-submit{
+		background: $link;
+		color: $white;
+		&:hover,&:focus{
+			background: $hover-link;
+			@include transThreeAll;
+		}
+		&#edit-reset{
+			background: $black;
+			&:hover{
+				background: $hover-link;
+				@include transThreeAll;
+			}
+		}
+	}
+	&+ .view-content{
+		margin-top: 2em;
+	}
+}//end views exposed form
+
+
+
+/* PATTERN LAB ONLY
+---------------------- */
+.pl{ 
+	.form-item-combine,.form-item-field-category-target-id{
+		max-width: 300px;
+	}
+	input.form-submit{
+		margin-bottom: 60px;
+	}
+}

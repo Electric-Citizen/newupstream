@@ -1,0 +1,53 @@
+/*WYSIWYG for editors*/
+html {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.cke_widget_element[data-align="right"]  {
+  float: right;
+  margin:0 0 20px 20px;
+  clear:both;
+}
+
+.cke_widget_element[data-align="left"]  {
+  float: right;
+  margin:0 20px 20px 0;
+  clear:both;
+}
+.cke_widget_element[data-align="center"]  {
+  margin: 2em auto 1em;
+  display: inline;
+  text-align: center;
+  clear:both;
+}
+
+span.highlight{
+  background: #fcd916;
+}
+
+div.warning {
+  border: 2px solid #dd241b;
+  color: #dd241b;
+  padding: .5em 1em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+small{
+  font-size: 80%;
+}
+
+table th, table td{
+  min-width: 40px;
+  padding: 2px 6px;
+}
+
+.field--name-field-caption{
+  font-style: italic;
+  font-size: 13px;
+  text-align: center;
+  color: #666;
+}
+
+

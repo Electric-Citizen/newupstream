@@ -1,0 +1,58 @@
+{#
+	DRUPAL: This template is embedded into the Drupal links & files paragraph template. 
+#}
+
+{{ link_instructions }}
+
+{% block plwidgetopen %}
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--links-files">
+		{% if link_back_img %}
+			<div class="image" style="background:url({{link_back_img}}) no-repeat">
+		{% elseif link_back_color %}
+			<div class="widget-color {{link_back_color}}">
+		{% endif %}
+{% endblock %}
+
+				{% if widget_title %}
+					<h2 class="widget-title">{{widget_title}}</h2>
+				{% endif %}
+		
+				<div class="wrapper">
+					{% block linkText %}
+						{% if link_summary %}
+							<div class="field field-oc-long-text">
+								{{ link_summary }}
+							</div>
+						{% endif %}
+					{% endblock %}
+
+					{% block links %}
+						<div class="field field-oc-link-multi">
+							{% for link in links %}
+
+								<div>
+									<a href="{{link.link_url}}">{{link.link_text}}</a>
+								</div>
+							{% endfor %}
+						</div>
+					{% endblock %}
+
+					{% block files %}
+						<div class="field field-oc-file-multi">
+						{% for file in files %}
+							<div>
+								<a href="{{file.file_url}}">{{file.file_text}}</a>
+							</div>
+						{% endfor %}
+						</div>
+					{% endblock %}
+				</div>
+				
+{% block plwidgetclose %}				
+		{% if link_back_img or link_back_color %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

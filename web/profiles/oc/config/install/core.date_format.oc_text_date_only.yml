@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oc_text_date_only
+label: 'OC Text Date Only'
+locked: false
+pattern: 'F j, Y'

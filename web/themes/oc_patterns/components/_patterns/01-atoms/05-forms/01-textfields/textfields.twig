@@ -1,0 +1,52 @@
+{#
+  STYLEGUIDE ONLY: This template is not brought into to Drupal.
+#}
+<div class="form-item js-form-type-textfield">
+  <label for="edit-name">Name</label>
+  <input autocorrect="none" autocapitalize="none" spellcheck="false" aria-describedby="edit-name--description" type="text" name="name" value="" size="60" maxlength="255" class="form-text" placeholder="First, Middle, Last">
+</div>
+
+<div class="form-item js-form-type-email">
+  <label for="edit-email" class="js-form-required">Email</label>
+  <input aria-describedby="edit-pass--description" type="email" name="email" size="60" maxlength="254" class="form-email">
+  <div class="description">
+    Enter your email.
+  </div>
+</div>
+
+<div class="form-item js-form-type-type-password form-item-password">
+  <label for="edit-password">Password</label>
+  <input data-drupal-selector="edit-password" type="password" name="password" size="60" maxlength="128" class="form-text">
+  <div class="description">
+    Enter your password.
+  </div>
+</div>
+
+<div class="form-item js-form-type-tel">
+  <label for="edit-phone" class="js-form-required">Phone</label>
+  <input data-drupal-selector="edit-phone" type="tel" name="phone" size="30" maxlength="128" class="form-email">
+</div>
+
+<form>
+  <fieldset class="fieldgroup js-form-wrapper form-item form-wrapper">
+  <legend>Fieldset example</legend>
+    <div class="fieldset-wrapper">
+      <div class="form-item js-form-type-textfield">
+         <label for="webaddress">Web Address</label>
+         <input autocorrect="none" autocapitalize="none" spellcheck="false" aria-describedby="edit-name--description" type="text" name="webaddress" value="" size="60" maxlength="255" class="form-text">
+       </div>
+
+       <div class="form-item js-form-type-textfield">
+         <label for="secret">Worst thing you've ever done?</label>
+         <input autocorrect="none" autocapitalize="none" spellcheck="false" aria-describedby="edit-name--description" type="text" name="secret" value="" size="60" maxlength="255" class="form-text" placeholder="Tell us a secret...">
+       </div>
+    </div>
+  </fieldset>
+ </form>
+
+ <div class="form-item js-form-type-textarea form-item-text-area">
+   <label for="textarea">Textarea</label>
+   <div>
+      <textarea class="form-textarea"  rows="5" cols="60" placeholder="Enter your message here"></textarea>
+   </div>
+ </div>

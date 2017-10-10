@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner
+    - media_entity.bundle.image
+    - node.type.blog
+id: node.blog.field_banner
+field_name: field_banner
+entity_type: node
+bundle: blog
+label: Banner
+description: 'Banner images should be a minimum of 1600x900px. <strong>NOTE: </strong>Banners will be cropped into different aspect ratios depending on device and screen size. Use the focal point tool (crosshairs) to ensure that they most important part of the image is preserved in all ratios.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

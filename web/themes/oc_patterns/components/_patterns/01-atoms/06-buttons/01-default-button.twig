@@ -1,0 +1,10 @@
+{#
+  STYLEGUIDE ONLY: This template is not brought into to Drupal.
+#}
+<p>Default style for anything with class of 'button' or a button tag.</p>
+<button class="button" href="{{ default_button_url }}">
+  {% block default_button_content %}
+    {{ default_button_content }}
+  {% endblock %}
+</button>
+<br>

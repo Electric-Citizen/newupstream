@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * EC template for a custom one column panel layout.
+ *
+ * This template provides a very simple "one column" panel display layout.
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   - content.middle: The only panel in the layout.
+ */
+#}
+<div class="kermit" {% if css_id %}{{ css_id }}{% endif %}>
+  <div class="top">
+    {{ content.top }}
+  </div>
+  <div class="main">
+    {{ content.main }}
+  </div>
+  <div class="bottom">
+    {{ content.bottom }}
+  </div>
+</div>

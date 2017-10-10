@@ -1,0 +1,229 @@
+/* ==================
+   STELYGUIDE ONLY SCSS
+==================== */
+
+.pl {
+  //section links
+  .patternLink {
+    color: red;
+    text-transform: uppercase;
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+  }
+
+  .sg-main{
+
+  }
+  #sg-patterns{
+    padding: 0;
+  }
+  .sg-pattern {
+    clear: left;
+    margin-bottom: 0;
+    padding-bottom: 2em;
+    padding-left: .5em;
+    padding-right: .5em;
+    &:not(#organisms-reveal-group){
+      background: $site-background;
+    }
+  }
+  .sg-subtype{
+    background: $site-background;
+    padding-left: .5em;
+    padding-right: .5em;
+    & > h2{
+      margin-bottom: 0;
+      padding-bottom: .5em;
+    }
+  }
+
+  //icon row
+  #icons {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > div {
+      border: 1px solid #eee;
+      padding: 1em;
+      text-align: center;
+    }
+  }
+
+  //in-template notes
+  &.notes{
+    //from text.scss 
+    @include x-smaller;
+    opacity: .8;
+    font-style: italic;
+    margin-bottom: 2em;
+  }
+
+  .flex-holder{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    .flex-half{
+      width: 50%;
+      padding: 0 20px;
+    }
+  }
+
+  //spacer shim
+  .pl-spacer{
+    margin-top: 1em;
+  }
+
+  //alerts
+  .pl-alert{
+    text-align: center;
+    max-width: 60%;
+    margin: 2em auto;
+    border: 2px solid $red-bad;
+    padding: 1em 2em;
+    @include onlysmall{
+      display: none;
+    }
+  }
+
+  //layout region placeholders
+  .region-placeholder{
+    background: $light-grey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    h3{
+      margin-bottom: 0;
+    }
+  }
+
+
+}//end pl
+
+
+/* MACROS
+----------- */
+.pl .macro-tile{
+  //from 01-mixins.scss 
+  @include inline-block-top;
+  width: 100%;
+  margin-bottom: 1em;
+  @include tab{
+    width: 30%;
+    padding-right: 2%;
+  }
+}
+
+
+/* MIXINS REFERENCES
+------------ */
+.pl{
+  .mixin-group:not(:first-of-type){
+    margin-top: 1.5em;
+  }
+  .mixin-tile{
+    //from 01-mixins.scss 
+    @include inline-block-top;
+    width: 100%;
+    margin-bottom: 1em;
+    ul{
+      //from 01-mixins.scss 
+      @include list-reset;
+      .include-tag{
+        color: $blue;
+      }
+      .similar{
+        margin-top: .5em;
+      }
+    }
+    @include tab{
+      width: 21%;
+      padding-right: 2%;
+    }
+  }
+}
+
+
+
+/* FLEX LAYOUTS
+-------------- */
+.pl #base-flex-single .wrapper,.pl #base-flex-three-quarter .wrapper,.pl #base-flex-two-third .wrapper{
+  max-width: 1000%;
+}
+.pl-flex-row{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+/* Superfish base
+------------------- */
+.pl{
+  ul.sf-main{
+    //from 01-mixins.scss 
+    @include list-reset;
+  }
+  .sf-desk{
+    li.sf-depth-1{
+      //from 01-mixins.scss 
+      @include inline-block;
+      position: relative;
+    }
+    ul.sf-hidden{
+      display: none;
+    }
+  }//end sf-desk
+}//end pl
+
+
+/* EMBEDDED VIDEOS
+------------------- */
+.pl .video-embed-field-responsive-video{
+  position: relative;
+  &:after{
+    content: '';
+    display: block;
+    padding-bottom: 56.25%;
+  }
+  iframe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+
+/* SITE HEADER
+------------------ */
+.pl .layout-container > header{
+  @include mobilemenu{
+    .sf-horizontal{
+      display: none;
+    }
+  }
+  @include deskmenu{
+    .sf-accordion-toggle{
+      display: none;
+    }
+  }
+}
+
+/* WIDGETS
+----------------- */
+.pl #organisms-accordion{
+  padding: 0 20px;
+}

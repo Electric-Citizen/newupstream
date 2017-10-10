@@ -1,0 +1,5 @@
+#uses the theme logo file.
+logo:
+  "../../../../logo.svg"
+sitename:
+  "OC Patterns"

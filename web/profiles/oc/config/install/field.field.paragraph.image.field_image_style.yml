@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_style
+    - paragraphs.paragraphs_type.image
+  module:
+    - options
+id: paragraph.image.field_image_style
+field_name: field_image_style
+entity_type: paragraph
+bundle: image
+label: 'Image Style'
+description: "Choose the image style for this image.  </br>\r\n<strong>Original:</strong> No style set </br>\r\n<strong>Small:</strong> 300px (chosen image should be 600px wide for retina purposes) </br>\r\n<strong>Medium:</strong> 600px  </br>\r\n<strong>Large:</strong> 900px </br>\r\n<strong>Full:</strong> Full width of parent column (chosen image should be 1200px wide)\r\n<strong>Square:</strong> 350x350px square (chosen image should be 700x700)\r\n<strong>Banner:</strong> 1500x500 on large screens (chosen image should be 1500 x 1000)"
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,64 @@
+/* =============
+    MESSAGING
+================ */
+
+
+/* EXTENDERS
+----------- */
+%ok {
+  background-color: #f8fff0;
+  color: #234600;
+}
+%warning {
+  background-color: #fffce5;
+  color: #840;
+}
+%error {
+  background-color: #fef5f1;
+  color: #8c2e0b;
+}
+
+/* MESSAGE STYLING
+------------------ */
+
+.drupal-message {
+  margin: 1em auto;
+  padding: 10px 10px 10px 50px; /* LTR */
+  background-color:$white;
+  background-image: url("../images/message-24-ok.png");
+
+  background-position: 8px 8px; /* LTR */
+  background-repeat: no-repeat;
+  border: 1px solid #be7;
+  max-width: $max-width;
+}
+
+.messages--status {
+  @extend .drupal-message;
+  @extend %ok;
+}
+.messages--warning {
+  @extend .drupal-message;
+  @extend %warning;
+  background-image: url("../images/message-24-warning.png");
+  border-color: #ed5;
+}
+.messages--error {
+  @extend .drupal-message;
+  @extend %error;
+  background-image: url("../images/message-24-error.png");
+  border-color: #ed541d;
+
+}
+.messages__list {
+  margin: 0;
+}
+.messages__item {
+  list-style-image: none;
+}
+
+/* Core/module installation error messages. 
+------------------------------ */
+.messages--error  p.error {
+  color: #333;
+}

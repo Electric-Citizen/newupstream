@@ -1,0 +1,12 @@
+/* ===========
+    SYSTEM FORMS
+=============== */
+
+/* USER LOGIN
+--------------- */
+.user-login-form{
+	.form-item input:not([type="submit"]){
+		max-width: 400px;
+	}
+}
+

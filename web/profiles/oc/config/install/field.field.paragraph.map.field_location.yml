@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_location
+    - paragraphs.paragraphs_type.map
+  module:
+    - geolocation
+id: paragraph.map.field_location
+field_name: field_location
+entity_type: paragraph
+bundle: map
+label: Location
+description: 'Use the search box to enter your location. You may enter street addresses, or search for well-known places (such as Mt. Rushmore). <strong>NOTE:</strong> After entering a location, you may click on the map to adjust the final pin location. The pin will be moved to wherever you click. You may use the zoom tools or double click to zoom the map and you drag to pan the map.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

@@ -1,0 +1,107 @@
+/* ============
+   TEXT
+============ */
+
+/* TEXT MIXINS
+---------------- */
+
+/// mixin - base-font-size
+@mixin base-font-size{
+  font-size: 18px;
+}
+
+/// mixin - x-smaller
+@mixin x-smaller{
+  font-size: 80%;
+}
+
+///mixin - smaller
+@mixin smaller{
+  font-size: 90%;
+}
+
+///mixin - larger
+@mixin larger{
+  font-size: 120%;
+}
+
+/// mixin - text-date
+@mixin text-date{
+  @include smaller;
+  font-style: italic;
+  font-family: $serif;
+  opacity: .7;
+}
+
+/// mixin - styled-date
+@mixin styled-date{
+  background: $light-blue;
+  padding: 10px 20px;
+  font-family: $serif;
+  font-style: italic;
+  border-radius: 10px;
+  @include tab{
+    @include larger;
+  }
+}
+
+/* TYPE STYLES
+--------------- */
+html,code{
+  font-family: $bodyfont;
+  @include base-font-size;
+  line-height: 1.4;
+}
+
+body {
+  color: $body;
+}
+
+p{
+  &:not(:last-child){
+    margin-bottom: 1.5em;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+figcaption {
+  text-align: center;
+  color: $mid-grey;
+  font-size: 15px;
+  font-style: italic;
+}
+
+small{
+  font-size: 80%;
+}
+
+span.highlight{
+  background: $highlighter;
+}
+
+.warning{
+  background: none;
+  padding: .5em 1em;
+  margin-bottom: 1.5em;
+  color: $warning;
+  border: 1px solid $warning;
+  text-align: center;
+}
+
+.hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl{
+  .pl-long-text{
+    @include auto;
+    max-width: $max-width-text;
+  }
+}

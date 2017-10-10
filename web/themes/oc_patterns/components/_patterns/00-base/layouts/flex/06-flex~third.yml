@@ -1,0 +1,12 @@
+#number of elements shown
+items:
+  1:
+  2:
+  3:
+
+#modifiers change the widget (backless is also used for non-colored)
+flex_modifiers:
+  1:
+    third
+  2:
+    backless

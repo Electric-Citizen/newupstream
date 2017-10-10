@@ -1,0 +1,47 @@
+{#
+  STYLEGUIDE ONLY: This template is not carried into Drupal. However, the Drupal taxonomy tags term page template is customized to match this breadcrumb and title structure.
+#}
+{{ blog_tags_instructions }}
+<div class="layout-container pl-spacer">
+  <main>
+    <div class="layout-content taxonomy tags">
+
+      <div class="block block-system-breadcrumb-block">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+          <h2 id="system-breadcrumb" class="visually-hidden">>Breadcrumb</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li>{{ term }}</li>
+          </ol>
+        </nav>
+      </div>
+      <h1>Posts About {{ term }}</h1>
+
+      <div>
+        <div id="block-oc-patterns-content" class="block block-system-main-block">
+          <div class="views-element-container">
+            <div class="view taxonomy-term page-1">
+              <div class="view-content">
+                {% for post in items %}
+                  <div class="views-row">
+                    <div class="blog-teaser">
+                      <div class="info">
+                        <h3><a href="#">{{ post.title }}</a></h3>
+                        <span class="date">{{ post.date }}</span>
+                        <span class="author"> by {{ post.author }}</span>
+                        <div class="field body">{{ post.text }}</div>
+                        <a class="post-link" role="button" href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <a class="feed-icon" href="#">Subscribe to {{ term }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

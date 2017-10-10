@@ -1,0 +1,32 @@
+/* ==============
+   SUPPORT BOOK NODE
+===================== */
+.node--type-support_book{
+	.block-region-top{
+		margin-bottom: 2em;
+	}
+
+	.block-region-main{
+		.block-entityfieldnodebody{
+			margin-bottom: 2em;
+		}
+	}
+
+	.block-region-sidebar{
+		@include tab{
+			margin-top: .5em;
+		}
+	}
+	
+}//end support book
+
+
+/* PATTERN LAB ONLY
+----------------------- */
+.pl .node--type-support_book{
+	.sidebar{
+		.pl-spacer{
+			margin-top: 0;
+		}
+	}
+}

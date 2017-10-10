@@ -1,0 +1,47 @@
+widget_title:
+  "Links N Files"
+
+#to add backgrounds, use either link_back_image or link_back color. Allowed colors are orange, blue, grey
+#additional colors must be added in the drupal background style field.
+link_back_color:
+  "blue"
+link_back_img:
+  
+links:
+  1:
+    link_text: 
+      "Link 1"
+    link_url:
+      "http://www.google.com"
+  2:
+    link_text: 
+      "Link 2"
+    link_url:
+      "http://www.google.com"
+  3:
+    link_text: 
+      "Link 3"
+    link_url:
+      "http://www.google.com"
+
+files:
+  1:
+    file_text:
+      "File 1"
+    file_url: 
+      "https://www.pdf-archive.com/2011/02/27/dummy/dummy.pdf"
+  1:
+    file_text:
+      "File 2"
+    file_url: 
+      "https://www.pdf-archive.com/2011/02/27/dummy/dummy.pdf"
+
+
+link_summary:
+  "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
+
+
+
+link_instructions:
+  "DRUPAL: This template is embedded into the Drupal links & files paragraph template. "
+

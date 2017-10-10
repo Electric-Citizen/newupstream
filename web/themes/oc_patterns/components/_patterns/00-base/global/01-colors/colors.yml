@@ -1,0 +1,81 @@
+items:
+  - name: $body
+    value: '#4d4e4e'
+  - name: $light-blue
+    value: '#9acde8'
+  - name: $blue
+    value: '#35729b'
+  - name: $mid-teal
+    value: '#5a8c92'
+  - name: $dark-blue
+    value: '#064771'
+  - name: $orange
+    value: '#d38013'
+  - name: $gold
+    value: '#efb61b'
+  - name: $red
+    value: '#960430'
+  - name: $light-grey
+    value: '#ccc'
+  - name: $mid-grey
+    value: '#6a7076'
+  - name: $grey
+    value: '#ddd'
+  - name: $dark-grey
+    value: '#222222'
+  - name: $warmgrey
+    value: '#6f625a'
+  - name: $off-white
+    value: '#f6f6f6'
+  - name: $white
+    value: '#fff'
+  - name: $black
+    value: '#000'
+  - name: $highlighter
+    value: '#f2dc26'
+  - name: $warning
+    value: '#dd241b'
+  - name: $transparent-white
+    value: 'rgba(255,255,255,0.7)'
+  - name: $transparent-black
+    value: 'rgba(35,35,35,0.35)'
+  - name: $image-overlay
+    value: 'rgba(35,35,35,0.4)'
+  - name: $gold-10
+    value: 'rgba(239,182,27,0.1)'
+  - name: $gold-60
+    value: 'rgba(239,182,27,0.6)'
+  - name: $gold-85
+    value: 'rgba(254,191,0,0.85)'
+  - name: $red-30
+    value: 'rgba(183,1,1,0.3)'
+  - name: $red-85
+    value: 'rgba(204,17,3,0.85)'
+  - name: $blue-85
+    value: 'rgba(0,203,254,0.85)'
+  - name: $green-85
+    value: 'rgba(36,204,3,0.85)'
+  - name: $green-good
+    value: '#218d00'
+  - name: $red-bad
+    value: '#cd0210'
+  - name: $unpublished
+    value: '#fff4fa'
+  - name: $unpublished-dark
+    value: '#fdd5dd'
+  - name: $site-background
+    value: '#f6f6f6'
+  - name: $link
+    value: '#d52d00'
+  - name: $active-link
+    value: '#6a2600'
+  - name: $hover-link
+    value: '#6a2600'
+  - name: $button-back
+    value: '#efb61b'
+  - name: $button-back-hover
+    value: '#c84700'
+meta:
+  description: >-
+    To add to these items, use Sass variables that start with <code>$</code> in
+    <code>.//components/_patterns/00-base/global/01-colors/_color-vars.scss</code>

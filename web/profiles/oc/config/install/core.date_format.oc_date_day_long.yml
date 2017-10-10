@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oc_date_day_long
+label: 'OC Date Day Long'
+locked: false
+pattern: 'l, F j, Y'

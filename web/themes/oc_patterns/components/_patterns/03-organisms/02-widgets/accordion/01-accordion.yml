@@ -1,0 +1,6 @@
+accordion_header:
+  "Whoot Whoot"
+accordion_content:
+  "Quae similitudo in genere etiam humano apparet. An potest cupiditas finiri? Faceres tu quidem, Torquate, haec omnia; Iubet igitur nos Pythius Apollo noscere nosmet ipsos. Cur deinde Metrodori liberos commendas? At ille pellit, qui permulcet sensum voluptate."
+accordion_instructions:
+  "DRUPAL: This twig template is brought directly into the drupal accordion item widget template. Theming classes are added to the accordion-item class in the pattern lab template. Available theming classes are: grey, red, black, caret, plus. NOTE: If using caret and a color, you will have to manually change the accordion svg files."

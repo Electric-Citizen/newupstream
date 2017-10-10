@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - '-'
+            - Underline
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - media
+        -
+          name: Miscellaneous
+          items:
+            - Linkit
+            - DrupalUnlink
+            - Table
+            - HorizontalRule
+            - Blockquote
+            - Maximize
+        -
+          name: Tools
+          items:
+            - RemoveFormat
+            - Source
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+        -
+          name: Custom
+          items:
+            - Styles
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: span.highlight|highlight
+    linkit:
+      linkit_profile: wysiwyg
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

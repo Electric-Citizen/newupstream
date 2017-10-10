@@ -1,0 +1,81 @@
+/* =============
+   CTA WIDGET
+=============== */
+
+.paragraph--type--call-to-action{
+	.widget-title{
+		text-align: center;
+	}
+	//button
+	.field-oc-link{
+		text-align: center;
+		margin-top: 2em;
+		margin-bottom: 1em;
+		a{
+			border: 1px solid;
+			border-color: inherit;
+			font-size: 22px;
+			padding: 10px 30px;
+			color: $link;
+			display: inline-block;
+			max-width: 300px;
+			&:hover,&:focus{
+				background-color: $link;
+				color: $white;
+				//from 02-animations.scss
+				@include transThreeAll;
+			}
+		}
+	}
+
+	//light backgrounds
+	& > .orange{
+		.field-oc-link a{
+			color: $black;
+			&:hover,&:focus{
+				background-color: $transparent-black;
+				color: $white;
+				border-color: $black;
+				//from 02-animations.scss
+				@include transThreeAll;
+			}
+		}
+	}
+
+	///dark background and image
+	& > .image,& > .blue, & > .grey{
+		.field-oc-link a{
+			color: $white;
+			&:hover,&:focus{
+				background-color: $transparent-white;
+				color: $black;
+				border-color: $white;
+				//from 02-animations.scss
+				@include transThreeAll;
+			}
+		}
+	}//end image
+
+	//when has slidin animation (call_to_action.js)
+	& > .widget-color,& > .image{
+		overflow: hidden;
+		& > *{
+			//from 01-mixins.scss
+			@include translate3d(0, 150%, 0);
+		}
+		&.slideUp > *{
+			//from 02-animations.scsss
+			@include animation('slideInUp 1s 1 ease-out forwards');
+		}
+	}
+
+}//end cta
+
+
+/* PATTERN LAB SPECIFIC
+------------------------ */
+.pl #organisms-call_to_action{
+	.sg-pattern-example > .flex-wrap.single:first-of-type{
+		margin-top: 1em;
+	}
+}

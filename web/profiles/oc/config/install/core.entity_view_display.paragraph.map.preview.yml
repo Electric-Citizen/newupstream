@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.map.field_admin_description
+    - field.field.paragraph.map.field_layout
+    - field.field.paragraph.map.field_location
+    - field.field.paragraph.map.field_oc_long_text
+    - field.field.paragraph.map.field_pin_info
+    - field.field.paragraph.map.field_widget_title
+    - paragraphs.paragraphs_type.map
+  module:
+    - options
+id: paragraph.map.preview
+targetEntityType: paragraph
+bundle: map
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_location: true
+  field_oc_long_text: true
+  field_pin_info: true
+  field_widget_title: true

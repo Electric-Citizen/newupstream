@@ -1,0 +1,64 @@
+/* =================
+   BEAKER
+=================== */
+
+.beaker{
+	.top{
+		//from layouts.scss
+		@include top;
+	}//end top
+
+	.content-wrapper{
+		display: flex;
+		flex-flow: row wrap;
+		max-width: $max-width;
+		//from 01-mixins.scss
+		@include auto;
+		padding: 0 20px 3em;
+		
+		//node title in main content
+		h1{
+			padding-left: 0;
+			padding-right: 0;
+			text-align: left;
+		}
+
+		.main{
+			flex: 0 0 100%;
+			order: 1;
+			@include tab{
+				flex: 0 0 76%;
+				order: 2;
+				overflow: hidden;
+			}
+		}
+		.sidebar{
+			flex: 0 0 100%;
+			order: 2;
+			@include tab{
+				padding-right: 40px;
+				flex: 0 0 24%;
+				order: 1;
+			}
+		}
+	}//end content wrapper
+
+}//end beaker
+
+
+/* PATTERN LAB ONLY
+------------------ */
+.sg-pattern-example > .beaker{
+	.top{
+		height: 100px;
+		margin-bottom: 1em;
+	}
+	.main,.sidebar{
+		height: 300px;
+		margin-bottom: 1em;
+	}
+	.bottom{
+		height: 100px;
+	}
+}
+

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_machine_name
+    - paragraphs.paragraphs_type.admin_view_placer
+id: paragraph.admin_view_placer.field_display_machine_name
+field_name: field_display_machine_name
+entity_type: paragraph
+bundle: admin_view_placer
+label: 'Display Machine Name'
+description: 'Enter the machine name of the view display (view block).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,214 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.profiles.body
+    - field.field.node.profiles.field_email
+    - field.field.node.profiles.field_first_name
+    - field.field.node.profiles.field_last_name
+    - field.field.node.profiles.field_phone
+    - field.field.node.profiles.field_position
+    - field.field.node.profiles.field_profile_image
+    - field.field.node.profiles.panelizer
+    - node.type.profiles
+  module:
+    - panelizer
+    - telephone
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: true
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          68708cd0-7827-472d-8be3-e708e2d4bf5e:
+            id: 'entity_field:node:body'
+            label: Bio
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: main
+            weight: -1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 68708cd0-7827-472d-8be3-e708e2d4bf5e
+          173b4c51-3a04-4f1b-ae39-258c65e5f8b5:
+            id: 'entity_field:node:field_email'
+            label: Email
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: email_mailto
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: sidebar
+            weight: -8
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 173b4c51-3a04-4f1b-ae39-258c65e5f8b5
+          1b539bcb-aa10-4d3d-b0bc-8755e0866b73:
+            id: 'entity_field:node:field_phone'
+            label: Phone
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: telephone_link
+              settings:
+                title: ''
+              third_party_settings: {  }
+              weight: 0
+            region: sidebar
+            weight: -7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 1b539bcb-aa10-4d3d-b0bc-8755e0866b73
+          f3889313-216d-48fc-adcf-9b0b34f73014:
+            id: 'entity_field:node:field_position'
+            label: Position
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_label
+              settings:
+                link: false
+              third_party_settings: {  }
+              weight: 0
+            region: main
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: f3889313-216d-48fc-adcf-9b0b34f73014
+          490e60ae-4adc-4e28-bac7-ac84e67282ae:
+            id: 'entity_field:node:field_profile_image'
+            label: 'Profile Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: square
+              third_party_settings: {  }
+              weight: 0
+            region: sidebar
+            weight: -9
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 490e60ae-4adc-4e28-bac7-ac84e67282ae
+          9a43a9b3-c7f0-4eeb-ba82-219156ca4743:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: main
+            weight: -3
+            uuid: 9a43a9b3-c7f0-4eeb-ba82-219156ca4743
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          22ebdebb-eb2a-4409-8237-429f82a89015:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: -10
+            uuid: 22ebdebb-eb2a-4409-8237-429f82a89015
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: e95f52c8-5070-4a1f-bb44-e8822b4553f1
+        weight: 0
+        layout: beaker
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:profiles:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+id: node.profiles.default
+targetEntityType: node
+bundle: profiles
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_email:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_first_name:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 106
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_position:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_profile_image:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  panelizer: true

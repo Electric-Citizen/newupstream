@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: lightbox_gallery
+label: 'Lightbox Gallery'
+behavior_plugins: {  }

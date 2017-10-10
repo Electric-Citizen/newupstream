@@ -1,0 +1,95 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mosaic_tiles
+    - paragraphs.paragraphs_type.mosaic_gallery
+    - paragraphs.paragraphs_type.tile_image
+  module:
+    - entity_reference_revisions
+id: paragraph.mosaic_gallery.field_mosaic_tiles
+field_name: field_mosaic_tiles
+entity_type: paragraph
+bundle: mosaic_gallery
+label: 'Mosaic Tiles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tile_image: tile_image
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 24
+        enabled: false
+      accordion_item:
+        weight: 25
+        enabled: false
+      admin_view_placer:
+        weight: 26
+        enabled: false
+      buttons:
+        weight: 27
+        enabled: false
+      call_to_action:
+        weight: 28
+        enabled: false
+      event_by_category:
+        weight: 29
+        enabled: false
+      form:
+        weight: 30
+        enabled: false
+      horizontal_rule:
+        weight: 31
+        enabled: false
+      image:
+        weight: 32
+        enabled: false
+      lightbox_gallery:
+        weight: 33
+        enabled: false
+      links_files:
+        weight: 34
+        enabled: false
+      map:
+        weight: 35
+        enabled: false
+      mosaic_gallery:
+        weight: 36
+        enabled: false
+      news_by_category:
+        weight: 37
+        enabled: false
+      pullquote:
+        weight: 38
+        enabled: false
+      reveal_group:
+        weight: 39
+        enabled: false
+      reveal_section:
+        weight: 40
+        enabled: false
+      slideshow:
+        weight: 41
+        enabled: false
+      social_media:
+        weight: 42
+        enabled: false
+      social_platform:
+        weight: 43
+        enabled: false
+      text:
+        weight: 44
+        enabled: false
+      tile_image:
+        enabled: true
+        weight: 45
+      video:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.image.field_admin_description
+    - field.field.paragraph.image.field_image_style
+    - field.field.paragraph.image.field_layout
+    - field.field.paragraph.image.field_oc_image
+    - field.field.paragraph.image.field_oc_link
+    - field.field.paragraph.image.field_oc_long_text
+    - field.field.paragraph.image.field_widget_title
+    - paragraphs.paragraphs_type.image
+  module:
+    - options
+id: paragraph.image.preview
+targetEntityType: paragraph
+bundle: image
+mode: preview
+content:
+  field_admin_description:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_image_style: true
+  field_oc_image: true
+  field_oc_link: true
+  field_oc_long_text: true
+  field_widget_title: true

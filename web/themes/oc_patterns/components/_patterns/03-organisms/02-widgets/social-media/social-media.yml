@@ -1,0 +1,41 @@
+widget_title:
+  "Social Media"
+
+
+# if icon svg viewbox positions come from base/global/04-macros/macros.twig and may
+# need to be reset when the icon sprite
+social_platforms:
+  1:
+    social_name:
+      "facebook"
+    social_link:
+      "https://www.facebook.com"
+
+  2:
+    social_name:
+      "twitter"
+    social_link:
+      "https://twitter.com"
+
+  3:
+    social_name:
+      "linkedin"
+    social_link:
+      "https://www.linkedin.com"
+
+  4:
+    social_name:
+      "youtube"
+    social_link:
+      "https://www.youtube.com"
+  5:
+    social_name:
+      "drupal"
+    social_link:
+      "https://www.drupal.org/"
+
+
+social_instructions:
+  "STYLEGUIDE ONLY: This template is not carried over to drupal but is for theming purposes only. 
+  HOWEVER, the macros used for viewbox position are imported into the Drupal social platform paragraph template."
+

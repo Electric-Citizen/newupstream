@@ -1,0 +1,44 @@
+/* ===================
+   SUPERFISH BLOCK 
+====================== */
+
+#superfish-main-toggle{
+	display: block;
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 17px;
+	right: 50px;
+	span{
+		display: none;
+	}
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 24px;
+		width: 24px;
+		//from 03-background-sizes
+		@include hamburger;
+	}
+	&:hover,&:focus{
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -1px;
+			right: 0;
+			width: 24px;
+			height: 1px;
+			background: $black;
+		}
+	}
+	&.sf-expanded{
+		&:before{
+			//from 03-background-sizes;
+			@include hamburger-expanded;
+		}
+	}
+}//end superfish-main-toggle

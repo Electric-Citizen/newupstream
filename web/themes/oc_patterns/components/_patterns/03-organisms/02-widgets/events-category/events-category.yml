@@ -1,0 +1,159 @@
+widget_title:
+  "Events by Category"
+
+#Available styles: three-column, vertical
+display_style:
+  "three-column"
+
+#Available options: image, date, body (one per number)
+display_options:
+  1:
+    "image"
+  2:
+    "body"
+  3: 
+   "date"
+
+  
+
+#Available categories: puppies, pablo escobar, da pope
+categories:
+  "da pope"
+
+events:
+  1:
+    title: 
+      "Event 1"
+    tag:
+      "puppies"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/people
+    date:
+      "7/27/17 - 3:00pm"
+    body:
+      "Duo Reges: constructio interrete. Quam ob rem tandem, inquit, non satisfacit? An quod ita callida est, ut optime possit architectari voluptates?"    
+  2:
+    title: 
+      "Event 2"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/architecture
+    date:
+      "1/1/16 - 12:01am"
+    body:
+      "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
+  3:
+    title: 
+      "Event 3"
+    tag:
+      "da pope"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/nature
+    date:
+      "5/5/15 - 5:55pm"
+    body:
+      "Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Traditur, inquit, ab Epicuro ratio neglegendi doloris."
+  4:
+    title: 
+      "Event 4"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/animals
+    date:
+      "11/31/09 - 10:14pm"
+    body:
+      "Quis hoc dicit? Ita fit cum gravior, tum etiam splendidior oratio."
+  5:
+    title: 
+      "Event 5"
+    tag:
+      "da pope"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/tech
+    date:
+      "2/14/02 -7:01pm"
+    body:
+      
+  6:
+    title: 
+      "Event 6"
+    tag:
+      "puppies"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/people
+    date:
+      "9/11/01 - 4:32pm"
+    body:
+      "Nam illud vehementer repugnat, eundem beatum esse et multis malis oppressum. Hoc loco tenere se Triarius non potuit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius."
+  7:
+    title: 
+      "Event 7"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/architecture
+    date:
+      "1/1/00 - 12:00am"
+    body:
+      "Propter nos enim illam, non propter eam nosmet ipsos diligimus. Ego vero volo in virtute vim esse quam maximam; Qui autem de summo bono dissentit de tota philosophiae ratione dissentit."
+  8:
+    title: 
+      "Event 8"
+    tag:
+      "pablo escobar"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/nature
+    date:
+      "9/24/79 - 8:32am"
+    body:
+      "Ad corpus diceres pertinere-, sed ea, quae dixi, ad corpusne refers? Nescio quo modo praetervolavit oratio."
+  9:
+    title: 
+      "Event 9"
+    tag:
+      "puppies"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/animals
+    date:
+      "7/4/76 - 7:00pm"
+    body:
+      "Quia dolori non voluptas contraria est, sed doloris privatio. Quae quo sunt excelsiores, eo dant clariora indicia naturae"
+  10:
+    title: 
+      "Event 10"
+    tag:
+      "da pope"
+    path:
+      "#"
+    image:
+      http://placeimg.com/250/200/tech
+    date:
+      "12/25/00 - 12:00am"
+    body:
+      "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
+
+
+events_category_instructions:
+  "STYLEGUIDE ONLY: This template is not carried into Drupal, but the Events by Category OC Widgets view is
+  customized to work with the widget display settings fields."
+

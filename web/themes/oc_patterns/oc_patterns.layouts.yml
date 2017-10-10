@@ -1,0 +1,60 @@
+kermit:
+  label: 'Kermit, One Column'
+  category: 'EC Layouts'
+  path: components/_layouts/kermit
+  icon: kermit.png
+  css: kermit.css
+  template: panels-kermit
+  regions:
+    top:
+      label: Top
+    main:
+      label: Main Content
+    bottom:
+      label: Bottom
+beaker:
+  label: 'Beaker 2 Columns, Sidebar Left'
+  category: 'EC Layouts'
+  path: components/_layouts/beaker
+  icon: beaker.png
+  css: beaker.css
+  template: panels-beaker
+  regions:
+    top:
+      label: Top
+    main:
+      label: Main Content
+    sidebar:
+      label: Sidebar
+    bottom:
+      label: Bottom
+bunsen:
+  label: 'Bunsen 2 Columns, Sidebar Right'
+  category: 'EC Layouts'
+  path: components/_layouts/bunsen
+  icon: bunsen.png
+  css: bunsen.css
+  template: panels-bunsen
+  regions:
+    top:
+      label: Top
+    main:
+      label: Main Content
+    sidebar:
+      label: Sidebar
+    bottom:
+      label: Bottom
+onecol:
+  label: 'Onecol, panelizer default fakeout'
+  category: 'EC Layouts'
+  path: components/_layouts/onecol
+  icon: bunsen.png
+  css: bunsen.css
+  template: panels-onecol
+  regions:
+    top:
+      label: Top
+    main:
+      label: Main Content
+    bottom:
+      label: Bottom

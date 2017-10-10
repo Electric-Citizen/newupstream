@@ -1,0 +1,9 @@
+{#
+ STYLEGUIDE ONLY: Not carried into Drupal.
+#}
+
+<a {% for attribute,value in link_attributes %}{{ attribute }}="{{ value }}"{% endfor %} href="{{ link_url }}">
+  {% block link_content %}
+    {{ link_content }}
+  {% endblock %}
+</a>

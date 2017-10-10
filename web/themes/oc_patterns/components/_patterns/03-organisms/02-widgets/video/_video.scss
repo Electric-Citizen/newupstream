@@ -1,0 +1,26 @@
+/* ===============
+   VIDEO WIDGET
+================= */
+
+.paragraph--type--video{
+	.wrapper{
+		max-width: $max-width !important;
+	}
+	//allow video to override layout padding on mobile
+	.field-oc-video{
+		@include onlysmall{
+			//from 01-mixins.scss
+			@include edge-to-edge;
+			//from 01-mixins.scss
+			@include calc(max-width, "100% + 40px");
+		}
+	}
+	//video summary
+	.field-oc-long-text{
+		max-width: $max-width-text;
+		//from 01-mixins.scss
+		@include auto;
+		margin-top: 1em;
+	}
+}//end video widget
+

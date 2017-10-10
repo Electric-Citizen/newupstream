@@ -1,0 +1,173 @@
+/* ================
+   SEARCH
+=================== */
+
+.block-search-form-block{
+
+  //search icon
+  .t-search{
+    font-size: 16px;
+    text-indent: 9000px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: block;
+    //from 03-background-sizes.scss
+    @include searchOpenToggle;
+    &.searching{
+      //from 03-background-sizes.scss
+      @include searchCloseToggle;
+    } 
+    //add an accessiblity indicator
+    &:hover,&:focus{
+      &:after{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: $black;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+      }
+    }   
+  }
+
+  //center search box on mobile and set height to 0 so can open under header when toggled
+  #search-block-form {
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    //from 01-mixins.scss
+    @include translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+    //from 01-mixins.scss (helps prevent flutter on height animation)
+    @include backface-visibility(hidden);
+    &.slideDown{
+      height: 50px;
+      //from 01-mixins.scss
+      @include transition(height, .2s, linear);
+
+    }
+    & > div{
+      //from 01-mixins.scss
+      @include inline-block;
+    }
+    //move search box back to upper right at desktop
+    @include deskmenu{
+      top: -5px;
+      left: auto;
+      //from 01-mixins.scss
+      @include translateX(0);
+      right: 55px;
+      max-width: 320px;
+    }
+
+    //search box input
+    .js-form-type-search{
+      padding: 10px 0;
+      width: 100%;
+      margin-bottom: 0;
+      @include deskmenu{
+        width: 320px;
+      }
+      input{
+        width: 100.15%;
+        @include deskmenu{
+          width: 100%;
+        }
+        padding: 9px 10px;
+        font-size: 13px;
+        border: none;
+        border: 1px solid $black;
+        //from forms.scss
+        @include placeholder;
+        &:focus{
+          //from forms.scss
+            @include placeholderFocus;
+        }
+      }
+    }
+
+    //search submit button
+    .form-submit{
+      position: absolute;
+      right: 8px;
+      top: 18px;
+      color: $white;
+      text-indent: 9000px;
+      border: none;
+      height: 24px;
+      width: 24px;
+      //from 03-background-sizes.scss
+      @include searchSubmitMobile;
+      padding: 0;
+      &:hover{
+        //from 03-background-sizes.scss
+        @include searchSubmitMobileHover;
+        @include transClear;
+      }
+      @include tab{
+        height: 20px;
+        width: 20px;
+        //from 03-background-sizes.scss
+        @include searchSubmitTabSize;
+        &:hover{
+          //from 03-background-sizes.scss
+          @include searchSubmitTabSize;
+        }
+      }
+    }
+  }//end search block form
+
+  //when styled as box (set in macros.twig)
+  &.box{
+    @include deskmenu{
+      #search-block-form{
+        height: auto;
+        right: 20px;
+      }
+      .t-search{
+        display: none;
+      }
+    }
+  }
+
+}//end search block
+
+
+/* PATTERN LAB ONLY 
+------------------- */
+.pl{
+  #molecules-search-block .sg-pattern-example{
+    position: relative;
+    min-height: 200px;
+
+    .block-search-form-block{
+      position: relative;
+      width: 100%;
+    }
+    .t-search{
+      right: auto;
+      left: 0;
+      overflow: visible;
+      top: 0;
+    }
+    #search-block-form{
+      right: auto;
+      left: 50%;
+      top: 30px;
+      .js-form-type-search input{
+        width: 100%;
+      }
+      @include deskmenu{
+        left: auto;
+      }
+    }
+  }
+}

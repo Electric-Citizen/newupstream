@@ -1,0 +1,23 @@
+{#
+  STYLEGUIDE ONLY: This template is not embedded into Drupal.
+#}
+<div class="flex-wrap single backless">
+	<div class="paragraph paragraph--type--accordion-group">
+		<h2 class="widget-title">Accordion Group</h2>
+		<div class="wrapper">
+			<div class="field field-accordion-item">
+				{% for accordion in accordion_group %}
+					<div>
+						{% 
+							include "@organisms/02-widgets/accordion/01-accordion.twig"
+							with{
+								accordion_header: accordion.accordion_header,
+								accordion_content: accordion.accordion_content,
+							}
+						%}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

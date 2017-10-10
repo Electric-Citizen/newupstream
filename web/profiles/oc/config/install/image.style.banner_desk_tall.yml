@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: banner_desk_tall
+label: 'Banner Desk Tall'
+effects:
+  10001773-de40-4380-8ce2-b2515c90671d:
+    uuid: 10001773-de40-4380-8ce2-b2515c90671d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 650

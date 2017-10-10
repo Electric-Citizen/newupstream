@@ -1,0 +1,39 @@
+{#
+ STYLEGUIDE ONLY: This template is not carried over to drupal but is for theming purposes only. HOWEVER, the macros used for viewbox position are imported into the Drupal social platform paragraph template.
+#}
+
+{% import "@base/global/04-macros/macros.twig" as styles %}
+{{ social_instructions }}
+
+<div class="flex-wrap single backless pl-spacer">
+	<div class="paragraph paragraph--type--social-media">
+		<h2 class="widget-title">{{ widget_title }}</h2>
+		<div class="wrapper">
+			<div class="field-social-media">
+				{% for social in social_platforms %}
+					<div>
+						{% set social_link = social.social_link %}
+						{% set social_name = social.social_name %}
+						{% if social.social_name == 'facebook' %}
+							{% set position = styles.facebook %}
+						{% elseif social.social_name == 'twitter' %}
+							{% set position = styles.twitter %}
+						{% elseif social.social_name == 'linkedin' %}
+							{% set position = styles.linkedin %}
+						{% elseif social.social_name == 'youtube' %}
+							{% set position = styles.youtube %}
+						{% elseif social.social_name == 'drupal' %}
+							{% set position = styles.drupal %}
+						{% endif %}	
+						
+						{% autoescape false %}
+							<a href="{{ social_link }}" aria-label="Link to the {{ social_name }} platform." role="button" class="icon {{ social_name }}">
+								<svg class="{{ social_name }}" viewBox="{{ position }}"><desc>F{{social_name}}</desc><use xlink:href="../../../../../dist/svg/sprite.css.svg#{{ social_name }}" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+							</a>
+						{% endautoescape %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

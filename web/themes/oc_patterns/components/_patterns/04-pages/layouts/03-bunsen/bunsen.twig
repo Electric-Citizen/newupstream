@@ -1,0 +1,41 @@
+{#
+ DRUPAL: This file is embedded in the Drupal Kermit layout template.
+#}
+{% block placeholderOpen %}{% endblock %}
+<div class="bunsen" {% if css_id %}{{ css_id }}{% endif %}>
+  
+  <div class="top">
+    {% block top %}
+      <div class="region-placeholder">
+        <h3>Top</h3>
+      </div>
+    {% endblock %}
+  </div>
+  
+  <div class="content-wrapper">
+    <div class="main">
+      {% block main %}
+         <div class="region-placeholder">
+           <h3>Main</h3>
+         </div>
+      {% endblock %}
+    </div>
+    <div class="sidebar">
+      {% block sidebar %}
+         <div class="region-placeholder">
+           <h3>Sidebar</h3>
+         </div>
+      {% endblock %}
+    </div>
+  </div>
+  
+  <div class="bottom">
+    {% block bottom %}
+      <div class="region-placeholder">
+         <h3>Bottom</h3>
+      </div>
+    {% endblock %}
+  </div>
+
+</div>
+{% block placeholderClose %}{% endblock %}

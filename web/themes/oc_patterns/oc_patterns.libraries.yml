@@ -1,0 +1,105 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      dist/style.css: {}
+  js:
+    dist/scripts.js: {}
+    components/_patterns/02-molecules/blocks/header-search-block/search-block.js: {}
+    components/js/stacktable/stacktable.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/underscore
+    - core/drupalSettings
+    - core/jquery.once
+ct-node:
+  version: 1.0
+  js:
+    components/_patterns/04-pages/nodes/node.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/underscore
+    - core/drupalSettings
+    - core/jquery.once
+accordion:
+  version: 1.0
+  js:
+    components/_patterns/03-organisms/02-widgets/accordion/accordion.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+call-to-action:
+  version: 3.0
+  js:
+    components/_patterns/03-organisms/02-widgets/call-to-action/call_to_action.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+lightbox:
+  version: 3.0
+  css:
+    theme:
+      components/js/swipebox/src/css/swipebox.css: {}
+  js:
+    components/js/swipebox/src/js/jquery.swipebox.js: {}
+    components/_patterns/03-organisms/02-widgets/lightbox/lightbox.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+masonry:
+  version: 3.0
+  js:
+    components/_patterns/03-organisms/02-widgets/mosaic-gallery/masonry.pkgd.js: {}
+    components/_patterns/03-organisms/02-widgets/mosaic-gallery/mosaic-gallery.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+media-js:
+  version: 1.0
+  js:
+    components/_patterns/05-sitewide/01-oc-base/media/media.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/underscore
+    - core/drupalSettings
+    - core/jquery.once
+page-menu:
+  version: 1.0
+  js:
+    components/_patterns/02-molecules/menus/02-page-menu/page-menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/underscore
+    - core/drupalSettings
+    - core/jquery.once
+reveal:
+  version: 1.0
+  js:
+    components/_patterns/03-organisms/02-widgets/reveal/reveal.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+fonts:
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external }
+      https://fonts.googleapis.com/css?family=Raleway:400,700: { type: external }

@@ -1,0 +1,35 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ mosaic_instructions }}
+
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--mosaic-gallery">
+
+	{% if widget_title %}
+		<h2 class="widget-title">{{widget_title}}</h2>
+	{% endif %}
+
+	<div class="wrapper">
+		<div class="field field-mosaic-tiles">
+			<div class="grid-sizer"></div>
+			{% for tile in tiles %}
+				{% set span = tile.tile_span %}
+				{% set link = tile.tile_link %}
+				{% set text = tile.tile_text %}
+				{% set image = tile.tile_image %}
+				{% include "@organisms/02-widgets/mosaic-gallery/_tile-image.twig" 
+					with{
+						column: span,
+						tile_link: link,
+						tile_text: text,
+						tile_image: image
+					}
+				%}
+			{% endfor %}
+		</div>
+	</div>
+							
+	</div>
+</div>

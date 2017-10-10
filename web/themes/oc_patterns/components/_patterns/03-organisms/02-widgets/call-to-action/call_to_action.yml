@@ -1,0 +1,19 @@
+#to add backgrounds, use either cta_back_image or cta_back color. Allowed colors are orange, blue, grey
+widget_title:
+  "Call To Action"
+
+#avaiable colors: orange, blue, grey 
+#additional colors must be added in the drupal background style field.
+cta_back_color:
+  
+cta_back_img:
+  "http://placeimg.com/1800/600/nature"
+cta_text:
+  "Quae sequuntur igitur? Sin dicit obscurari quaedam nec apparere, quia valde parva sint, nos quoque concedimus;"
+cta_url:
+  "http://www.google.com"
+cta_link_text:
+  "Click Me"
+
+cta_instructions:
+  "DRUPAL: This template is embedded into the Call To Action paragraph template."

@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.small
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_media_image
+    - media_entity.bundle.image
+    - responsive_image.styles.small_300
+  module:
+    - responsive_image
+id: media.image.small
+targetEntityType: media
+bundle: image
+mode: small
+content:
+  field_caption:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_media_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: small_300
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,56 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ events_category_instructions }}
+
+{% block plwidgetopen %}
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--event-by-category">
+{% endblock %}
+
+	{% if widget_title %}
+		<h2 class="widget-title">{{widget_title}}</h2>
+	{% endif %}
+
+	<div class="wrapper">
+		<div class="views-element-container">
+			<div class="view oc-widgets news-by-category">
+				<div class="view-content">
+					{% for event in events %}
+						{% if event.tag == categories %}
+							<div class="views-row {{ display_style }}">
+								{% for option in display_options %}
+									{% if option == 'image' %}
+										<div class="card-image">
+											<a href="{{ event.path }}">
+												<img src="{{ event.image }}" />
+											</a>
+										</div>
+									{% endif %}
+								{% endfor %}
+								<div class="card-text">
+									<h3><a href="{{ event.path }}">{{ event.title }}</a></h3>
+									{% for option in display_options %}
+										{% if option == 'date' %}
+											<div class="date">{{ event.date }}</div>
+										{% endif %}
+									{% endfor %}
+									{% for option in display_options %}
+										{% if option == 'body' %}
+											{{ event.body }}
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+				
+{% block plwidgetclose %}				
+	</div>
+</div>
+{% endblock %}

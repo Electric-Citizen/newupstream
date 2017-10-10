@@ -1,0 +1,42 @@
+name: Open Citizen Patterns
+type: theme
+description: Custom theme by Electric Citizen for use with patternlab
+package: EC
+core: 8.x
+# Defines libraries group in which we can add css/js.
+libraries:
+  - oc_patterns/global-styling
+  - oc_patterns/fonts
+ckeditor_stylesheets:
+  - https://fonts.googleapis.com/css?family=Open+Sans
+  - components/css/cke.css
+base theme: stable
+hidden: false
+regions:
+ header: Header 
+ content: Content 
+ footer: Footer 
+# MUST install `components` module: `drush dl components && drush en components -y`
+# For compatibility with Pattern Lab templates; this list must
+# always be the folders immediately under the `$sourceDir` patterns folder
+# `$sourceDir` = defined in `pattern-lab/config/config.yml` under `sourceDir
+# patterns folder = `$sourceDir` + `_patterns/`
+component-libraries:
+  base:
+    paths:
+      - components/_patterns/00-base
+  atoms:
+    paths:
+      - components/_patterns/01-atoms
+  molecules:
+    paths:
+      - components/_patterns/02-molecules
+  organisms:
+    paths:
+      - components/_patterns/03-organisms
+  pages:
+    paths:
+      - components/_patterns/04-pages
+  sitewide:
+    paths:
+      - components/_patterns/05-sitewide

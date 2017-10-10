@@ -1,0 +1,35 @@
+{#
+	STYLEGUIDE ONLY: This template is not used in Drupal.
+#}
+
+{{ video_instructions }}
+
+	<div class="flex-wrap single pl-spacer">
+		<div class="paragraph paragraph--type--video">
+			
+
+				{% if widget_title %}
+					<h2 class="widget-title">{{widget_title}}</h2>
+				{% endif %}
+		
+				<div class="wrapper">
+					<div class="field field-oc-video">
+						<article class="media media-video view-mode-default">
+							<div class="field field-media-video-embed-field">
+								<div class="video-embed-field-responsive-video">
+									<iframe width="854" height="480" src="https://www.youtube.com/embed/ImaYMoTi2g8" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</article>
+					</div>
+					{% if video_summary %}
+						<div class="field field-oc-long-text">
+							{{ video_summary }}
+						</div>
+					{% endif %}
+				</div>
+				
+
+
+		</div>
+	</div>

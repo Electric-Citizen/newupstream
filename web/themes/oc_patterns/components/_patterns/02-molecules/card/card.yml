@@ -1,0 +1,47 @@
+#Instructions
+card_instructions:
+  "Cards are used to style anything with card-image and card-text classes. 
+  Mostly used for view rows or content item widgets."
+
+#set at views-row or paragraph item level, variables: three-column, four-column, round
+card_modifiers:
+
+
+card_img_src:
+  "http://placeimg.com/1280/720/nature"
+card_img_url:
+  "#"
+
+
+#Text div
+card_text_modifiers:
+
+# Title
+card_title:
+  "This is the Title"
+card_title_link: 
+  "#"
+
+# Extra Line (date, subtitle, etc)
+card_line:
+  "July 4, 1776"
+# Modifiers will be added as classes to the card line wrapper div (need to manually set in Drupal)
+card_line_modifiers:
+  1:
+    "date"
+
+# Body
+card_body:
+  "Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+# Modifiers will be added as classes to the card body wrapper div
+card_body_modifiers:
+
+# Link
+card_link_url:
+  "#"
+card_link_text:
+  'Read more »'
+card_link_modifiers:
+  1:
+    more-link
+  

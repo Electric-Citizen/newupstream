@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_browser
+    - field.field.paragraph.slideshow.field_admin_description
+    - field.field.paragraph.slideshow.field_layout
+    - field.field.paragraph.slideshow.field_oc_image_multi
+    - field.field.paragraph.slideshow.field_viewfield
+    - field.field.paragraph.slideshow.field_widget_title
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_admin_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_layout:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_oc_image_multi:
+    weight: 3
+    settings:
+      form_mode: media_browser
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+    type: inline_entity_form_complex
+    region: content
+  field_widget_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_viewfield: true
+  status: true
+  uid: true

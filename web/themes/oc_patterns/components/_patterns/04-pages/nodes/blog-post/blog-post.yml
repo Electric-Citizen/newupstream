@@ -1,0 +1,69 @@
+blog_post_instructions:
+  "STYLEGUIDE ONLY: This template is not used in Drupal, however, 
+  the Drupal blog node title field template is customized to add the necessary wrappers 
+  and elements for the title, author, date overlay. Add to Any is a placeholder only."
+post_title:
+  "PL Blog Post Example"
+
+banner_img:
+  "http://placeimg.com/1600/550/architecture"
+post_date:
+  "December 25, 0000"
+post_author:
+  "Alpha Omega"
+body:
+  1:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tibi hoc incredibile, quod beatissimum. Quid ad utilitatem tantae pecuniae? Traditur, inquit, ab Epicuro ratio neglegendi doloris. Ex ea difficultate illae fallaciloquae, ut ait Accius, malitiae natae sunt. Apparet statim, quae sint officia, quae actiones. Duo Reges: constructio interrete."
+  2:
+    "Occultum facinus esse potuerit, gaudebit; An potest cupiditas finiri? Isto modo ne improbos quidem, si essent boni viri. Memini vero, inquam;"
+  3:
+    "Praeclarae mortes sunt imperatoriae; Iam in altera philosophiae parte. Omnia peccata paria dicitis. Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; Non enim solum Torquatus dixit quid sentiret, sed etiam cur. Igitur neque stultorum quisquam beatus neque sapientium non beatus. Tollenda est atque extrahenda radicitus."
+
+addtoany:
+  "yes"
+
+# CALL TO ACTION WIDGET ON POST
+widget_title:
+  "Call To Action"
+cta_back_color:
+  
+cta_back_img:
+  "http://placeimg.com/1800/600/nature"
+cta_text:
+  "Quae sequuntur igitur? Sin dicit obscurari quaedam nec apparere, quia valde parva sint, nos quoque concedimus;"
+cta_url:
+  "http://www.google.com"
+cta_link_text:
+  "Click Me"  
+
+
+# POST AUTHOR
+profile_img:
+  "http://placeimg.com/350/350/people"
+profile_url:
+  "#"
+profile_bio:
+  "Occultum facinus esse potuerit, gaudebit; An potest cupiditas finiri? Isto modo ne improbos quidem, si essent boni viri. Memini vero, inquam..."
+
+
+# TAGS
+tags:
+  1:
+    tag_url:
+      "#"
+    tag_text:
+      "Donkeys"
+  2:
+    tag_url:
+      "#"
+    tag_text:
+      "The Pope"
+  3:
+    tag_url:
+      "#"
+    tag_text:
+      "Pablo Escobar"
+
+
+
+

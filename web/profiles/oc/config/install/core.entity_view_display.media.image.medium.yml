@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.medium
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_media_image
+    - media_entity.bundle.image
+    - responsive_image.styles.medium_500
+  module:
+    - responsive_image
+id: media.image.medium
+targetEntityType: media
+bundle: image
+mode: medium
+content:
+  field_caption:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_media_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: medium_500
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

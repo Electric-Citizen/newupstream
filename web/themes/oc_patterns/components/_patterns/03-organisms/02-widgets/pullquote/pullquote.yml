@@ -1,0 +1,17 @@
+widget_title:
+  "Pullquote"
+
+#to add backgrounds, use either quote_back_image or quote_back color. Allowed colors are orange, blue, grey
+#additional colors must be added in the drupal background style field.
+quote_back_color:
+
+quote_back_image:
+
+quote:
+  "Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen."
+source:
+  "Some Guy"
+
+quote_instructions:
+  "DRUPAL: This template is embedded into the Drupal pullquote paragraph template."
+

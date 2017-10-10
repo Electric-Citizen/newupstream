@@ -1,0 +1,133 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.support_book.body
+    - field.field.node.support_book.field_oc_widgets
+    - field.field.node.support_book.panelizer
+    - node.type.support_book
+  module:
+    - entity_reference_revisions
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: true
+    allow: true
+    default: default
+    displays:
+      default:
+        blocks:
+          1ccaf0d3-577d-4fed-ac32-4fc6d8436271:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: main
+            weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 1ccaf0d3-577d-4fed-ac32-4fc6d8436271
+          4cf068aa-b4ea-49c4-ab92-0142bf06a4a6:
+            id: 'entity_field:node:field_oc_widgets'
+            label: Widgets
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_revisions_entity_view
+              settings:
+                view_mode: default
+                link: ''
+              third_party_settings: {  }
+              weight: 0
+            region: main
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 4cf068aa-b4ea-49c4-ab92-0142bf06a4a6
+          f585c0a0-b836-423f-be62-bbe33c0fb92a:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: main
+            weight: -1
+            uuid: f585c0a0-b836-423f-be62-bbe33c0fb92a
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          edd3d954-39cf-4d40-a4c1-8f3a0f79ae06:
+            id: book_navigation
+            label: 'Website User Guide'
+            provider: book
+            label_display: visible
+            block_mode: 'book pages'
+            region: sidebar
+            weight: 0
+            uuid: edd3d954-39cf-4d40-a4c1-8f3a0f79ae06
+            context_mapping: {  }
+          c483dd43-f4fc-4a83-bfa7-81e419268a95:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: 0
+            uuid: c483dd43-f4fc-4a83-bfa7-81e419268a95
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 3b2cafc9-965e-4034-a6b2-65df9a61e28f
+        weight: 0
+        layout: beaker
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:support_book:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+id: node.support_book.default
+targetEntityType: node
+bundle: support_book
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oc_widgets:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  panelizer: true

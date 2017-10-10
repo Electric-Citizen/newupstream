@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.position
+id: taxonomy_term.position.default
+targetEntityType: taxonomy_term
+bundle: position
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true
+  path: true

@@ -1,0 +1,38 @@
+{#
+	DRUPAL: This file is embedded into the Drupal button paragraph template.
+#}
+{{button_instructions}}
+
+{% block plwidgetopen %}
+<div class="flex-wrap pl-spacer">
+	<div class="paragraph--type--buttons">
+{% endblock %}
+
+
+		{% if widget_title %}
+			<h2 class="widget-title">{{widget_title}}</h2>
+		{% endif %}
+		
+		<div class="wrapper">
+			<div class="field--name-field-oc-link-multi">
+				<ul>
+					{% block buttons %}
+						{% for button_item in button_items %}
+							{% block button_items %}
+								{% set text = button_item.button_text %}
+								{% set link = button_item.button_text %}
+								{% set color = button_item.button_color %}
+								<li>
+									<a class="button button-widget {{color}}" href="{{ link }}" role="button">{{ text }}</a>
+								</li>
+							{% endblock %}
+						{% endfor %}
+					{% endblock %}
+				</ul>
+			</div>
+		</div>
+
+{% block plwidgetclose %}
+	</div>
+</div>
+{% endblock %}

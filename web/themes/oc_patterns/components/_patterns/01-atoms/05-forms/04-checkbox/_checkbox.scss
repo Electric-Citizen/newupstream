@@ -1,0 +1,36 @@
+/* ============
+   CHECKBOX
+   =============== */
+
+
+//move checkbox options inline
+.form-checkboxes{
+	margin-bottom: 0;
+  fieldset &{
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+}
+
+
+//move input inline with label
+.js-form-type-checkbox{
+  //from 01-mixins.scss
+  @include fauxlist;
+  width: auto;
+  label,input{
+    display: inline-block;
+  }
+  label{
+  	font-weight: $regular;
+  	margin-bottom: 0;
+  }
+  input[type="checkbox"]{
+  	margin-right: .3em;
+  }
+  // custom checkboxes (defined in forms.scss, set with variable from macros.twig)
+  .custom-options &{
+    //from forms.scss
+    @include customOptions;
+  }
+}

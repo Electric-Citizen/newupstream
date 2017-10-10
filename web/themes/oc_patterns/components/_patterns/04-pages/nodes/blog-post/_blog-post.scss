@@ -1,0 +1,190 @@
+/* ====================
+   BLOG NODE
+===================== */
+.node--type-blog{
+
+	.block-region-top{
+		position: relative;
+
+		//banner
+		.block-entity-fieldnodefield-banner{
+			img{
+				display: block;
+				width: 100%;
+			}
+			@include tab{
+				.field-banner{
+					position: relative;
+					///from 01-mixins.scss
+					@include overlay;
+				}
+			}
+		}
+
+		//breadcrumbs
+		.block-system-breadcrumb-block ol{
+			@include tab{
+				position: relative;
+				z-index: 3;
+				max-width: 60%;
+			}
+		}
+
+		//title, date, author
+		.block-entity-fieldnodetitle{
+			//date and author
+			.metatext{
+				//from text.scss
+				@include text-date;
+				padding: 0 20px;
+				margin-bottom: 1.5em;
+			}
+			// move on top of banner at tablet
+			@include tab{
+				margin-top: 0;
+				position: absolute;
+				top: 45%;
+				left: 0;
+				width: 100%;
+				//from 01-mixins.scss
+				@include translateY(-50%);
+				z-index: 10;
+				color: $white;
+				text-align: center;
+				h1{
+					margin-bottom: .25em;
+				}
+				.metatext{
+					///from 01-mixins.scss
+					@include opacity(1);
+				}
+			}
+		}
+		
+		//add to any block positioning
+		.block-addtoany-block{
+			padding: 0 20px;
+			@include tab{
+				position: absolute;
+				z-index: 2;
+				bottom: 11px;
+				right: 0;
+				width: 100%;
+				text-align: right;
+				& > span{
+					display: block;
+					max-width: $max-width;
+					@include auto;
+				}
+			}
+		}
+	}//end block region top
+
+
+	.block-region-main{
+		//from node.scss
+		@include main-content;
+
+		//author
+		.block-entity-fieldnodefield-author{
+			margin-bottom: 2em;
+			max-width: $max-width-text;
+			//from 01-mixins.scss
+			@include auto;
+			.profile-teaser{
+				.field-profile-image{
+					img{
+						border-radius: 50%;
+						max-width: 200px;
+						display: block;
+						//from 01-mixins.scss
+						@include auto;
+						margin-bottom: 1em;
+						//from 01-mixins.scss
+						@include imageHover;
+					}
+				}
+				.info{
+					a:hover,&:focus{
+						//from 02-animations.scss
+						@include transThreeAll;
+					}
+				}
+				@include smalltab{
+					display: flex;
+					flex-flow: row-wrap;
+					.field-profile-image{
+						flex: 0 0 200px;
+					}
+					.info{
+						padding-left: 30px;
+					}
+				}
+			}
+		}//end author
+
+		//tags
+		.block-entity-fieldnodefield-tags{
+			max-width: $max-width-text;
+			@include auto;
+			.label{
+				font-weight: $heavy;
+				margin-right: .5em;
+			}
+			div{
+				display: inline;
+				div{
+					&:not(:last-child){
+						&:after{
+							content: ",";
+						}
+					}
+				}
+				a{
+					//from text.scss
+					@include smaller;
+					//from 02-animations.scss
+					@include transThreeAll;
+				}
+			}
+		}//end tags
+
+	}//end block region main
+
+	//bottom
+	.block-region-bottom{
+		padding: 0 20px;
+		.block-flippy-block{
+			max-width: $max-width;
+			//from 01-mixins.scss
+			@include auto;
+		}
+	}
+
+}//end blog post
+
+
+/* PATTERN LAB ONLY
+---------------- */
+.pl{
+	.block-addtoany-block{
+		@include tab{
+			bottom: 12px !important;
+		}
+		& > span{
+			font-size: 0;
+			margin-top: 2px;
+			span{
+				display: inline-block;
+				font-size: initial;
+				padding: 0 1px; 
+				.icon{
+					height: 32px;
+					width: 32px;
+					//from 03-background-sizes.scss
+					@include a2aSize;
+				}
+			}
+		}
+	}
+}

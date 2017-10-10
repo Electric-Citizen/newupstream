@@ -1,0 +1,67 @@
+
+reveal_sections:
+  1:
+    reveal_back_color:
+      "orange"
+    reveal_back_image:
+
+    reveal_columns:
+      "single"
+
+    reveal_title:
+      "Welcome to Reveal"
+    reveal_content:
+      1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cyrenaici quidem non recusant; Ita relinquet duas, 
+        de quibus etiam atque etiam consideret. Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere."
+      2:
+        "Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba. Sed tamen intellego quid velit. Maximus dolor, inquit, brevis est. Sed residamus, inquit, si placet. 
+        Scisse enim te quis coarguere possit? Qua tu etiam inprudens utebare non numquam."
+      3:
+        "Quid censes in Latino fore? Consequens enim est et post oritur, ut dixi. Sed emolumenta communia esse dicuntur, recte autem facta et peccata non habentur communia. 
+        Aliena dixit in physicis nec ea ipsa, quae tibi probarentur; 
+        At hoc in eo M. At enim, qua in vita est aliquid mali, ea beata esse non potest."
+      4: 
+        "At ille pellit, qui permulcet sensum voluptate. Commoda autem et incommoda in eo genere sunt, quae praeposita et reiecta diximus; Quae quo sunt excelsiores, eo dant clariora indicia naturae. 
+        Atqui haec patefactio quasi rerum opertarum, cum quid quidque sit aperitur, definitio est. 
+        Quis enim redargueret? Sed hoc sane concedamus. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus;"
+  2:
+    reveal_back_color:
+
+    reveal_back_image:
+      http://placeimg.com/2000/2000/architecture
+    reveal_columns:
+      "two-left"
+    reveal_title:
+      "Lots of options"
+    reveal_content:
+      1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cyrenaici quidem non recusant; Ita relinquet duas, 
+        de quibus etiam atque etiam consideret. Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere."
+      2:
+        "Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba. Sed tamen intellego quid velit. Maximus dolor, inquit, brevis est. Sed residamus, inquit, si placet. 
+        Scisse enim te quis coarguere possit? Qua tu etiam inprudens utebare non numquam."
+  3:
+    reveal_back_color:
+      "grey"
+    reveal_back_image:
+
+    reveal_columns:
+      "two-right"
+    reveal_title:
+      "Pretty dang cool!"
+    reveal_content:
+      1:
+        "Quid censes in Latino fore? Consequens enim est et post oritur, ut dixi. Sed emolumenta communia esse dicuntur, recte autem facta et peccata non habentur communia. 
+        Aliena dixit in physicis nec ea ipsa, quae tibi probarentur; 
+        At hoc in eo M. At enim, qua in vita est aliquid mali, ea beata esse non potest."
+      2: 
+        "At ille pellit, qui permulcet sensum voluptate. Commoda autem et incommoda in eo genere sunt, quae praeposita et reiecta diximus; Quae quo sunt excelsiores, eo dant clariora indicia naturae. 
+        Atqui haec patefactio quasi rerum opertarum, cum quid quidque sit aperitur, definitio est. 
+        Quis enim redargueret? Sed hoc sane concedamus. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus;"
+
+reveal_instructions:
+  "STYLEGUIDE ONLY: This template is not carried into Drupal and true reveal functionality is not shown here
+  due to the complexity of Pattern Lab. This is meant to display section theming options only. 
+
+  

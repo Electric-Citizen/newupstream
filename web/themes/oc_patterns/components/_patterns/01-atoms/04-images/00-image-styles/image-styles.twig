@@ -1,0 +1,19 @@
+{#
+ STYLEGUIDE ONLY: Not carried into Drupal.
+#}
+
+<div class="image-styles">
+
+	{% for image in images %}
+
+	<div{% if image.wrapperSize %} class="{{ image.wrapperSize }}"{% endif %}>
+		<strong>{{ image.style }}</strong>
+		<div class="pl media {{ image.styleMachine }}">
+			<img src="{{ image.img }}" />
+		</div>
+		<strong>{{ image.effects }}</strong>
+	</div>
+
+	{% endfor %}
+
+</div>

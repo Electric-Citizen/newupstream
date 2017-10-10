@@ -1,0 +1,28 @@
+{#
+  STYLEGUIDE ONLY: This template is used as an example for views-rows or content widgets in Drupal, but is not embedded into Drupal.
+  Modifier variables can change the card styling but must be manually added as class in Drupal.
+#}
+<div class="item-list">
+  <ul class="pl-flex-row">
+    {% for card_grid_item in card_grid_items %}
+      {% include "@molecules/card/01-card.twig" 
+      	with{
+      		card_modifiers: card_grid_item.card_modifiers,
+      		card_img_src: card_grid_item.card_img_src,
+      		card_img_url: card_grid_item.card_img_url,
+      		card_text_modifiers: card_grid_item.card_text-modifiers,
+      		card_title: card_grid_item.card_title,
+      		card_title_link: card_grid_item.card_title_link,
+      		card_title_modifiers: card_grid_item.card_title_modifiers,
+      		card_line: card_grid_item.card_line,
+      		card_line_modifiers: card_grid_item.card_line_modifiers,
+      		card_body: card_grid_item.card_body,
+      		card_body_modifiers: card_grid_item.card_body_modifiers,
+      		card_link_url: card_grid_item.card_link_url,
+      		card_link_text: card_grid_item.card_link_text,
+      		card_link_modifiers: card_grid_item.card_link_modifiers
+      	}
+      %}
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,40 @@
+{#
+  STYLEGUIDE ONLY: This template is not brought into to Drupal.
+#}
+<div class="form-item js-form-type-managed-file form-item-file-upload-field js-form-item-file-upload-field">
+  <label for="edit-file-upload-field-upload">File Upload</label>
+  <div id="edit-field-upload-field-upload" class="js-form-managed-file form-managed-file">
+    <div id="ajax-wrapper">
+       <input data-drupal-selector="edit-file-upload-field-upload" type="file" name="files[file_upload_field]" size="22" class="js-form-file form-file">
+       <input data-drupal-selector="edit-file-upload-field-upload-button" type="submit" name="file_upload_field_upload_button" value="Upload" class="js-hide-button js-form-submit form-submit">
+       <div class="description">
+          One File only
+          <br>
+          128mb limit
+          <br>
+          Allowed types: unicorns, pixies, Clint Eastwood
+       </div>
+    </div>
+  </div>
+  <div id="edit-file-upload-field-upload--description" class="description">
+    A field that allows all the file types.
+  </div>  
+</div>
+
+<div class="form-item js-form-type-webform-document-file form-item-document-upload js-form-item-document-upload">
+  <label for="edit-document-upload-upload">Document Only Upload</label>
+  <div id="edit-document-upload-upload" class="js-form-managed-file form-managed-file">
+    <div id="ajax-wrapper--2">
+       <input data-drupal-selector="edit-document-upload-upload" type="file" name="files[document_upload]" size="22" class="js-form-file form-file">
+       <input data-drupal-selector="edit-document-upload-upload-button" type="submit" name="docuemtn_upload_upload_button" value="Upload" class="js-hide-button js-form-submit form-submit">
+       <div class="description">
+          One File only
+          <br>
+          128mb limit
+          <br>
+          Allowed types: Valuable shredded documents
+       </div>
+    </div>
+  </div>
+</div>
+

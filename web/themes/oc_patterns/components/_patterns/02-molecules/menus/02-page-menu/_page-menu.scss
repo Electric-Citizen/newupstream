@@ -1,0 +1,158 @@
+/* =================
+   PAGE MENU
+===================== */
+
+
+.block--system-menu.page-menu{
+
+  /* NON-KERMIT DESKTOP MENU
+  -------------- */ 
+
+  //top level
+  & > ul{
+    //from 01-mixins.scss
+    @include list-reset;
+
+    //child menus
+    ul{
+      margin: .25em 0;
+      display: none;
+      padding-left: 12px;
+      //from 02-animations.scss
+      @include transThreeAll;
+      li{
+        //reset sub menus to base font size
+        //from text.scss
+        @include base-font-size;
+        a:hover{
+          //from 02-animations.scsss
+          @include transThreeAll;
+        }
+      }
+    }
+    //set first livel to larger size
+    & > li{
+      font-size: 20px;
+    }
+  }//end first level ul
+
+
+  //global menu items
+  li{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    list-style: none;
+    //shift non parents over to match expander spacing
+    &:not(.parent){
+      padding-left: .8em;
+    }
+
+    //parents
+    &.parent{
+      .expander{
+        &:before{
+          content: "+";
+        }
+      }
+      &.expanded{
+        .expander{
+          &:before{
+            content: "–";
+          }
+        }
+        //show next menu level
+        & > ul{
+          display: block;
+          height: 0;
+          //from 02-animations.scss
+          @include animation(slideDown .2s 1 forwards);
+          //from 01-mixins.scss
+          @include backface-visibility(hidden);
+        }
+        & > a{
+          color: $black;
+        }
+      }//end when expanded
+    }//end parent
+
+  }//end global li
+
+  //active link
+  a.is-active{
+    color: $black;
+  }
+
+
+  /* MOBILE & KERMIT PAGE MENU
+  --------------------- */
+
+  //select2 mobile jump menu
+  .select2-container{
+    width: 100% !important;
+    max-width: 400px;
+    .select2-selection__rendered{
+      background-color: $link;
+      color: $white;
+      border: none;
+    }
+    .select2-selection--single{
+      height: 38px; 
+      border: none;
+      .select2-selection__arrow{
+        height: 20px;
+        width: 20px;
+        top: 8px;
+        right: 8px;         
+        //from 03-background-sizes.scss
+        @include sideDropArrow;
+      }
+    }
+    //icons when open, focused
+    &.select2-container--open,&:focus{
+      .select2-selection--single .select2-selection__arrow{
+        //from background-sizes.scss
+        @include sideDropArrowActive;
+      }
+    }
+  }
+
+  //kermit specific placement
+  .kermit &{
+    & > ul{
+      display: none;
+    }
+    @include tab{
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+    }
+    @include breakpoint (1240px){
+      //from 01-mixins.scss
+      @include calc(right, "50vw - 620px");
+    }
+    h2.block-title{
+      display: none;
+    }
+    .select2-container{
+      max-width: 300px;
+      @include tab{
+        width: 300px !important;
+      }
+    }
+  }
+  
+  //when in any top region
+  .block-region-top &{
+    padding: 0 20px;
+  }
+  
+}//end .block--system-menu.page-menu nav
+
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl .page-menu{
+  & > ul:not(:first-of-type){
+    display: none;
+  }
+} 

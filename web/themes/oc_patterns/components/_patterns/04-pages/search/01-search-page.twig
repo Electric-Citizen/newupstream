@@ -1,0 +1,40 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ search_page_instructions }}
+
+<div class="path-search">
+	<div class="layout-content">
+		<div>
+			<form id="search-form" class="search-form search-page-form">
+				<div class="container-inline js-form-wrapper form-wrapper">
+					<div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys">
+						<label>Enter your keywords</label>
+						<input class="form-search" name="keys" size="30" max-length="255" type="search">
+
+					</div>
+					<input class="button js-form-submit form-submit" name="op" type="submit">
+				</div>
+			</form>
+			<h2>Search Results</h2>
+			<ol>
+				{% for result in results %}
+				<li>
+					{% set title = result.search_title %}
+					{% set text = result.search_text %}
+					{% embed "@pages/search/00-search-result.twig" 
+						with{
+							search_title: title,
+							search_text: text
+						}
+					%}
+					{% block searchStart %}{# remove search start div#}{% endblock %}
+					{% block searchEnd %}{# remove search end /div #}{% endblock %}
+					{% endembed %}
+				</li>
+				{% endfor %}
+			</ol>
+		</div>
+	</div>
+</div>

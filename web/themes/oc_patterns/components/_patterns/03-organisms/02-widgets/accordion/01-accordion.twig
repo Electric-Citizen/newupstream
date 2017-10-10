@@ -1,0 +1,15 @@
+{#
+  DRUPAL: This template is embedded into the Drupal accordion-item paragraph template and used in the Pattern Lab accordion group template.
+  Style macros used carry into both places. Available variables: grey, red, black, plus, caret.
+#}
+{% import "@base/global/04-macros/macros.twig" as styles %}
+
+{{accordion_instructions}}
+
+<div class="accordion-item {{ styles.accordionStyle }}" aria-expanded="false">
+  <h3 class="accordion-header">{{accordion_header}}</h3>
+  <div class="field field-oc-long-text">
+      {{accordion_content|raw}}
+  </div>
+</div>
+            

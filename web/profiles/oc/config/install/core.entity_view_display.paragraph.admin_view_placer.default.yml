@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_view_placer.field_admin_description
+    - field.field.paragraph.admin_view_placer.field_display_machine_name
+    - field.field.paragraph.admin_view_placer.field_layout
+    - field.field.paragraph.admin_view_placer.field_view_machine_name
+    - field.field.paragraph.admin_view_placer.field_viewfield
+    - field.field.paragraph.admin_view_placer.field_widget_title
+    - paragraphs.paragraphs_type.admin_view_placer
+  module:
+    - options
+id: paragraph.admin_view_placer.default
+targetEntityType: paragraph
+bundle: admin_view_placer
+mode: default
+content:
+  field_layout:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_viewfield:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_widget_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_admin_description: true
+  field_display_machine_name: true
+  field_view_machine_name: true

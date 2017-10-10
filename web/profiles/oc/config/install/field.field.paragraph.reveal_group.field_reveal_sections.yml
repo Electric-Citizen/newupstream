@@ -1,0 +1,89 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reveal_sections
+    - paragraphs.paragraphs_type.reveal_group
+    - paragraphs.paragraphs_type.reveal_section
+  module:
+    - entity_reference_revisions
+id: paragraph.reveal_group.field_reveal_sections
+field_name: field_reveal_sections
+entity_type: paragraph
+bundle: reveal_group
+label: 'Reveal Sections'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      reveal_section: reveal_section
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 22
+        enabled: false
+      accordion_item:
+        weight: 23
+        enabled: false
+      admin_view_placer:
+        weight: 24
+        enabled: false
+      buttons:
+        weight: 25
+        enabled: false
+      call_to_action:
+        weight: 26
+        enabled: false
+      event_by_category:
+        weight: 27
+        enabled: false
+      form:
+        weight: 28
+        enabled: false
+      horizontal_rule:
+        weight: 29
+        enabled: false
+      image:
+        weight: 30
+        enabled: false
+      lightbox_gallery:
+        weight: 31
+        enabled: false
+      links_files:
+        weight: 32
+        enabled: false
+      map:
+        weight: 33
+        enabled: false
+      news_by_category:
+        weight: 34
+        enabled: false
+      pullquote:
+        weight: 35
+        enabled: false
+      reveal_group:
+        weight: 36
+        enabled: false
+      reveal_section:
+        enabled: true
+        weight: 37
+      slideshow:
+        weight: 38
+        enabled: false
+      social_media:
+        weight: 39
+        enabled: false
+      social_platform:
+        weight: 40
+        enabled: false
+      text:
+        weight: 41
+        enabled: false
+      video:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

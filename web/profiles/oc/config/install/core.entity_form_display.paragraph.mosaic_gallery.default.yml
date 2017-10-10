@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mosaic_gallery.field_admin_description
+    - field.field.paragraph.mosaic_gallery.field_mosaic_tiles
+    - field.field.paragraph.mosaic_gallery.field_widget_title
+    - paragraphs.paragraphs_type.mosaic_gallery
+  module:
+    - paragraphs
+id: paragraph.mosaic_gallery.default
+targetEntityType: paragraph
+bundle: mosaic_gallery
+mode: default
+content:
+  field_admin_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mosaic_tiles:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: tile_image
+    third_party_settings: {  }
+    region: content
+  field_widget_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

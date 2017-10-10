@@ -1,0 +1,8 @@
+buttons_size: 32
+additional_html: "<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n<a class=\"a2a_button_linkedin\"></a>\r\n<a class=\"a2a_button_email\"></a>\r\n"
+additional_css: '.a2a_svg { border-radius: 0 !important; }'
+additional_js: "a2a_config.templates = {\r\n    email: {\r\n        subject: \"Check this out: ${title}\",\r\n        body: \"Click the link:\\n${link}\"\r\n    }\r\n};"
+universal_button: none
+custom_universal_button: ''
+universal_button_placement: before
+no_3p: false

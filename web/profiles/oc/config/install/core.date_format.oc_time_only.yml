@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: oc_time_only
+label: 'OC Time Only'
+locked: false
+pattern: 'g:ia'

@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: banner_big_desk_narrow
+label: 'Banner Big Desk Narrow'
+effects:
+  d089c267-8b7a-4f53-bb22-4cb84e38de97:
+    uuid: d089c267-8b7a-4f53-bb22-4cb84e38de97
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 300

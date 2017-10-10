@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: reveal_section
+label: 'Reveal Section'
+behavior_plugins: {  }

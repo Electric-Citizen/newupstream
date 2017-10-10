@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_header
+    - paragraphs.paragraphs_type.accordion_item
+id: paragraph.accordion_item.field_accordion_header
+field_name: field_accordion_header
+entity_type: paragraph
+bundle: accordion_item
+label: 'Accordion Header'
+description: 'This is the text that will be displayed on the collapsed accordion. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

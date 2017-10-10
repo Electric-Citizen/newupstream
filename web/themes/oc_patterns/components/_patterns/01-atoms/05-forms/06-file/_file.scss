@@ -1,0 +1,30 @@
+/* FILE
+=========== */
+
+///mixin - file-upload
+@mixin file-upload{
+	.js-form-managed-file,.form-managed-file{
+		input.js-form-submit,input.form-submit{
+			//from forms.scss
+			@include form-submit;
+			font-size: 13px;
+			padding: .5em 2em;
+		}
+		//allowed upload file types description
+		.description{
+			//from text.scss
+			@include x-smaller;
+			line-height: 1.25em;
+			opacity: .7;
+			margin-bottom: .5em;
+		}
+	}
+
+} //end file upload mixin
+
+.js-form-type-managed-file,.form-item-file-upload-field,.js-form-item-file-upload-field{
+	@include file-upload;
+}
+.js-form-type-webform-document-file,.form-item-document-upload,.js-form-item-document-upload{
+	@include file-upload;
+}

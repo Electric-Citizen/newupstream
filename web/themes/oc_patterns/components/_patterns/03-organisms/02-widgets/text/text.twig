@@ -1,0 +1,38 @@
+{#
+	DRUPAL: This template is embedded into the Drupal text paragraph template.
+#}
+
+{{ text_instructions }}
+
+{% block plwidgetopen %}
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--text">
+		{% if text_back_img %}
+			<div class="image" style="background:url({{text_back_img}}) no-repeat">
+		{% elseif text_back_color %}
+			<div class="widget-color {{text_back_color}}">
+		{% endif %}
+{% endblock %}
+
+				{% if widget_title %}
+					<h2 class="widget-title">{{widget_title}}</h2>
+				{% endif %}
+		
+				<div class="wrapper">
+					{% block text %}
+						<div class="{{columns}}">
+							<div class="field field-oc-long-text">
+								<p>{{text}}</p>
+								<p>{{text_two}}</p>
+							</div>
+						</div>
+					{% endblock %}
+				</div>
+				
+{% block plwidgetclose %}				
+		{% if text_back_img or text_back_color %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,2 @@
+search_instructions:
+  "This block replaces the Drupal search block. Form styles are set in macros.twig. Available styles: toggle, box."

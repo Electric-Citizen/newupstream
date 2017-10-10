@@ -1,0 +1,21 @@
+/* ==============
+   TEXT WIDGET
+================= */
+
+.paragraph--type--text{
+	.field-oc-long-text{
+		margin-bottom: .5em;
+	}
+	//two column text option
+	.two-column{
+		@include tab{
+			.field-oc-long-text{
+				//from 01-mixins.scss
+				@include column-count(2);
+				//from 01-mixins.scss
+				@include column-gap(2em);
+			}
+		}
+	}
+}//end links-files widget
+

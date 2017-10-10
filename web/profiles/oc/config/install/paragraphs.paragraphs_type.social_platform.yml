@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: social_platform
+label: 'Social Platform'
+behavior_plugins: {  }

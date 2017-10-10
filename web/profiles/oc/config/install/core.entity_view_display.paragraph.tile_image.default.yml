@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tile_image.field_admin_description
+    - field.field.paragraph.tile_image.field_column_span
+    - field.field.paragraph.tile_image.field_oc_image
+    - field.field.paragraph.tile_image.field_oc_link
+    - field.field.paragraph.tile_image.field_oc_long_text
+    - paragraphs.paragraphs_type.tile_image
+  module:
+    - link
+    - options
+    - text
+id: paragraph.tile_image.default
+targetEntityType: paragraph
+bundle: tile_image
+mode: default
+content:
+  field_column_span:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_oc_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: large
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_oc_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_oc_long_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_admin_description: true

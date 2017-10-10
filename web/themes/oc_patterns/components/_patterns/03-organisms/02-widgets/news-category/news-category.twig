@@ -1,0 +1,56 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ news_category_instructions }}
+
+{% block plwidgetopen %}
+<div class="flex-wrap single pl-spacer">
+	<div class="paragraph paragraph--type--news-by-category">
+{% endblock %}
+
+	{% if widget_title %}
+		<h2 class="widget-title">{{widget_title}}</h2>
+	{% endif %}
+
+	<div class="wrapper">
+		<div class="views-element-container">
+			<div class="view oc-widgets news-by-category">
+				<div class="view-content">
+					{% for article in news %}
+						{% if article.tag == categories %}
+							<div class="views-row {{ display_style }}">
+								{% for option in display_options %}
+									{% if option == 'image' %}
+										<div class="card-image">
+											<a href="{{ article.path }}">
+												<img src="{{ article.image }}" />
+											</a>
+										</div>
+									{% endif %}
+								{% endfor %}
+								<div class="card-text">
+									<h3><a href="{{ article.path }}">{{ article.title }}</a></h3>
+									{% for option in display_options %}
+										{% if option == 'date' %}
+											<div class="date">{{ article.date }}</div>
+										{% endif %}
+									{% endfor %}
+									{% for option in display_options %}
+										{% if option == 'body' %}
+											{{ article.body }}
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+				
+{% block plwidgetclose %}				
+	</div>
+</div>
+{% endblock %}

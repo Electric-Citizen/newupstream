@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_use_as_background
+    - node.type.landing_page
+id: node.landing_page.field_use_as_background
+field_name: field_use_as_background
+entity_type: node
+bundle: landing_page
+label: 'Use as Background'
+description: 'Check this box if you want to use the banner image as a background behind the page title.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Background
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_link_multi
+    - paragraphs.paragraphs_type.buttons
+  module:
+    - link
+id: paragraph.buttons.field_oc_link_multi
+field_name: field_oc_link_multi
+entity_type: paragraph
+bundle: buttons
+label: Buttons
+description: 'The link text will be the button text.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

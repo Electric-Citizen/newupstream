@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: oc_thumbnail_large
+label: 'OC Thumbnail Large'
+effects:
+  c40487ea-41ac-4cf6-a8ba-b9efc1cb9641:
+    uuid: c40487ea-41ac-4cf6-a8ba-b9efc1cb9641
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 200

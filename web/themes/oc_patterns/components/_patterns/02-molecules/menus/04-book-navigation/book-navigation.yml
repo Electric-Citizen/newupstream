@@ -1,0 +1,30 @@
+book_instructions:
+  "STYLEGUIDE ONLY: This template is not embedded into drupal, but the drupal block--book.html.twig template
+  is customized to turn the block title into a link to the parent book node."
+
+book_parent:
+  "Book Tree Navigation"
+book_parent_link:
+  "#"
+
+book_nav:
+  1:
+    book_link:
+      "Book Link 1"
+    book_link_url:
+      "#"
+  2:
+    book_link:
+      "Book Link 2"
+    book_link_url:
+      "#"
+  3:
+    book_link:
+      "Book Link 3"
+    book_link_url:
+      "#"
+  4:
+    book_link:
+      "Book Link 4"
+    book_link_url:
+      "#"

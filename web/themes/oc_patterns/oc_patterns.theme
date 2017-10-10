@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the OC Subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\taxonomy\Entity\Term;
+
+
+function oc_patterns_preprocess_field(&$variables, $hook) {
+  if ($variables['element']['#object']->bundle() == 'admin_view_placer') {
+        $view_name = $variables['element']['#object']->get('field_view_machine_name')->value;
+        $display_name = $variables['element']['#object']->get('field_display_machine_name')->value; 
+        $view = views_embed_view($view_name,$display_name);  
+        $view_output = \Drupal::service('renderer')->render($view);  
+        $variables["viewfield"] = $view_output;
+  }elseif ($variables['element']['#object']->bundle() == 'slideshow') { 
+        //ksm($variables);
+        $paragraph_id = $variables['element']['#object']->id(); 
+        $view = views_embed_view('oc_widgets', 'slideshow',$paragraph_id);  
+        $view_output = \Drupal::service('renderer')->render($view);  
+        $variables["viewfield"] = $view_output;
+  }elseif ($variables['element']['#object']->bundle() == 'news_by_category') { 
+        //ksm($variables);
+        $paragraph_id = $variables['element']['#object']->id(); 
+        $view = views_embed_view('oc_widgets', 'news_by_category',$paragraph_id);  
+        $view_output = \Drupal::service('renderer')->render($view);  
+        $variables["viewfield"] = $view_output;
+  }elseif ($variables['element']['#object']->bundle() == 'event_by_category') { 
+        //ksm($variables);
+        $paragraph_id = $variables['element']['#object']->id(); 
+        $view = views_embed_view('oc_widgets', 'events_by_category',$paragraph_id);  
+        $view_output = \Drupal::service('renderer')->render($view);  
+        $variables["viewfield"] = $view_output;
+  }
+}
+
+function oc_patterns_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+//set theme templates for content types and tax vocabularies
+function oc_patterns_theme_suggestions_page_alter(array &$suggestions, array $variables, $hook) {
+  // Try to get the node, so we can check if we're on the node page.
+  $node = Drupal::request()->attributes->get('node');
+  if ($node) {
+    $suggestions[] = 'page__' . $node->getTYpe();
+  }
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
+    $term = Term::load($tid);
+    $suggestions[] = 'page__taxonomy__' . $term->getVocabularyId();
+  }
+}
