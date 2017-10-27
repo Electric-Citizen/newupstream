@@ -198,6 +198,19 @@
   }
 }
 
+///mixin - fullback
+@mixin fullback($fullback){
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  z-index: -1;
+  width: 200vw;
+  height: 100%;
+  background: $fullback;
+}
+
 
 
 /* LAYOUT MIXINS

@@ -3,7 +3,9 @@
 ================= */
 body {
   background: $off-white;
-  overflow-x: hidden;
+  & > .overflow-guard{
+    overflow-x: hidden;
+  }
 }
 p{
   margin-top: 0;
@@ -286,3 +288,15 @@ a[href$='.ppt'],a[href$=".pptx"]{
   }
 }
 
+
+
+/* PLAYGROUND
+----------------- */
+#block-customtestingblock{
+  position: relative;
+  z-index: 1;
+  padding: 2em 20px;
+  &:after{
+    @include fullback($gold);
+  }
+}
