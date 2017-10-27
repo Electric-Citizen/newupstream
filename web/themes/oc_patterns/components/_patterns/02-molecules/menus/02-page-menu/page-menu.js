@@ -11,12 +11,28 @@ Drupal.behaviors.pageMenu = {
 
           //find nested lists and set their parents and expanders
           if(($('> ul', this).length) && (!$('.expander:first', this).length) ){
-            $(this).addClass('parent').prepend('<span class="expander" aria-expanded="false"></span>');
+            $(this).addClass('parent').prepend('<button class="expander" aria-expanded="false"></button>');
           }
 
           //find active-trail li and add aria expanded role
           $('li.active-trail > .expander').attr('aria-expanded', "true");
         });
+
+        //set button roles, tab indexes and keypresses on sidebar links
+        $('.block--system-menu.page-menu a').each(function(i){
+          //find heirarchies in the menu and add a class to each link
+          $(this).addClass('level-' + $(this).parents('.page-menu ul').length);
+          $(this).attr('tabindex', '0');
+          $(this).attr('role', 'button');
+          $(this).focusin(function(e){
+            $(this).keydown(function(e) {
+              if((e.which === 13) && (e.target === this)){  //on enter
+                document.location = $('a:first-child', this).attr('href');
+              }
+            });
+          });
+        });
+
         //change expanded class and aria-roles on expander click
         $('.expander').click(function(){
           $(this).closest('li').toggleClass('expanded');
@@ -54,9 +70,26 @@ Drupal.behaviors.pageMenu = {
               // Populate the rest of the dropdown with menu items
               $('.block--system-menu.page-menu a').each(function() {
                 var el = $(this);
+                if(el.is('.level-1')){
+                  var elLevel = 'level-1';
+                  var elText = el.text();
+                }else if(el.is('.level-2')){
+                  var elLevel = 'level-2';
+                  var elText = '–' + el.text();
+                }else if(el.is('.level-3')){
+                  var elLevel = 'level-3';
+                  var elText = '––' + el.text();
+                }else if(el.is('.level-4')){
+                  var elLevel = 'level-4';
+                  var elText = '–––' + el.text();
+                }else if(el.is('.level-5')){
+                  var elLevel = 'level-5';
+                  var elText = '––––' + el.text();
+                }
                 $('<option />', {
                   "value"   : el.attr("href"),
-                  "text"    : el.text()
+                  "text"    : elText,
+                  "class"   : elLevel
                 }).appendTo('.block--system-menu.page-menu select');
               });
 
