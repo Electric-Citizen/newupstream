@@ -143,4 +143,4 @@
     }
   }; /////end fixed footer //////
 })(jQuery, Drupal);
-//# sourceMappingURL=scripts-styleguide.js.map
+//# sourceMappingURL=global.js.map

@@ -1,5 +1,8 @@
 {
-  "extends": "stylelint-config-standard",
+  "ignoreFiles": [
+    "components/_patterns/01-atoms/04-images/icons/_icon_sprite.scss"
+  ],
+  "defaultSeverity": "warning",
   "rules": {
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [
@@ -8,10 +11,10 @@
         "extend",
         "if",
         "each",
-        "content"
+        "content",
+        "for"
       ]
     }],
-     "indentation": null,
-     "max-empty-lines": null,
+     "indentation": tab,
   }
 }
