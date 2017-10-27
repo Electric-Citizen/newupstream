@@ -4,7 +4,7 @@ global-styling:
     theme:
       dist/style.css: {}
   js:
-    dist/scripts.js: {}
+    components/_patterns/00-base/global/global.js: {}
     components/_patterns/02-molecules/blocks/header-search-block/search-block.js: {}
     components/js/stacktable/stacktable.min.js: {}
   dependencies:

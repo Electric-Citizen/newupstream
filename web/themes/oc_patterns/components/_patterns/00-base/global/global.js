@@ -48,8 +48,7 @@ Drupal.behaviors.fireFocus = {
 
         //set focus and open / close elements on tab
         $('#superfish-main.sf-horizontal li').each(function(i){
-        
-          $(this).attr('tabindex', i + 3);
+          $(this).attr('tabindex', '0');
           $(this).focusin(function(e){
             $(this).siblings('li.menuparent').removeClass('sfHover');
             $(this).siblings('li.menuparent ul').addClass('sf-hidden');

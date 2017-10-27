@@ -49,6 +49,7 @@
 
         //set focus and open / close elements on tab
         $('#superfish-main.sf-horizontal li').each(function (i) {
+          alert('fuckery');
           $(this).attr('tabindex', '0');
           $(this).focusin(function (e) {
             $(this).siblings('li.menuparent').removeClass('sfHover');
