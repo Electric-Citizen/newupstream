@@ -116,6 +116,9 @@
       // domain: 'emulsify.dev',
       openBrowserAtStart: true,
       browser: "google chrome",
+      online: true,
+      injectChanges: true,
+      proxy: 'http://upstream-local.dd:8083/',
       reloadDelay: 50,
       reloadDebounce: 750
     },
