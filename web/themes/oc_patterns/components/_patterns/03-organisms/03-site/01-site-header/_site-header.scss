@@ -1,5 +1,5 @@
 /* =================
-   SITE HEADER
+	SITE HEADER
 =================== */
 
 .layout-container > header {
@@ -58,11 +58,11 @@
 	//search toggler
 	.t-search{
 		position: absolute;
-      	top: 17px;
-      	right: 20px;
-      	@include deskmenu{
-		    right: 25px;
-		    top: 13px;
+		top: 17px;
+		right: 20px;
+		@include deskmenu{
+			right: 25px;
+			top: 13px;
 		}
 	}
 }//end search block
