@@ -1,5 +1,5 @@
 /* ================
-   PULLQUOTE WIDGET
+	PULLQUOTE WIDGET
 ======================= */
 .paragraph--type--pullquote{
 
@@ -18,13 +18,13 @@
 		//opening quotation mark
 		&:before{
 			color: $transparent-black;
-	   	content: "“";
-	   	font-size: 3em;
-	   	line-height: 0.1em;
-	   	margin-right: 0.25em;
-	   	vertical-align: -0.4em;
-	   }
-	   //colsing quotation mark
+			content: "“";
+			font-size: 3em;
+			line-height: 0.1em;
+			margin-right: 0.25em;
+			vertical-align: -0.4em;
+		}
+		//colsing quotation mark
 		&:after{
 			color: $transparent-black;
 			content: "”";

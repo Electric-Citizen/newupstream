@@ -106,11 +106,11 @@
 
 		//dropdown wrapper
 		& > ul{
-		 padding: 20px 0 0;
-		 @include menuDropdown;
-		 & > li{ 
-			padding: 0 0 20px;
-		 }
+			padding: 20px 0 0;
+			@include menuDropdown;
+			& > li{ 
+				padding: 0 0 20px;
+			}
 		}
 		
 		//single column
@@ -403,8 +403,8 @@ ul.sf-menu.sf-accordion{
 	li.sf-depth-2{
 
 		&:first-of-type.sf-expanded{
-				border-top: 0;
-			}
+			border-top: 0;
+		}
 		&:last-of-type.sf-expanded{
 			border-bottom: 0;
 		}
@@ -451,8 +451,8 @@ ul.sf-menu.sf-accordion{
 		list-style: none;
 	}
 	.sf-hidden{
-			display: none;
-		}
+		display: none;
+	}
 	.faux-header{
 		padding: 2em 20px;
 		background: $gold; 

@@ -33,28 +33,28 @@
 			background: $button-back;
 			color: $black;
 			&:hover,&:focus{
-			  background: $button-back-hover;
-			  color: $white;
+				background: $button-back-hover;
+				color: $white;
 			}
 		}
 		&.orange{
 			background: $gold;
 			color: $black;
 			&:hover,&:focus{
-			  background: $orange;
-			  color: $white;
+				background: $orange;
+				color: $white;
 			}
 		}
 		&.blue{
 			background: $blue;
 			&:hover,&:focus{
-			  background: $dark-blue;
+				background: $dark-blue;
 			}
 		}
 		&.dark-grey{
 			background: $mid-grey;
 			&:hover,&:focus{
-			  background: $black;
+				background: $black;
 			}
 		}
 	}//end button-widget (links)

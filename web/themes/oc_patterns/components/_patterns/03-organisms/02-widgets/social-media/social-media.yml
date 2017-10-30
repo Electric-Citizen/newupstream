@@ -2,7 +2,7 @@ widget_title:
   "Social Media"
 
 
-# if icon svg viewbox positions come from base/global/04-macros/macros.twig and may
+# if icon svg viewbox positions come from base/global/05-macros/macros.twig and may
 # need to be reset when the icon sprite
 social_platforms:
   1:

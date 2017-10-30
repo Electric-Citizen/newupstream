@@ -106,8 +106,20 @@
     }
   }
 
+  .clean-list{
+    @include list-reset;
+  }
 
 }//end pl
+
+
+/* GRID VARIABLES
+---------------- */
+.pl #base-grid{
+  strong{
+    color: $blue;
+  }
+}
 
 
 /* MACROS
