@@ -72,7 +72,7 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    type: entity_reference_paragraphs
+    type: paragraphs
     region: content
   field_tags:
     weight: 5

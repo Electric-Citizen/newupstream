@@ -1,0 +1,10 @@
+widget_title:
+  "Custom Block Placer"
+block_content:
+  "Placeholder text for the custom block placer widget. This widget places any block created using the Basic or Widget block types. Useful for re-usable widgets."
+
+
+block_instructions:
+  "STYLEGUIDE ONLY: This widget template is not embedded into Drupal." 
+
+  

@@ -7,8 +7,10 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.admin_view_placer
+    - paragraphs.paragraphs_type.block_placer
     - paragraphs.paragraphs_type.buttons
     - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.custom_code
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
@@ -40,8 +42,10 @@ settings:
     target_bundles:
       accordion_group: accordion_group
       admin_view_placer: admin_view_placer
+      block_placer: block_placer
       buttons: buttons
       call_to_action: call_to_action
+      custom_code: custom_code
       form: form
       horizontal_rule: horizontal_rule
       image: image
@@ -56,53 +60,77 @@ settings:
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
-        weight: -29
+        weight: -51
       accordion_item:
-        weight: -28
+        weight: -50
         enabled: false
       admin_view_placer:
         enabled: true
-        weight: -27
+        weight: -49
+      block_placer:
+        enabled: true
+        weight: -48
       buttons:
         enabled: true
-        weight: -26
+        weight: -47
       call_to_action:
         enabled: true
-        weight: -25
+        weight: -46
+      custom_code:
+        enabled: true
+        weight: -45
       form:
         enabled: true
-        weight: -24
+        weight: -44
       horizontal_rule:
         enabled: true
-        weight: -23
+        weight: -43
       image:
         enabled: true
-        weight: -22
+        weight: -42
       lightbox_gallery:
         enabled: true
-        weight: -21
+        weight: -41
       links_files:
         enabled: true
-        weight: -20
+        weight: -40
       map:
         enabled: true
-        weight: -19
+        weight: -39
       slideshow:
         enabled: true
-        weight: -18
+        weight: -38
       text:
         enabled: true
-        weight: -17
+        weight: -37
       video:
         enabled: true
-        weight: -16
+        weight: -36
       pullquote:
         enabled: true
-        weight: 27
+        weight: -35
       social_media:
         enabled: true
-        weight: 31
+        weight: -34
       social_platform:
-        weight: 32
+        weight: -33
+        enabled: false
+      event_by_category:
+        weight: -32
+        enabled: false
+      mosaic_gallery:
+        weight: -31
+        enabled: false
+      news_by_category:
+        weight: -30
+        enabled: false
+      reveal_group:
+        weight: -29
+        enabled: false
+      reveal_section:
+        weight: -28
+        enabled: false
+      tile_image:
+        weight: -27
         enabled: false
 field_type: entity_reference_revisions

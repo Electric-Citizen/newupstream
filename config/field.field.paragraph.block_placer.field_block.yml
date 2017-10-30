@@ -1,0 +1,30 @@
+uuid: 6cdf827b-2cd6-42b8-8494-9b4a46fd5cc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - block_content.type.widgets_block
+    - field.storage.paragraph.field_block
+    - paragraphs.paragraphs_type.block_placer
+id: paragraph.block_placer.field_block
+field_name: field_block
+entity_type: paragraph
+bundle: block_placer
+label: Block
+description: 'Use this field to place custom blocks.Allowed block types are Basic Block and Widgets Block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      basic: basic
+      widgets_block: widgets_block
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic
+field_type: entity_reference

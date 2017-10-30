@@ -1,0 +1,27 @@
+{#
+	STYLEGUIDE ONLY: This file is not embedded into Drupal.
+#}
+{{block_instructions}}
+
+{% block plwidgetopen %}
+<div class="flex-wrap pl-spacer">
+	<div class="paragraph--type--buttons">
+{% endblock %}
+
+
+		{% if widget_title %}
+			<h2 class="widget-title">{{widget_title}}</h2>
+		{% endif %}
+		
+		<div class="wrapper">
+			<div class="field--name-field-block">
+				{% block blockPlacer %}
+					{{ block_content }}
+				{% endblock %}
+			</div>
+		</div>
+
+{% block plwidgetclose %}
+	</div>
+</div>
+{% endblock %}

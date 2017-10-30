@@ -1,0 +1,32 @@
+uuid: 2d2a1be5-1c9f-40ee-b2c6-c9c51d64115c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.custom_code.field_admin_description
+    - field.field.paragraph.custom_code.field_layout
+    - paragraphs.paragraphs_type.custom_code
+  module:
+    - options
+id: paragraph.custom_code.preview
+targetEntityType: paragraph
+bundle: custom_code
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

@@ -1,0 +1,24 @@
+uuid: 9846a868-ea1a-4a90-bf9d-da86109becad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.custom_code.field_admin_description
+    - field.field.paragraph.custom_code.field_layout
+    - paragraphs.paragraphs_type.custom_code
+  module:
+    - options
+id: paragraph.custom_code.default
+targetEntityType: paragraph
+bundle: custom_code
+mode: default
+content:
+  field_layout:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden:
+  field_admin_description: true

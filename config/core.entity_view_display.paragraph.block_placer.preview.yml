@@ -1,0 +1,36 @@
+uuid: 7ad9f679-9168-410d-8240-0c8ca32f849e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.block_placer.field_admin_description
+    - field.field.paragraph.block_placer.field_block
+    - field.field.paragraph.block_placer.field_layout
+    - field.field.paragraph.block_placer.field_widget_title
+    - paragraphs.paragraphs_type.block_placer
+  module:
+    - options
+id: paragraph.block_placer.preview
+targetEntityType: paragraph
+bundle: block_placer
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    type: list_default
+    weight: 1
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_block: true
+  field_widget_title: true

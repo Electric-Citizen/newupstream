@@ -1,0 +1,11 @@
+widget_title:
+  "Custom Block Placer"
+custom_content:
+  "Placeholder text for the custom code widget. This widget allows any custom html and twig.
+  To add custom code, copy the paragraph--custom-code.html.twig template located in the theme's templates > ZZZ-custom > widgets > custom-code folder and rename it to: paragraph--custom-code--pid.html.twig (The pid will be automatically generated in Drupal. Delete this block of text and enter all of your custom code in the same twig block (block widgetContent)."
+
+
+custom_code_instructions:
+  "STYLEGUIDE ONLY: This widget template is not embedded into Drupal."
+
+  

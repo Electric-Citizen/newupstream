@@ -1,0 +1,31 @@
+uuid: 8c79f8a4-fd90-43cb-a07d-b7b12af36acf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.custom_code.field_admin_description
+    - field.field.paragraph.custom_code.field_layout
+    - paragraphs.paragraphs_type.custom_code
+id: paragraph.custom_code.default
+targetEntityType: paragraph
+bundle: custom_code
+mode: default
+content:
+  field_admin_description:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_layout:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

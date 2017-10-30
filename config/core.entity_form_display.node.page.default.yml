@@ -61,7 +61,7 @@ content:
     type: metatag_firehose
     region: content
   field_oc_widgets:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 4
     settings:
       title: Paragraph

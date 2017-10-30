@@ -15,7 +15,7 @@ bundle: widgets_block
 mode: default
 content:
   field_block_widgets:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 27
     settings:
       title: Paragraph

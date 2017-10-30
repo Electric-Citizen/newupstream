@@ -1,0 +1,20 @@
+{#
+	STYLEGUIDE ONLY: This file is not embedded into Drupal.
+#}
+{{custom_code_instructions}}
+
+{% block plwidgetopen %}
+<div class="flex-wrap pl-spacer">
+	<div class="paragraph--type--buttons">
+{% endblock %}
+	
+		<div class="wrapper">
+			{% block customCode %}
+				{{ custom_content }}
+			{% endblock %}
+		</div>
+
+{% block plwidgetclose %}
+	</div>
+</div>
+{% endblock %}
