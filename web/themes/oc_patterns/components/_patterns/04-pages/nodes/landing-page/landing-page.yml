@@ -3,7 +3,7 @@ landing_page_instructions:
   However, the Drupal landing-page page template is customized to attach the node.js script file."
 
 banner_style:
-  "background"
+
 
 banner_img:
   "http://placeimg.com/1600/750/nature"

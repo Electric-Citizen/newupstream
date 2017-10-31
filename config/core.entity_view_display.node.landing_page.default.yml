@@ -60,24 +60,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: af93de64-c923-429c-b4fd-7641fd362112
-          bed98e09-b5a4-4ce0-810b-a5ad26e28c90:
-            id: 'entity_field:node:field_banner'
-            label: Banner
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: entity_reference_entity_view
-              settings:
-                view_mode: banner_tall
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: top
-            weight: -3
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: bed98e09-b5a4-4ce0-810b-a5ad26e28c90
           2546e9ea-3be3-42fd-87d4-63e2f45c4ef3:
             id: 'entity_field:node:field_oc_widgets'
             label: Widgets
@@ -96,26 +78,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2546e9ea-3be3-42fd-87d4-63e2f45c4ef3
-          eadec068-631a-4617-8992-e92000011881:
-            id: 'entity_field:node:field_use_as_background'
-            label: 'Use as Background'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: boolean
-              settings:
-                format: default
-                format_custom_true: ''
-                format_custom_false: ''
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: top
-            weight: 0
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: eadec068-631a-4617-8992-e92000011881
           6bc4426f-84e4-480e-bdfa-44eef6803301:
             id: 'menu_block:main'
             label: 'Main navigation'
@@ -130,22 +92,13 @@ third_party_settings:
             weight: 1
             uuid: 6bc4426f-84e4-480e-bdfa-44eef6803301
             context_mapping: {  }
-          b097564e-29f7-4ffe-9efe-5f086d3cdffd:
-            id: system_breadcrumb_block
-            label: Breadcrumbs
-            provider: system
-            label_display: '0'
-            region: top
-            weight: -2
-            uuid: b097564e-29f7-4ffe-9efe-5f086d3cdffd
-            context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: cfb3f498-2997-474e-81fc-71ef6ef23762
         weight: 0
         layout: kermit
         layout_settings: {  }
-        page_title: null
+        page_title: ''
         storage_type: panelizer_default
         storage_id: 'node:landing_page:default:default'
         builder: ipe

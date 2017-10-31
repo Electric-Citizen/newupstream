@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.page.field_banner
     - field.field.node.page.field_metatags
     - field.field.node.page.field_oc_widgets
-    - field.field.node.page.field_use_as_background
     - field.field.node.page.panelizer
     - node.type.page
   module:
@@ -41,5 +40,4 @@ hidden:
   field_banner: true
   field_metatags: true
   field_oc_widgets: true
-  field_use_as_background: true
   panelizer: true

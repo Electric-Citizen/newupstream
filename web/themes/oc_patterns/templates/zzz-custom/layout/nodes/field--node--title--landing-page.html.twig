@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override for the node title field.
+ *
+ * This is an override of field.html.twig for the node title field. See that
+ * template for documentation about its details and overrides.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing span element.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @see field.html.twig
+ */
+#}
+{% set background = element['#object'].field_use_as_background.value %}
+{% set banner = drupal_entity('media', element['#object'].field_banner.0.target_id, 'banner_tall') %}
+
+{% if background == 1 and banner is not empty %}
+	<div class="landing-header background">
+		<div class="field field-banner">
+			{{ banner }}
+		</div>
+		<div class="text-wrapper">
+			<div class="block-system-breadcrumb-block">
+				{# rbeadcrumbs block content from field_preprocess in .theme #}
+				{{landing_crumbs}}
+			</div>
+			<div class="field field-node-title">
+	    		<h1>{{ element.0['#context'].value }}</h1>
+	    	</div>
+    	</div>
+	</div>
+	
+{% else %}
+	<div class="landing-header">
+		{% if banner is not empty %}
+			<div class="field field-banner">
+				{{ banner }}
+			</div>
+		{% endif %}
+		<div class="text-wrapper">
+			<div class="block-system-breadcrumb-block">
+				{# rbeadcrumbs block content from field_preprocess in .theme #}
+				{{landing_crumbs}}
+			</div>
+			<div class="field field-node-title">
+	    		<h1>{{ element.0['#context'].value }}</h1>
+	    	</div>
+    	</div>
+	</div>
+	
+{% endif %}

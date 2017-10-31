@@ -48,6 +48,18 @@ function oc_patterns_preprocess_field(&$variables, $hook) {
         $view = views_embed_view('oc_widgets', 'events_by_category',$paragraph_id);  
         $view_output = \Drupal::service('renderer')->render($view);  
         $variables["viewfield"] = $view_output;
+  }elseif ($variables['element']['#object']->bundle() == 'landing_page'){
+        //add landing page breadcrumbs as a variable
+        $block_manager = \Drupal::service('plugin.manager.block');
+        $config = [];
+        $plugin_block = $block_manager->createInstance('system_breadcrumb_block', $config);
+        $access_result = $plugin_block->access(\Drupal::currentUser());
+                if (is_object($access_result) && $access_result->isForbidden() || is_bool($access_result) && !$access_result) {
+          // You might need to add some cache tags/contexts.
+          return [];
+        }
+        $render = $plugin_block->build();
+        $variables['landing_crumbs'] = $render;
   }
 }
 

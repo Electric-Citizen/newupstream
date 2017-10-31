@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.page.field_banner
     - field.field.node.page.field_metatags
     - field.field.node.page.field_oc_widgets
-    - field.field.node.page.field_use_as_background
     - field.field.node.page.panelizer
     - node.type.page
   module:
@@ -66,18 +65,13 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: preview
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
       add_mode: button
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
-  field_use_as_background:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   path:
     type: path

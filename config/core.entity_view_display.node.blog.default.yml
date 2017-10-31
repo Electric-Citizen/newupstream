@@ -168,25 +168,7 @@ third_party_settings:
         static_context: {  }
       default:
         blocks:
-          a98ee4be-8b59-4796-ae58-02e3bd15f89a:
-            id: 'entity_field:node:title'
-            label: Title
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: string
-              settings:
-                link_to_entity: false
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            region: middle
-            weight: -5
-            uuid: a98ee4be-8b59-4796-ae58-02e3bd15f89a
-          fffc779b-2337-43d8-b4b3-2ef2e98d11a7:
+          7ea73780-c7d1-4041-8543-aec0cef0cea9:
             id: 'entity_field:node:uid'
             label: 'Authored by'
             provider: ctools_block
@@ -200,10 +182,10 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 0
-            uuid: fffc779b-2337-43d8-b4b3-2ef2e98d11a7
-          c485734d-37e9-49ac-8cf0-5dac665b2554:
+            uuid: 7ea73780-c7d1-4041-8543-aec0cef0cea9
+          d4fb93cd-695e-4851-85c0-26026c515090:
             id: 'entity_field:node:created'
             label: 'Authored on'
             provider: ctools_block
@@ -220,10 +202,10 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 0
-            uuid: c485734d-37e9-49ac-8cf0-5dac665b2554
-          ec94fe40-8175-4273-8d74-07577ddfb6b1:
+            uuid: d4fb93cd-695e-4851-85c0-26026c515090
+          98864294-9442-44b3-b54d-c62c57ae68a2:
             id: 'entity_field:node:body'
             label: Body
             provider: ctools_block
@@ -237,10 +219,10 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 101
-            uuid: ec94fe40-8175-4273-8d74-07577ddfb6b1
-          035a0d7d-5f3b-4bc6-8639-451f9b6502f4:
+            uuid: 98864294-9442-44b3-b54d-c62c57ae68a2
+          57ecbc26-7895-42ef-98b0-871e409e4a0a:
             id: 'entity_field:node:field_author'
             label: Author
             provider: ctools_block
@@ -255,10 +237,10 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 105
-            uuid: 035a0d7d-5f3b-4bc6-8639-451f9b6502f4
-          1fc8b1d1-0932-4633-8030-a8b575b0c453:
+            uuid: 57ecbc26-7895-42ef-98b0-871e409e4a0a
+          916080c2-c66f-40d3-9013-42d3b0a5c66c:
             id: 'entity_field:node:field_banner'
             label: Banner
             provider: ctools_block
@@ -273,10 +255,10 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 103
-            uuid: 1fc8b1d1-0932-4633-8030-a8b575b0c453
-          b4c735da-f5e3-4ae8-b676-730ac60f8840:
+            uuid: 916080c2-c66f-40d3-9013-42d3b0a5c66c
+          14d6f3fa-d147-4cf7-a250-06ef7da44fbe:
             id: 'entity_field:node:field_metatags'
             label: Metatags
             provider: ctools_block
@@ -290,10 +272,10 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 107
-            uuid: b4c735da-f5e3-4ae8-b676-730ac60f8840
-          e160cdc7-bb6a-430d-889b-12295c147bec:
+            uuid: 14d6f3fa-d147-4cf7-a250-06ef7da44fbe
+          2ed73ab9-5b67-4cca-8ba4-cc6c933e0ebf:
             id: 'entity_field:node:field_oc_widgets'
             label: Widgets
             provider: ctools_block
@@ -309,10 +291,10 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 102
-            uuid: e160cdc7-bb6a-430d-889b-12295c147bec
-          7435ced4-d923-4a31-aa73-ad41b8ae23dd:
+            uuid: 2ed73ab9-5b67-4cca-8ba4-cc6c933e0ebf
+          1c34e416-a100-4e96-a9bc-41c6cf8f0f41:
             id: 'entity_field:node:field_tags'
             label: Tags
             provider: ctools_block
@@ -327,14 +309,14 @@ third_party_settings:
               region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: middle
+            region: content
             weight: 104
-            uuid: 7435ced4-d923-4a31-aa73-ad41b8ae23dd
+            uuid: 1c34e416-a100-4e96-a9bc-41c6cf8f0f41
         id: panels_variant
         label: Default
-        uuid: e76f3e40-56c1-4b5e-9708-bad2f7dad701
+        uuid: eae52732-8893-4e67-85fd-dca78f78a0d0
         weight: 0
-        layout: onecol
+        layout: layout_onecol
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: ''

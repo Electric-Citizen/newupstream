@@ -11,6 +11,7 @@ button:
   support_book: false
   blog: false
   landing_page: false
+  gather_content_node: false
 message:
   page: false
   event: false
@@ -20,6 +21,7 @@ message:
   support_book: false
   blog: false
   landing_page: false
+  gather_content_node: true
 tab:
   page: true
   event: true
@@ -29,6 +31,7 @@ tab:
   support_book: true
   blog: true
   landing_page: true
+  gather_content_node: false
 tab_edit:
   page: false
   event: false
@@ -38,5 +41,6 @@ tab_edit:
   support_book: false
   blog: false
   landing_page: false
+  gather_content_node: false
 _core:
   default_config_hash: g2fkTjrvlyS3orVjGWsZNyZn-pVUCwiLuWtl15oB0dY
