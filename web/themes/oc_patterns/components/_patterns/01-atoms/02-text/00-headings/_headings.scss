@@ -1,6 +1,28 @@
 /* ============
    HEADINGS
 ============== */
+//h1 sizes
+$h1-sm: 32px;
+$h1-mid: 46px;
+$h1-lg: 60px;
+
+//h2 sizes
+$h2-sm: 26px;
+$h2-mid: 29px;
+$h2-lg: 32px;
+
+//h3 sizes
+$h3-sm: 23px;
+$h3-mid: 26px;
+
+//h4 sizes
+$h4-sm: 22px;
+
+//h5 sizes
+$h5-sm: 20px;
+
+//h6 sizes
+$h6-sm: 18px;
 
 /* HEADING MIXINS
 ------------------ */
@@ -17,37 +39,49 @@
 @mixin heading-1{
 	@include header-globals;
 	font-family: $display-header;
-	font-size: 32px;
+	font-size: $h1-sm;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	@include tab{
-		font-size: 60px;
+		font-size: $h1-mid;
+	}
+	@include max-width{
+		font-size: $h1-lg;
 	}
 }
 
 @mixin heading-2 {
 	@include header-globals;
-	font-size: 32px;
+	font-size: $h2-sm;
+	@include tab{
+		font-size: $h2-mid;
+	}
+	@include max-width{
+		font-size: $h2-lg;
+	}
 }
 
 @mixin heading-3{
 	@include header-globals;
-	font-size: 23px;
+	font-size: $h3-sm;
+	@include tab{
+		font-size: $h3-mid;
+	}
 }
 
 @mixin heading-4{
 	@include header-globals;
-	font-size: 22px;
+	font-size: $h4-sm;
 }
 
 @mixin heading-5{
 	@include header-globals;
-	font-size: 20px;
+	font-size: $h5-sm;
 }
 
 @mixin heading-6{
 	@include header-globals;
-	font-size: 18px;
+	font-size: $h6-sm;
 }
 
 @mixin block-title{
@@ -103,5 +137,43 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 	}
 }
 
+
+/* PATTERN LAB ONLY
+---------------------- */
+.pl{
+	h1{
+		font-size: $h1-sm;
+		&.header-mid{
+			font-size: $h1-mid;
+		}
+		&.header-lg{
+			font-size: $h1-lg;
+		}
+	}//end h1
+	h2:not(.block-title):not(.widget-title){
+		font-size: $h2-sm;
+		&.header-mid{
+			font-size: $h2-mid;
+		}
+		&.header-lg{
+			font-size: $h2-lg;
+		}
+	}//end h2
+	h3{
+		font-size: $h3-sm;
+		&.header-mid{
+			font-size: $h3-mid;
+		}
+	}//end h1
+	h4{
+		font-size: $h4-sm;
+	}//end h4
+	h5{
+		font-size: $h5-sm;
+	}//end h5
+	h6{
+		font-size: $h6-sm;
+	}//end h6
+}//end pl
 
 

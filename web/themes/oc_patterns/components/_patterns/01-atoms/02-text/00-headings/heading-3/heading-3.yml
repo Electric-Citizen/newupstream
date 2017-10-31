@@ -1,2 +1,4 @@
 heading:
-  "This is a Header 3 styling"
+  "This is H3"
+heading_mid:
+  "This is H3 at 760px"

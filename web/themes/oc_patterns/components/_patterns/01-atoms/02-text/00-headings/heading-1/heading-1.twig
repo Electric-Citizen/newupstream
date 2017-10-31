@@ -1,6 +1,16 @@
 {#
  STYLEGUIDE ONLY: Not carried into Drupal.
 #}
-<h1>
+<h1 class="header-sm">
     {{ heading }}
 </h1>
+{% if heading_mid %}
+	<h1 class="header-mid">
+	    {{ heading_mid }}
+	</h1>
+{% endif %}
+{% if heading_large %}
+	<h1 class="header-lg">
+	    {{ heading_large }}
+	</h1>
+{% endif %}
