@@ -1,5 +1,5 @@
 /* ===========
-    MIXINS
+		MIXINS
 =================== */
 
 //   For help see the mixins refernce chart in Pattern Lab: 
@@ -12,72 +12,72 @@
 
 ///mixin - transform
 @mixin transform($transforms) {
-  -moz-transform: $transforms;
-  -o-transform: $transforms;
-  -ms-transform: $transforms;
-  -webkit-transform: $transforms;
-  transform: $transforms;
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
 }
 
 ///mixin - translate
 @mixin translate ($x, $y) {
-   @include transform(translate($x, $y));
+	@include transform(translate($x, $y));
 }
 @mixin translateX ($x) {
-   @include transform(translateX($x));
+	@include transform(translateX($x));
 }
 @mixin translateY ($y) {
-   @include transform(translateY($y));
+	@include transform(translateY($y));
 }
 @mixin translate3d ($x, $y, $z) {
-   @include transform(translate3d($x, $y, $z));
+	@include transform(translate3d($x, $y, $z));
 }
 
 ///mixin - skew
 @mixin skew ($x, $y) {
-   @include transform(skew(#{$x}deg, #{$y}deg));
+	@include transform(skew(#{$x}deg, #{$y}deg));
 }
 
 ///mixin - scale
 @mixin scale($scalex, $scaley) {
-   @include transform(scale($scalex, $scaley));
+	@include transform(scale($scalex, $scaley));
 }
 @mixin scale3d($scalex, $scaley, $scalez) {
-   @include transform(scale($scalex, $scaley, $scalez));
+	@include transform(scale($scalex, $scaley, $scalez));
 }
 
 ///mixin - rotate
 @mixin rotate ($deg) {
-  @include transform(rotate(#{$deg}deg));
+	@include transform(rotate(#{$deg}deg));
 }
 @mixin rotate3d ($rotx, $roty, $rotz, $deg) {
-  @include transform(rotate3d($rotx, $roty, $rotz, #{$deg}deg));
+	@include transform(rotate3d($rotx, $roty, $rotz, #{$deg}deg));
 }
 
 ///mixin - perspective
 @mixin perspective ($perspective) {
-  @include transform(perspective(#{$perspective}));
+	@include transform(perspective(#{$perspective}));
 }
 
 ///mixin - transform-origin
 @mixin transform-origin ($origin) {
-  -moz-transform-origin: $origin;
-  -o-transform-origin: $origin;
-  -ms-transform-origin: $origin;
-  -webkit-transform-origin: $origin;
-  transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
 }
 
 ///mixin - backface-visibility
 @mixin backface-visibility($backface){
-  -webkit-backface-visiblity: $backface;
-  -moz-backface-visiblity: $backface;
-  backface-visiblity: $backface;
+	-webkit-backface-visiblity: $backface;
+	-moz-backface-visiblity: $backface;
+	backface-visiblity: $backface;
 }
 
 ///mixin - backgroundSize
 @mixin backgroundSize($back-width, $back-height){
-  background-size: #{$back-width} #{$back-height};
+	background-size: #{$back-width} #{$back-height};
 }
 
 ///mixin - transition
@@ -87,42 +87,42 @@
 	-ms-transition: $transition-property $transition-time $method;
 	-o-transition: $transition-property $transition-time $method;
 	transition: $transition-property $transition-time $method;
-  backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 ///mixin - opacity
 @mixin opacity($opacity){
-  opacity: #{$opacity};
-  filter: Alpha(opacity=($opacity * 100));
+	opacity: #{$opacity};
+	filter: Alpha(opacity=($opacity * 100));
 }
 
 ///mixin - column-count
 @mixin column-count($column){
-  -webkit-column-count: #{$column};
-  -moz-column-count: #{$column};
-  column-count: #{$column};
+	-webkit-column-count: #{$column};
+	-moz-column-count: #{$column};
+	column-count: #{$column};
 }
 
 ///mixin - column-gap
 @mixin column-gap($gap){
-  -webkit-column-gap: #{$gap};
-  -moz-column-gap: #{$gap};
-  column-gap: #{$gap};
+	-webkit-column-gap: #{$gap};
+	-moz-column-gap: #{$gap};
+	column-gap: #{$gap};
 }
 
 
 ///mixin - calc
 @mixin calc($property, $expression) { 
-  #{$property}: -webkit-calc(#{$expression});
-  #{$property}: -moz-calc(#{$expression});  
-  #{$property}: calc(#{$expression}); 
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});  
+	#{$property}: calc(#{$expression}); 
 }
 
 ///mixin - calcForce
 @mixin calcForce($property, $expression) { 
-  #{$property}: -webkit-calc(#{$expression}) !important;
-  #{$property}: -moz-calc(#{$expression}) !important;  
-  #{$property}: calc(#{$expression}) !important; 
+	#{$property}: -webkit-calc(#{$expression}) !important;
+	#{$property}: -moz-calc(#{$expression}) !important;  
+	#{$property}: calc(#{$expression}) !important; 
 }
 
 
@@ -132,83 +132,83 @@
 
 /// mixin - browserWipe
 @mixin browserWipe{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 
 /// mixin - overlay
 @mixin overlay{
-  &:before{
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: $image-overlay;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-      }
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: $image-overlay;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
 }
 
 ///mixin - imageHover
 @mixin imageHover{
-  border: 1px solid $light-grey;
-  &:hover,&:focus{
-    border-color: $dark-grey;
-    @include opacity(.7);
-    @include transThreeAll;
-  }
+	border: 1px solid $light-grey;
+	&:hover,&:focus{
+		border-color: $dark-grey;
+		@include opacity(.7);
+		@include transThreeAll;
+	}
 }
 
 
 ///mixin - list-reset
 @mixin list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 
 ///mixin - fauxlist
 @mixin fauxlist{
-  @include inline-block-top;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  &:last-child{
-    margin-right: 0;
-  }
+	@include inline-block-top;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	&:last-child{
+		margin-right: 0;
+	}
 }
 
 
 ///mixin - more-link
 @mixin more-link {
-  a {
-    font-size: .9rem;
-    font-weight: $heavy;
-    text-decoration: none;
+	a {
+		font-size: .9rem;
+		font-weight: $heavy;
+		text-decoration: none;
 
-    &::before {
-      content: "»";
-      font-size: 1.2rem;
-      margin-right: .2em;
-    }
-  }
+		&::before {
+			content: "»";
+			font-size: 1.2rem;
+			margin-right: .2em;
+		}
+	}
 }
 
 ///mixin - fullback
 @mixin fullback($fullback){
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -50vw;
-  z-index: -1;
-  width: 200vw;
-  height: 100%;
-  background: $fullback;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -50vw;
+	z-index: -1;
+	width: 200vw;
+	height: 100%;
+	background: $fullback;
 }
 
 
@@ -220,121 +220,181 @@ $textW: $max-width-text;
 
 ///mixin - auto
 @mixin auto{
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 ///mixin - edge-to-edge
 @mixin edge-to-edge {
-    margin-left:-20px;
-    margin-right:-20px;/*make divs look full width*/
+	margin-left:-20px;
+	margin-right:-20px;/*make divs look full width*/
 }
 
 ///mixin - clearfix
 @mixin clearfix {
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
 }
 
 ///mixin - paddedContent
 @mixin paddedContent{
-  @include calc(max-width, "#{$contentW} + 40px");
-  padding-left: 20px;
-  padding-right: 20px;
+	@include calc(max-width, "#{$contentW} + 40px");
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 ///mixin - paddedText
 @mixin paddedText{
-  @include calc(max-width, "#{$textW} + 40px");
-  padding-left: 20px;
-  padding-right: 20px;
+	@include calc(max-width, "#{$textW} + 40px");
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 ///mixin - inline-block
 @mixin inline-block{
-  display: inline-block;
-  vertical-align: middle;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 ///mixin - inline-setup
 @mixin inline-setup{
-  font-size: initial;
-  @include inline-block-top;
-  width: 100%;
+	font-size: initial;
+	@include inline-block-top;
+	width: 100%;
 }
 
 ///mixin - inline-setup-center
 @mixin inline-setup-center{
-  font-size: initial;
-  @include inline-block;
-  width: 100%;
+	font-size: initial;
+	@include inline-block;
+	width: 100%;
 }
 
 ///mixin - inline-block-top
 @mixin inline-block-top{
-  display: inline-block;
-  vertical-align: top;
+	display: inline-block;
+	vertical-align: top;
 }
 
 ///mixin - inline-block-bottom
 @mixin inline-block-bottom{
-  display: inline-block;
-  vertical-align: bottom;
+	display: inline-block;
+	vertical-align: bottom;
 }
+
+
+///mixin safe-flex
+@mixin safeFlex($direction, $wrap, $justify, $align){
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	@if $wrap == 'wrap'{
+		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+	}@else{
+		flex-wrap: nowrap;
+		-ms-flex-wrap: none;
+	}
+	@if $justify == 'start'{
+		justify-content: flex-start;
+		-ms-flex-pack: start;
+	}@else if $justify == 'end'{
+		justify-content: flex-end;
+		-ms-flex-pack: end;
+	}@else if $justify == 'center'{
+		justify-content: center;
+		-ms-flex-pack: center;
+	}@else if  $justify == 'justify'{
+		justify-content: space-between;
+		-ms-flex-pack: justify;
+	}
+	@if $align == 'start'{
+		align-items: flex-start;
+		-ms-flex-align: start;
+	}@else if $align == 'end'{
+		align-items: flex-end;
+		-ms-flex-align: end;
+	}@else if $align == 'center'{
+		align-items: center;
+		-ms-flex-align: center;
+	}@else if $align == 'stretch'{
+		align-items: stretch;
+		-ms-flex-align: stretch;
+	}@else if $align == 'baseline'{
+		align-items: baseline;
+		-ms-flex-align: baseline;
+	}
+}//end safe-flex
+
+
+///mixin safe flex size
+@mixin safeFlexSize($grow, $shrink, $size){
+	flex: $grow $shrink $size;
+	-ms-flex: $grow $shrink $size;
+}
+
+
+///mixin safe flex order
+@mixin safeFlexOrder($order){
+	order: $order;
+	-ms-flex-order: $order;
+}
+
 
 ///mixin - three-column
 @mixin three-column{
-  width: 100%;
-  flex: 0 0 auto;
-  @include smalltab{
-      @include calc(width, "50% - 1.5em");
-      &:nth-of-type(odd){
-        margin-right: 1.5em;
-      }
-    }
-    @include tab{
-      @include calc(width, "33.333% - 1em");
-      &:nth-of-type(3n+1){
-        margin-right: 1.5em;
-      }
-      &:nth-of-type(3n+2){
-        margin-right: 1.5em;
-      }
-      &:nth-of-type(3n+3){
-        margin-right: 0;
-      }
-    }
+	width: 100%;
+	@include safeFlexSize(0,0,auto);
+	@include smalltab{
+		@include calc(width, "50% - 1.5em");
+		&:nth-of-type(odd){
+			margin-right: 1.5em;
+		}
+	}
+	@include tab{
+		@include calc(width, "33.333% - 1em");
+		&:nth-of-type(3n+1){
+			margin-right: 1.5em;
+		}
+		&:nth-of-type(3n+2){
+			margin-right: 1.5em;
+		}
+		&:nth-of-type(3n+3){
+			margin-right: 0;
+		}
+	}
 }
 
 
 ///mixin - four-column
 @mixin four-column{
-  width: 100%;
-  flex: 0 0 auto;
-  @include smalltab{
-      @include calc(width, "50% - 1.5em");
-      &:nth-of-type(odd){
-        margin-right: 1.5em;
-      }
-    }
-    @include tab{
-      @include calc(width, "25% - 1.125em");
-      &:nth-of-type(4n+1){
-        margin-right: 1.5em;
-      }
-      &:nth-of-type(4n+2){
-        margin-right: 1.5em;
-      }
-      &:nth-of-type(4n+3){
-        margin-right: 1.5em;
-      }
-      &:nth-of-type(4n+4){
-        margin-right: 0;
-      }
-    }
+	width: 100%;
+	@include safeFlexSize(0,0,auto);
+	@include smalltab{
+		@include calc(width, "50% - 1.5em");
+		&:nth-of-type(odd){
+			margin-right: 1.5em;
+		}
+	}
+	@include tab{
+		@include calc(width, "25% - 1.125em");
+		&:nth-of-type(4n+1){
+			margin-right: 1.5em;
+		}
+		&:nth-of-type(4n+2){
+			margin-right: 1.5em;
+		}
+		&:nth-of-type(4n+3){
+			margin-right: 1.5em;
+		}
+		&:nth-of-type(4n+4){
+			margin-right: 0;
+		}
+	}
 }
 
 

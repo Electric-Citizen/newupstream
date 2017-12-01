@@ -5,7 +5,7 @@ dependencies: {  }
 id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
 label: 'http://dev-newupstream.pantheonsite.io/'
 chunks: 1
-links: 8
-max_filesize: 1392
+links: 10
+max_filesize: 1768
 context: {  }
-updated: 1509399272
+updated: 1509483401

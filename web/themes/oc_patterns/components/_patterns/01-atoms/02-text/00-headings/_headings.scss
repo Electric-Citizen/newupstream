@@ -99,7 +99,7 @@ $h6-sm: 18px;
 /* HEADING STYLING
 ------------------- */
 h1 {
-  @include heading-1;
+	@include heading-1;
 }
 
 h2:not(.block-title):not(.widget-title){
@@ -123,7 +123,7 @@ h6{
 }
 
 h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 

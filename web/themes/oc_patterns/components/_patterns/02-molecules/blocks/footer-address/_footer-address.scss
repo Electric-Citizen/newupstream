@@ -3,14 +3,18 @@
 ==================== */
 
 .footer-address{
-	flex: 0 0 100%;
-	order: 2;
+	//from 01-mixins.scss
+	@include safeFlexSize(0,0,100%);
+	//from 01-mixins.scss
+	@include safeFlexOrder(2);
 	text-align: center;
 	margin-bottom: 1.5em;
 	//change the footer block order at tab and align left
 	@include tab{
-		flex: 0 0 30%;
-		order: 1;
+		//from 01-mixins.scss
+		@include safeFlexSize(0,0,30%);
+		//from 01-mixins.scss
+		@include safeFlexOrder(1);
 		text-align: left;
 		margin-bottom: 0;
 	}

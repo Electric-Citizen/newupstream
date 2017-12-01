@@ -1,5 +1,5 @@
 /* ============
-   RADIO
+	 RADIO
 ============== */
 
 //move radio options inline
@@ -10,27 +10,27 @@
 
 //move input inline with label
 .js-form-type-radio{
-  //from 01-mixins.scss
-  @include fauxlist;
-  width: auto;
-  label,input{
-    display: inline-block;
-  }
-  label{
-  	font-weight: $regular;
-  	margin-bottom: 0;
-  }
-  input[type="radio"]{
-  	margin-right: .3em;
-    position: relative;
-    top: -2px;
-  }
-  //custom radio buttons (defined in forms.scss, set with variable from macros.twig)
-  .custom-options &{
-    //from forms.scss
-    @include customOptions;
-    label:before{
-      border-radius: 50%;
-    }
-  }
+	//from 01-mixins.scss
+	@include fauxlist;
+	width: auto;
+	label,input{
+		display: inline-block;
+	}
+	label{
+		font-weight: $regular;
+		margin-bottom: 0;
+	}
+	input[type="radio"]{
+		margin-right: .3em;
+		position: relative;
+		top: -2px;
+	}
+	//custom radio buttons (defined in forms.scss, set with variable from macros.twig)
+	.custom-options &{
+		//from forms.scss
+		@include customOptions;
+		label:before{
+			border-radius: 50%;
+		}
+	}
 }

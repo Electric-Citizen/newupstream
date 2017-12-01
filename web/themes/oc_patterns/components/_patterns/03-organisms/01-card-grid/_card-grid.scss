@@ -24,10 +24,9 @@
 			padding-bottom: 0;
 		}
 		@include smalltab{
-			display: flex;
-			align-items: flex-start;
+			@include safeFlex(row, null, center, start);
 			.card-image{
-				flex: 0 0 250px;
+				@include safeFlexSize(0,0,250px);
 				margin-right: 20px;
 			}
 			.card-text{

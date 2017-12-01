@@ -137,8 +137,7 @@
 				padding-left: 20px;
 				padding-right: 20px;
 				padding-bottom: 20px;
-				display: flex;
-				flex-flow: row wrap;
+				@include safeFlex(row, wrap, null, null);
 			}
 		}
 
@@ -198,14 +197,14 @@
 			}
 		}//end level 2 link
 		&.two-colum li.sf-depth-2{
-			flex: 0 0 50%;
+			@include safeFlexSize(0,0,50%);
 			padding: 0 10px;
 			& > a{
 				padding: 12px 10px;
 			}
 		}
 		&.three-column li.sf-depth-2{
-			flex: 0 0 33%;
+			@include safeFlexSize(0,0,33.333%);
 			padding: 0 10px;
 			& > a{
 				padding: 12px 10px;

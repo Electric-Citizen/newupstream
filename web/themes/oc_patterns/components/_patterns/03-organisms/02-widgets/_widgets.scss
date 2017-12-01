@@ -1,23 +1,23 @@
 /* ===================
-   WIDGETS GLOBAL
+	WIDGETS GLOBAL
 ===================== */
 
 //widgets parent field
 .field--name-field-oc-widgets {
 	//use flex to support layout field
 	display: flex;
-  	flex-flow: row wrap;
-  	//override layout padding
-  	//from 01-mixins.scss
-  	@include edge-to-edge;
-  	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
-  	.beaker .main &,.bunsen .main &{
-  		overflow: hidden;
-  		@include tab{
-  			margin-left: 0;
-  			margin-right: 0;
-  		}
-  	}	
+	flex-flow: row wrap;
+	//override layout padding
+	//from 01-mixins.scss
+	@include edge-to-edge;
+	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
+	.beaker .main &,.bunsen .main &{
+		overflow: hidden;
+		@include tab{
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}	
 }
 
 /* BACKGROUND TEXT STYLING MIXINS

@@ -3,12 +3,14 @@
 ==================== */
 
 #block-footercopyright{
-	flex: 0 0 100%;
-	order: 3;
+	//from 01-mixins.scss
+	@include safeFlexSize(0,0,100%);
+	//from 01-mixins.scss
+	@include safeFlexOrder(3);
 	text-align: center;
 	//change the footer block order at tab and align rigth and bottom
 	@include tab{
-		flex: 0 0 50%;
+		@include safeFlexSize(0,0,50%);
 		position: absolute;
 		bottom: 0;
 		right: 0;

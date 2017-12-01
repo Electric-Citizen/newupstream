@@ -6,13 +6,15 @@
 	h2.block-title{
 		display: none;
 	}
-	flex: 0 0 100%;
-	order: 1;
+	//from 01-mixins.scss
+	@include safeFlexSize(0,0,100%);
+	//from 01-mixins.scss
+	@include safeFlexOrder(1);
 	margin-bottom: 1.5em;
 	text-align: center;
 	//change the footer block order at tab and align right
 	@include tab{
-		flex: 0 0 70%;
+		@include safeFlexSize(0,0,70%);
 		text-align: right;
 	}
 	ul{

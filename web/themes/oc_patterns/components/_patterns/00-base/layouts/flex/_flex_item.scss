@@ -5,15 +5,17 @@ FLEX ITEMS
 /* WIDGETS FLEX ITEMS
 --------------------- */
 .flex-wrap{
-  	// need mins so that js can calculate heights and widths
+	// need mins so that js can calculate heights and widths
 	min-height: 0;
 	min-width: 0;
 	&:not(.fill){
-		flex: 0 0 100%;
+		//from 01-mixins.scss
+		@include safeFlexSize(0,0,100%);
 	}
 	//use auto for fill-remainder widget layout
 	&.fill{
-		flex: 1 1 auto;
+		//from 01-mixins.scss
+		@include safeFlexSize(0,0,auto);
 	}
 
 	//padding for widgets without color or image backgrounds (and views, accordions)
@@ -57,26 +59,32 @@ FLEX ITEMS
 			}
 		}
 		&.quarter,&.third{
-			flex: 0 0 50%;
+			//from 01-mixins.scss
+			@include safeFlexSize(0,0,50%);
 		}
 	}
 
 	//percents at content width
 	@include max-width{
 		&.quarter{
-			flex: 0 0 25%;
+			//from 01-mixins.scss
+			@include safeFlexSize(0,0,25%);
 		}
 		&.third{
-			flex: 0 0 33.333%;
+			//from 01-mixins.scss
+			@include safeFlexSize(0,0,33.333%);
 		}
 		&.half{
-			flex: 0 0 50%;
+			//from 01-mixins.scss
+			@include safeFlexSize(0,0,50%);
 		}
 		&.two-thirds{
-			flex: 0 0 66.666%;
+			//from 01-mixins.scss
+			@include safeFlexSize(0,0,66.666%);
 		}
 		&.three-quarter{
-			flex: 0 0 75%;
+			//from 01-mixins.scss
+			@include safeFlexSize(0,0,75%);
 		}
 	}
 
@@ -91,39 +99,6 @@ FLEX ITEMS
 .single:not(.backless):last-child{
 	margin-bottom: 2em;
 }
-
-//ie fallbacks
-.is-ie{
-	display: block;
-	font-size: 0;
-	.flex-wrap{
-		@include inline-setup;
-		@include tab{
-			&.quarter,&.third{
-				width: 50%;
-			}
-		}
-		@include max-width{
-			&.quarter{
-				width: 25%;
-			}
-			&.third{
-				width: 33.333%
-			}
-			&.half{
-				width: 50%;
-			}
-			&.two-thirds{
-				width: 66.666%;
-			}
-			&.three-quarter{
-				width: 75%;
-			}
-		}
-	}
-}
-
-
 
 
 /* PATTERN LAB ONLY

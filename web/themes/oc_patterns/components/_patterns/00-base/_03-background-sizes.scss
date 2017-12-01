@@ -10,112 +10,112 @@ $rows: 5;
 /// used in ICONS.SCSS
 $plicon: 60px;
 @mixin plIconSize{
-    @include backgroundSize($columns * $plicon,$rows * $plicon);
+	@include backgroundSize($columns * $plicon,$rows * $plicon);
 }
 
 
 /// used in SELECT.SCSS 
 $droparrow: 15px;
 @mixin dropArrow{
-    @include sprite-drop-arrow;
-    @include backgroundSize($columns * $droparrow,$rows * $droparrow);
+	@include sprite-drop-arrow;
+	@include backgroundSize($columns * $droparrow,$rows * $droparrow);
 }
 @mixin dropArrowActive{
-    @include sprite-drop-arrow-active;
-    @include backgroundSize($columns * $droparrow,$rows * $droparrow);
+	@include sprite-drop-arrow-active;
+	@include backgroundSize($columns * $droparrow,$rows * $droparrow);
 }
 
 
 /// used in SEARCH-BLOCK.SCSS 
 $searchtoggle: 22px;
 @mixin searchOpenToggle{
-  @include sprite-search-toggle;
-  @include backgroundSize($columns * $searchtoggle,$rows * $searchtoggle);
+	@include sprite-search-toggle;
+	@include backgroundSize($columns * $searchtoggle,$rows * $searchtoggle);
 }
 @mixin searchCloseToggle{
-  @include sprite-close-circle-punchout;
-  @include backgroundSize($columns * $searchtoggle,$rows * $searchtoggle);
+	@include sprite-close-circle-punchout;
+	@include backgroundSize($columns * $searchtoggle,$rows * $searchtoggle);
 }
 $searchsubmitmobile: 24px;
 @mixin searchSubmitMobile{
-  @include sprite-search-submit;
-  @include backgroundSize($columns * $searchsubmitmobile,$rows * $searchsubmitmobile);
+	@include sprite-search-submit;
+	@include backgroundSize($columns * $searchsubmitmobile,$rows * $searchsubmitmobile);
 }
 @mixin searchSubmitMobileHover{
-  @include sprite-search-submit-hover;
-  @include backgroundSize($columns * $searchsubmitmobile,$rows * $searchsubmitmobile);
+	@include sprite-search-submit-hover;
+	@include backgroundSize($columns * $searchsubmitmobile,$rows * $searchsubmitmobile);
 }
 $searchsubmittab: 20px;
 @mixin searchSubmitTabSize{
-  @include backgroundSize($columns * $searchsubmittab,$rows * $searchsubmittab);
+	@include backgroundSize($columns * $searchsubmittab,$rows * $searchsubmittab);
 }
 
 
 /// used in SUPERFISH-BLOCK.SCSS
 $hamburger: 25px;
 @mixin hamburger{
-  @include sprite-hamburger;
-  @include backgroundSize($columns * $hamburger,$rows * $hamburger);
+	@include sprite-hamburger;
+	@include backgroundSize($columns * $hamburger,$rows * $hamburger);
 }
 @mixin hamburger-expanded{
-  @include sprite-close-circle-punchout;
-  @include backgroundSize($columns * $hamburger,$rows * $hamburger);
+	@include sprite-close-circle-punchout;
+	@include backgroundSize($columns * $hamburger,$rows * $hamburger);
 }
 
 
 /// used in PAGE-MENU.SCSS 
 $sidedroparrow: 20px;
 @mixin sideDropArrow{
-  @include sprite-drop-arrow-white;
-  @include backgroundSize($columns * $sidedroparrow,$rows * $sidedroparrow);
+	@include sprite-drop-arrow-white;
+	@include backgroundSize($columns * $sidedroparrow,$rows * $sidedroparrow);
 }
 @mixin sideDropArrowActive{
-  @include sprite-drop-arrow-active-white;
-  @include backgroundSize($columns * $sidedroparrow,$rows * $sidedroparrow);
+	@include sprite-drop-arrow-active-white;
+	@include backgroundSize($columns * $sidedroparrow,$rows * $sidedroparrow);
 }
 
 
 /// used in SUPERFISH.SCSS
 $deskmenuarrow: 18px;
 @mixin deskmenuArrow{
-  @include sprite-menu-desk-item-open;
-  @include backgroundSize($columns * $deskmenuarrow,$rows * $deskmenuarrow);
+	@include sprite-menu-desk-item-open;
+	@include backgroundSize($columns * $deskmenuarrow,$rows * $deskmenuarrow);
 }
 @mixin deskmenuArrowActive{
-  @include sprite-menu-desk-item-active;
-  @include backgroundSize($columns * $deskmenuarrow,$rows * $deskmenuarrow);
+	@include sprite-menu-desk-item-active;
+	@include backgroundSize($columns * $deskmenuarrow,$rows * $deskmenuarrow);
 }
 $desksubarrow: 15px;
 @mixin deskSubSize{
-  @include backgroundSize($columns * $desksubarrow,$rows * $desksubarrow);
+	@include backgroundSize($columns * $desksubarrow,$rows * $desksubarrow);
 }
 $mobilemenuarrow: 18px;
 @mixin mobilemenuOpen{
-  @include sprite-menu-item-toggle-open;
-  @include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
+	@include sprite-menu-item-toggle-open;
+	@include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
 }
 @mixin mobilemenuActive{
-  @include sprite-menu-item-toggle-active;
-  @include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
+	@include sprite-menu-item-toggle-active;
+	@include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
 }
 @mixin mobilemenuClose{
-  @include sprite-menu-item-toggle-close;
-  @include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
+	@include sprite-menu-item-toggle-close;
+	@include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
 }
 
 
 /// used in ACCORDION.SCSS 
 $accordiontoggle: 20px;
 @mixin accordcaretSize{
-  @include backgroundSize($columns * $accordiontoggle,$rows * $accordiontoggle);
+	@include backgroundSize($columns * $accordiontoggle,$rows * $accordiontoggle);
 }
 @mixin accordcaretShutHover{
-  @include sprite-accordion-shut-hover;
-  @include backgroundSize($columns * $accordiontoggle,$rows * $accordiontoggle);
+	@include sprite-accordion-shut-hover;
+	@include backgroundSize($columns * $accordiontoggle,$rows * $accordiontoggle);
 }
 @mixin accordcaretOpen{
-  @include sprite-accordion-open;
-  @include backgroundSize($columns * $accordiontoggle,$rows * $accordiontoggle);
+	@include sprite-accordion-open;
+	@include backgroundSize($columns * $accordiontoggle,$rows * $accordiontoggle);
 }
 
 
@@ -124,12 +124,12 @@ $accordiontoggle: 20px;
 /// used in BLOG-POST.SCSS
 $addtoany: 32px;
 @mixin a2aSize{
-  @include backgroundSize($columns * $addtoany,$rows * $addtoany);
+	@include backgroundSize($columns * $addtoany,$rows * $addtoany);
 }
 
 /// used in SITEWIDE GLOBAL-STYLES.SCSS 
 $iconsize: 18px;
 @mixin iconSize{
-  @include backgroundSize($columns * $iconsize,$rows * $iconsize);
+	@include backgroundSize($columns * $iconsize,$rows * $iconsize);
 }
 

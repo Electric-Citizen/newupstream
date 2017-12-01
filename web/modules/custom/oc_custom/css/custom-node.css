@@ -123,12 +123,10 @@
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Admin View Placer"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Admin View Placer"]:hover{
   background: url(../icons/svg/view-placer.svg) no-repeat;
-  
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"]:hover{
   background: url(../icons/svg/accordion.svg) no-repeat;
-  
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"]:hover{
