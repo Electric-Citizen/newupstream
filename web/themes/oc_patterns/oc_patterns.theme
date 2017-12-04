@@ -65,8 +65,21 @@ function oc_patterns_preprocess_field(&$variables, $hook) {
 
 // Block suggestions for custom block bundles.
 function oc_patterns_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
   if (isset($variables['elements']['content']['#block_content'])) {
+    $block_name = str_replace(' ','_',strtolower($variables['elements']['content']['#block_content']->label()));
     array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+    array_splice($suggestions, 2, 0, 'block__' . $block_name);
+  }
+}
+
+//find node title for custom breadcrumbs and other blocks
+function oc_patterns_preprocess_block(&$variables) {
+  //find the title of the node the block is on
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node){
+    $nodetitle = $node->getTitle();
+    $variables['nodetitle'] = $nodetitle;
   }
 }
 
