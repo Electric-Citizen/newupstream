@@ -21,6 +21,7 @@
 #}
 {% set background = element['#object'].field_use_as_background.value %}
 {% set banner = drupal_entity('media', element['#object'].field_banner.0.target_id, 'banner_tall') %}
+{% set title = element.0['#context'].value %}
 
 {% if background == 1 and banner is not empty %}
 	<div class="landing-header background">
@@ -33,7 +34,7 @@
 				{{landing_crumbs}}
 			</div>
 			<div class="field field-node-title">
-	    		<h1>{{ element.0['#context'].value }}</h1>
+	    		<h1>{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}</h1>
 	    	</div>
     	</div>
 	</div>
@@ -51,7 +52,7 @@
 				{{landing_crumbs}}
 			</div>
 			<div class="field field-node-title">
-	    		<h1>{{ element.0['#context'].value }}</h1>
+	    		<h1>{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}</h1>
 	    	</div>
     	</div>
 	</div>

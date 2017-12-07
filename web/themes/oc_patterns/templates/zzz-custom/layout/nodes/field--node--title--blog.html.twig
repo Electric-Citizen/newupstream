@@ -25,7 +25,8 @@
 <div class="text-wrapper">
 	<h1{{ attributes }}>
 	  {%- for item in items -%}
-	    {{ item.content }}
+	    {% set title = item.content['#context'].value %}
+ 		{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}
 	  {%- endfor -%}
 	</h1>
 	<div class="metatext">
