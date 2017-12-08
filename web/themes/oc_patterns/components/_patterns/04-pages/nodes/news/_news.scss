@@ -20,10 +20,10 @@
 	.bunsen{
 		@include onlysmall{
 			.sidebar{
-				order: 1;
+				@include safeFlexOrder(1);
 			}
 			.main{
-				order: 2;
+				@include safeFlexOrder(2);
 			}
 		}
 	}

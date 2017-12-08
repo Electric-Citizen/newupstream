@@ -14,12 +14,11 @@
 	}
 
 	.view-content{
-		display: flex;
-		flex-flow: row wrap;
+		@include safeFlex(row,wrap,null,null);
 	}
 	.views-row{
 		width: 100%;
-		flex: 0 0 auto;
+		@include safeFlexSize(0,0,auto);
 		margin-bottom: 2em;
 		@include tab{
 			width: 50%;
@@ -60,8 +59,7 @@
 		@include auto;
 	}
 	.view-content{
-		display: flex;
-		flex-flow: row wrap;
+		@include safeFlex(row,wrap,null,null);
 	}
 }
 
@@ -76,8 +74,7 @@
 		@include auto;
 	}
 	.view-content{
-		display: flex;
-		flex-flow: row wrap;
+		@include safeFlex(row,wrap,null,null);
 	}
 }
 
@@ -92,8 +89,7 @@
 		@include auto;
 	}
 	.view-content{
-		display: flex;
-		flex-flow: row wrap;
+		@include safeFlex(row,wrap,null,null);
 	}
 	.views-field-title{
 		h3{

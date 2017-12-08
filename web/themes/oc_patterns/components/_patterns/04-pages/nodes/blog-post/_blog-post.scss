@@ -111,10 +111,9 @@
 					}
 				}
 				@include smalltab{
-					display: flex;
-					flex-flow: row-wrap;
+					@include safeFlex(row,wrap,null,null);
 					.field-profile-image{
-						flex: 0 0 200px;
+						@include safeFlexSize(0,0,200px);
 					}
 					.info{
 						padding-left: 30px;

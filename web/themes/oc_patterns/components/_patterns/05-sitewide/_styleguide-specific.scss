@@ -46,9 +46,7 @@
 
 	//icon row
 	#icons {
-		display: flex;
-		flex-wrap: wrap;
-
+		@include safeFlex(row,wrap,null,null);
 		& > div {
 			border: 1px solid #eee;
 			padding: 1em;
@@ -66,9 +64,7 @@
 	}
 
 	.flex-holder{
-		display: flex;
-		flex-flow: row wrap;
-		align-items: flex-start;
+		@include safeFlex(row,wrap,null,start);
 		.flex-half{
 			width: 50%;
 			padding: 0 20px;
@@ -97,9 +93,7 @@
 		background: $light-grey;
 		width: 100%;
 		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		@include safeFlex(column,null,center,null);
 		text-align: center;
 		h3{
 			margin-bottom: 0;
@@ -172,8 +166,7 @@
 	max-width: 1000%;
 }
 .pl-flex-row{
-	display: flex;
-	flex-flow: row wrap;
+	@include safeFlex(row,wrap,null,null);
 }
 
 

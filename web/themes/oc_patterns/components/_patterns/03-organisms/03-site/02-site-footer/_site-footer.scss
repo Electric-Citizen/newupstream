@@ -25,9 +25,7 @@ footer {
 			position: relative;
 			max-width: $max-width;
 			@include auto;
-			display: flex;
-			flex-flow: row wrap;
-			align-content: center;
+			@include safeFlex(row,wrap,null,center);
 		}
 
 		//add a top border when not fixed
@@ -49,11 +47,11 @@ footer {
 				z-index: 999;
 				width: 100%;
 				#block-footeraddress{
-					order: 2;
+					@include safeFlexOrder(2);
 				}
 				.footer-menu{
-					flex: 0 0 100%;
-					order: 1;
+					@include safeFlexSize(0,0,100%);
+					@include safeFlexOrder(1);
 					text-align: center;
 				}
 
@@ -61,11 +59,11 @@ footer {
 				&:hover,&:focus{
 					bottom: 0;
 					#block-footeraddress{
-						order: 1;
+						@include safeFlexOrder(1);
 					}
 					.footer-menu{
-						flex: 0 0 70%;
-						order: 2;
+						@include safeFlexSize(0,0,70%);
+						@include safeFlexOrder(2);
 						text-align: right;
 					}
 				}

@@ -9,8 +9,7 @@
 	}//end top
 
 	.content-wrapper{
-		display: flex;
-		flex-flow: row wrap;
+		@include safeFlex(row,wrap,null,null);
 		max-width: $max-width;
 		//from 01-mixins.scss
 		@include auto;
@@ -24,19 +23,19 @@
 		}
 
 		.main{
-			flex: 0 0 100%;
-			order: 1;
+			@include safeFlexSize(0,0,100%);
+			@include safeFlexOrder(1);
 			@include tab{
-				flex: 0 0 76%;
+				@include safeFlexSize(0,0,76%);
 				overflow: hidden;
 			}
 		}
 		.sidebar{
-			flex: 0 0 100%;
-			order: 2;
+			@include safeFlexSize(0,0,100%);
+			@include safeFlexOrder(2);
 			@include tab{
 				padding-left: 40px;
-				flex: 0 0 24%;
+				@include safeFlexSize(0,0,24%);
 			}
 		}
 	}//end content wrapper

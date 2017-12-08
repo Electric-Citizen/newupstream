@@ -37,9 +37,7 @@
 		width: 100%;
 		&:hover{
 			.field-oc-long-text{
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+				@include safeFlex(column,null,center,null);
 				& > *{
 					color: $white !important;
 					text-shadow: 1px 1px 1px $dark-grey;

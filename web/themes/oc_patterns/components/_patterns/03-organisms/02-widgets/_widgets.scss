@@ -5,8 +5,7 @@
 //widgets parent field
 .field--name-field-oc-widgets {
 	//use flex to support layout field
-	display: flex;
-	flex-flow: row wrap;
+	@include safeFlex(row,wrap,null,null);
 	//override layout padding
 	//from 01-mixins.scss
 	@include edge-to-edge;

@@ -10,15 +10,14 @@
 	}
 
 	.view-content{
-		display: flex;
-		flex-flow: row wrap;
+		@include safeFlex(row,wrap,null,null);
 	}
 
 	//override normal 250px image width to allow shrinkage when in smaller spaces
 	.views-row.horizontal{
 		.card-image{
 			@include tab{
-				flex: 0 0 30%;
+				@include safeFlexSize(0,0,30%);
 			}
 		}
 	}

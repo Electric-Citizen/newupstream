@@ -2,7 +2,7 @@
    REVEAL GROUP AND SECTION WIDGETS
 ==================== */
 @mixin columns{
-	flex: 0 0 50%;
+	@include safeFlexSize(0,0,50%);
 	overflow: hidden;
 	& > p,& > h3,& > h4,& > h5,& > h6,& > h2.widget-title{
 		max-width: 70%;
@@ -73,12 +73,10 @@
 		padding-top: 15vh;
 		padding-bottom: 15vh;
 		@include tab{
-			display: flex;
-			flex-flow: row wrap;
-			align-items: stretch;
+			@include safeFlex(row,wrap,null,stretch);
 		}
 		& > .title-wrap,& > .field-oc-long-text,& > .field-reveal-widgets{
-			flex: 0 0 100%;
+			@include safeFlexSize(0,0,100%);
 		}
 		.title-wrap > h2.widget-title{
 			font-size: 26px;
@@ -150,7 +148,7 @@
 			& > .field-oc-long-text, & > .field-reveal-widgets{
 				@include tab{
 					@include columns;
-					order: 1
+					@include safeFlexOrder(1);
 				}
 			}
 		}//end two-column
