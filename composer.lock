@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c941b3a068c2e602ba062a477e0ae48d",
+    "content-hash": "c81ff0888d1a23600fb2a11c8529d84f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3302,61 +3302,6 @@
             "homepage": "https://www.drupal.org/project/focal_point",
             "support": {
                 "source": "http://cgit.drupalcode.org/focal_point"
-            }
-        },
-        {
-            "name": "drupal/gathercontent",
-            "version": "3.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/gathercontent",
-                "reference": "8.x-3.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gathercontent-8.x-3.0-beta2.zip",
-                "reference": "8.x-3.0-beta2",
-                "shasum": "746ec81bc44f75e1fd0fc8759eeb37d7f11fe992"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-beta2",
-                    "datestamp": "1486575482"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Adam Hawes",
-                    "homepage": "https://www.drupal.org/user/3434691"
-                },
-                {
-                    "name": "Mathew Chapman",
-                    "homepage": "https://www.drupal.org/user/2710699"
-                },
-                {
-                    "name": "Sweetchuck",
-                    "homepage": "https://www.drupal.org/user/23728"
-                },
-                {
-                    "name": "mirom",
-                    "homepage": "https://www.drupal.org/user/2875431"
-                }
-            ],
-            "description": "Imports items from GatherContent to your Drupal CMS",
-            "homepage": "https://www.drupal.org/project/gathercontent",
-            "support": {
-                "source": "http://cgit.drupalcode.org/gathercontent"
             }
         },
         {
@@ -10905,7 +10850,6 @@
         "drupal/flexslider": 10,
         "drupal/flippy": 20,
         "drupal/focal_point": 10,
-        "drupal/gathercontent": 10,
         "drupal/geolocation": 20,
         "drupal/inline_entity_form": 10,
         "drupal/libraries": 20,
