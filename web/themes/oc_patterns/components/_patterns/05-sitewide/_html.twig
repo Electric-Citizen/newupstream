@@ -44,6 +44,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
+    {% block headInsert %}
+      {# placeholder for any site or page specific <head> additions #}
+    {% endblock %}
   </head>
   <body {{ attributes.addClass(body_classes) }}>
     <div class="overflow-guard">
@@ -56,6 +59,9 @@
       {{ page_top }}
       {{ page }}
       {{ page_bottom }}
+      {% block bottomInsert %}
+        {# placeholder for any site or page specific additions (like fixed modals) #}
+      {% endblock %}
     </div>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
