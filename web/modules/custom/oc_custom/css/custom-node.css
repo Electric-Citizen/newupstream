@@ -121,112 +121,113 @@
   background-color: rgba(205,232,246,0.3) !important;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Admin View Placer"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Admin View Placer"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Admin View Placer"]{
   background: url(../icons/svg/view-placer.svg) no-repeat;
 }
+}
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"]{
   background: url(../icons/svg/accordion.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"]{
   background: url(../icons/svg/accordion.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Block Placer"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Block Placer"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Block Placer"]{
   background: url(../icons/svg/block.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Buttons"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Buttons"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Buttons"]{
   background: url(../icons/svg/button.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Call to Action"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Call to Action"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Call to Action"]{
   background: url(../icons/svg/cta.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Content Item"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Content Item"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Content Item"]{
   background: url(../icons/svg/content.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Contact Info"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Contact Info"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Contact Info"]{
   background: url(../icons/svg/contact.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Custom Code"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Custom Code"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Custom Code"]{
   background: url(../icons/svg/custom.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Events by Category"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Events by Category"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Events by Category"]{
   background: url(../icons//svg/events.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Form"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Form"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Form"]{
   background: url(../icons/svg/form.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Horizontal Rule"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Horizontal Rule"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Horizontal Rule"]{
   background: url(../icons/svg/hr.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Image"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Image"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Image"]{
   background: url(../icons/svg/image.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Links & Files"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Links & Files"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Links & Files"]{
   background: url(../icons/svg/link.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Lightbox Gallery"],.field--widge-paragraphs .paragraphs-tabs-wrapper input[value="Add Lightbox Gallery"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Lightbox Gallery"]{
   background: url(../icons/svg/gallery.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Map"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Map"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Map"]{
   background: url(../icons//svg/map.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Mosaic Gallery"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Mosaic Gallery"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Mosaic Gallery"]{
   background: url(../icons//svg/mosaic.svg) no-repeat;
 }
 
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add News by Category"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add News by Category"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add News by Category"]{
   background: url(../icons//svg/news.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Pullquote"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Pullquote"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Pullquote"]{
   background: url(../icons/svg/pullquote.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Group"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Group"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Group"]{
   background: url(../icons/svg/reveal.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Section"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Section"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Section"]{
   background: url(../icons/svg/reveal.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Slideshow"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Slideshow"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Slideshow"]{
   background: url(../icons/svg/slider.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Media"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Media"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Media"]{
   background: url(../icons/svg/social-media.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Platform"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Platform"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Platform"]{
   background: url(../icons/svg/social-media.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Text"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Text"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Text"]{
   background: url(../icons/svg/text.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Tile Image"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Tile Image"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Tile Image"]{
   background: url(../icons//svg/mosaic.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"],.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"]:hover{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"]{
   background: url(../icons/svg/video.svg) no-repeat;
 }
 
