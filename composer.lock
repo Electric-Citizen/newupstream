@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "611053fef36987016dcf9d0d36203ec0",
+    "content-hash": "baa19d792cf3bcbfebae330601837907",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1143,7 +1143,11 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc1",
-                    "datestamp": "1479709140"
+                    "datestamp": "1479709140",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
                 },
                 "patches_applied": {
                     "URL doesnt match machine name": "https://www.drupal.org/files/issues/addanother-url-doesnt-match-machine-name-2851584-3.patch"
@@ -3373,67 +3377,34 @@
         },
         {
             "name": "drupal/geolocation",
-            "version": "dev-1.x",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geolocation",
-                "reference": "6da06c6858773620b1f636e4aab02327524d8af9"
+                "reference": "8.x-1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "a401d5c576a8c4886e84272f2ca2a3c524c46869"
             },
             "require": {
                 "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
-                "installer-paths": {
-                    "web/core": [
-                        "type:drupal-core"
-                    ],
-                    "web/modules/contrib/{$name}": [
-                        "type:drupal-module"
-                    ],
-                    "web/profiles/{$name}": [
-                        "type:drupal-profile"
-                    ],
-                    "web/libraries/{$name}": [
-                        "type:drupal-library"
-                    ],
-                    "web/themes/{$name}": [
-                        "type:drupal-theme"
-                    ],
-                    "drush/contrib/{$name}": [
-                        "type:drupal-drush"
-                    ]
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
                 },
-                "build-env": {
-                    "export-configuration": "drush config-export --yes"
-                },
-                "drupal-scaffold": {
-                    "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8/{version}/{path}",
-                    "includes": [
-                        "sites/default/default.services.pantheon.preproduction.yml",
-                        "sites/default/settings.pantheon.php"
-                    ],
-                    "excludes": [
-                        ".csslintrc",
-                        ".editorconfig",
-                        ".eslintignore",
-                        ".eslintrc.json",
-                        ".htaccess",
-                        "web.config"
-                    ],
-                    "terminus": {
-                        "compatible-version": "^1.4"
+                "drupal": {
+                    "version": "8.x-1.11",
+                    "datestamp": "1505687043",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches": {
-                    "drupal/geolocation": {
-                        "Empty field fatal error": "https://www.drupal.org/files/issues/2891286-3-check-item-available.patch"
-                    },
-                    "drupal/addanother": {
-                        "URL doesnt match machine name": "https://www.drupal.org/files/issues/addanother-url-doesnt-match-machine-name-2851584-3.patch"
-                    }
-                },
-                "enable-patching": true
+                }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -3453,8 +3424,7 @@
             "homepage": "https://www.drupal.org/project/geolocation",
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
-            },
-            "time": "2017-11-13T10:34:47+00:00"
+            }
         },
         {
             "name": "drupal/honeypot",
@@ -10918,7 +10888,6 @@
         "drupal/flexslider": 10,
         "drupal/flippy": 20,
         "drupal/focal_point": 10,
-        "drupal/geolocation": 20,
         "drupal/inline_entity_form": 10,
         "drupal/libraries": 20,
         "drupal/page_manager": 10,
