@@ -2,7 +2,7 @@
    FOOTER COPYRIGHT
 ==================== */
 
-#block-footercopyright{
+.block-simple-blockfooter-copyright{
 	//from 01-mixins.scss
 	@include safeFlexSize(0,0,100%);
 	//from 01-mixins.scss

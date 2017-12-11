@@ -12,7 +12,7 @@ footer {
 	.footer-inner{
 		background: $dark-grey;
 		color: $off-white;
-		min-height: 260px;
+		min-height: 289px;
 		padding: 30px 20px 30px;
 		box-sizing: border-box;
 		@include tab{
@@ -82,14 +82,14 @@ footer {
 
 .layout-container > main{
 	//from 01-mixins.scss
-	@include calc(min-height, "100vh - 349px");
+	@include calc(min-height, "100vh - 378px");
 	@include tab{
 		//from 01-mixins.scss
-		@include calc(min-height, "100vh - 258px");
+		@include calc(min-height, "100vh - 277px");
 	}
 	@include deskmenu{
 		//from 01-mixins.scss
-		@include calc(min-height, "100vh - 275px");
+		@include calc(min-height, "100vh - 294px");
 	}
 }
 

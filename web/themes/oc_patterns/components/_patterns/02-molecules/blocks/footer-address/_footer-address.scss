@@ -2,7 +2,7 @@
    FOOTER ADDRESS 
 ==================== */
 
-.footer-address{
+.block-simple-blockfooter-address{
 	//from 01-mixins.scss
 	@include safeFlexSize(0,0,100%);
 	//from 01-mixins.scss
@@ -21,7 +21,7 @@
 	h2{
 		display: none;
 	}
-	.field.body ul{
+	ul{
 		padding-left: 0;
 		//from 01-mixins.scss
 		@include list-reset;
