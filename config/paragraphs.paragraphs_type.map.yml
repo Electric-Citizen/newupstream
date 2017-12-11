@@ -1,9 +1,13 @@
 uuid: 73915745-21e8-4686-a0cf-f22857219369
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:18ea36d4-3fd3-4894-9149-6017c3150757'
 _core:
   default_config_hash: JOgEVUcpdgazZoePTtXWigCQ_TJd-k6dF-SPKXOYJlo
 id: map
 label: Map
+icon_uuid: 18ea36d4-3fd3-4894-9149-6017c3150757
+description: ''
 behavior_plugins: {  }

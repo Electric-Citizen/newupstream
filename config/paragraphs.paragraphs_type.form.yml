@@ -1,9 +1,13 @@
 uuid: 6b04c224-1109-4a80-b92a-9abea917c57e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:777528c5-2885-4d0c-a13a-66c124b2d8a8'
 _core:
   default_config_hash: z09duKNmIUMwKjKeao4lpvK79cu0zjAYZ9mb87vBgLo
 id: form
 label: Form
+icon_uuid: 777528c5-2885-4d0c-a13a-66c124b2d8a8
+description: ''
 behavior_plugins: {  }

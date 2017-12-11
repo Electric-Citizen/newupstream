@@ -1,9 +1,13 @@
 uuid: 6484c86d-61f4-4f6e-bcfb-1624fb49d99c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:a4c7075f-9fa2-494e-b616-9a3e55642a47'
 _core:
   default_config_hash: c0pgHhzfGVGySPInyvr5fhglEJi830XG2zN5MWbOCGw
 id: text
 label: Text
+icon_uuid: a4c7075f-9fa2-494e-b616-9a3e55642a47
+description: ''
 behavior_plugins: {  }

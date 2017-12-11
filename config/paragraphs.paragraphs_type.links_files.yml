@@ -1,9 +1,13 @@
 uuid: 3a5bbf0d-543c-4a2e-80ce-01c8cf732091
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:cb77aac9-796c-466e-9b29-828a8bf79ee7'
 _core:
   default_config_hash: QwfMOirJ441xsk8khq6haDomEqeAZSxtRMSvYiWMjvs
 id: links_files
 label: 'Links & Files'
+icon_uuid: cb77aac9-796c-466e-9b29-828a8bf79ee7
+description: ''
 behavior_plugins: {  }

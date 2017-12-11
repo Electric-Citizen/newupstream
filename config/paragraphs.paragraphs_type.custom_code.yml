@@ -1,7 +1,11 @@
 uuid: 80512959-4ded-4693-8a1f-7776ded8048e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:dc651f6c-26ad-4ab4-ba95-90d03f66e2c1'
 id: custom_code
 label: 'Custom Code'
+icon_uuid: dc651f6c-26ad-4ab4-ba95-90d03f66e2c1
+description: ''
 behavior_plugins: {  }

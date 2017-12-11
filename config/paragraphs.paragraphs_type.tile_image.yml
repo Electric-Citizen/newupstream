@@ -1,9 +1,13 @@
 uuid: cb23e398-02c9-4b72-a99a-d706de11ec1f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:84c60ac1-0719-4744-a85a-a79d9ea61d95'
 _core:
   default_config_hash: zGqfAFPQBfgjng3C0UOH7mT8uu89Op4BrsqBr_FR2v8
 id: tile_image
 label: 'Tile Image'
+icon_uuid: 84c60ac1-0719-4744-a85a-a79d9ea61d95
+description: ''
 behavior_plugins: {  }

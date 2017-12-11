@@ -1,9 +1,13 @@
 uuid: bfefb0c9-c205-4eee-ad31-7dc29d2c2d82
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:2f0e7f38-79c6-400a-8b4b-85e9385f4022'
 _core:
   default_config_hash: 2PpqkmOLR5jSI-DBXGgFm4tol_PynjRZ9BffejUwiHc
 id: buttons
 label: Buttons
+icon_uuid: 2f0e7f38-79c6-400a-8b4b-85e9385f4022
+description: ''
 behavior_plugins: {  }

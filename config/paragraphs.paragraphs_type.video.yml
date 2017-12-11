@@ -1,9 +1,13 @@
 uuid: 748367d3-a8d9-4ba2-b01f-f98cacc0e44a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:20d5d2e0-efbf-468c-abfc-b023ed6e1870'
 _core:
   default_config_hash: vnFORggcCGo3wRaEO0xMnmqJcK9qm1lCtVO69bl0lbs
 id: video
 label: Video
+icon_uuid: 20d5d2e0-efbf-468c-abfc-b023ed6e1870
+description: ''
 behavior_plugins: {  }

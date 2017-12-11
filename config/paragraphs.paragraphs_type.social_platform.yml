@@ -1,9 +1,13 @@
 uuid: 66469bdc-c03e-4f7e-88e0-2a293afea89a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:bcb6de22-caec-4673-8985-52b56d4b27c9'
 _core:
   default_config_hash: egHCfUHQcCuE8hfo0jaTRVS9JefYLZs0zegZ3IfiSWs
 id: social_platform
 label: 'Social Platform'
+icon_uuid: bcb6de22-caec-4673-8985-52b56d4b27c9
+description: ''
 behavior_plugins: {  }

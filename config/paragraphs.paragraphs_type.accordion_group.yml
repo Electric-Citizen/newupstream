@@ -1,9 +1,13 @@
 uuid: d88afdf9-3e6b-4aec-961b-1332d49d249e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:3463b5d3-a527-4ac0-b1a9-84a495d614b6'
 _core:
   default_config_hash: FhFNxBKqbZtQXblHXf44SrI1cbH_Q8OEvDbJJVLcd0M
 id: accordion_group
 label: 'Accordion Group'
+icon_uuid: 3463b5d3-a527-4ac0-b1a9-84a495d614b6
+description: ''
 behavior_plugins: {  }

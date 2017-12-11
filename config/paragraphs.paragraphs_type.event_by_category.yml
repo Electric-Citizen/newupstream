@@ -1,9 +1,13 @@
 uuid: 219a930f-bcd0-4e84-a9f5-c3586365f69a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:71f689e1-cc2a-423e-a979-428c849eceae'
 _core:
   default_config_hash: U8J7P2ijvy6wN1XHf7QzwFX8IOgBnWpKtSqE7whivZs
 id: event_by_category
 label: 'Events by Category'
+icon_uuid: 71f689e1-cc2a-423e-a979-428c849eceae
+description: ''
 behavior_plugins: {  }

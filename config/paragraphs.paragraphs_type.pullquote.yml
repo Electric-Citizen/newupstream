@@ -1,9 +1,13 @@
 uuid: ef1409da-48fc-48b1-901b-2570407b77f9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:ff1d5535-d91c-4ca3-a60f-9cc76a45e1c5'
 _core:
   default_config_hash: gDuVmsYqqJ5O0fWK-BtniYeLfxlreTdd_nxfJ6gxsgk
 id: pullquote
 label: Pullquote
+icon_uuid: ff1d5535-d91c-4ca3-a60f-9cc76a45e1c5
+description: ''
 behavior_plugins: {  }

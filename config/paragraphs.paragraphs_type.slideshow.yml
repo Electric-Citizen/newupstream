@@ -1,9 +1,13 @@
 uuid: d7690c18-9fef-4b27-bef6-89a84af8e077
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:3e91c741-de7a-4720-8028-09dd9fc2b6f1'
 _core:
   default_config_hash: W-YSWm69MO4j53tndCm8_qZECmzSJsCBva_O_OgzfZo
 id: slideshow
 label: Slideshow
+icon_uuid: 3e91c741-de7a-4720-8028-09dd9fc2b6f1
+description: ''
 behavior_plugins: {  }

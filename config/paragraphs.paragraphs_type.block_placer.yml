@@ -1,7 +1,11 @@
 uuid: e40f5f2a-44e7-4189-8261-ee0c8c40ab25
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:9035179c-5e0f-43d7-8282-aa9d375cd4aa'
 id: block_placer
 label: 'Block Placer'
+icon_uuid: 9035179c-5e0f-43d7-8282-aa9d375cd4aa
+description: ''
 behavior_plugins: {  }

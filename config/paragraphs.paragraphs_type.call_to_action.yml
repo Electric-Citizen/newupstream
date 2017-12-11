@@ -1,9 +1,13 @@
 uuid: 87bef14a-3810-4f27-a252-875b8679c2e8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:9f306de7-479d-4c8d-8832-edcd1ba9877c'
 _core:
   default_config_hash: zf3GsXCKLTS8GhBlCv6BH43gxx1ZXjR9Hvd9VNyL81o
 id: call_to_action
 label: 'Call to Action'
+icon_uuid: 9f306de7-479d-4c8d-8832-edcd1ba9877c
+description: ''
 behavior_plugins: {  }
