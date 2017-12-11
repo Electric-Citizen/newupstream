@@ -18,12 +18,14 @@ bundle: accordion_group
 mode: default
 content:
   field_accordion_item:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: preview
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
       add_mode: button
       form_display_mode: default
       default_paragraph_type: accordion_item

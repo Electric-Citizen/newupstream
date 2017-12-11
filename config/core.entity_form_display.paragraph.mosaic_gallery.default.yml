@@ -25,12 +25,14 @@ content:
     type: string_textfield
     region: content
   field_mosaic_tiles:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: preview
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
       add_mode: button
       form_display_mode: default
       default_paragraph_type: tile_image
