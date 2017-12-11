@@ -3,6 +3,16 @@
  * Visual styles non-node form css.
  */
 
+/* ADMIN CONTENT VIEW
+-------------------- */
+.view-content.view-display-id-page_1 .view-filters{
+  float: left;
+}
+
+.view-content.view-display-id-page_1 #edit-header.form-wrapper{
+  float: right;
+}
+
 
 /* ENTITY BROWSER */
 .eb-media{
