@@ -9,6 +9,7 @@ use Drupal\Core\Config\ConfigImporter;
 use Drupal\Core\Config\ConfigImporterException;
 use Drupal\Core\Site\Settings;
 use Drupal\config_installer\Storage\SourceStorage;
+use Drupal\language\Entity\ConfigurableLanguage;
 
 /**
  * Need to do a manual include since this install profile never actually gets
@@ -23,7 +24,7 @@ include_once __DIR__ . '/src/Storage/SourceStorage.php';
  */
 function config_installer_install_tasks_alter(&$tasks, $install_state) {
   unset($tasks['install_download_translation']);
-  $key = array_search('install_profile_modules', array_keys($tasks));
+  $key = array_search('install_profile_modules', array_keys($tasks), TRUE);
   unset($tasks['install_profile_modules']);
   unset($tasks['install_profile_themes']);
   unset($tasks['install_install_profile']);
@@ -272,6 +273,16 @@ function config_installer_fix_profile() {
         drupal_set_message($message, 'error');
       }
     }
+
+    // At this point the configuration should match completely.
+    if (\Drupal::moduleHandler()->moduleExists('language')) {
+      // If the English language exists at this point we need to ensure
+      // install_download_additional_translations_operations() does not delete
+      // it.
+      if (\Drupal\language\Entity\ConfigurableLanguage::load('en')) {
+        $install_state['profile_info']['keep_english'] = TRUE;
+      }
+    }
     // Replace the install profile so that the config_installer still works.
     _config_installer_switch_profile('config_installer');
     system_list_reset();
@@ -299,6 +310,12 @@ function _config_installer_switch_profile($profile) {
  *   The name of the install profile from the sync configuration.
  */
 function _config_installer_get_original_install_profile() {
+  // In Drupal 8.3 the profile is written to config and not settings.
+  $core = \Drupal::service('config.storage.sync')->read('core.extension');
+  if (isset($core['profile'])) {
+    return $core['profile'];
+  }
+
   $original_profile = NULL;
   // Profiles need to be extracted from the install list if they are there.
   // This is because profiles need to be installed after all the configuration
@@ -307,9 +324,7 @@ function _config_installer_get_original_install_profile() {
   $listing->setProfileDirectories([]);
   // Read directly from disk since the source storage in the config importer is
   // being altered to exclude profiles.
-  $new_extensions = \Drupal::service('config.storage.sync')
-                           ->read('core.extension')['module'];
-  $profiles = array_intersect_key($listing->scan('profile'), $new_extensions);
+  $profiles = array_intersect_key($listing->scan('profile'), $core['module']);
 
   if (!empty($profiles)) {
     // There can be only one.
@@ -331,7 +346,7 @@ function _config_installer_get_original_install_profile() {
  * @see install_download_translation()
  */
 function config_download_translations(&$install_state) {
-  $needs_download = isset($install_state['parameters']['langcode']) && !isset($install_state['translations'][$install_state['parameters']['langcode']]) && $install_state['parameters']['langcode'] != 'en';
+  $needs_download = isset($install_state['parameters']['langcode']) && !isset($install_state['translations'][$install_state['parameters']['langcode']]) && $install_state['parameters']['langcode'] !== 'en';
   if ($needs_download) {
     return install_download_translation($install_state);
   }

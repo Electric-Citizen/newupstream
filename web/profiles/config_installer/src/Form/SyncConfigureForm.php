@@ -42,6 +42,8 @@ class SyncConfigureForm extends FormBase {
       '#maxlength' => 255,
       '#description' => $this->t('Path to the config directory you wish to import, can be relative to document root or an absolute path.'),
       '#required' => TRUE,
+      // This value can only be changed if settngs.php is writable.
+      '#disabled' => !is_writable(\Drupal::service('site.path') . '/settings.php')
     ];
 
     $form['import_tarball'] = [
@@ -76,9 +78,11 @@ class SyncConfigureForm extends FormBase {
     }
     $sync_directory = $form_state->getValue('sync_directory');
     // If we've customised the sync directory ensure its good to go.
-    if ($sync_directory != config_get_config_directory(CONFIG_SYNC_DIRECTORY)) {
-      // Ensure it exists and is writeable.
-      if (!file_prepare_directory($sync_directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
+    if ($sync_directory !== config_get_config_directory(CONFIG_SYNC_DIRECTORY)) {
+      // We have to create the directory if it does not exist. If it exists we
+      // need to ensure it is writeable is we are processing an upload.
+      $create_directory = !is_dir($sync_directory) || $has_upload;
+      if ($create_directory && !file_prepare_directory($sync_directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
         $form_state->setErrorByName('sync_directory', t('The directory %directory could not be created or could not be made writable. To proceed with the installation, either create the directory and modify its permissions manually or ensure that the installer has the permissions to create it automatically. For more information, see the <a href="@handbook_url">online handbook</a>.', [
           '%directory' => $sync_directory,
           '@handbook_url' => 'http://drupal.org/server-permissions',
@@ -87,7 +91,7 @@ class SyncConfigureForm extends FormBase {
     }
 
     // If no tarball ensure we have files.
-    if (!$form_state->hasAnyErrors() && !$has_upload) {
+    if (!$has_upload && !$form_state->hasAnyErrors()) {
       $sync = new FileStorage($sync_directory);
       if (count($sync->listAll()) === 0) {
         $form_state->setErrorByName('sync_directory', $this->t('No file upload provided and the sync directory is empty'));
@@ -100,7 +104,7 @@ class SyncConfigureForm extends FormBase {
     }
 
     // Update the sync directory setting if required.
-    if ($sync_directory != config_get_config_directory(CONFIG_SYNC_DIRECTORY)) {
+    if ($sync_directory !== config_get_config_directory(CONFIG_SYNC_DIRECTORY)) {
       $settings['config_directories'][CONFIG_SYNC_DIRECTORY] = (object) [
         'value' => $sync_directory,
         'required' => TRUE,
@@ -117,10 +121,14 @@ class SyncConfigureForm extends FormBase {
       try {
         $archiver = new ArchiveTar($tarball_path, 'gz');
         $files = [];
-        foreach ($archiver->listContent() as $file) {
-          $files[] = $file['filename'];
+        $list = $archiver->listContent();
+        if (is_array($list)) {
+          /** @var array $list */
+          foreach ($list as $file) {
+            $files[] = $file['filename'];
+          }
+          $archiver->extractList($files, config_get_config_directory(CONFIG_SYNC_DIRECTORY));
         }
-        $archiver->extractList($files, config_get_config_directory(CONFIG_SYNC_DIRECTORY));
       }
       catch (\Exception $e) {
         $form_state->setErrorByName('import_tarball', $this->t('Could not extract the contents of the tar file. The error message is <em>@message</em>', ['@message' => $e->getMessage()]));

@@ -2,7 +2,6 @@
 
 namespace Drupal\config_installer\Tests;
 
-use Drupal\Core\Archiver\ArchiveTar;
 use Drupal\Core\Config\FileStorage;
 
 /**
@@ -48,12 +47,7 @@ class ConfigInstallerSyncTest extends ConfigInstallerTestBase {
     drupal_mkdir($this->syncDir);
 
     // Extract the tarball into the sync directory.
-    $archiver = new ArchiveTar($this->getTarball(), 'gz');
-    $files = [];
-    foreach ($archiver->listContent() as $file) {
-      $files[] = $file['filename'];
-    }
-    $archiver->extractList($files, $this->syncDir);
+    $this->extractTarball($this->getTarball(), $this->syncDir);
 
     // Change the user.settings::register so that we can test that
     // standard_install() does not override it.

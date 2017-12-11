@@ -2,6 +2,9 @@
 
 namespace Drupal\config_installer\Tests;
 
+use Drupal\config\Controller\ConfigController;
+use Drupal\Core\Archiver\ArchiveTar;
+use Drupal\Core\Config\StorageComparer;
 use Drupal\Core\DrupalKernel;
 use Drupal\Core\Extension\ExtensionDiscovery;
 use Drupal\Core\Site\Settings;
@@ -21,6 +24,39 @@ abstract class ConfigInstallerTestBase extends InstallerTestBase {
   protected $profile = 'config_installer';
 
   /**
+   * {@inheritdoc}
+   */
+  protected function setUp() {
+    parent::setUp();
+
+    // Drupal is installed perform some basic assertions that all
+    // config_installer tests need.
+    if ($this->isInstalled) {
+      // Ensure the test environment has the latest container.
+      $this->rebuildAll();
+
+      $sync = \Drupal::service('config.storage.sync');
+      $sync_core_extension = $sync->read('core.extension');
+      // Ensure that the correct install profile is active.
+      if (version_compare(\Drupal::VERSION, '8.3', '>=')) {
+        $this->assertEqual($sync_core_extension['profile'], \Drupal::installProfile());
+      }
+      else {
+        $listing = new ExtensionDiscovery(\Drupal::root());
+        $listing->setProfileDirectories([]);
+        $profiles = array_intersect_key($listing->scan('profile'), $sync_core_extension['module']);
+        $current_profile = Settings::get('install_profile');
+        $this->assertFalse(empty($current_profile), 'The $install_profile setting exists');
+        $this->assertEqual($current_profile, key($profiles));
+      }
+
+      // Ensure that the configuration has been completely synced.
+      $this->assertNoSynDifferences();
+    }
+  }
+
+
+  /**
    * Ensures that the user page is available after installation.
    */
   public function testInstaller() {
@@ -35,23 +71,6 @@ abstract class ConfigInstallerTestBase extends InstallerTestBase {
     $this->assertRaw(t('Congratulations, you installed @drupal!', [
       '@drupal' => drupal_install_profile_distribution_name(),
     ]));
-
-    // Ensure that all modules, profile and themes have been installed and have
-    // expected weights.
-    $sync = \Drupal::service('config.storage.sync');
-    $sync_core_extension = $sync->read('core.extension');
-    $this->assertIdentical($sync_core_extension, \Drupal::config('core.extension')->get());
-
-    // Ensure that the correct install profile has been written to settings.php.
-    $listing = new ExtensionDiscovery(\Drupal::root());
-    $listing->setProfileDirectories([]);
-    $profiles = array_intersect_key($listing->scan('profile'), $sync_core_extension['module']);
-    $current_profile = Settings::get('install_profile');
-    $this->assertFalse(empty($current_profile), 'The $install_profile setting exists');
-    $this->assertEqual($current_profile, key($profiles));
-
-    // Test that any configuration entities in sync have been created.
-    // @todo
   }
 
   /**
@@ -129,6 +148,63 @@ abstract class ConfigInstallerTestBase extends InstallerTestBase {
       return $versioned_file;
     }
     return __DIR__ . '/Fixtures/' . $tarball;
+  }
+
+  /**
+   * Extracts a tarball to a directory.
+   *
+   * @param string $tarball_path
+   *   The path to a tarball to extract.
+   * @param string $directory
+   *   The directory to extract to.
+   *
+   * @return string[]
+   *   The list files extracted.
+   */
+  protected function extractTarball($tarball_path, $directory) {
+    $archiver = new ArchiveTar($tarball_path, 'gz');
+    $files = [];
+    $list = $archiver->listContent();
+    if (is_array($list)) {
+      /** @var array $list */
+      foreach ($list as $file) {
+        $files[] = $file['filename'];
+      }
+    }
+    $archiver->extractList($files, $directory);
+    return $files;
+  }
+
+  /**
+   * Ensures that the sync and active configuration match.
+   *
+   * @return bool
+   *   TRUE if sync and active configuration match, FALSE if not.
+   */
+  protected function assertNoSynDifferences() {
+    $sync = $this->container->get('config.storage.sync');
+    $active = $this->container->get('config.storage');
+    // Ensure that we have no configuration changes to import.
+    $storage_comparer = new StorageComparer(
+      $sync,
+      $active,
+      $this->container->get('config.manager')
+    );
+    $changelist = $storage_comparer->createChangelist()->getChangelist();
+    // system.mail is changed by \Drupal\simpletest\InstallerTestBase::setUp()
+    // this is a good idea because it prevents tests emailling.
+    $key = array_search('system.mail', $changelist['update'], TRUE);
+    if ($key !== FALSE) {
+      unset($changelist['update'][$key]);
+    }
+    $return = $this->assertIdentical($changelist, $storage_comparer->getEmptyChangelist());
+    // Output proper diffs.
+    $controller = ConfigController::create($this->container);
+    foreach ($changelist['update'] as $config_name) {
+      $diff = $controller->diff($config_name);
+      $this->verbose(\Drupal::service('renderer')->renderPlain($diff));
+    }
+    return $return;
   }
 
 }

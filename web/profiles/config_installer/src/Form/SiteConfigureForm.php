@@ -5,6 +5,7 @@ namespace Drupal\config_installer\Form;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Site\Settings;
 use Drupal\Core\State\StateInterface;
 use Drupal\user\UserStorageInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -113,7 +114,14 @@ class SiteConfigureForm extends FormBase {
     $post_params = $this->getRequest()->request->all();
     if (empty($post_params)) {
       $original_profile_name = _config_installer_get_original_install_profile();
-      if ($original_profile_name) {
+      $need_to_write_settings = $original_profile_name !== Settings::get('install_profile');
+      // In Drupal 8.3.x it is not necessary to have an install profile written
+      // to settings.php.
+      if (version_compare(\Drupal::VERSION, '8.3', '>=') && !is_writable(\Drupal::service('site.path') . '/settings.php')) {
+        \Drupal::service('kernel')->invalidateContainer();
+        $need_to_write_settings = FALSE;
+      }
+      if ($need_to_write_settings) {
         $settings['settings']['install_profile'] = (object) [
           'value' => $original_profile_name,
           'required' => TRUE,
@@ -203,6 +211,12 @@ class SiteConfigureForm extends FormBase {
 
     // Record when this install ran.
     $this->state->set('install_time', $_SERVER['REQUEST_TIME']);
+
+    if (version_compare(\Drupal::VERSION, '8.3', '>=')) {
+      // We need to invalidate the container to ensure that the correct profile
+      // is used on after installation.
+      \Drupal::service('kernel')->invalidateContainer();
+    }
   }
 
 }

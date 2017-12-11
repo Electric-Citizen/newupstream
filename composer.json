@@ -38,7 +38,7 @@
     "drupal/config_installer": "^1.0",
     "drupal/console": "~1.0",
     "drupal/contact_storage": "^1.0@beta",
-    "drupal/core": "8.3.7",
+    "drupal/core": "8.4.3",
     "drupal/ctools": "^3.0@alpha",
     "drupal/default_content": "^1.0.0@alpha",
     "drupal/devel": "^1.0@RC",

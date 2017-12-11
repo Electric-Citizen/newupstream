@@ -2,8 +2,6 @@
 
 namespace Drupal\config_installer\Tests;
 
-use Drupal\Core\Archiver\ArchiveTar;
-
 /**
  * Tests the config installer profile by linking to a directory.
  *
@@ -37,12 +35,7 @@ class ConfigInstallerFrDirectorySyncTest extends ConfigInstallerTestBase {
     drupal_mkdir($this->syncDir);
 
     // Extract the tarball into the sync directory.
-    $archiver = new ArchiveTar($this->getTarball(), 'gz');
-    $files = [];
-    foreach ($archiver->listContent() as $file) {
-      $files[] = $file['filename'];
-    }
-    $archiver->extractList($files, $this->syncDir);
+    $this->extractTarball($this->getTarball(), $this->syncDir);
 
     $this->drupalPostForm(NULL, ['sync_directory' => drupal_realpath($this->syncDir)], 'Save and continue');
   }

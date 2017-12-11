@@ -50,7 +50,7 @@ class SourceStorage implements StorageInterface {
    */
   public function read($name) {
     $data = $this->baseStorage->read($name);
-    if ($name == 'core.extension' && isset($data['module'])) {
+    if ($name === 'core.extension' && isset($data['module'])) {
       // Remove any profiles from the list. These will be installed later.
       // @see config_installer_config_import_profile()
       $data['module'] = array_diff_key($data['module'], $this->profiles);
