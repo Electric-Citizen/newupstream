@@ -3,7 +3,7 @@ mail: tim@electriccitizen.com
 slogan: ''
 page:
   403: ''
-  404: /search404
+  404: /node/2
   front: /node
 admin_compact_mode: false
 weight_select_max: 100

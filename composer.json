@@ -70,7 +70,6 @@
     "drupal/pathauto": "^1.0@RC",
     "drupal/pathologic": "1.x-dev",
     "drupal/redirect": "^1.0@alpha",
-    "drupal/search404": "^1.0@beta",
     "drupal/search_api": "^1.0",
     "drupal/seo_checklist": "^4.0",
     "drupal/simple_block": "^1.0@beta",
