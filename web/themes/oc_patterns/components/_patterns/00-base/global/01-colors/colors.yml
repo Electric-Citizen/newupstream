@@ -65,6 +65,8 @@ items:
     value: '#fdd5dd'
   - name: $site-background
     value: '#f6f6f6'
+  - name: $border-rule
+    value: '#222222'
   - name: $link
     value: '#d52d00'
   - name: $active-link

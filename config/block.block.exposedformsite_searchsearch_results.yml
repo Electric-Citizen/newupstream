@@ -1,0 +1,29 @@
+uuid: 2c6241e8-cc4e-4989-acff-8a66571ba087
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.site_search
+  module:
+    - system
+    - views
+  theme:
+    - oc_patterns
+id: exposedformsite_searchsearch_results
+theme: oc_patterns
+region: header
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:site_search-search_results'
+settings:
+  id: 'views_exposed_filter_block:site_search-search_results'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /site-search
+    negate: true
+    context_mapping: {  }

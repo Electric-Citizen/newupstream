@@ -2,10 +2,7 @@ uuid: 7e34b9e2-e36e-4db0-9c00-c34cc4124962
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:04aaf65d-96ed-4d3d-91ba-afddd2a0a594'
   module:
-    - block_content
     - system
   theme:
     - oc_patterns

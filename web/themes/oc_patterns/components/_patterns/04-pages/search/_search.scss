@@ -2,97 +2,101 @@
    SEARCH 	
 ================= */
 
-/* SEARCH PAGE FORM (404 & DEFAULT)
------------------ */
-.search-page-form{
-	margin-bottom: 3em;
-	//keyword
-	.form-item-keys{
-		label{
-			display: block;
-		}
-		input.form-search{
-			//from forms.scss
-			@include textInput;
-			display: inline-block;
-			max-width: 300px;
-		}
-	}
-	input.form-submit{
-		background: $link;
-		padding: 9px 3em 11px;
-		color: $white;
-		&:hover,&:focus{
-			background: $hover-link;
-		}
-	}
-	a.search-help-link{
-		display: none;
-	}
-}//end form
-
 
 /* SEARCH PAGE
 ------------------ */
-.path-search{
-	//search results
-	h2{
-		font-size: 32px;
-		text-transform: none;
-		text-align: left;
-		border-bottom:1px solid $light-grey;
-		padding-bottom:3px;
-		&:after{
-			width: 100%;
-			left: 0;
-		}
+.path-site-search{
+
+	//prevent contextual links interference when logged in
+	.views-element-container{
+		position: static;
 	}
-	ol{
-		//from 01-mixins.scss
-		@include list-reset;
-		li{
-			margin-bottom: 2em;
-			a:hover{
-				//from 03-animations.scss
-				@include transThreeAll;
-			}
-		}
+
+	.page-main{
+		position: relative;
 	}
-	//no results
-	.no-results{
-		ul{
-			padding-left: 30px;
-			margin: 0 0 2em;
-			& > li{
-				list-style: disc;
-				ul{
-					padding: 0 0 0 1em;
-				}
-				ol{
-					padding: 0 0 0 1em;
-					list-style: decimal;
+
+	.layout-content{
+		padding: 2em 20px 0 !important; 
+		.site-search{
+			h1{
+				@include tab{
+					color: $black;
 				}
 			}
-		}
-	}
+			.block-search-form-block{
+				text-align: left;
+				margin-bottom: 2em;
+				display: block;
+				width: 100%;
+				.t-search{
+					display: none;
+				}
+				#views-exposed-form-site-search-search-results{
+					@include safeFlex(row,wrap,null,center);
+					@include translateX(0);
+					height: auto;
+					position: static;
+					max-width: 100%;
+					width: 100%;
+					.form-item-search-api-fulltext{
+						@include safeFlexSize(0,1,280px);
+						margin-right: 1em;
+						label{
+							display: none;
+						}
+						input{
+
+						}
+					}
+					.form-actions input{
+						margin-bottom: 0;
+						padding: .5em 2.25em;
+						position: static;
+						background: $link;
+						width: 132px;
+						height: auto;
+						text-indent: 0;
+						&:hover,&:active,&:focus{
+							background: $mid-grey;
+							@include transThreeAll;
+						}
+						@include tab{
+							padding: .5em 3em;
+							width: 145px;
+						}
+						&:not(#edit-reset){
+							margin-right: 10px;
+						}
+						&#edit-reset{
+							background: $black;
+							&:hover,&:focus,&:active{
+								background: $mid-grey;
+							}
+						}
+					}
+				}//end foirm
+			}//end block search form
+
+			h2.results-header{
+				margin-top: 2em;
+				@include safeFlexSize(0,0,100%);
+				padding-bottom: .5em;
+				border-bottom: 1px solid $border-rule;
+				margin-bottom: .5em;
+			}
+			.view-content,.view-empty{
+				@include safeFlexSize(0,0,100%);
+				margin-bottom: 3em;
+			}
+		}//site-search
+	}//layout content
+	
 	
 
 }//end search page
 
 
-/* 404 SEARCH
------------------ */
-ol.search-results{
-	//from 01-mixins.scss
-	@include list-reset;
-	li{
-		margin-bottom: 2em;
-		a:hover,a:focus{
-			//from 03-animations.scss
-			@include transThreeAll;
-		}
-	}
-}
 
 
 /* PATTERN LAB ONLY
