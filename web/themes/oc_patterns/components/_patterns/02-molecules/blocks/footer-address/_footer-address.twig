@@ -4,12 +4,10 @@
 
 <div id="block-footeraddress" class="block block-simple-blockfooter-address">
 	{% block address_content %}
-		<div class="field body">
-			<ul>
-				{% for line in address %}
-					<li>{{ line.address_line }}</li>
-				{% endfor %}
-			</ul>
-		</div>
+		<ul>
+			{% for line in address %}
+				<li>{{ line.address_line }}</li>
+			{% endfor %}
+		</ul>
 	{% endblock %}
 </div>
