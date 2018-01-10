@@ -59,10 +59,10 @@ settings:
           items:
             - Styles
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: "span.highlight|Highlight\r\ndiv.warning|Warning\r\nsmall|Small"
+    language:
+      language_list: un
     linkit:
       linkit_profile: wysiwyg
 image_upload:
