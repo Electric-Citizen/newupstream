@@ -121,10 +121,6 @@
   background-color: rgba(205,232,246,0.3) !important;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Admin View Placer"]{
-  background: url(../icons/svg/view-placer.svg) no-repeat;
-}
-}
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"]{
   background: url(../icons/svg/accordion.svg) no-repeat;
@@ -225,6 +221,10 @@
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Tile Image"]{
   background: url(../icons//svg/mosaic.svg) no-repeat;
+}
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add View Placer"]{
+  background: url(../icons/svg/view-placer.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"]{

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.background_image
     - field.field.node.page.body
     - field.field.node.page.field_banner
     - field.field.node.page.field_metatags
@@ -25,24 +26,18 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
     region: content
-  created:
-    type: datetime_timestamp
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_banner:
     type: inline_entity_form_complex
     weight: 1
     settings:
-      form_mode: default
+      form_mode: background_image
       label_singular: ''
       label_plural: ''
       allow_new: true
@@ -54,14 +49,14 @@ content:
         entity_browser_id: image_browser
     region: content
   field_metatags:
-    weight: 26
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_oc_widgets:
     type: paragraphs
-    weight: 4
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -75,31 +70,17 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 4
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 7
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 6
     region: content
     third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 8
-    third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 0
@@ -108,14 +89,9 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
 hidden:
+  created: true
   panelizer: true
+  promote: true
+  sticky: true
+  uid: true

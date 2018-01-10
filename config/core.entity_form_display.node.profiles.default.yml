@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.media.media_browser
+    - core.entity_form_mode.media.background_image
     - field.field.node.profiles.body
     - field.field.node.profiles.field_email
     - field.field.node.profiles.field_first_name
@@ -75,7 +75,7 @@ content:
   field_profile_image:
     weight: 2
     settings:
-      form_mode: media_browser
+      form_mode: background_image
       label_singular: ''
       label_plural: ''
       allow_new: true
