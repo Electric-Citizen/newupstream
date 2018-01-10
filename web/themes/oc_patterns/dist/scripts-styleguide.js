@@ -110,9 +110,10 @@
   Drupal.behaviors.sticky_footer = {
     attach: function attach(context, settings) {
       $('body:not(.logged-in) .footer-inner.fixed', context).once('isFixed').each(function () {
-        $(window).load(myfunction);
-        $(window).resize(myfunction);
-        function myfunction() {
+
+        $(window).on('resize', _.debounce(fixedFooter, 100)).trigger('resize');
+
+        function fixedFooter() {
           var windowW = $(window).width();
           var windowH = $(window).height();
           var minHeight = windowH - $('footer').height();

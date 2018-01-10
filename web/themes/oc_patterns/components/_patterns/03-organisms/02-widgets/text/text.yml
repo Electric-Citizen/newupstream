@@ -16,7 +16,7 @@ text_two:
 
 #break text using css columns on larger screens. Available variables: two-column
 columns:
-  two-column
+  # two-column
 
 text_instructions:
   "DRUPAL: This template is embedded into the Drupal text paragraph template."

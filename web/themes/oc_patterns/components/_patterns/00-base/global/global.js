@@ -108,15 +108,16 @@ Drupal.behaviors.fireFocus = {
 Drupal.behaviors.sticky_footer = {
   attach: function(context, settings) {
     $('body:not(.logged-in) .footer-inner.fixed', context).once('isFixed').each(function(){
-        $(window).load(myfunction);
-          $(window).resize(myfunction);
-          function myfunction(){
-            var windowW = $(window).width();
-            var windowH = $(window).height();
-            var minHeight = windowH - $('footer').height();
-            //$('#wrapper').css('min-height', minHeight + 'px');
-            //run position check if width is tab or greater
-            if(windowW > 760){
+
+         $(window).on('resize',  _.debounce( fixedFooter, 100 )).trigger('resize');
+
+        function fixedFooter(){
+          var windowW = $(window).width();
+          var windowH = $(window).height();
+          var minHeight = windowH - $('footer').height();
+          //$('#wrapper').css('min-height', minHeight + 'px');
+          //run position check if width is tab or greater
+          if(windowW > 760){
               checkOffset();
             //  $('#footer-wrapper').hide(0);
               $(document).scroll(function() {
