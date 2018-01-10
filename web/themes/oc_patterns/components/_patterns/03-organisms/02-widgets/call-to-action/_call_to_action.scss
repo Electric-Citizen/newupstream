@@ -35,7 +35,7 @@
 			&:hover,&:focus{
 				background-color: $transparent-black;
 				color: $white;
-				border-color: $black;
+				border-color: $border-rule;
 				//from 02-animations.scss
 				@include transThreeAll;
 			}

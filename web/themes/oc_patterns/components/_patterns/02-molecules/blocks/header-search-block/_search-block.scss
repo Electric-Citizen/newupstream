@@ -84,7 +84,7 @@
 				padding: 9px 10px;
 				font-size: 13px;
 				border: none;
-				border: 1px solid $black;
+				border: 1px solid $border-rule;
 				//from forms.scss
 				@include placeholder;
 				&:focus{

@@ -17,7 +17,7 @@
 		@include four-column;
 	}
 	&.horizontal{
-		border-bottom: 1px solid $grey;
+		border-bottom: 1px solid $border-rule;
 		padding-bottom: 1.5em;
 		&:last-of-type{
 			border-bottom: 0;

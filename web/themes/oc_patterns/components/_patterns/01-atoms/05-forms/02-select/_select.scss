@@ -5,7 +5,7 @@
 @mixin inputSelect{
 	width: 100%;
 	font-size: 16px;
-	border: 1px solid $black;
+	border: 1px solid $border-rule;
 	border-radius: 0;
 	height: auto;
 	&.select2--container--focus{
@@ -156,7 +156,7 @@ body .select2-container--default{
 ---------------- */
 .select2-container{
 	.select2-dropdown{
-		border: 1px solid $black;
+		border: 1px solid $border-rule;
 		border-radius: 0;
 		border-top: 0;
 		padding: 0;

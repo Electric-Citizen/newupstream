@@ -54,7 +54,7 @@
 		&.menuparent{
 			& > ul{
 				background: $white;
-				border: 1px dotted $warmgrey;
+				border: 1px dotted $border-rule;
 			}
 		}
 	}
@@ -190,7 +190,7 @@
 		a.sf-depth-2{
 			&.menuparent{
 				//remove 2nd level togglers when in multi-column
-				border-bottom: 1px dotted $mid-grey;
+				border-bottom: 1px dotted $border-rule;
 				&:after{
 					content: none !important;
 				}
@@ -386,7 +386,7 @@ ul.sf-menu.sf-accordion{
 	/* ====  LEVEL 1  ====*/
 	li.sf-depth-1{
 		&:not(:last-child){
-			border-bottom: 1px solid $warmgrey;
+			border-bottom: 1px solid $border-rule;
 		}
 		&.sf-expanded{
 			& > a{
@@ -412,13 +412,6 @@ ul.sf-menu.sf-accordion{
 			padding: 10px 30px;
 			&:not(.sf-accordion-button){
 				padding: 10px 30px 10px 40px;
-			}
-		}
-		//add some borders to inner level 2 dropdowns
-		&:not(:only-of-type){
-			&.sf-expanded{
-				// border-top: 1px solid $pf-green-30;
-				// border-bottom: 1px solid $pf-green-30;
 			}
 		}
 
