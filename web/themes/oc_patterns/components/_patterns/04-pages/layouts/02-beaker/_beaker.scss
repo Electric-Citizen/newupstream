@@ -23,20 +23,20 @@
 		}
 
 		.main{
-			@include safeFlexSize(0,0,100%);
+			width: 100%;
 			@include safeFlexOrder(1);
 			@include tab{
-				@include safeFlexSize(0,0,76%);
+				width: 76%;
 				@include safeFlexOrder(2);
 				overflow: hidden;
 			}
 		}
 		.sidebar{
-			@include safeFlexSize(0,0,100%);
+			width: 100%;
 			@include safeFlexOrder(2);
 			@include tab{
 				padding-right: 40px;
-				@include safeFlexSize(0,0,24%);
+				width: 24%;
 				@include safeFlexOrder(1);
 			}
 		}

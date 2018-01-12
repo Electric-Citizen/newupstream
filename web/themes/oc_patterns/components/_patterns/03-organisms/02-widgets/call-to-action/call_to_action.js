@@ -6,8 +6,8 @@ Drupal.behaviors.ctaSlide = {
       $(".paragraph--type--call-to-action > .widget-color,.paragraph--type--call-to-action > .image", context).once('contentSlide').each(function(){  
         
       //animate when the page scrolls down far enough
-      $(window).load(function(){
-        
+      $(window).on("load", function(){
+          randomEntrance();
         $(document).scroll(function() {
             randomEntrance();
         });

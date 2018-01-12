@@ -48,14 +48,14 @@
 	%}
 		{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
 			
-			{% block lightImages %}
+			{% block lightboxContent %}
 				{% for key, item in content.field_oc_image_multi if key|first != '#' %}
 					{% if paragraph.field_oc_image_multi[key].target_id > 0 %}
-						{% block lightItem %}
-							<a class="swipebox" href="#item{{paragraph.field_oc_image_multi[key].target_id}}" rel="gallery-{{paragraph.id.value}}"> {{ drupal_entity('media', paragraph.field_oc_image_multi[key].target_id, 'large_thumb') }} </a>
-       
-       						<div class="swipe-hidden" id="item{{paragraph.field_oc_image_multi[key].target_id}}"> {{ drupal_entity('media', paragraph.field_oc_image_multi[key].target_id, 'large') }} </div>
-						{% endblock %}
+							<div class="featherlight-gal image-gal" href="#item{{paragraph.field_oc_image_multi[key].target_id}}" rel="gallery-{{paragraph.id.value}}"> {{ drupal_entity('media', paragraph.field_oc_image_multi[key].target_id, 'large_thumb') }}
+	   
+								<div class="featherlight-hidden" id="item{{paragraph.field_oc_image_multi[key].target_id}}"> {{ drupal_entity('media', paragraph.field_oc_image_multi[key].target_id, 'large') }} </div>
+
+							</div>
 					{% endif %}
 				{% endfor %}
 			{% endblock %}

@@ -1,5 +1,5 @@
 {#
- 	DRUPAL: This template is embedded into the Drupal lightbox gallery paragraph template.
+	DRUPAL: This template is embedded into the Drupal lightbox gallery paragraph template.
 #}
 {{lightbox_instructions}}
 
@@ -15,16 +15,15 @@
 		{% endblock %}
 		
 		<div class="wrapper">
-			{% block lightImages %}
+			{% block lightboxContent %}
 				{% for image in images %}
-					{% block lightItem %}
-						<a class="swipebox" href="#item{{image.id}}" rel="gallery">
-							<img src="{{image.src}}" />
-						</a>
-						<div class="swipe-hidden" id="item{{image.id}}">
+					<div class="featherlight-gal image-gal" href="#item{{image.id}}">
+						<img src="{{image.src}}" />
+			
+						<div class="featherlight-hidden" id="item{{image.id}}">
 							<img src="{{image.src}}" />
 						</div>
-					{% endblock %}
+					</div>
 				{% endfor %}
 			{% endblock %}
 		</div>
