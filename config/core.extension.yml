@@ -25,7 +25,6 @@ module:
   dblog: 0
   default_content: 0
   devel: 0
-  disqus: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0

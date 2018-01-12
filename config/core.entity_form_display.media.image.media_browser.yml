@@ -9,7 +9,8 @@ dependencies:
     - image.style.thumbnail
     - media_entity.bundle.image
   module:
-    - image
+    - focal_point
+    - path
 _core:
   default_config_hash: _zUZbld95Zs8Yda_1tD_to9HKEJxPl4N-9QatO6tikA
 id: media.image.media_browser
@@ -30,8 +31,10 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   name:
     type: string_textfield
