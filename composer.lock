@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3ac29930a7e84edd72960210e21679f",
+    "content-hash": "4fe5a6d0d6fb2372964adf7fef968dd9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1275,74 +1275,6 @@
             }
         },
         {
-            "name": "drupal/amp",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/amp",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/amp-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "e8eeae99be7a16dc8b0bafd865c824b8ae106aa9"
-            },
-            "require": {
-                "drupal/core": "*",
-                "drupal/token": "*",
-                "lullabot/amp": "^1.0.0"
-            },
-            "require-dev": {
-                "drupal/adsense": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1467409439"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "mdrummond",
-                    "homepage": "https://www.drupal.org/user/360968"
-                },
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                },
-                {
-                    "name": "mtift",
-                    "homepage": "https://www.drupal.org/user/751908"
-                },
-                {
-                    "name": "rudygalfi",
-                    "homepage": "https://www.drupal.org/user/3390576"
-                },
-                {
-                    "name": "sidharth_k",
-                    "homepage": "https://www.drupal.org/user/294068"
-                }
-            ],
-            "description": "Google AMP integration",
-            "homepage": "http://drupal.org/project/amp",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/amp",
-                "issues": "http://drupal.org/project/issues/amp"
-            }
-        },
-        {
             "name": "drupal/auto_entitylabel",
             "version": "2.1.0-beta1",
             "source": {
@@ -1400,120 +1332,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_entitylabel",
                 "issues": "https://www.drupal.org/project/issues/auto_entitylabel"
-            }
-        },
-        {
-            "name": "drupal/checklistapi",
-            "version": "1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/checklistapi",
-                "reference": "8.x-1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/checklistapi-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "61ba33ccd2ba7a30aa875256b59b1752528d3eaa"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1511328488",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "TravisCarden",
-                    "homepage": "https://www.drupal.org/user/236758"
-                }
-            ],
-            "description": "Provides an API for creating fillable, persistent checklists.",
-            "homepage": "https://www.drupal.org/project/checklistapi",
-            "support": {
-                "source": "http://cgit.drupalcode.org/checklistapi"
-            }
-        },
-        {
-            "name": "drupal/coffee",
-            "version": "1.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/coffee",
-                "reference": "8.x-1.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/coffee-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "92631b9ea65298a057cc4143e0939bb156ef5e8d"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev",
-                    "dev-8.x-1.x": "8.1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1477414741"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Mol",
-                    "homepage": "https://www.drupal.org/u/michaelmol",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Marco",
-                    "homepage": "https://www.drupal.org/u/willzyx",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Oliver Köhler",
-                    "homepage": "https://www.drupal.org/u/nebel54",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Alli Price",
-                    "homepage": "https://www.drupal.org/u/heylookalive",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "See other contributors",
-                    "homepage": "https://www.drupal.org/node/1356930/committers",
-                    "role": "contributor"
-                }
-            ],
-            "description": "Provides an Alfred like search box to navigate within your site.",
-            "homepage": "https://drupal.org/project/coffee",
-            "support": {
-                "source": "https://cgit.drupalcode.org/coffee",
-                "issues": "https://drupal.org/project/issues/coffee",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -4499,62 +4317,6 @@
             }
         },
         {
-            "name": "drupal/seo_checklist",
-            "version": "4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/seo_checklist",
-                "reference": "8.x-4.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/seo_checklist-8.x-4.1.zip",
-                "reference": "8.x-4.1",
-                "shasum": "b290b4a681b37ffc5785e75c0125b983e379158a"
-            },
-            "require": {
-                "drupal/checklistapi": "*",
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-4.1",
-                    "datestamp": "1512797885",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Finklea",
-                    "homepage": "https://www.drupal.org/user/46676"
-                },
-                {
-                    "name": "TravisCarden",
-                    "homepage": "https://www.drupal.org/user/236758"
-                }
-            ],
-            "description": "Uses best practices to check for proper search engine optimization.",
-            "homepage": "https://www.drupal.org/project/seo_checklist",
-            "keywords": [
-                "SEO"
-            ],
-            "support": {
-                "source": "http://drupalcode.org/seo_checklist",
-                "issues": "https://www.drupal.org/project/issues/seo_checklist"
-            }
-        },
-        {
             "name": "drupal/simple_block",
             "version": "1.0.0-beta1",
             "source": {
@@ -5664,114 +5426,6 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
-            "name": "lullabot/amp",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Lullabot/amp-library.git",
-                "reference": "a8eb47c657a99ddbcf208631d44ffd41bc0219ce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Lullabot/amp-library/zipball/a8eb47c657a99ddbcf208631d44ffd41bc0219ce",
-                "reference": "a8eb47c657a99ddbcf208631d44ffd41bc0219ce",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.1",
-                "marc1706/fast-image-size": "1.*",
-                "masterminds/html5": "^2.2.0",
-                "php": ">=5.5.0",
-                "querypath/querypath": ">=3.0.4",
-                "sabberworm/php-css-parser": "^8.0.0",
-                "sebastian/diff": "~1.2"
-            },
-            "require-dev": {
-                "php": ">=5.5.0",
-                "phpunit/phpunit": "4.8.*",
-                "symfony/console": "^2.7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/Spec/validator-generated.php"
-                ],
-                "psr-4": {
-                    "Lullabot\\AMP\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Sidharth Kshatriya",
-                    "email": "sid.kshatriya@gmail.com"
-                }
-            ],
-            "description": "A set of useful classes and utilities to convert html to AMP html (See https://www.ampproject.org/)",
-            "homepage": "https://github.com/Lullabot/amp-library",
-            "keywords": [
-                "amp",
-                "drupal",
-                "mobile"
-            ],
-            "time": "2017-08-03T15:10:55+00:00"
-        },
-        {
-            "name": "marc1706/fast-image-size",
-            "version": "v1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/marc1706/fast-image-size.git",
-                "reference": "c4ded0223a4e49ae45a2183a69f6afac5baf7250"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/marc1706/fast-image-size/zipball/c4ded0223a4e49ae45a2183a69f6afac5baf7250",
-                "reference": "c4ded0223a4e49ae45a2183a69f6afac5baf7250",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FastImageSize\\": "lib",
-                    "FastImageSize\\tests\\": "tests"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marc Alexander",
-                    "email": "admin@m-a-styles.de",
-                    "homepage": "https://www.m-a-styles.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "fast-image-size is a PHP library that does almost everything PHP's getimagesize() does but without the large overhead of downloading the complete file.",
-            "homepage": "https://www.m-a-styles.de",
-            "keywords": [
-                "fast",
-                "getimagesize",
-                "image",
-                "imagesize",
-                "php",
-                "size"
-            ],
-            "time": "2017-10-23T18:52:01+00:00"
-        },
-        {
             "name": "masterminds/html5",
             "version": "2.3.0",
             "source": {
@@ -6330,48 +5984,6 @@
             "time": "2017-12-10T21:49:27+00:00"
         },
         {
-            "name": "querypath/querypath",
-            "version": "3.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/technosophos/querypath.git",
-                "reference": "6b8e2395fac61fac25bbe962f94def556cb85f7d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/technosophos/querypath/zipball/6b8e2395fac61fac25bbe962f94def556cb85f7d",
-                "reference": "6b8e2395fac61fac25bbe962f94def556cb85f7d",
-                "shasum": ""
-            },
-            "require": {
-                "masterminds/html5": "2.*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "QueryPath": "src/"
-                },
-                "files": [
-                    "src/qp_functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "HTML/XML querying (CSS 4 or XPath) and processing (like jQuery)",
-            "homepage": "https://github.com/technosophos/querypath",
-            "keywords": [
-                "css",
-                "html",
-                "jquery",
-                "xml",
-                "xslt"
-            ],
-            "time": "2016-08-01T22:40:30+00:00"
-        },
-        {
             "name": "rvtraveller/qs-composer-installer",
             "version": "1.1",
             "source": {
@@ -6408,102 +6020,6 @@
             "description": "Install Quicksilver modules for Pantheon into custom locations.",
             "homepage": "https://github.com/rvtraveller/qs-composer-installer",
             "time": "2017-01-27T20:40:31+00:00"
-        },
-        {
-            "name": "sabberworm/php-css-parser",
-            "version": "8.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
-                "reference": "850cbbcbe7fbb155387a151ea562897a67e242ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/850cbbcbe7fbb155387a151ea562897a67e242ef",
-                "reference": "850cbbcbe7fbb155387a151ea562897a67e242ef",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Sabberworm\\CSS": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Raphael Schweikert"
-                }
-            ],
-            "description": "Parser for CSS Files written in PHP",
-            "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
-            "keywords": [
-                "css",
-                "parser",
-                "stylesheet"
-            ],
-            "time": "2016-07-19T19:14:21+00:00"
-        },
-        {
-            "name": "sebastian/diff",
-            "version": "1.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
-                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kore Nordmann",
-                    "email": "mail@kore-nordmann.de"
-                },
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                }
-            ],
-            "description": "Diff implementation",
-            "homepage": "https://github.com/sebastianbergmann/diff",
-            "keywords": [
-                "diff"
-            ],
-            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "stack/builder",
@@ -10346,6 +9862,58 @@
             "time": "2017-01-29T09:50:25+00:00"
         },
         {
+            "name": "sebastian/diff",
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/diff.git",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kore Nordmann",
+                    "email": "mail@kore-nordmann.de"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Diff implementation",
+            "homepage": "https://github.com/sebastianbergmann/diff",
+            "keywords": [
+                "diff"
+            ],
+            "time": "2017-05-22T07:24:03+00:00"
+        },
+        {
             "name": "sebastian/environment",
             "version": "1.3.8",
             "source": {
@@ -10664,7 +10232,6 @@
     "stability-flags": {
         "drupal/addanother": 5,
         "drupal/auto_entitylabel": 10,
-        "drupal/coffee": 10,
         "drupal/contact_storage": 10,
         "drupal/ctools": 15,
         "drupal/default_content": 15,
