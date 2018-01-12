@@ -42,7 +42,6 @@
     "drupal/ctools": "^3.0@alpha",
     "drupal/default_content": "^1.0.0@alpha",
     "drupal/devel": "^1.0@RC",
-    "drupal/disqus": "^1.0@RC",
     "drupal/easy_breadcrumb": "^1.6",
     "drupal/entity_browser": "^1.1",
     "drupal/entity_embed": "^1.0@beta",
