@@ -10,13 +10,13 @@ html {
   height: auto;
 }
 .cke_widget_element[data-align="right"]  {
-  float: left;
+  float: right;
   margin:0 0 20px 20px;
   clear:both;
 }
 
 .cke_widget_element[data-align="left"]  {
-  float: right;
+  float: left;
   margin:0 20px 20px 0;
   clear:both;
 }
