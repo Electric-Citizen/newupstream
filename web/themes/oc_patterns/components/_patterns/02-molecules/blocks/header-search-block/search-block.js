@@ -1,4 +1,5 @@
 (function($, Drupal) {
+	
 //search toggle
 Drupal.behaviors.searchToggle = {
 	attach: function (context, settings) {
@@ -10,5 +11,6 @@ Drupal.behaviors.searchToggle = {
 		});
 	}
 }
+
 })(jQuery, Drupal);
 

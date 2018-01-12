@@ -3,7 +3,6 @@
 ================== */
 
 .paragraph--type--links-files{
-
 	//set margins for links and files lists
 	.field-oc-link-multi,.field-oc-file-multi{
 		margin-top: 1em;
@@ -11,7 +10,6 @@
 			margin-bottom: .25em;
 		}
 	}
-
 	//remove top margin to combine links and files lists
 	.field-oc-link-multi + .field-oc-file-multi{
 		margin-top: 0;

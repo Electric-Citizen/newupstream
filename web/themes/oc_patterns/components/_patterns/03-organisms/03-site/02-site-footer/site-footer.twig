@@ -20,20 +20,20 @@ Available macro variables: fixed, non-fixed.
 
 {% block footerContent %}
 <footer role="contentinfo" class="pl-spacer">
-  <div class="footer-inner {{ styles.fixedFooter }}">	
-    <div>
-  	{% if address %}
-  		{% include "@molecules/blocks/footer-address/_footer-address.twig" %}
-  	{% endif %}
+	<div class="footer-inner {{ styles.fixedFooter }}">	
+		<div>
+		{% if address %}
+			{% include "@molecules/blocks/footer-address/_footer-address.twig" %}
+		{% endif %}
 
-  	{% if menu %}
-  		{% include "@molecules/blocks/footer-menu/_footer-menu.twig" %}
-  	{% endif %}
+		{% if menu %}
+			{% include "@molecules/blocks/footer-menu/_footer-menu.twig" %}
+		{% endif %}
 
-  	{% if copyright %}
-	  	{% include "@molecules/blocks/footer-copyright/_footer-copyright.twig" %}
-  	{% endif %}
-    </div>
-  </div>
+		{% if copyright %}
+			{% include "@molecules/blocks/footer-copyright/_footer-copyright.twig" %}
+		{% endif %}
+		</div>
+	</div>
 </footer>
 {% endblock %}

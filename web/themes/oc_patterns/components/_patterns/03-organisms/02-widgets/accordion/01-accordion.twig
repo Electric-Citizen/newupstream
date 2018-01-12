@@ -4,12 +4,12 @@
 #}
 {% import "@base/global/05-macros/macros.twig" as styles %}
 
-{{accordion_instructions}}
+{{ accordion_instructions }}
 
 <div class="accordion-item {{ styles.accordionStyle }}" aria-expanded="false">
-	<h3 class="accordion-header">{{accordion_header}}</h3>
+	<h3 class="accordion-header">{{ accordion_header }}</h3>
 	<div class="field field-oc-long-text">
-		{{accordion_content|raw}}
+		{{ accordion_content|raw }}
 	</div>
 </div>
 			

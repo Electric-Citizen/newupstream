@@ -8,14 +8,14 @@
 <div class="flex-wrap single pl-spacer">
 	<div class="paragraph paragraph--type--call-to-action">
 		{% if cta_back_img %}
-			<div class="image" style="background:url({{cta_back_img}}) no-repeat">
+			<div class="image" style="background:url({{ cta_back_img }}) no-repeat">
 		{% elseif cta_back_color %}
-			<div class="widget-color {{cta_back_color}}">
+			<div class="widget-color {{ cta_back_color }}">
 		{% endif %}
 {% endblock %}
 				<h2 class="widget-title">
 					{% if cta_url %}
-						<a href="{{cta_url}}">{{ widget_title }}</a>
+						<a href="{{ cta_url }}">{{ widget_title }}</a>
 					{% else %}
 						{{ widget_title }}
 					{% endif %}

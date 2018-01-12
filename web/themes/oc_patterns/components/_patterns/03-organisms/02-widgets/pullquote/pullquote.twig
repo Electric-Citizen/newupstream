@@ -11,24 +11,24 @@
 		{% endif %}
 {% endblock %}
 
-				{% if widget_title %}
-					<h2 class="widget-title">{{widget_title}}</h2>
-				{% endif %}
-		
-				<div class="wrapper">
-					{% block quoteContent %}
-						{% if quote %}
-							<div class="field field-oc-long-text">
-								{{ quote }}
-							</div>
-						{% endif %}
-						{% if source %}
-							<div class="field field-oc-short-text">
-								{{ source }}
-							</div>
-						{% endif %}
-					{% endblock %}
+	{% if widget_title %}
+		<h2 class="widget-title">{{widget_title}}</h2>
+	{% endif %}
+
+	<div class="wrapper">
+		{% block quoteContent %}
+			{% if quote %}
+				<div class="field field-oc-long-text">
+					{{ quote }}
 				</div>
+			{% endif %}
+			{% if source %}
+				<div class="field field-oc-short-text">
+					{{ source }}
+				</div>
+			{% endif %}
+		{% endblock %}
+	</div>
 				
 {% block plwidgetclose %}
 		{% if quote_back_color %}

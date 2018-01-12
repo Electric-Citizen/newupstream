@@ -6,21 +6,21 @@
 {% extends "@molecules/menus/02-superfish/00-superfish.twig" %}
 
 {% block superhide_start %}{# hide pl-only content #}{% endblock %}
-     
-      {% block superfish_main %}
-          <div id="block-oc-patterns-mainnavigation" class="contextual-region block block-superfishmain {{ styles.menuAlign }}">
-          	  {% block superfish_content %}
-          	  	{% block superfish_mobile %}
-          	  		<div class="sf-accordion-toggle sf-style-none">
-          	  			<a id="superfish-main-toggle" href="#">
-          	  				<span>Main Navigation</span>
-          	  			</a>
-          	  		</div>	
-          	 	{% endblock %}
-              	{{ parent() }}
-   			  {% endblock %}
-          </div>
-      {% endblock %}
-      
+		 
+	{% block superfish_main %}
+		<div id="block-oc-patterns-mainnavigation" class="contextual-region block block-superfishmain {{ styles.menuAlign }}">
+			{% block superfish_content %}
+				{% block superfish_mobile %}
+					<div class="sf-accordion-toggle sf-style-none">
+						<a id="superfish-main-toggle" href="#">
+							<span>Main Navigation</span>
+						</a>
+					</div>	
+				{% endblock %}
+				{{ parent() }}
+			{% endblock %}
+		</div>
+	{% endblock %}
+			
 
 {% block superhide_end %}{# hide pl-only content #}{% endblock %}

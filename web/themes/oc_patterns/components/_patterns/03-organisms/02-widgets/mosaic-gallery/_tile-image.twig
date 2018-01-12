@@ -8,25 +8,25 @@
 		<a href="{{ tile_link }}">
 	{% endif %}
 
-			{% if tile_text %}
-				<div class="field field-oc-long-text">
-					{% block tileText %}
-						<p>{{ tile_text }}</p>
-					{% endblock %}
-				</div>
-			{% endif %}
+		{% if tile_text %}
+			<div class="field field-oc-long-text">
+				{% block tileText %}
+					<p>{{ tile_text }}</p>
+				{% endblock %}
+			</div>
+		{% endif %}
 
-			{% if tile_image %}
-				<div class="field field-oc-image">
-					{% block tileImage %}
-						<article class="media media-image">
-							<div class="field field-media-image">
-								<img src="{{ tile_image }}" />
-							</div>
-						</article>
-					{% endblock %}
-				</div>
-			{% endif %}
+		{% if tile_image %}
+			<div class="field field-oc-image">
+				{% block tileImage %}
+					<article class="media media-image">
+						<div class="field field-media-image">
+							<img src="{{ tile_image }}" />
+						</div>
+					</article>
+				{% endblock %}
+			</div>
+		{% endif %}
 
 	{% if tile_link %}
 		</a>

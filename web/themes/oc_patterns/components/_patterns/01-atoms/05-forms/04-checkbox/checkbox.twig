@@ -8,11 +8,11 @@
 <div class="form-checkboxes {{ styles.checkboxElements }}">
 {% endif %}
       {% for key, listItem in listItems.five %}
-        {% include "@atoms/05-forms/04-checkbox/_checkbox-item.twig"
-          with {
-            "checkbox_item": listItem.shortTitle
-          }
-        %}
+      	{% include "@atoms/05-forms/04-checkbox/_checkbox-item.twig"
+      	with {
+      		"checkbox_item": listItem.shortTitle
+      	}
+      	%}
       {% endfor %}
 {% if not attributes %}
 </div>
