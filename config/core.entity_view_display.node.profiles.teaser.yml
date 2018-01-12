@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.profiles.field_first_name
     - field.field.node.profiles.field_last_name
     - field.field.node.profiles.field_phone
-    - field.field.node.profiles.field_position
     - field.field.node.profiles.field_profile_image
     - field.field.node.profiles.panelizer
     - node.type.profiles
@@ -67,6 +66,5 @@ hidden:
   addtoany: true
   field_email: true
   field_phone: true
-  field_position: true
   links: true
   panelizer: true

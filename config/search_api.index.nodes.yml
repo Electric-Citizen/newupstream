@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - field.storage.node.field_position
     - field.storage.node.field_oc_widgets
     - field.storage.paragraph.field_widget_title
     - field.storage.paragraph.field_viewfield
@@ -39,14 +38,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
-  field_position:
-    label: Position
-    datasource_id: 'entity:node'
-    property_path: field_position
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_position
   field_widget_title:
     label: 'Widgets » Paragraph » Widget Title'
     datasource_id: 'entity:node'
@@ -120,7 +111,6 @@ processor_settings:
     fields:
       - title
       - body
-      - field_position
       - field_widget_title
       - field_viewfield
       - field_event_pin_info
@@ -141,7 +131,6 @@ processor_settings:
     fields:
       - title
       - body
-      - field_position
       - field_widget_title
       - field_viewfield
       - field_event_pin_info
@@ -158,7 +147,6 @@ processor_settings:
     fields:
       - title
       - body
-      - field_position
       - field_widget_title
       - field_viewfield
       - field_event_pin_info
@@ -186,7 +174,6 @@ processor_settings:
     fields:
       - title
       - body
-      - field_position
       - field_widget_title
       - field_viewfield
       - field_event_pin_info
