@@ -5,8 +5,12 @@ html {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.cke_widget_element img{
+  max-width: 100%;
+  height: auto;
+}
 .cke_widget_element[data-align="right"]  {
-  float: right;
+  float: left;
   margin:0 0 20px 20px;
   clear:both;
 }
