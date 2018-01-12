@@ -1,7 +1,7 @@
 /* ==============
    SUPPORT BOOK NODE
 ===================== */
-.node--type-support_book{
+.node-type-support-book{
 	.block-region-top{
 		margin-bottom: 2em;
 	}
@@ -18,6 +18,25 @@
 		}
 	}
 	
+	//restricted access message
+	.restricted{
+		padding-top: 6em;
+		text-align: center;
+		@include auto;
+		max-width: $max-width-text + 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+		& > div{
+			border: 1px solid $border-rule;
+			padding: 40px 30px;
+		}
+		@include tab{
+			padding-top: 10em;
+		}
+		@include max-width{
+			padding-top: 15em;
+		}
+	}
 }//end support book
 
 
