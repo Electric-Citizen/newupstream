@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.profiles.field_first_name
     - field.field.node.profiles.field_last_name
     - field.field.node.profiles.field_phone
+    - field.field.node.profiles.field_position
     - field.field.node.profiles.field_profile_image
     - field.field.node.profiles.panelizer
     - node.type.profiles
@@ -117,6 +118,23 @@ third_party_settings:
             weight: -10
             uuid: 22ebdebb-eb2a-4409-8237-429f82a89015
             context_mapping: {  }
+          14584254-3efc-4159-b3b3-fa9adff5fbb0:
+            id: 'entity_field:node:field_position'
+            label: Position
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: main
+            weight: -2
+            uuid: 14584254-3efc-4159-b3b3-fa9adff5fbb0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
         id: panels_variant
         label: Default
         uuid: e95f52c8-5070-4a1f-bb44-e8822b4553f1
@@ -173,6 +191,14 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: content
+  field_position:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_profile_image:
     weight: 102

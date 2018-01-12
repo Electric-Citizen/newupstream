@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.profiles.field_first_name
     - field.field.node.profiles.field_last_name
     - field.field.node.profiles.field_phone
+    - field.field.node.profiles.field_position
     - field.field.node.profiles.field_profile_image
     - field.field.node.profiles.panelizer
     - node.type.profiles
@@ -65,8 +66,16 @@ content:
     third_party_settings: {  }
     type: telephone_default
     region: content
-  field_profile_image:
+  field_position:
     weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_image:
+    weight: 3
     settings:
       form_mode: background_image
       label_singular: ''
@@ -90,7 +99,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 8
     region: content
     third_party_settings: {  }
 hidden:

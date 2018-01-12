@@ -11,6 +11,7 @@ dependencies:
     - field.storage.paragraph.field_accordion_item
     - field.storage.paragraph.field_oc_long_text
     - field.storage.paragraph.field_accordion_header
+    - field.storage.node.field_position
     - search_api.server.local
   module:
     - paragraphs
@@ -96,6 +97,15 @@ field_settings:
       module:
         - paragraphs
         - paragraphs
+  field_position:
+    label: Position
+    datasource_id: 'entity:node'
+    property_path: field_position
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_position
 datasource_settings:
   'entity:node':
     bundles:
@@ -116,6 +126,7 @@ processor_settings:
       - field_event_pin_info
       - field_oc_long_text_1
       - field_accordion_header_1
+      - field_position
     exceptions:
       texan: texa
       mexican: mexic
@@ -136,6 +147,7 @@ processor_settings:
       - field_event_pin_info
       - field_oc_long_text_1
       - field_accordion_header_1
+      - field_position
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -152,6 +164,7 @@ processor_settings:
       - field_event_pin_info
       - field_oc_long_text_1
       - field_accordion_header_1
+      - field_position
     weights:
       preprocess_index: -48
       preprocess_query: -48
@@ -179,6 +192,7 @@ processor_settings:
       - field_event_pin_info
       - field_oc_long_text_1
       - field_accordion_header_1
+      - field_position
     title: true
     alt: true
     tags:
