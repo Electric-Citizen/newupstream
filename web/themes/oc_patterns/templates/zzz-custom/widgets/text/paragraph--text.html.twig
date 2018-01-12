@@ -68,7 +68,7 @@
 			
 			{% block text %}
 				{% set columns = content.field_two_column.0['#markup'] %}
-				<div class="{{columns}}">
+				<div class="{{ columns }}">
 					{{ content.field_oc_long_text}}
 				</div>
 				

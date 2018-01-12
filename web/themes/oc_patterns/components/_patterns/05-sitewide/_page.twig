@@ -45,66 +45,66 @@
 #}
 
 {#
-  DRUPAL: This template is being embedded into multiple Drupal templates. Macros variables can also alter the footer theming/behavior. Avaiable variables: fixed, non-fixed.
+	DRUPAL: This template is being embedded into multiple Drupal templates. Macros variables can also alter the footer theming/behavior. Avaiable variables: fixed, non-fixed.
 #}
 
 {% import "@base/global/05-macros/macros.twig" as styles %}
 
 <div class="layout-container">
 
-  {% block pageHeader %}
-    <header role="banner">
-      {{ page.header }}
-    </header>
-  {% endblock %}
+	{% block pageHeader %}
+		<header role="banner">
+			{{ page.header }}
+		</header>
+	{% endblock %}
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+	{{ page.primary_menu }}
+	{{ page.secondary_menu }}
 
-  {{ page.breadcrumb }}
+	{{ page.breadcrumb }}
 
-  {{ page.highlighted }}
+	{{ page.highlighted }}
 
-  {{ page.help }}
+	{{ page.help }}
 
-  {{ messages }}
+	{{ messages }}
 
-  {% block pageMain %}
-    <main role="main">
-      <a id="main-content" tabindex="-2"></a>{# link is in html.html.twig #}
+	{% block pageMain %}
+		<main role="main">
+			<a id="main-content" tabindex="-2"></a>{# link is in html.html.twig #}
 
-      {% block mainContent %}
-        <div class="layout-content">
-            {% block pageContent %}
-              {{ page.content }}
-            {% endblock %}
-        </div>{# /.layout-content #}
-      {% endblock %}
-      
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
+			{% block mainContent %}
+				<div class="layout-content">
+						{% block pageContent %}
+							{{ page.content }}
+						{% endblock %}
+				</div>{# /.layout-content #}
+			{% endblock %}
+			
+			{% if page.sidebar_first %}
+				<aside class="layout-sidebar-first" role="complementary">
+					{{ page.sidebar_first }}
+				</aside>
+			{% endif %}
 
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
+			{% if page.sidebar_second %}
+				<aside class="layout-sidebar-second" role="complementary">
+					{{ page.sidebar_second }}
+				</aside>
+			{% endif %}
 
-    </main>
-  {% endblock %}
+		</main>
+	{% endblock %}
 
-  {% block pageFooter %}
-    {% if page.footer %}
-      <footer role="contentinfo">
-        <div class="footer-inner {{ styles.fixedFooter }}">
-          {{ page.footer }}
-        </div>
-      </footer>
-    {% endif %}
-  {% endblock %}
+	{% block pageFooter %}
+		{% if page.footer %}
+			<footer role="contentinfo">
+				<div class="footer-inner {{ styles.fixedFooter }}">
+					{{ page.footer }}
+				</div>
+			</footer>
+		{% endif %}
+	{% endblock %}
 
 
 </div>{# /.layout-container #}

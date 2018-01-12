@@ -26,28 +26,28 @@
  */
 #}
 {%
-  set classes = [
-    'block',
-    'block-' ~ plugin_id|clean_class,
-  ]
+	set classes = [
+		'block',
+		'block-' ~ plugin_id|clean_class,
+	]
 %}
 
 
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2 class="block-title">
-      {% for item in content['#items'] %}
-        {% if loop.first %}
-        <a href="/node/{{item.original_link.pid}}">
-        {% endif %}
-      {% endfor %}
-      {{ label }}
-      </a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+	{{ title_prefix }}
+	{% if label %}
+		<h2 class="block-title">
+			{% for item in content['#items'] %}
+				{% if loop.first %}
+				<a href="/node/{{ item.original_link.pid }}">
+				{% endif %}
+			{% endfor %}
+			{{ label }}
+			</a>
+		</h2>
+	{% endif %}
+	{{ title_suffix }}
+	{% block content %}
+		{{ content }}
+	{% endblock %}
 </div>

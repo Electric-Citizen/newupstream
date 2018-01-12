@@ -31,20 +31,20 @@
  */
 #}
 {% if title %}
-  <h3>{{ title }}</h3>
+	<h3>{{ title }}</h3>
 {% endif %}
 {% for row in rows %}
-  {%
-    set row_classes = [
-      default_row_class ? 'views-row',
-    ]
-  %}
-  {# find the number of items to display #}
-  {% set number = row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_number_of_items }}']|striptags|trim %}
-  {# display the row content only if the loop index of the row is less than or equal to the number of items to be displayed #}
-  {% if loop.index <= number %}
-    <div{{ row.attributes.addClass(row_classes) }}>
-        {{ row.content }}
-    </div>
-  {% endif %}
+	{%
+		set row_classes = [
+			default_row_class ? 'views-row',
+		]
+	%}
+	{# find the number of items to display #}
+	{% set number = row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_number_of_items }}']|striptags|trim %}
+	{# display the row content only if the loop index of the row is less than or equal to the number of items to be displayed #}
+	{% if loop.index <= number %}
+		<div{{ row.attributes.addClass(row_classes) }}>
+			{{ row.content }}
+		</div>
+	{% endif %}
 {% endfor %}

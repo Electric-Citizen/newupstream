@@ -45,31 +45,25 @@
 
 {# Define image style based on picker #}
 {% if (style == 'small') %}
-{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'small') %}
-
+	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'small') %}
 
 {% elseif (style == 'medium') %}
-{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'medium') %}
-
+	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'medium') %}
 
 {% elseif (style == 'large') %}
-{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'large') %}
-
+	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'large') %}
 
 {% elseif (style == 'full') %}
-{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'full') %}
-
+	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'full') %}
 
 {% elseif (style == 'square') %}
-{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'square') %}
+	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'square') %}
 
 {% elseif (style == 'banner') %}
-{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'banner') %}
-
+	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'banner') %}
 
 {% elseif (style == 'default') %}
-{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'default') %}
-
+	{% set image =  drupal_entity('media', paragraph.field_oc_image.0.target_id, 'default') %}
 
 {% endif %}
 

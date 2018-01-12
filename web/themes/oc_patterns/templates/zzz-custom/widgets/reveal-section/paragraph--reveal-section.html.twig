@@ -59,11 +59,11 @@
 		<div class="widget-color {{special}}">
 	{% endif %}
 
-			<div class="wrapper {{columns}}">
-				<div class="title-wrap">{{content.field_widget_title}}</div>
-				{# print the content without the styling fields #}
-    			{{ content|without('field_background_style', 'field_background_image', 'field_widget_title', 'field_column_style') }}
-    		</div>
+		<div class="wrapper {{columns}}">
+			<div class="title-wrap">{{content.field_widget_title}}</div>
+			{# print the content without the styling fields #}
+ 			{{ content|without('field_background_style', 'field_background_image', 'field_widget_title', 'field_column_style') }}
+ 		</div>
 
  	{% if content.field_background_style[0]['#markup']|render %}
  		</div>

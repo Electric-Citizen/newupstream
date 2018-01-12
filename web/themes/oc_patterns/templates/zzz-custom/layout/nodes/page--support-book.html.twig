@@ -49,16 +49,16 @@
 {# check if a user is authenticated and replace the support page content if they are not #}
 {% block pageMain %}
 	{% if logged_in %}
-	{{ parent() }}
-{% else %}
-	<main role="main">
+		{{ parent() }}
+	{% else %}
+		<main role="main">
 
-      <div class="layout-content">
-        <div class="restricted">You must be <a href="/user">logged in</a> to view support pages.</div>
-      </div>{# /.layout-content #}
+	      <div class="layout-content">
+	      	<div class="restricted">You must be <a href="/user">logged in</a> to view support pages.</div>
+	      </div>{# /.layout-content #}
 
-    </main>
-{% endif %}
+	    </main>
+	{% endif %}
 {% endblock %}
   
 

@@ -22,8 +22,8 @@
 
 
 <h1{{ attributes }}>
-  {%- for item in items -%}
-    {% set title = item.content['#context'].value %}
+	{%- for item in items -%}
+		{% set title = item.content['#context'].value %}
 		{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}
-  {%- endfor -%}
+	{%- endfor -%}
 </h1>

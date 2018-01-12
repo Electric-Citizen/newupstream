@@ -24,15 +24,15 @@
 
 <div class="text-wrapper">
 	<h1{{ attributes }}>
-	  {%- for item in items -%}
-	    {% set title = item.content['#context'].value %}
- 		{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}
-	  {%- endfor -%}
+		{%- for item in items -%}
+			{% set title = item.content['#context'].value %}
+			{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}
+		{%- endfor -%}
 	</h1>
 	<div class="metatext">
 		<span class="date">{{ date }}</span>
 		{% if author %}
-		<span class="author"> by {{ author }}</span>
+			<span class="author"> by {{ author }}</span>
 		{% endif %}
 	</div>
 </div>

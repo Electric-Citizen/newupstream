@@ -82,14 +82,15 @@ This template is used for the author field rendering on posts
 {% set nid = elements['#node'].id() %}
 
 <div class="profile-teaser">
-  {% if elements.field_profile_image %}
-    <a href="/node/{{ nid }}">{{ elements.field_profile_image }}</a>
-  {% endif %}
-  <div class="info">
-    <h4><a href="/node/{{ nid }}">About the Author:</a></h4>
-    {% set text = elements.body|render|striptags %}
-    <div class="body">{{ text|length > 300 ? text|slice(0, 300) ~ '...' : text }} <a href="/node/{{ nid }}">More&nbsp;»</a>
-</div>
-  </div>
+	{% if elements.field_profile_image %}
+		<a href="/node/{{ nid }}">{{ elements.field_profile_image }}</a>
+	{% endif %}
+	<div class="info">
+		<h4><a href="/node/{{ nid }}">About the Author:</a></h4>
+		{% set text = elements.body|render|striptags %}
+		<div class="body">{{ text|length > 300 ? text|slice(0, 300) ~ '...' : text }} 
+			<a href="/node/{{ nid }}">More&nbsp;»</a>
+		</div>
+	</div>
 </div>
 

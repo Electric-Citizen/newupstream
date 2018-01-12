@@ -76,7 +76,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 			
 			{# print the content without the styling fields #}
     		{% block widgetContent %}
-    			{{content.field_widget_title}}
+    			{{ content.field_widget_title }}
     			<div class="wrapper">
 					{# print the content without the styling fields #}
     				{{ content|without('field_layout','field_widget_title') }}

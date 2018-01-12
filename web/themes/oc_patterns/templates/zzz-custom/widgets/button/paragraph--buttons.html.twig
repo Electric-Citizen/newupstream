@@ -64,7 +64,7 @@
 				{% set title = content.field_oc_link_multi[key]['#title'] %}
 				{% block button_items %}
 					<li>
-						<a href="{{content.field_oc_link_multi[key]['#url']}}" class="button button-widget {{color}}" role="button">{{content.field_oc_link_multi[key]['#title']}}</a>
+						<a href="{{ content.field_oc_link_multi[key]['#url'] }}" class="button button-widget {{ color }}" role="button">{{ content.field_oc_link_multi[key]['#title'] }}</a>
 					</li>
 				{% endblock %}
 			{% endfor %}

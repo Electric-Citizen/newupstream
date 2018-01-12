@@ -51,34 +51,31 @@
 {% block widgetContent %}
 	{{ attach_library('oc_patterns/call-to-action') }}
 	{# figure out is the background style is set to image and an image has been set #}
-		{% if (content.field_background_style[0]['#markup'] == 'image') and (content.field_background_image.0|render) %}
-		{# add class of image and set style background image #}
-			<div class="{{special}}" style="background:url({{ bgImage }}) no-repeat">
-		{% elseif (content.field_background_style[0]['#markup']|render) and (content.field_background_style[0]['#markup'] != 'image') %}
-			<div class="widget-color {{special}}">
-		{% endif %}
+	{% if (content.field_background_style[0]['#markup'] == 'image') and (content.field_background_image.0|render) %}
+	{# add class of image and set style background image #}
+		<div class="{{ special }}" style="background:url({{ bgImage }}) no-repeat">
+	{% elseif (content.field_background_style[0]['#markup']|render) and (content.field_background_style[0]['#markup'] != 'image') %}
+		<div class="widget-color {{ special }}">
+	{% endif %}
 
-				{% embed "@organisms/02-widgets/call-to-action/call_to_action.twig" 
-					with{
-						widget_title: content.field_widget_title.0['#context'].value,
-						cta_url: buttonUrl
-					}
-				%}
-				{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
+			{% embed "@organisms/02-widgets/call-to-action/call_to_action.twig" 
+				with{
+					widget_title: content.field_widget_title.0['#context'].value,
+					cta_url: buttonUrl
+				}
+			%}
+			{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
 
-					{% block cta %}
-						{{ content.field_oc_long_text }}
-						{{ content.field_oc_link }}
-					{% endblock %}
+				{% block cta %}
+					{{ content.field_oc_long_text }}
+					{{ content.field_oc_link }}
+				{% endblock %}
 
-				{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
+			{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
 
-				{% endembed %}
+			{% endembed %}
 
-		{% if content.field_background_style[0]['#markup']|render %}
- 			</div>
- 		{% endif %}
-
-	
-
+	{% if content.field_background_style[0]['#markup']|render %}
+		</div>
+	{% endif %}	
 {% endblock %}

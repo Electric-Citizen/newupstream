@@ -84,11 +84,11 @@ This template is used for the per tag taxonomy term blog post rendering
 {% set date = elements['#node'].getCreatedTime()|date("n/j/y") %}
 
 <div class="blog-teaser">
-  <div class="info">
-    <h3><a href="/node/{{nid}}">{{elements['#node'].getTitle()}}</a></h3>
-    <span class="date">{{date}}</span><span class="author"> by {{elements.field_author.0['#plain_text']}}</span>
-    {{elements.body}}
-    <a href="/node/{{nid}}" class="post-link" role="button">Read More</a>
-  </div>
+	<div class="info">
+		<h3><a href="/node/{{ nid }}">{{ elements['#node'].getTitle() }}</a></h3>
+		<span class="date">{{date}}</span><span class="author"> by {{ elements.field_author.0['#plain_text'] }}</span>
+		{{ elements.body }}
+		<a href="/node/{{ nid }}" class="post-link" role="button">Read More</a>
+	</div>
 </div>
 

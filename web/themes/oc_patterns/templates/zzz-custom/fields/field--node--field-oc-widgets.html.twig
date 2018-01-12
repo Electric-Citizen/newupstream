@@ -45,28 +45,28 @@ set classes = [
 %}
 
 {% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addClass(classes) }}>
-      {% for item in items %}
-       {{ item.content }}
-      {% endfor %}
-    </div>
-  {% else %}
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
-  {% endif %}
+	{% if multiple %}
+		<div{{ attributes.addClass(classes) }}>
+			{% for item in items %}
+				{{ item.content }}
+			{% endfor %}
+		</div>
+	{% else %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+	{% endif %}
 {% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes }}>{{ label }}</div>
-    {% if multiple %}
-      <div>
-    {% endif %}
-    {% for item in items %}
-     {{ item.content }}
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-  </div>
+	<div{{ attributes.addClass(classes) }}>
+		<div{{ title_attributes }}>{{ label }}</div>
+		{% if multiple %}
+			<div>
+		{% endif %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+		{% if multiple %}
+			</div>
+		{% endif %}
+	</div>
 {% endif %}

@@ -33,15 +33,15 @@
 
 
 {% if 'image' in displayFields %}
-	 <div class="card-image">
-	  {{ fields.field_banner.content }}
-	 </div>
+	<div class="card-image">
+		{{ fields.field_banner.content }}
+	</div>
 {% endif %}
 
 <div class="card-text">
 	<h3><a href="{{ fields.path.content|striptags|trim }}">{{ fields.title.content }}</a></h3>
 	{% if 'date' in displayFields %}
-  		 {{ fields.field_oc_date.content }}
+		{{ fields.field_oc_date.content }}
 	{% endif %}
 
 	{% if 'body' in displayFields %}

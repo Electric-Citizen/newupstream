@@ -31,44 +31,44 @@
  */
 #}
 {%
-  set classes = [
-    'view',
-    css_name|clean_class,
-    view.current_display|clean_class
-  ]
+	set classes = [
+		'view',
+		css_name|clean_class,
+		view.current_display|clean_class
+	]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <h1>Site Search</h1>
-  
-  {{ drupal_block('exposedformsite_searchsearch_results', false) }}
+	<h1>Site Search</h1>
+	
+	{{ drupal_block('exposedformsite_searchsearch_results', false) }}
 
-  {% if header %}
-    <div class="view-header">
-      {{ header }}
-    </div>
-  {% endif %}
+	{% if header %}
+		<div class="view-header">
+			{{ header }}
+		</div>
+	{% endif %}
 
-  {{ attachment_before }}
-  {% if rows %}
-    <div class="view-content">
-      {{ rows }}
-    </div>
-  {% endif %}
-  {% if empty %}
-    <div class="view-empty">
-      {{ empty }}
-    </div>
-  {% endif %}
+	{{ attachment_before }}
+	{% if rows %}
+		<div class="view-content">
+			{{ rows }}
+		</div>
+	{% endif %}
+	{% if empty %}
+		<div class="view-empty">
+			{{ empty }}
+		</div>
+	{% endif %}
 
-  {{ pager }}
+	{{ pager }}
 
-  {{ attachment_after }}
-  {{ more }}
+	{{ attachment_after }}
+	{{ more }}
 
-  {% if footer %}
-    <div class="view-footer">
-      {{ footer }}
-    </div>
-  {% endif %}
+	{% if footer %}
+		<div class="view-footer">
+			{{ footer }}
+		</div>
+	{% endif %}
 
 </div>
