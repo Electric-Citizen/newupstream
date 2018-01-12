@@ -4,50 +4,6 @@
  */
 
 
-/* USED WHEN SHOWING LAYOUTS GRID ON ADMIN SIDE (NEEEDS JS ENABLED) */
-/*
-.flextable .draggable.grid{
-  	display: inline-block;
-  	font-size: 0;
-  	width: 100%;
-  	border-top: 1px solid #ddd;
-  	border-left: 1px solid #ddd;
-  	border-right: 1px solid #ddd;
-}
-.flextable .draggable.grid td{
-	display: inline-block;
-	font-size: 12px;
-}
-.flextable .draggable.grid td:not(.field-multiple-drag){
-	width: calc(100% - 32px);
-	width: -moz-calc(100% - 32px);
-	width: -web-calc(100% - 32px);
-	text-align: right;
-}
-
-@media screen and (min-width: 760px){
-	.flextable .draggable.grid.auto{
-		width: auto;
-	}
-  	.flextable .draggable.grid.quarter{
-    	width: 50%;
-  	}
-}
-@media screen and (min-width: 1200px){
-  	.flextable .draggable.grid.half{
-    	width: 50%;
-  	}
-  	.flextable .draggable.grid.third{
-    	width: 33.333%;
-  	}
-  	.flextable .draggable.grid.quarter{
-    	width: 25%;
-  	}
-}
-
-*/
-
-
 /* style media image fields inside admin widgets */
 .field--widget-entity-reference-paragraphs img{
   max-width: 100%;
@@ -64,8 +20,6 @@
   width: 100%;
 
 }
-
-
 
 
 /*  ADMIN REMINDERS
@@ -231,7 +185,16 @@
   background: url(../icons/svg/video.svg) no-repeat;
 }
 
-
+/* CUSTOM WARNINGS
+------------------ */
+.node-form .custom-warning{
+  color: #000000;
+  font-size: 12px;
+  border: 2px solid #dd241b;
+  background: rgba(221,36,27,0.2);
+  padding: .25em 1em;
+  display: inline-block;
+}
 
 /* WIDGET ADMIN DESCRIPTION */
 .field--name-field-admin-description .field-item{
