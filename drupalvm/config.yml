@@ -1,0 +1,51 @@
+alias_local: '@upstream.local'
+alias_remote: '@upstream.live'
+
+branch: master
+site: 8be50dbc-4463-43b5-bd18-d8304662382
+env: dev
+
+vagrant_hostname: upstream.local
+vagrant_machine_name: upstream
+vagrant_ip: 192.168.88.101
+
+drupal_site_name: "EC Upstream"
+drupal_enable_modules: []
+drupal_account_name: admin
+drupal_account_pass: admin
+
+drupal_build_composer_project: false
+drupal_build_composer: true
+drupal_composer_path: false
+drupal_composer_install_dir: "/var/www/drupalvm"
+drupal_core_path: "{{ drupal_composer_install_dir }}/web"
+drupal_enabled_modules: []
+
+vagrant_plugins:
+ - name: vagrant-vbguest
+ - name: vagrant-hostsupdater
+
+# Set this to 'false' if you don't need to install drupal (using the drupal_*
+# settings below), but instead copy down a database (e.g. using drush sql-sync).
+drupal_install_site: true
+
+# Required Drupal settings.
+drupal_core_path: "{{ drupal_composer_install_dir }}/web"
+drupal_core_owner: "{{ drupalvm_user }}"
+drupal_db_user: drupal
+drupal_db_password: drupal
+drupal_db_name: drupal
+drupal_db_host: localhost
+
+
+
+# Settings for installing a Drupal site if 'drupal_install_site:' is 'true'.
+drupal_major_version: 8
+drupal_domain: "{{ vagrant_hostname }}"
+drupal_site_name: "Drupal"
+drupal_install_profile: standard
+drupal_account_name: admin
+drupal_account_pass: admin
+
+# Additional arguments or options to pass to `drush site-install`.
+drupal_site_install_extra_args: []
