@@ -1,15 +1,15 @@
-alias_local: '@upstream.local'
-alias_remote: '@upstream.live'
+alias_local: '@newupstream.local'
+alias_remote: '@newupstream.dev'
 
 branch: master
 site: 8be50dbc-4463-43b5-bd18-d8304662382
 env: dev
 
-vagrant_hostname: upstream.local
-vagrant_machine_name: upstream
+vagrant_hostname: newupstream.local
+vagrant_machine_name: newupstream
 vagrant_ip: 192.168.88.101
 
-drupal_site_name: "EC Upstream"
+drupal_site_name: "EC New Upstream"
 drupal_enable_modules: []
 drupal_account_name: admin
 drupal_account_pass: admin
@@ -37,7 +37,9 @@ drupal_db_password: drupal
 drupal_db_name: drupal
 drupal_db_host: localhost
 
-
+# Drupal VM automatically creates a drush alias file in your ~/.drush folder if
+# this variable is 'true'.
+configure_drush_aliases: false
 
 # Settings for installing a Drupal site if 'drupal_install_site:' is 'true'.
 drupal_major_version: 8

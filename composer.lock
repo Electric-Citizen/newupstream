@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d33d73e379bd31f37fae797fb6f53fb",
+    "content-hash": "b3ac02742528a46d6a670ab67a5db611",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2562,17 +2562,11 @@
         },
         {
             "name": "drupal/devel",
-            "version": "1.2.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/devel",
-                "reference": "8.x-1.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "01f3349ef75f6e21fceef24be9d3d6506ca29647"
+                "reference": "c4f6ab902ab288b29f55834b8f9b19ba2b3a89ec"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2586,11 +2580,16 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1507197844",
+                    "version": "8.x-1.2+2-dev",
+                    "datestamp": "1513502285",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
                     }
                 }
             },
@@ -2640,7 +2639,8 @@
                 "source": "http://cgit.drupalcode.org/devel",
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
+            },
+            "time": "2017-12-28T22:38:51+00:00"
         },
         {
             "name": "drupal/easy_breadcrumb",
@@ -10564,7 +10564,7 @@
         "drupal/contact_storage": 10,
         "drupal/ctools": 15,
         "drupal/default_content": 15,
-        "drupal/devel": 5,
+        "drupal/devel": 20,
         "drupal/entity_embed": 10,
         "drupal/field_group": 5,
         "drupal/flexslider": 10,

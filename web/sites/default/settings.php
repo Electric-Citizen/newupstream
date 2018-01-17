@@ -38,4 +38,15 @@ if (file_exists($local_settings)) {
  * See: tests/installer-features/installer.feature
  */
 
-$conf['install_profile'] = 'oc';
+$conf['install_profile'] = 'oc';$databases['default']['default'] = array (
+  'database' => 'drupal',
+  'username' => 'drupal',
+  'password' => 'drupal',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['hash_salt'] = 'dlXw9kLaST1GlRT1NKKpZctkKKYO04H755mNzxky-y4OjKCm0AuZG4V0vIjT7XJeSYNbqOOe6w';
+$settings['install_profile'] = 'standard';
