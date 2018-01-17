@@ -13,6 +13,8 @@ module:
   comment: 0
   components: 0
   config: 0
+  config_filter: 0
+  config_split: 0
   config_update: 0
   config_update_ui: 0
   contact: 0
@@ -24,7 +26,6 @@ module:
   datetime: 0
   dblog: 0
   default_content: 0
-  devel: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
@@ -34,6 +35,7 @@ module:
   entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
+  environment_indicator: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -51,7 +53,6 @@ module:
   image: 0
   image_style_quality: 0
   inline_entity_form: 0
-  kint: 0
   layout_discovery: 0
   libraries: 0
   link: 0

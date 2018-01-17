@@ -1,0 +1,14 @@
+uuid: 210a490f-ca90-429f-ac93-07977be88e3e
+langcode: en
+status: false
+dependencies: {  }
+id: live
+label: Live
+folder: ../config/environments/live
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
