@@ -23,12 +23,56 @@ $config_directories = array(
   CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
 );
 
+
 /**
- * If there is a local settings file, then include it
+ * Set up config splits
  */
-$local_settings = __DIR__ . "/settings.local.php";
-if (file_exists($local_settings)) {
-  include $local_settings;
+
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  switch($_ENV['PANTHEON_ENVIRONMENT']) {
+    case 'live':
+      $config['config_split.config_split.live']['status'] = TRUE;
+      $config['config_split.config_split.excluded']['status'] = TRUE;
+      $config['environment_indicator.indicator']['bg_color'] = '#990000';
+      $config['environment_indicator.indicator']['fg_color'] = '#fff';
+      $config['environment_indicator.indicator']['name'] = 'Live';
+    case 'test':
+      $config['config_split.config_split.test']['status'] = TRUE;
+      $config['config_split.config_split.excluded']['status'] = TRUE;
+      $config['environment_indicator.indicator']['bg_color'] = '#ff9900';
+      $config['environment_indicator.indicator']['fg_color'] = '#fff';
+      $config['environment_indicator.indicator']['name'] = 'Test';
+      break;
+    case 'dev':
+      $config['config_split.config_split.dev']['status'] = TRUE;
+      $config['environment_indicator.indicator']['bg_color'] = '#006600';
+      $config['environment_indicator.indicator']['fg_color'] = '#fff';
+      $config['environment_indicator.indicator']['name'] = 'Dev';
+      break;
+    default :
+      $config['config_split.config_split.live']['status'] = TRUE;
+      break;
+  }
+} else { // LOCAL
+  $config['config_split.config_split.local']['status'] = TRUE;
+
+  /**
+   * If there is a local settings file, then include it
+   */
+  $local_settings = __DIR__ . "/settings.local.php";
+  if (file_exists($local_settings)) {
+    include $local_settings;
+  }
+
+  /**
+   * If there is a drupalvm settings file, then include it
+   */
+  $vm_settings = __DIR__ . "/settings.drupalvm.php";
+  if (file_exists($vm_settings)) {
+    include $vm_settings;
+  }
+
+
 }
 
 /**

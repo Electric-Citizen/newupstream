@@ -1,0 +1,10 @@
+uuid: b25acc62-097a-4e60-ba97-476da6d7990d
+langcode: en
+status: true
+dependencies: {  }
+machine: local
+description: null
+name: Local
+url: 'http://newupstream.local/'
+fg_color: '#d0d0d0'
+bg_color: '#0d0d0d'

@@ -1,0 +1,19 @@
+uuid: b43fdef2-b38d-46eb-b8df-15e4546bb63d
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+folder: ../config/environments/local
+module:
+  config_devel: 0
+  devel: 0
+  devel_generate: 0
+  kint: 0
+  webform_devel: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
