@@ -59,6 +59,12 @@
   clear: both;
 }
 
+/* widget helptext
+------------------- */
+.field--widget-paragraphs .description strong span{
+  color: #dd241b ;
+}
+
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit{
   padding-left: 30px;
   border: 2px solid #02acd7;
@@ -194,6 +200,14 @@
   background: rgba(221,36,27,0.2);
   padding: .25em 1em;
   display: inline-block;
+}
+
+/* WIDGET LABEL */
+.js .paragraph-type-top .paragraph-type-title{
+  min-width: 300px;
+}
+.paragraph-type-title .paragraph-type-label{
+  font-weight: bold;
 }
 
 /* WIDGET ADMIN DESCRIPTION */
