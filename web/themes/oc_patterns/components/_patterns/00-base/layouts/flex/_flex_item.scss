@@ -22,8 +22,11 @@ FLEX ITEMS
 	&.backless{
 		& > .paragraph:not(.paragraph--type--admin-view-placer):not(.paragraph--type--accordion-item){
 			padding: 1em 20px;
+			//prevent padding on nested widgets
+			.paragraph{
+				padding: 0;
+			}
 		}
-
 	}
 
 	.wrapper{

@@ -59,6 +59,12 @@
   clear: both;
 }
 
+/* WIDGET CONTENT SPACING
+-------------------------- */
+.paragraphs-content{
+  margin-bottom: 1em;
+}
+
 /* widget helptext
 ------------------- */
 .field--widget-paragraphs .description strong span{
@@ -211,7 +217,7 @@
 }
 
 /* WIDGET ADMIN DESCRIPTION */
-.field--name-field-admin-description .field-item{
+.field--name-field-admin-description,.field--name-field-admin-description .field-item{
   color: #ec2f10;
 }
  
