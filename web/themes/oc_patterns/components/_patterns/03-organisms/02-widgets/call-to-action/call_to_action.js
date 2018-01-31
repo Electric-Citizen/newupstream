@@ -21,7 +21,7 @@ Drupal.behaviors.ctaSlide = {
 
 		});
 	}
-}
+};
 
 
 })(jQuery, Drupal);

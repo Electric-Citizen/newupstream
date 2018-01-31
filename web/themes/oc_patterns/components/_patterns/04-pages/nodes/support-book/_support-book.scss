@@ -17,26 +17,32 @@
 			margin-top: .5em;
 		}
 	}
-	
+
 	//restricted access message
-	.restricted{
-		padding-top: 6em;
-		text-align: center;
-		@include auto;
-		max-width: $max-width-text + 40px;
-		padding-left: 20px;
-		padding-right: 20px;
-		& > div{
-			border: 1px solid $border-rule;
-			padding: 40px 30px;
+	&:not(.logged-in){
+		.layout-container > main{
+			position: relative;
 		}
-		@include tab{
-			padding-top: 10em;
-		}
-		@include max-width{
-			padding-top: 15em;
+		.restricted{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+			& > div{
+				max-width: $maxwidthtext + 40px;
+				border: 1px solid $border-rule;
+				padding: 40px 30px;
+				@include auto;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include translate(-50%,-50%);
+			}
 		}
 	}
+
 }//end support book
 
 
