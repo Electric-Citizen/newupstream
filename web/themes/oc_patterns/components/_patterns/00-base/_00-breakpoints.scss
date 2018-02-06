@@ -15,8 +15,8 @@
 $smalltab: 500px;
 $tab: 760px;
 $desk: 900px;
-$max-width: 1200px;
-$max-width-text: 800px;
+$maxwidth: 1200px;
+$maxwidthtext: 800px;
 $onlytab: 760px 899px;
 $onlysmall: max-width 759px; 
 $mobilemenu:max-width 979px;
@@ -43,9 +43,9 @@ $deskmenu:min-width 980px;
 	}
 }
 
-///mixin - max-width
-@mixin max-width {
-	@include breakpoint($max-width) {
+///mixin - maxwidth
+@mixin maxwidth {
+	@include breakpoint($maxwidth) {
 		@content;
 	}
 }

@@ -215,8 +215,8 @@
 
 /* LAYOUT MIXINS
 -------------------- */
-$contentW: $max-width;
-$textW: $max-width-text;
+$contentW: $maxwidth;
+$textW: $maxwidthtext;
 
 ///mixin - auto
 @mixin auto{

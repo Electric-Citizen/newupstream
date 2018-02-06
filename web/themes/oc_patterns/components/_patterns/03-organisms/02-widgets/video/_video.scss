@@ -4,7 +4,7 @@
 
 .paragraph--type--video{
 	.wrapper{
-		max-width: $max-width !important;
+		max-width: $maxwidth !important;
 	}
 	//allow video to override layout padding on mobile
 	.field-oc-video{
@@ -17,7 +17,7 @@
 	}
 	//video summary
 	.field-oc-long-text{
-		max-width: $max-width-text;
+		max-width: $maxwidthtext;
 		//from 01-mixins.scss
 		@include auto;
 		margin-top: 1em;

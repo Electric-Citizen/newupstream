@@ -45,7 +45,7 @@ $h6-sm: 18px;
 	@include tab{
 		font-size: $h1-mid;
 	}
-	@include max-width{
+	@include maxwidth{
 		font-size: $h1-lg;
 	}
 }
@@ -56,7 +56,7 @@ $h6-sm: 18px;
 	@include tab{
 		font-size: $h2-mid;
 	}
-	@include max-width{
+	@include maxwidth{
 		font-size: $h2-lg;
 	}
 }
@@ -90,7 +90,7 @@ $h6-sm: 18px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
-	max-width: $max-width;
+	max-width: $maxwidth;
 	//from 01-mixins.scss
 	@include auto;
 }

@@ -3,7 +3,7 @@
 ==================== */
 .paragraph--type--lightbox-gallery{
 	.wrapper{
-		max-width: $max-width !important;
+		max-width: $maxwidth !important;
 		text-align: center;
 	}
 	//hide the content before lightbox
@@ -108,7 +108,7 @@
 		}
 
 		.gallery-text{
-			max-width: $max-width-text;
+			max-width: $maxwidthtext;
 			padding: 2em 3em;
 		}
 	}//end featherlight content

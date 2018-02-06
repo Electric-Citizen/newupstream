@@ -87,7 +87,7 @@
 			@include auto;
 		}
 		.field-reveal-widgets{
-			max-width: 1200px;
+			max-width: $maxwidth;
 			@include auto;
 			.widget-title:after{
 				content: none !important;
@@ -110,7 +110,7 @@
 						font-size: 48px;
 					}
 				}
-				@include max-width{
+				@include maxwidth{
 					h2.widget-title{
 						font-size: 56px;
 					}
@@ -139,7 +139,7 @@
 						font-size: 48px;
 					}
 				}
-				@include max-width{
+				@include maxwidth{
 					h2.widget-title{
 						font-size: 56px;
 					}

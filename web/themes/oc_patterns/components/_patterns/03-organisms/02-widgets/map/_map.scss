@@ -5,12 +5,12 @@
 .paragraph--type--map{
 	//override default text width wrapper sizing
 	.wrapper{
-		max-width: $max-width !important;
+		max-width: $maxwidth !important;
 	}
 	//map summary
 	.field-oc-long-text{
 		margin-top: 1em;
-		max-width: $max-width-text;
+		max-width: $maxwidthtext;
 		@include auto;
 	}
 	//allow map to override layout margins on mobile

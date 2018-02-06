@@ -10,7 +10,7 @@
 
 	.content-wrapper{
 		@include safeFlex(row,wrap,null,null);
-		max-width: $max-width;
+		max-width: $maxwidth;
 		//from 01-mixins.scss
 		@include auto;
 		padding: 0 20px 3em;

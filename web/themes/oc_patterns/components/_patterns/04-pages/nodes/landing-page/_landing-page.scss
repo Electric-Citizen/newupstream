@@ -8,45 +8,21 @@
 		.block-entity-fieldnodetitle{
 			margin-top: 0;
 		}
-		.landing-header{
-			&.background{
-				//from node.scss
-				@include background-banner;
+		.field-banner{
+			opacity: 0;
+			//from 02-animations.scss
+			@include animation('fadeIn 1.2s 1 forwards');
+			img{
+				width: 100%;
 			}
-			//make room for page nav at tab when banner not used as background
-			&:not(.background){
-				@include tab{
-					.field-node-title,.breadcrumb{
-						float: left;
-						width: 100%;
-					}
-				}
+		}
+		.field-node-title{
+			margin-top: 0;
+			margin-bottom: 1.5em;
+			h1{
+				margin: 0;
 			}
-			.text-wrapper{
-				max-width: $max-width;
-				@include auto;
-			}
-			.breadcrumb{
-				margin-bottom: 1em;
-				@include tab{
-					float: left;
-					width: 100%;
-					margin-bottom: 1em;
-				}
-			}
-			.field-banner{
-				opacity: 0;
-				//from 02-animations.scss
-				@include animation('fadeIn 1.2s 1 forwards');
-			}
-			.field-node-title{
-				margin-top: 0;
-				margin-bottom: 1.5em;
-				h1{
-					margin: 0;
-				}
-			}
-		}//end landing-header
+		}
 		.page-menu{
 			@include tab{
 				top: 100%;
@@ -55,18 +31,11 @@
 		}
 	}//end block-regoin-top
 
-	.field-banner{
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
 
 	.block-region-main{
 		//from node.scss
-		@include main-content;
+		@include mainContent;
 		.field.body{
-			margin: 0 0 5em;
 			p{
 				&:first-child{
 					font-size: 22px;				

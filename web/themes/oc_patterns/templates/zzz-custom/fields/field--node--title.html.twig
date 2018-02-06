@@ -22,8 +22,9 @@
 
 
 <h1{{ attributes }}>
-	{%- for item in items -%}
-		{% set title = item.content['#context'].value %}
-		{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}
-	{%- endfor -%}
+	{% if element.0['#context'].value|split(' ')|length > 1 %}
+		<h1>{{ element.0['#context'].value|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ element.0['#context'].value|split(' ')|last }}</h1>
+	{% else %}
+		<h1>{{ element.0['#context'].value }}</h1>
+	{% endif %}
 </h1>

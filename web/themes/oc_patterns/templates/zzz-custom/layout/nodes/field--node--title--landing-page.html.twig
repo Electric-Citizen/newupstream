@@ -34,7 +34,11 @@
 				{{ landing_crumbs }}
 			</div>
 			<div class="field field-node-title">
-	    		<h1>{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}</h1>
+	    		{% if title|split(' ')|length > 1 %}
+					<h1>{{ title|split(' ')|slice(0,-1)|join(' ') }}&nbsp;{{ title|split(' ')|last }}</h1>
+				{% else %}
+					<h1>{{ title }}</h1>
+				{% endif %}
 	    	</div>
     	</div>
 	</div>

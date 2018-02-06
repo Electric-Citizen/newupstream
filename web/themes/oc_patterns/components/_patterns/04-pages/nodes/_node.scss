@@ -1,44 +1,31 @@
 /* ===============
    NODES GLOBAL
 =================== */
-@mixin background-banner{
-	@include tab{
-		margin-top: 0;
-		position: relative;
-		.field-banner{
-			position: relative;
-			//from 01-mixins.scss
-			@include overlay;
-		}
-		.field-node-title{
-			margin-top: 0;
-			margin-bottom: 0;
-			h1{
-				text-align: center;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				//from 01-mixins.scss
-				@include translate(-50%, -65%);
-				z-index: 20;
-				color: $white;
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-		}
-	}
-}//end background-banner
-
-@mixin main-content{
+@mixin mainContentSide{
 	//body
 	.block-entity-fieldnodebody{
-		max-width: $max-width-text;
+		max-width: $maxwidth;
 		//from 01-mixins.scss
 		@include auto;
 		margin-bottom: 2em;
 	}
 	.block-entity-fieldnodefield-oc-widgets{
-		max-width: 1200px;
+		max-width: $maxwidth;
+		//from 01-mixins.scss
+		@include auto
+	}
+}
+
+@mixin mainContent{
+	//body
+	.block-entity-fieldnodebody{
+		max-width: $maxwidthtext;
+		//from 01-mixins.scss
+		@include auto;
+		margin-bottom: 2em;
+	}
+	.block-entity-fieldnodefield-oc-widgets{
+		max-width: $maxwidth;
 		//from 01-mixins.scss
 		@include auto
 	}

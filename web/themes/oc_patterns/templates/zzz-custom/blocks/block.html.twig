@@ -25,12 +25,31 @@
  * @see template_preprocess_block()
  */
 #}
-{%
-	set classes = [
-		'block',
-		'block-' ~ plugin_id|clean_class,
-	]
-%}
+{% if content['#block_content'].bundle %}
+  {%
+    set classes = [
+      'block',
+      'block-' ~ label|clean_class,
+      'block-' ~ content['#block_content'].bundle|clean_class,
+      'block-' ~ plugin_id|clean_class,
+    ]
+  %}
+{% elseif label %}
+  {%
+    set classes = [
+      'block',
+      'block-' ~ label|clean_class,
+      'block-' ~ plugin_id|clean_class,
+    ]
+  %}
+{% else %}
+  {%
+    set classes = [
+      'block',
+      'block-' ~ plugin_id|clean_class,
+    ]
+  %}
+{% endif %}
 <div{{ attributes.addClass(classes) }}>
 	{{ title_prefix }}
 	{% if label %}

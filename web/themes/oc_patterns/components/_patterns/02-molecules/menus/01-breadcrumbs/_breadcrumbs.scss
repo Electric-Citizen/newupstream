@@ -3,7 +3,7 @@
 ------------------- */
 
 .breadcrumb{
-	max-width: $max-width;
+	max-width: $maxwidth;
 	//from 01-mixins.scss
 	@include auto;
 	padding-left: 20px;

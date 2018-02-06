@@ -16,6 +16,10 @@
 		margin-bottom: 1.5em;
 	}
 
+	.block-region-main{
+		@include mainContentSide;
+	}
+
 	//move sidebar to first in bunsen
 	.bunsen{
 		@include onlysmall{

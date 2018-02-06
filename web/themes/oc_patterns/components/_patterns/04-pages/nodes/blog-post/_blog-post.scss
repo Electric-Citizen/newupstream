@@ -73,7 +73,7 @@
 				text-align: right;
 				& > span{
 					display: block;
-					max-width: $max-width;
+					max-width: $maxwidth;
 					@include auto;
 				}
 			}
@@ -83,12 +83,12 @@
 
 	.block-region-main{
 		//from node.scss
-		@include main-content;
+		@include mainContentSide;
 
 		//author
 		.block-entity-fieldnodefield-author{
 			margin-bottom: 2em;
-			max-width: $max-width-text;
+			max-width: $maxwidthtext;
 			//from 01-mixins.scss
 			@include auto;
 			.profile-teaser{
@@ -124,7 +124,7 @@
 
 		//tags
 		.block-entity-fieldnodefield-tags{
-			max-width: $max-width-text;
+			max-width: $maxwidthtext;
 			@include auto;
 			.label{
 				font-weight: $heavy;
@@ -154,7 +154,7 @@
 	.block-region-bottom{
 		padding: 0 20px;
 		.block-flippy-block{
-			max-width: $max-width;
+			max-width: $maxwidth;
 			//from 01-mixins.scss
 			@include auto;
 		}

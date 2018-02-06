@@ -7,9 +7,7 @@
 	}
 
 	.block-region-main{
-		.block-entityfieldnodebody{
-			margin-bottom: 2em;
-		}
+		@include mainContentSide;
 	}
 
 	.block-region-sidebar{

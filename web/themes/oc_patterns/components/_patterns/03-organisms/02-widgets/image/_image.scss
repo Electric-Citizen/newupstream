@@ -6,7 +6,7 @@
 
 	//Wrapper sizing (needs to be changed when image styles are changed or added to widget)
 	.image-wrapper{
-		max-width: $max-width;
+		max-width: $maxwidth;
 		//from 01-mixins.scss
 		@include auto;
 		&.small{
@@ -54,7 +54,7 @@
 	.field-oc-long-text{
 		margin: 1em auto 0;
 		text-align: left;
-		max-width: $max-width-text;
+		max-width: $maxwidthtext;
 	}
 	
 }//end image widget

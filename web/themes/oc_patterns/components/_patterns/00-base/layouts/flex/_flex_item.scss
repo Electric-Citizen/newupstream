@@ -33,7 +33,7 @@ FLEX ITEMS
 		width: 100%;
 		//set widget content wrappers to text width when in kermit
 		.pl & ,.kermit .block-region-main &{
-			max-width: $max-width-text;
+			max-width: $maxwidthtext;
 			@include auto;
 		}
 	}
@@ -68,7 +68,7 @@ FLEX ITEMS
 	}
 
 	//percents at content width
-	@include max-width{
+	@include maxwidth{
 		&.quarter{
 			//from 01-mixins.scss
 			@include safeFlexSize(0,0,25%);

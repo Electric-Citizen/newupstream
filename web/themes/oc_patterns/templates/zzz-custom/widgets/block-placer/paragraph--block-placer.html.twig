@@ -36,16 +36,25 @@
  * @ingroup themeable
  */
 #}
-{{ attach_library('oc_patterns/accordion') }}
 
-{% set text = {
-	'#type': 'processed_text',
-	'#text': content.field_oc_long_text.0['#text'],
-	'#format': content.field_oc_long_text.0['#format']
- } %}
-{% include "@organisms/02-widgets/accordion/01-accordion.twig" 
-	with{
-		accordion_header: content.field_accordion_header.0['#context'].value,
-		accordion_content: text,
-	}
-%}
+
+{# NOTES
+------------
+	This is the parent paragraphs template. Other paragraphs templates can extend this template as needed by
+	inheriting and altering the blocks defined here.
+	Field templates can also overview content set here (example: field--paragraph--field-widget-title.html.twig which sets all titles h2.pane-title)
+#}
+
+{% extends "paragraph.html.twig" %}
+
+{# NOTE: No content is allowed outside of {% block widgetContent %} #}
+{% block widgetContent %}
+
+	{{ content.field_widget_title }}
+
+	<div class="block block-{{ content.field_block.0['#block_content'].label|clean_class }} block-{{ content.field_block.0['#block_content'].bundle|clean_class }}">
+		{{ content.field_block }}
+	</div>
+	
+{# NOTE: No content allowed past this point #}
+{% endblock %}
