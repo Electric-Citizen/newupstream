@@ -196,6 +196,14 @@
 
 <div class="mixin-tile">
 	<ul>
+		<li><strong>Edge Reset</strong></li>
+		<li class="include-tag">@include edgeReset;</li>
+		<li>Set 0 left and right margins.</li>
+	</ul>
+</div>
+
+<div class="mixin-tile">
+	<ul>
 		<li><strong>Clearfix</strong></li>
 		<li class="include-tag">@include clearfix;</li>
 		<li>Creates a psuedo :after element to clear all floats</li>
@@ -324,6 +332,22 @@
 		<li class="include-tag">@include fullback($color);</li>
 		<li>Used in pseudo elements to provide colored full-width backgrounds.</li>
 	</ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Gradient</strong></li>
+    <li class="include-tag">@include gradient($grad-direction,$grad-start,$grad-stop);</li>
+    <li>Creates a two color gradient starting form the chosen direction (top, bottom, left, right).</li>
+  </ul>
+</div>
+
+<div class="mixin-tile">
+  <ul>
+    <li><strong>Triangle</strong></li>
+    <li class="include-tag">@include triangle($tri-direction,$tri-height,$tri-width,$tri-color);</li>
+    <li>Used in pseudo elements to create custom triangles.</li>
+  </ul>
 </div>
 
 

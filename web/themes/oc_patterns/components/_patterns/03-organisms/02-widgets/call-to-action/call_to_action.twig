@@ -13,13 +13,15 @@
 			<div class="widget-color {{ cta_back_color }}">
 		{% endif %}
 {% endblock %}
-				<h2 class="widget-title">
-					{% if cta_url %}
-						<a href="{{ cta_url }}">{{ widget_title }}</a>
-					{% else %}
-						{{ widget_title }}
-					{% endif %}
-				</h2>
+				{% if widget_title %}
+					<h2 class="widget-title">
+						{% if cta_url %}
+							<a href="{{ cta_url }}">{{ widget_title }}</a>
+						{% else %}
+							{{ widget_title }}
+						{% endif %}
+					</h2>
+				{% endif %}
 
 				<div class="wrapper">
 					{% block cta %}

@@ -212,6 +212,51 @@
 }
 
 
+///mixin - gradient
+@mixin gradient($grad-direction,$grad-start,$grad-stop) { 
+	background: -moz-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* FF3.6+ */  
+	background: -webkit-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Chrome10+,Safari5.1+ */ 
+	background: -o-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Opera 11.10+ */ 
+	background: -ms-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* IE10+ */ 
+	@if $grad-direction == 'top'{	
+		background: linear-gradient(to bottom, $grad-start 0%,$grad-stop 100%); /* W3C */
+	}@else if $grad-direction == 'bottom'{
+		background: linear-gradient(to top, $grad-start 0%,$grad-stop 100%); /* W3C */
+	}@else if $grad-direction == 'left'{
+		background: linear-gradient(to right, $grad-start 0%,$grad-stop 100%); /* W3C */
+	}@else if $grad-direction == 'right'{
+		background: linear-gradient(to left, $grad-start 0%,$grad-stop 100%); /* W3C */
+	}
+	
+}
+
+
+@mixin triangle($tri-direction,$tri-height,$tri-width,$tri-color){
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(0.05deg);
+	-moz-transform: scale(1.1);
+	transform: rotate(0.05deg);
+	@if $tri-direction == 'up'{	
+		border-right: $tri-width double rgba(0,0,0,0);
+		border-left: $tri-width double rgba(0,0,0,0);
+		border-bottom: $tri-height solid $tri-color;
+	}@else if $tri-direction == 'down'{
+		border-right: $tri-width double rgba(0,0,0,0);
+		border-left: $tri-width double rgba(0,0,0,0);
+		border-top: $tri-height solid $tri-color;
+	}@else if $tri-direction == 'left'{
+		border-top: $tri-height double rgba(0,0,0,0);
+		border-bottom: $tri-height double rgba(0,0,0,0);
+		border-right: $tri-width solid $tri-color;
+	}@else if $tri-direction == 'right'{
+		border-top: $tri-height double rgba(0,0,0,0);
+		border-bottom: $tri-height double rgba(0,0,0,0);
+		border-left: $tri-width solid $tri-color;
+	}
+}
+
+
 
 /* LAYOUT MIXINS
 -------------------- */
@@ -227,7 +272,13 @@ $textW: $maxwidthtext;
 ///mixin - edge-to-edge
 @mixin edge-to-edge {
 	margin-left:-20px;
-	margin-right:-20px;/*make divs look full width*/
+	margin-right:-20px;
+}
+
+///mixin - edge-to-edge
+@mixin edgeReset {
+	margin-left:-20px;
+	margin-right:-20px;
 }
 
 ///mixin - clearfix

@@ -51,68 +51,32 @@
 
 {% block widgetContent %}
 
-	{# figure out is the background style is set to image and an image has been set #}
-	{% if (content.field_background_style[0]['#markup'] == 'image') and (content.field_background_image|render) %}
-		{# add class of image and set style background image #}
-		<div class="{{special}}" style="background:url({{ bgImage }}) no-repeat">
-			{% embed "@organisms/02-widgets/pullquote/pullquote.twig" 
-				with{
-					widget_title: content.field_widget_title.0['#context'].value
-				}
-			%}
-				{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
-
-				{% block quoteContent %}
-					{{ content.field_oc_long_text }}
-					{{ content.field_oc_short_text }}
-				{% endblock %}
-
-				{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
-
-			{% endembed %}
- 		</div>
-
-	{# detect if a background is set that is not 'image' #}
-	{% elseif (content.field_background_style|render) and (content.field_background_style[0]['#markup'] != 'image') %}
-		{# add the color classes #}
+	{# figure out if a background style is set and provide the propper wrapper #}
+	{% if (content.field_background_style[0]['#markup'] == 'image') and (content.field_background_image.0|render) %}
+	{# add class of image and set style background image andd content position if used #}
+		{% set contentPlace = content.field_content_position.0['#markup'] %}
+		<div class="{{special}}{% if contentPlace %} {{ contentPlace }}{% endif %}" style="background:url({{ bgImage }}) no-repeat">
+	{% elseif (content.field_background_style[0]['#markup']|render) and (content.field_background_style[0]['#markup'] != 'image') %}
 		<div class="widget-color {{special}}">
-			{% embed "@organisms/02-widgets/pullquote/pullquote.twig" 
-				with{
-					widget_title: content.field_widget_title.0['#context'].value
-				}
-			%}
-
-				{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
-
-				{% block quoteContent %}
-					{{ content.field_oc_long_text }}
-					{{ content.field_oc_short_text }}
-				{% endblock %}
-
-				{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
-
-			{% endembed %}
-		</div>
-
-	{% else %}
-		{{content.field_widget_title}}
-		<div class="wrapper">
-			{% embed "@organisms/02-widgets/pullquote/pullquote.twig" 
-				with{
-					widget_title: content.field_widget_title.0['#context'].value
-				}
-			%}
-				{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
-
-				{% block quoteContent %}
-					{{ content.field_oc_long_text }}
-					{{ content.field_oc_short_text }}
-				{% endblock %}
-
-				{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
-
-			{% endembed %}
-		</div>
 	{% endif %}
+
+			{% embed "@organisms/02-widgets/pullquote/pullquote.twig" 
+				with{
+					widget_title: content.field_widget_title.0['#context'].value
+				}
+			%}
+				{% block plwidgetopen %}{# patternlab specifc html #}{% endblock %}
+
+				{% block quoteContent %}
+					{{ content.field_oc_long_text }}
+					{{ content.field_oc_short_text }}
+				{% endblock %}
+
+				{% block plwidgetclose %}{# patternlab specifc html #}{% endblock %}
+
+			{% endembed %}
+ 	{% if content.field_background_style[0]['#markup'] %}
+ 		</div>
+ 	{% endif %}
 
 {% endblock %}

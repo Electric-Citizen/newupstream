@@ -16,6 +16,21 @@ p{
 }
 
 
+/* KINTING
+-------------- */
+.kint{
+	position: fixed;
+	z-index: 9999;
+	top: 200px;
+	right: 5%;
+	width: 90%;
+	max-width: 800px;
+	@include calc(max-height, "90% - 200px");
+	overflow: scroll;
+}
+
+
+
 /*  FLEXSLIDER
 -------------------------------- */
 
