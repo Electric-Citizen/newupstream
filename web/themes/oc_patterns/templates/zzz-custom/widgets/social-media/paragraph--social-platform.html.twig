@@ -60,7 +60,7 @@
 
 {# turn off autoescape to render html #}
 {% autoescape false %}
-	<a href="{{ link }}" aria-label="Link to the {{ name }} platform." role="button" class="icon {{ name }}">
+	<a href="{{ link }}" aria-label="Link to the {{ name }} platform." role="button" class="icon {{ name }}" target="_blank">
 		<svg class="{{ name }}" viewBox="{{ position }}"><desc>{{ name }}</desc><use xlink:href="/themes/oc_patterns/dist/svg/sprite.css.svg#{{ name }}" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
 	</a>
 {% endautoescape %}
