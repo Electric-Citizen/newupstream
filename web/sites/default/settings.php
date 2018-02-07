@@ -82,4 +82,4 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
  * See: tests/installer-features/installer.feature
  */
 
-$conf['install_profile'] = 'oc';
+$conf['install_profile'] = 'oc';$settings['install_profile'] = 'standard';
