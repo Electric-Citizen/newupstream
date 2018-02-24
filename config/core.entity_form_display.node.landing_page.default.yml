@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_oc_widgets
-    - field.field.node.landing_page.field_use_as_background
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
@@ -69,13 +68,6 @@ content:
     third_party_settings: {  }
     type: paragraphs
     region: content
-  field_use_as_background:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   path:
     type: path
     weight: 5
@@ -97,6 +89,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
 hidden:
   created: true
   panelizer: true

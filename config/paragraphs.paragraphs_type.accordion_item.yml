@@ -9,5 +9,5 @@ _core:
 id: accordion_item
 label: 'Accordion Item'
 icon_uuid: 3fcf2449-30a2-4b46-b972-f9ddde522828
-description: ''
+description: 'Accordion Group subwidget'
 behavior_plugins: {  }

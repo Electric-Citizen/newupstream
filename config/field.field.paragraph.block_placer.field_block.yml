@@ -12,8 +12,8 @@ field_name: field_block
 entity_type: paragraph
 bundle: block_placer
 label: Block
-description: 'Use this field to place custom blocks.Allowed block types are Basic Block and Widgets Block.'
-required: false
+description: 'Use this field to place custom blocks. Allowed block types are Basic Block and Widgets Block. <strong>NOTE:<strong> Blocks can be created or edited <a href="/admin/structure/block/block-content">here.</a>'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

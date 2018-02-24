@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_oc_widgets
-    - field.field.node.landing_page.field_use_as_background
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
@@ -39,7 +38,7 @@ third_party_settings:
               weight: 0
               region: content
             region: top
-            weight: -1
+            weight: 0
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: cc5ec35d-5181-40ba-85de-37f989a4fd42
@@ -92,6 +91,32 @@ third_party_settings:
             weight: 1
             uuid: 6bc4426f-84e4-480e-bdfa-44eef6803301
             context_mapping: {  }
+          3e5151e7-9435-4b23-b51c-8bde259c5732:
+            id: 'entity_field:node:field_banner'
+            label: Banner
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: banner_tall
+              third_party_settings: {  }
+              weight: 0
+            region: top
+            weight: -2
+            uuid: 3e5151e7-9435-4b23-b51c-8bde259c5732
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          57f623a4-1857-4597-a36d-c8e21fb99311:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: -1
+            uuid: 57f623a4-1857-4597-a36d-c8e21fb99311
+            context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: cfb3f498-2997-474e-81fc-71ef6ef23762
@@ -141,16 +166,6 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
-    region: content
-  field_use_as_background:
-    weight: 104
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   links:
     weight: 100

@@ -28,7 +28,7 @@ content:
       autocollapse: all
       add_mode: button
       form_display_mode: default
-      default_paragraph_type: accordion_item
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   field_admin_description:

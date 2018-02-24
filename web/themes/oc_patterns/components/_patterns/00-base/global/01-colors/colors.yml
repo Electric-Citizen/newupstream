@@ -38,7 +38,7 @@ items:
   - name: $transparent-white
     value: 'rgba(255,255,255,0.7)'
   - name: $transparent-black
-    value: 'rgba(35,35,35,0.35)'
+    value: 'rgba(35,35,35,0.7)'
   - name: $image-overlay
     value: 'rgba(35,35,35,0.4)'
   - name: $gold-10

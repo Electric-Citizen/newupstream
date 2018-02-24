@@ -9,5 +9,5 @@ _core:
 id: social_platform
 label: 'Social Platform'
 icon_uuid: bcb6de22-caec-4673-8985-52b56d4b27c9
-description: ''
+description: 'Social media sub-widget'
 behavior_plugins: {  }
