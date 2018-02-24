@@ -21,7 +21,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: ''
-  file_extensions: 'txt pdf doc docx zip xsl xslx'
+  file_extensions: 'txt pdf doc docx zip xls xlsx'
   max_filesize: 20mb
   description_field: true
   handler: 'default:file'
