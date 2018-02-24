@@ -2520,7 +2520,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/devel",
-                "reference": "c4f6ab902ab288b29f55834b8f9b19ba2b3a89ec"
+                "reference": "60a775d1e22575d18a70810cdefe881ddc81ffd7"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2534,8 +2534,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2+2-dev",
-                    "datestamp": "1513502285",
+                    "version": "8.x-1.2+8-dev",
+                    "datestamp": "1518823380",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2594,7 +2594,7 @@
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             },
-            "time": "2017-12-28T22:38:51+00:00"
+            "time": "2018-02-16T23:33:46+00:00"
         },
         {
             "name": "drupal/easy_breadcrumb",

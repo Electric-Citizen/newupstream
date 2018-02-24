@@ -71,7 +71,7 @@
   color: #dd241b ;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit{
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit:not([value="Add another item"]){
   padding-left: 30px;
   border: 2px solid #02acd7;
   color: #535353;
@@ -80,6 +80,10 @@
   float: left;
   background-position: 2px 0 !important;
   margin-right: 15px;
+}
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper .clearfix{
+  margin-bottom: 2em;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit:hover{
