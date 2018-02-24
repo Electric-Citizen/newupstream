@@ -10,8 +10,8 @@
 
 <div class="mixin-tile">
 	<ul>
-		<li><strong>Smalltab</strong></li>
-		<li class="include-tag">@include smalltab{}</li>
+		<li><strong>smallTab</strong></li>
+		<li class="include-tag">@include smallTab{}</li>
 		<li>Creates a breakpoint at 500px</li>
 	</ul>
 </div>
@@ -32,35 +32,35 @@
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Max Width</strong></li>
-		<li class="include-tag">@include max-width{}</li>
+		<li class="include-tag">@include maxWidth{}</li>
 		<li>Creates a breakpoint at 1200px</li>
 	</ul>
 </div>
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Only Tab</strong></li>
-		<li class="include-tag">@include onlytab{}</li>
+		<li class="include-tag">@include onlyTab{}</li>
 		<li>Creates a breakpoint between 760px and 899px</li>
 	</ul>
 </div>
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Only Small</strong></li>
-		<li class="include-tag">@include onlysmall{}</li>
+		<li class="include-tag">@include onlySmall{}</li>
 		<li>Creates a breakpoint from 0 to 499px</li>
 	</ul>
 </div>
 <div class="mixin-tile">
 	<ul>
-		<li><strong>Deskmenu</strong></li>
-		<li class="include-tag">@include deskmenu{}</li>
+		<li><strong>deskMenu</strong></li>
+		<li class="include-tag">@include deskMenu{}</li>
 		<li>Creates a breakpoint at 980px</li>
 	</ul>
 </div>
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Mobile Menu</strong></li>
-		<li class="include-tag">@include mobilemenu{}</li>
+		<li class="include-tag">@include mobileMenu{}</li>
 		<li>Creates a breakpoint from 0 to 979px</li>
 	</ul>
 </div>
@@ -189,7 +189,7 @@
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Edge to Edge</strong></li>
-		<li class="include-tag">@include edge-to-edge;</li>
+		<li class="include-tag">@include edgeToEdge;</li>
 		<li>Add -20px left and right margins to override padding.</li>
 	</ul>
 </div>
@@ -290,7 +290,7 @@
 	<ul>
 		<li><strong>Overlay</strong></li>
 		<li class="include-tag">@include overlay;</li>
-		<li>Creates a psuedo :before element with absolute positioning from the top left that covers 100% width and height and has a semi-transparent background set to the $image-overlay color value.</li>
+		<li>Creates a psuedo :before element with absolute positioning from the top left that covers 100% width and height and has a semi-transparent background set to the $imgOverlay color value.</li>
 	</ul>
 </div>
 
@@ -305,7 +305,7 @@
 <div class="mixin-tile">
 	<ul>
 		<li><strong>List Reset</strong></li>
-		<li class="include-tag">@include list-reset;</li>
+		<li class="include-tag">@include listReset;</li>
 		<li>Removes default margin, padding and list styles on ul and ol lists.</li>
 	</ul>
 </div>
@@ -391,10 +391,10 @@
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Heading 1</strong></li>
-		<li class="include-tag">@include heading-1;</li>
+		<li class="include-tag">@include heading1;</li>
 		<li>Sets h1 theming.</li>
 		<li class="similar">Similar:</li>
-		<li class="include-tag">@include heading-2 thru @include heading-6 (each header has a style mixin).</li>
+		<li class="include-tag">@include heading2 thru @include heading6 (each header has a style mixin).</li>
 	</ul>
 </div>
 
@@ -409,7 +409,7 @@
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Base Font Size</strong></li>
-		<li class="include-tag">@include base-font-size;</li>
+		<li class="include-tag">@include baseFontSize;</li>
 		<li>Sets the base font size.</li>
 	</ul>
 </div>
@@ -420,14 +420,14 @@
 		<li class="include-tag">@include larger;</li>
 		<li>Increase the font-size by 120%;</li>
 		<li class="similar">Similar:</li>
-		<li class="include-tag">@include x-smaller; (80%)</br>@include smaller; (90%)</li>
+		<li class="include-tag">@include xSmaller; (80%)</br>@include smaller; (90%)</li>
 	</ul>
 </div>
 
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Text Date</strong></li>
-		<li class="include-tag">@include text-date;</li>
+		<li class="include-tag">@include textDate;</li>
 		<li>Sets the style for dates.</li>
 	</ul>
 </div>
@@ -514,18 +514,18 @@
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Outline Button</strong></li>
-		<li class="include-tag">@include outline-button;</li>
-		<li>Defines outline button style.</li>
+		<li class="include-tag">@include outlineButton($outlineColor);</li>
+		<li>Defines outline button style with variable color.</li>
 	</ul>
 </div>
 
 <div class="mixin-tile">
 	<ul>
 		<li><strong>Light back</strong></li>
-		<li class="include-tag">@include light-back;</li>
+		<li class="include-tag">@include lightBack;</li>
 		<li>Use darker text and links on light backgrounds.</li>
 		<li class="similar">Similar:</li>
-		<li class="include-tag">@include dark-back;</li>
+		<li class="include-tag">@include darkBack;</li>
 	</ul>
 </div>
 

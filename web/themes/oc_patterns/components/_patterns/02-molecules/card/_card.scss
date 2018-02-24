@@ -7,7 +7,7 @@
 /* GENERAL VIEWS
 ------------------------ */
 .item-list > ul{
-	@include list-reset;
+	@include listReset;
 }
 .view-content a,.card a{
 	//from 02-animations.scss
@@ -49,7 +49,7 @@
 	}
 	.date{
 		//from text.scss
-		@include text-date;
+		@include textDate;
 		margin-bottom: .5em;
 	}
 

@@ -10,8 +10,8 @@ footer {
 
 	//set style for footer (need inner for fixed footer script)
 	.footer-inner{
-		background: $dark-grey;
-		color: $off-white;
+		background: $darkGrey;
+		color: $offWhite;
 		min-height: 289px;
 		padding: 30px 20px 30px;
 		box-sizing: border-box;
@@ -23,7 +23,7 @@ footer {
 		//limit footer content to max-width and set flex parenting
 		& > div{
 			position: relative;
-			max-width: $maxwidth;
+			max-width: $maxWidth;
 			@include auto;
 			@include safeFlex(row,wrap,null,null);
 		}
@@ -31,7 +31,7 @@ footer {
 		//add a top border when not fixed
 		&:not(.isFixed){
 			& > div{
-				border-top: 1px solid $off-white;
+				border-top: 1px solid $offWhite;
 				padding-top: 1em;
 			}
 		}
@@ -39,7 +39,7 @@ footer {
 		//styling when fixed
 		&.isFixed{
 			@include tab{
-				border-top: 1px solid $off-white;
+				border-top: 1px solid $offWhite;
 				position: fixed;
 				//negative bottom to hide non-important footer items when fixed
 				bottom: -135px;	
@@ -87,7 +87,7 @@ footer {
 		//from 01-mixins.scss
 		@include calc(min-height, "100vh - 277px");
 	}
-	@include deskmenu{
+	@include deskMenu{
 		//from 01-mixins.scss
 		@include calc(min-height, "100vh - 294px");
 	}

@@ -29,8 +29,8 @@
 			bottom: 0;
 			text-align: center;
 			& > div{
-				max-width: $maxwidthtext + 40px;
-				border: 1px solid $border-rule;
+				max-width: $maxWidthText + 40px;
+				border: 1px solid $borderRule;
 				padding: 40px 30px;
 				@include auto;
 				position: absolute;

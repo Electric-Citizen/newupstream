@@ -17,7 +17,7 @@
 		}
 		//opening quotation mark
 		&:before{
-			color: $transparent-black;
+			color: $transBlack;
 			content: "“";
 			font-size: 3em;
 			line-height: 0.1em;
@@ -26,7 +26,7 @@
 		}
 		//colsing quotation mark
 		&:after{
-			color: $transparent-black;
+			color: $transBlack;
 			content: "”";
 			font-size: 3em;
 			line-height: 0.1em;

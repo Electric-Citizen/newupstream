@@ -1,13 +1,13 @@
 items:
   - name: $body
     value: '#4d4e4e'
-  - name: $light-blue
+  - name: $lightBlue
     value: '#9acde8'
   - name: $blue
     value: '#35729b'
-  - name: $mid-teal
+  - name: $midTeal
     value: '#5a8c92'
-  - name: $dark-blue
+  - name: $darkBlue
     value: '#064771'
   - name: $orange
     value: '#d38013'
@@ -15,17 +15,17 @@ items:
     value: '#efb61b'
   - name: $red
     value: '#960430'
-  - name: $light-grey
+  - name: $lightGray
     value: '#ccc'
-  - name: $mid-grey
+  - name: $midGrey
     value: '#6a7076'
   - name: $grey
     value: '#ddd'
-  - name: $dark-grey
+  - name: $darkGrey
     value: '#222222'
-  - name: $warmgrey
+  - name: $warmGrey
     value: '#6f625a'
-  - name: $off-white
+  - name: $offWhite
     value: '#f6f6f6'
   - name: $white
     value: '#fff'
@@ -35,47 +35,33 @@ items:
     value: '#f2dc26'
   - name: $warning
     value: '#dd241b'
-  - name: $transparent-white
+  - name: $transWhite
     value: 'rgba(255,255,255,0.7)'
-  - name: $transparent-black
+  - name: $transBlack
     value: 'rgba(35,35,35,0.7)'
-  - name: $image-overlay
+  - name: $imgOverlay
     value: 'rgba(35,35,35,0.4)'
-  - name: $gold-10
-    value: 'rgba(239,182,27,0.1)'
-  - name: $gold-60
-    value: 'rgba(239,182,27,0.6)'
-  - name: $gold-85
-    value: 'rgba(254,191,0,0.85)'
-  - name: $red-30
-    value: 'rgba(183,1,1,0.3)'
-  - name: $red-85
-    value: 'rgba(204,17,3,0.85)'
-  - name: $blue-85
-    value: 'rgba(0,203,254,0.85)'
-  - name: $green-85
-    value: 'rgba(36,204,3,0.85)'
-  - name: $green-good
+  - name: $greenGood
     value: '#218d00'
-  - name: $red-bad
+  - name: $redBad
     value: '#cd0210'
-  - name: $unpublished
+  - name: $unpub
     value: '#fff4fa'
-  - name: $unpublished-dark
+  - name: $unpubDark
     value: '#fdd5dd'
-  - name: $site-background
+  - name: $siteBack
     value: '#f6f6f6'
-  - name: $border-rule
+  - name: $borderRule
     value: '#222222'
   - name: $link
     value: '#d52d00'
-  - name: $active-link
+  - name: $activeLink
     value: '#6a2600'
-  - name: $hover-link
+  - name: $hoverLink
     value: '#6a2600'
-  - name: $button-back
+  - name: $buttonBack
     value: '#efb61b'
-  - name: $button-back-hover
+  - name: $buttonBackHover
     value: '#c84700'
 meta:
   description: >-

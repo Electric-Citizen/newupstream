@@ -24,22 +24,22 @@
 		color: $white;
 	}
 	&:hover,&:focus {
-		background-color: $mid-grey;
+		background-color: $midGrey;
 		//from 02-animations.scss
 		@include transThreeAll;
 	}
 }
 
-///mixin - outline-button
-@mixin outline-button{
+///mixin - outlineButton
+@mixin outlineButton($outlineColor){
 	@include button;
 	background: transparent;
-	border: 2px solid $white;
-	color: $white;
+	border: 2px solid $outlineColor;
+	color: $outlineColor;
 	&:hover,&:focus{
-		background: $transparent-white;
+		background: $outlineColor;
 		color: $black;
-		border-color: $black;
+		border-color: $outlineColor;
 		//from 02-animations.scss
 		@include transThreeAll;
 	}
@@ -51,18 +51,18 @@
 	@include button;
 }
 
-//outline-buttons
+//outlineButtons
 .button-outline{
-	@include outline-button;
+	@include outlineButton($black);
 }
 
 
 /* PATTERN LAB ONLY
 --------------- */
 
-//background for outline-button example
+//background for outlineButton example
 .pl.background{
 	padding: 2em 3em;
 	width: 100%;
-	background: $warmgrey;
+	background: $warmGrey;
 }

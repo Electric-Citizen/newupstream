@@ -12,10 +12,8 @@
 		height: 22px;
 		cursor: pointer;
 		display: block;
-		//from 03-background-sizes.scss
 		@include searchOpenToggle;
 		&.searching{
-			//from 03-background-sizes.scss
 			@include searchCloseToggle;
 		} 
 		//add an accessiblity indicator
@@ -42,24 +40,20 @@
 		position: absolute;
 		top: 100%;
 		left: 50%;
-		//from 01-mixins.scss
 		@include translateX(-50%);
 		width: 80%;
 		max-width: 500px;
-		//from 01-mixins.scss (helps prevent flutter on height animation)
-		@include backface-visibility(hidden);
+		@include backfaceVisibility(hidden);
 		&.slideDown{
 			height: 50px;
-			//from 01-mixins.scss
 			@include transition(height, .2s, linear);
 
 		}
 		& > div{
-			//from 01-mixins.scss
-			@include inline-block;
+			display: inline-block;
 		}
 		//move search box back to upper right at desktop
-		@include deskmenu{
+		@include deskMenu{
 			top: -5px;
 			left: auto;
 			//from 01-mixins.scss
@@ -73,22 +67,20 @@
 			padding: 10px 0;
 			width: 100%;
 			margin-bottom: 0;
-			@include deskmenu{
+			@include deskMenu{
 				width: 320px;
 			}
 			input{
 				width: 100%;
-				@include deskmenu{
+				@include deskMenu{
 					width: 100%;
 				}
 				padding: 9px 10px;
 				font-size: 13px;
 				border: none;
-				border: 1px solid $border-rule;
-				//from forms.scss
+				border: 1px solid $borderRule;
 				@include placeholder;
 				&:focus{
-					//from forms.scss
 					@include placeholderFocus;
 				}
 			}
@@ -104,21 +96,17 @@
 			border: none;
 			height: 24px;
 			width: 24px;
-			//from 03-background-sizes.scss
 			@include searchSubmitMobile;
 			padding: 0;
 			&:hover{
-				//from 03-background-sizes.scss
 				@include searchSubmitMobileHover;
 				@include transClear;
 			}
 			@include tab{
 				height: 20px;
 				width: 20px;
-				//from 03-background-sizes.scss
 				@include searchSubmitTabSize;
 				&:hover{
-					//from 03-background-sizes.scss
 					@include searchSubmitTabSize;
 				}
 			}
@@ -127,7 +115,7 @@
 
 	//when styled as box (set in macros.twig)
 	&.box{
-		@include deskmenu{
+		@include deskMenu{
 			#search-block-form{
 				height: auto;
 				right: 20px;
@@ -165,7 +153,7 @@
 			.js-form-type-search input{
 				width: 100%;
 			}
-			@include deskmenu{
+			@include deskMenu{
 				left: auto;
 			}
 		}

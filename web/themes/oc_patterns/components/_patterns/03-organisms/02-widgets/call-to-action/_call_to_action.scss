@@ -33,9 +33,9 @@
 		.field-oc-link a{
 			color: $black;
 			&:hover,&:focus{
-				background-color: $transparent-black;
+				background-color: $transBlack;
 				color: $white;
-				border-color: $border-rule;
+				border-color: $borderRule;
 				//from 02-animations.scss
 				@include transThreeAll;
 			}
@@ -47,7 +47,7 @@
 		.field-oc-link a{
 			color: $white;
 			&:hover,&:focus{
-				background-color: $transparent-white;
+				background-color: $transWhite;
 				color: $black;
 				border-color: $white;
 				//from 02-animations.scss

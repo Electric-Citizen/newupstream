@@ -11,8 +11,6 @@
 	}
 
 	.block-entity-fieldnodecreated{
-		//from text.scss
-		@include styled-date;
 		margin-bottom: 1.5em;
 	}
 
@@ -22,7 +20,7 @@
 
 	//move sidebar to first in bunsen
 	.bunsen{
-		@include onlysmall{
+		@include onlySmall{
 			.sidebar{
 				@include safeFlexOrder(1);
 			}

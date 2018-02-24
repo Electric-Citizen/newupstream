@@ -3,7 +3,7 @@
 ==================== */
 .paragraph--type--lightbox-gallery{
 	.wrapper{
-		max-width: $maxwidth !important;
+		max-width: $maxWidth !important;
 		text-align: center;
 	}
 	//hide the content before lightbox
@@ -14,8 +14,7 @@
 	.image-gal{
 		margin: 0 10px 20px;
 		max-width: 250px;
-		//from 01-mixins.scss
-		@include inline-block-top;
+		display: inline-block;
 		overflow: hidden;
 		img{
 			width: 100%;
@@ -29,7 +28,7 @@
 //FEATHERLIGHT OVERLAY THEMING
 .node .featherlight{
 	.featherlight-content{
-		background: $site-background;
+		background: $siteBack;
 		padding: 0;
 		border-bottom: 0;
 		margin-left: 5%;
@@ -40,7 +39,7 @@
 			background: none;
 			font-size: 24px;
 			color: $white;
-			text-shadow: 2px 2px 3px $transparent-black;
+			text-shadow: 2px 2px 3px $transBlack;
 			height: 32px;
 			width: 32px;
 			font-family: $bodyfont;
@@ -61,7 +60,7 @@
 				width: 60px;
 				height: 80px;
 				left: 0;
-				text-shadow: 2px 2px 2px $transparent-black;
+				text-shadow: 2px 2px 2px $transBlack;
 			}
 			&:hover{
 				background: rgba(255,255,255,0.15);
@@ -83,7 +82,7 @@
 				height: 80px;
 				left: auto;
 				right: 0;
-				text-shadow: 2px 2px 2px $transparent-black;
+				text-shadow: 2px 2px 2px $transBlack;
 			}
 			&:hover{
 				background: rgba(255,255,255,0.15);
@@ -108,7 +107,7 @@
 		}
 
 		.gallery-text{
-			max-width: $maxwidthtext;
+			max-width: $maxWidthText;
 			padding: 2em 3em;
 		}
 	}//end featherlight content
@@ -118,10 +117,10 @@
 		.featherlight-content{
 			.featherlight-close-icon,.featherlight-previous,.featherlight-next{
 				color: rgba(35,35,35,0.6);
-				text-shadow: 2px 2px 3px $light-grey;
+				text-shadow: 2px 2px 3px $lightGray;
 				span{
 					color: rgba(35,35,35,0.6);
-					text-shadow: 2px 2px 3px $light-grey;
+					text-shadow: 2px 2px 3px $lightGray;
 				}
 				&:hover{
 					color: $black;

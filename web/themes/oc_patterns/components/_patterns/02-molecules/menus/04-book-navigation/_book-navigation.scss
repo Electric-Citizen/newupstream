@@ -15,7 +15,7 @@
 	}
 	ul{
 		//from 01-mixins.scss
-		@include list-reset;
+		@include listReset;
 		a:hover,a:focus{
 			//from 02-animations.scss
 			@include transThreeAll;

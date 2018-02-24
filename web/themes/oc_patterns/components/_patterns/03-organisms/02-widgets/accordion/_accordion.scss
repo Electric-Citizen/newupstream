@@ -15,7 +15,7 @@
 		}
 	}
 	.field-oc-long-text{
-		background: $off-white;
+		background: $offWhite;
 	}
 	&.accord-active{ 
 		.accordion-header{
@@ -36,7 +36,7 @@
 		}
 	}
 	.field-oc-long-text{
-		background: $off-white;
+		background: $offWhite;
 	}
 	&.accord-active{ 
 		.accordion-header{
@@ -54,8 +54,8 @@
 	//accordion header bar
 	.accordion-header{
 		border: 1px solid;
-		border-color: $mid-grey;
-		color: $mid-grey;
+		border-color: $midGrey;
+		color: $midGrey;
 		margin-bottom: 0;
 		position: relative;
 		padding: 10px 10px 10px 30px;
@@ -72,7 +72,7 @@
 			content: "+";
 		}
 		&:hover,&:focus{
-			background: $mid-grey;
+			background: $midGrey;
 			color: $white;
 			//from animations.scss
 			@include transThreeAll;
@@ -85,7 +85,7 @@
 		top: 0;
 		height: 0;
 		overflow: hidden;
-		background: $off-white;
+		background: $offWhite;
 		padding: 0 2em;
 		//from 02-animations.scss
 		@include transTwoAll;	
@@ -94,7 +94,7 @@
 	//active accordion
 	&.accord-active{
 		.accordion-header{
-			background: $mid-grey;
+			background: $midGrey;
 			color: $white;
 			border-bottom: 0;
 			&:after{

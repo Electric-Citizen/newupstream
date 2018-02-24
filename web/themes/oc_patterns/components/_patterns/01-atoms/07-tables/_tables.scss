@@ -15,7 +15,7 @@
 		padding: .25em .5em;
 	}
 	thead th{
-		background: $mid-grey;
+		background: $midGrey;
 		color: $white;
 	}
 
@@ -28,11 +28,11 @@
 			background: $white;
 		}
 		th{
-			background: $mid-grey;
+			background: $midGrey;
 			color: $white;
 		}
 		//give a bit extra room in the row on mobile
-		@include onlysmall{
+		@include onlySmall{
 			td{
 				padding: .5em 20px;
 			}
@@ -90,7 +90,7 @@ table{
 }
 
 //hide large stacktable at less than 760
-@include onlysmall{
+@include onlySmall{
 	.stacktable{
 		&.large-only{
 			display: none;

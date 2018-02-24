@@ -58,17 +58,6 @@ lightbox:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
-masonry:
-  version: 3.0
-  js:
-    components/_patterns/03-organisms/02-widgets/mosaic-gallery/masonry.pkgd.js: {}
-    components/_patterns/03-organisms/02-widgets/mosaic-gallery/mosaic-gallery.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal.ajax
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
 media-js:
   version: 1.0
   js:
@@ -88,14 +77,18 @@ page-menu:
     - core/underscore
     - core/drupalSettings
     - core/jquery.once
-reveal:
-  version: 1.0
+slideshow:
+  version: 3.0
+  css:
+    theme:
+      //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, minified: true }
+      //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
   js:
-    components/_patterns/03-organisms/02-widgets/reveal/reveal.js: {}
+    components/_patterns/03-organisms/02-widgets/slideshow/slideshow.js: {}
+    //cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js: { type: external, minified: true }
   dependencies:
     - core/jquery
     - core/drupal
-    - core/underscore
     - core/drupalSettings
     - core/jquery.once
 fonts:

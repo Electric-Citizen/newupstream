@@ -54,21 +54,21 @@ div{
 		padding: 5px 10px;
 		border: 1px solid;
 		&.panelizer-ipe-save-custom{
-			border-color: $green-good;
-			background: $green-good;
+			border-color: $greenGood;
+			background: $greenGood;
 			color: $white;
 			&:hover,&:focus{
 				background: transparent;
-				color: darken($green-good, 10%);
+				color: darken($greenGood, 10%);
 			}
 		}
 		&.panelizer-ipe-save-default{
-			border-color: $red-bad;
-			background: $red-bad;
+			border-color: $redBad;
+			background: $redBad;
 			color: $white;
 			&:hover,&:focus{
 				background: transparent;
-				color: darken($red-bad, 10%);
+				color: darken($redBad, 10%);
 			}
 		}
 	}
@@ -98,7 +98,7 @@ div{
 	margin-top: 2em;
 	.tabs {
 		margin: 1em 0;
-		border-bottom:1px solid $mid-grey;
+		border-bottom:1px solid $midGrey;
 
 		ul {
 			padding-left:0;
@@ -114,10 +114,10 @@ div{
 			display: block;
 			padding: 0.2em 1em;
 			&.is-active {
-				background-color: $light-grey;
+				background-color: $lightGray;
 			}
 			&:focus,&:hover {
-				background-color: $off-white;
+				background-color: $offWhite;
 			}
 		}
 	}

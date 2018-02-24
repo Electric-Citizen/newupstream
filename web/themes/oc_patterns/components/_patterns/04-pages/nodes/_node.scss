@@ -4,13 +4,13 @@
 @mixin mainContentSide{
 	//body
 	.block-entity-fieldnodebody{
-		max-width: $maxwidth;
+		max-width: $maxWidth;
 		//from 01-mixins.scss
 		@include auto;
 		margin-bottom: 2em;
 	}
 	.block-entity-fieldnodefield-oc-widgets{
-		max-width: $maxwidth;
+		max-width: $maxWidth;
 		//from 01-mixins.scss
 		@include auto
 	}
@@ -19,22 +19,22 @@
 @mixin mainContent{
 	//body
 	.block-entity-fieldnodebody{
-		max-width: $maxwidthtext;
+		max-width: $maxWidthText;
 		//from 01-mixins.scss
 		@include auto;
 		margin-bottom: 2em;
 	}
 	.block-entity-fieldnodefield-oc-widgets{
-		max-width: $maxwidth;
+		max-width: $maxWidth;
 		//from 01-mixins.scss
 		@include auto
 	}
 }
 
 
-/* UNPUBLISHED NODES
+/* unpub NODES
 ---------------------- */
-.node--unpublished{
-	background: $unpublished;
-	border-top: 20px solid $unpublished-dark;
+.node--unpub{
+	background: $unpub;
+	border-top: 20px solid $unpubDark;
 }

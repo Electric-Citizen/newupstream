@@ -3,12 +3,8 @@
 =================== */
 
 .block--system-branding{
-	//from 01-mixins.scss  (vertically aligns header elements)
-	@include inline-setup-center;
+	@include safeFlex(row,wrap,null,center);
 	a{
-		> *{
-			vertical-align: middle;
-		}
 		img{
 			border: 1px solid transparent;
 		}
@@ -20,7 +16,7 @@
 		&:hover,&:focus{
 			text-decoration: none;
 			img{
-				border-color: $border-rule;
+				border-color: $borderRule;
 			}
 			.site-name{
 				color: $black;

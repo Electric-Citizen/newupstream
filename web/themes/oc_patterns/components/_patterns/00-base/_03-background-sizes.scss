@@ -76,31 +76,31 @@ $sidedroparrow: 20px;
 
 
 /// used in SUPERFISH.SCSS
-$deskmenuarrow: 18px;
-@mixin deskmenuArrow{
+$deskMenuarrow: 18px;
+@mixin deskMenuArrow{
 	@include sprite-menu-desk-item-open;
-	@include backgroundSize($columns * $deskmenuarrow,$rows * $deskmenuarrow);
+	@include backgroundSize($columns * $deskMenuarrow,$rows * $deskMenuarrow);
 }
-@mixin deskmenuArrowActive{
+@mixin deskMenuArrowActive{
 	@include sprite-menu-desk-item-active;
-	@include backgroundSize($columns * $deskmenuarrow,$rows * $deskmenuarrow);
+	@include backgroundSize($columns * $deskMenuarrow,$rows * $deskMenuarrow);
 }
 $desksubarrow: 15px;
 @mixin deskSubSize{
 	@include backgroundSize($columns * $desksubarrow,$rows * $desksubarrow);
 }
-$mobilemenuarrow: 18px;
-@mixin mobilemenuOpen{
+$mobileMenuarrow: 18px;
+@mixin mobileMenuOpen{
 	@include sprite-menu-item-toggle-open;
-	@include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
+	@include backgroundSize($columns * $mobileMenuarrow,$rows * $mobileMenuarrow);
 }
-@mixin mobilemenuActive{
+@mixin mobileMenuActive{
 	@include sprite-menu-item-toggle-active;
-	@include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
+	@include backgroundSize($columns * $mobileMenuarrow,$rows * $mobileMenuarrow);
 }
-@mixin mobilemenuClose{
+@mixin mobileMenuClose{
 	@include sprite-menu-item-toggle-close;
-	@include backgroundSize($columns * $mobilemenuarrow,$rows * $mobilemenuarrow);
+	@include backgroundSize($columns * $mobileMenuarrow,$rows * $mobileMenuarrow);
 }
 
 

@@ -3,7 +3,7 @@
 ------------------- */
 
 .breadcrumb{
-	max-width: $maxwidth;
+	max-width: $maxWidth;
 	//from 01-mixins.scss
 	@include auto;
 	padding-left: 20px;
@@ -11,14 +11,14 @@
 	padding-top: 1em;
 	ol {
 		//from 01-mixins.scss
-		@include list-reset;
+		@include listReset;
 	}
 
 	li{
 		display: inline-block;
-		color: $mid-grey;
+		color: $midGrey;
 		//from text.scss
-		@include x-smaller;
+		@include xSmaller;
 		a{
 			padding-right: .25em;
 			//from 02-animations.scss

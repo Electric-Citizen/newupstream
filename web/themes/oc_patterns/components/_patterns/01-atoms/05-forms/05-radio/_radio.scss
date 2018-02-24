@@ -5,14 +5,14 @@
 //move radio options inline
 .js-webform-radios{
 	margin-bottom: 0;
+	@include safeFlex(row,wrap,null,null);
 }
 
 
 //move input inline with label
 .js-form-type-radio{
-	//from 01-mixins.scss
-	@include fauxlist;
 	width: auto;
+	margin-right: 1em;
 	label,input{
 		display: inline-block;
 	}

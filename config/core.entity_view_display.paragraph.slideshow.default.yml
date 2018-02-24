@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.slideshow.field_admin_description
     - field.field.paragraph.slideshow.field_layout
     - field.field.paragraph.slideshow.field_oc_image_multi
-    - field.field.paragraph.slideshow.field_viewfield
     - field.field.paragraph.slideshow.field_widget_title
     - paragraphs.paragraphs_type.slideshow
   module:
@@ -25,13 +24,15 @@ content:
     third_party_settings: {  }
     type: list_key
     region: content
-  field_viewfield:
+  field_oc_image_multi:
+    type: entity_reference_entity_view
     weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
   field_widget_title:
     weight: 0
     label: hidden
@@ -42,4 +43,3 @@ content:
     region: content
 hidden:
   field_admin_description: true
-  field_oc_image_multi: true

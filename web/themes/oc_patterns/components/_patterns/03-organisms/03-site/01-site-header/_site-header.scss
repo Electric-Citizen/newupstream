@@ -20,13 +20,12 @@
 ------------------- */
 .block--system-branding{
 	//leave room for search toogle and menu hamburger on mobile
-	//from 01-mixins.scss
 	@include calc(width, "100% - 70px");
 	position: relative;
 	z-index: 10;
 
 	//set width at desktop
-	@include deskmenu{
+	@include deskMenu{
 		width: 300px;
 	}
 
@@ -34,7 +33,7 @@
 		img{
 			max-width: 160px;
 			margin-right: 5px;
-			@include deskmenu{
+			@include deskMenu{
 				max-width: 200px;
 			}
 		}
@@ -46,12 +45,11 @@
 ------------------- */
 .block-search-form-block{
 	position: static;
-	@include inline-block;
+	display: inline-block;
 	text-align: right;
 
 	//set width at desktop
-	@include deskmenu{
-		//from 01-mixins.scss
+	@include deskMenu{
 		@include calc(width, "100% - 300px");
 	}
 
@@ -60,7 +58,7 @@
 		position: absolute;
 		top: 17px;
 		right: 20px;
-		@include deskmenu{
+		@include deskMenu{
 			right: 25px;
 			top: 13px;
 		}
@@ -71,12 +69,10 @@
 /* MAIN NAVIGATION BLOCK
 ------------------------ */
 .block-superfishmain{
-	//from 01-mixins.scss
-	@include inline-setup;
 	text-align: right;
 
 	//desktop position
-	@include deskmenu{
+	@include deskMenu{
 		width: 100%;
 		margin: 10px 0 0 -10px;
 		vertical-align: middle;
@@ -100,7 +96,7 @@
 			position: static;
 			margin: 0;
 		}
-	}//end deskmenu
+	}//end deskMenu
 	
 }//end main nav
 

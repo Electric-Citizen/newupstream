@@ -24,7 +24,7 @@ button_items:
       "http://www.google.com"
   4:
     button_color:
-      "dark-grey"
+      "darkGrey"
     button_text:
       "Dark Grey"
     button_link:

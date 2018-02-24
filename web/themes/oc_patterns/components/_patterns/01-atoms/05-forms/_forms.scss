@@ -51,7 +51,7 @@
 
 ///mixin textInput
 @mixin textInput{
-	border: 1px solid $border-rule;
+	border: 1px solid $borderRule;
 	font-size: 15px;
 	padding: 10px 6px 11px;
 	width: 100%;
@@ -65,20 +65,20 @@
 @mixin required{
 	&:after{
 		content: '*';
-		color: $red-bad;
+		color: $redBad;
 		position: relative;
 		top: -1px;
 		right: -.25em;
 		//from text.scss
-		@include x-smaller;
+		@include xSmaller;
 	}
 }
 
 ///mixin - form-submit
-@mixin form-submit{
+@mixin formSubmit{
 	//from 01-mixins.scss
 	@include browserWipe;
-	background: $button-back;
+	background: $buttonBack;
 	font-weight: $heavy;
 	font-family: $header;
 	text-transform: uppercase;
@@ -88,7 +88,7 @@
 	border: 0;
 	color: $black;
 	&:hover,&:focus{
-		background: $button-back-hover;
+		background: $buttonBackHover;
 		//from 02-animations.scss
 		@include transThreeAll;
 		color: $white;
@@ -102,13 +102,13 @@
 		display: none;
 		&:checked{
 			+ label:before{
-				background: $red-30;
+				background: $transBlack;
 				border-color: darken($link, 5%);
 			}
 		}
 	}
 	label{
-		@include inline-block;
+		display: inline-block;
 		width: 100%;
 		padding-left: 26px;
 		position: relative;
@@ -116,7 +116,7 @@
 		//create custom boxes before the label
 		&:before{
 			content: '';
-			@include inline-block;
+			display: inline-block;
 			width: 16px;
 			height: 16px;
 			border: 2px solid $link;
@@ -141,7 +141,7 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 
 //validation
 .has-error {
-	border-color: $red-bad;
+	border-color: $redBad;
 }
 
 

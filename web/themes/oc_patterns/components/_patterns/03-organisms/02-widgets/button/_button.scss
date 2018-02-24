@@ -4,11 +4,9 @@
 .paragraph--type--buttons{
 	text-align: center;
 	ul{
-		//from 01-mixins.scss
-		@include list-reset;
+		@include listReset;
+		@include safeFlex(row,wrap,null,null);
 		li{
-			//from 01-mixins.scss
-			@include inline-block-top;
 			max-width: 350px;
 			margin: 0 20px 20px;
 		}
@@ -16,24 +14,21 @@
 
 	//links		
 	.button-widget{
-		//from 02-animations.scss
 		@include transThreeAll;
-		//from buttons.scss
 		@include button;
 		padding: .75em 2em;
 		min-width: 200px;
 		line-height: 1em;
 		color: $white;
 		text-decoration: none;
-		//from text.scss
 		@include larger;
 
 		//button colors
 		&.default,&.link{
-			background: $button-back;
+			background: $buttonBack;
 			color: $black;
 			&:hover,&:focus{
-				background: $button-back-hover;
+				background: $buttonBackHover;
 				color: $white;
 			}
 		}
@@ -48,11 +43,11 @@
 		&.blue{
 			background: $blue;
 			&:hover,&:focus{
-				background: $dark-blue;
+				background: $darkBlue;
 			}
 		}
-		&.dark-grey{
-			background: $mid-grey;
+		&.darkGrey{
+			background: $midGrey;
 			&:hover,&:focus{
 				background: $black;
 			}

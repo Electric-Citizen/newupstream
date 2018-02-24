@@ -35,7 +35,7 @@
 			//date and author
 			.metatext{
 				//from text.scss
-				@include text-date;
+				@include textDate;
 				padding: 0 20px;
 				margin-bottom: 1.5em;
 			}
@@ -73,7 +73,7 @@
 				text-align: right;
 				& > span{
 					display: block;
-					max-width: $maxwidth;
+					max-width: $maxWidth;
 					@include auto;
 				}
 			}
@@ -88,7 +88,7 @@
 		//author
 		.block-entity-fieldnodefield-author{
 			margin-bottom: 2em;
-			max-width: $maxwidthtext;
+			max-width: $maxWidthText;
 			//from 01-mixins.scss
 			@include auto;
 			.profile-teaser{
@@ -110,7 +110,7 @@
 						@include transThreeAll;
 					}
 				}
-				@include smalltab{
+				@include smallTab{
 					@include safeFlex(row,wrap,null,null);
 					.field-profile-image{
 						@include safeFlexSize(0,0,200px);
@@ -124,7 +124,7 @@
 
 		//tags
 		.block-entity-fieldnodefield-tags{
-			max-width: $maxwidthtext;
+			max-width: $maxWidthText;
 			@include auto;
 			.label{
 				font-weight: $heavy;
@@ -154,7 +154,7 @@
 	.block-region-bottom{
 		padding: 0 20px;
 		.block-flippy-block{
-			max-width: $maxwidth;
+			max-width: $maxWidth;
 			//from 01-mixins.scss
 			@include auto;
 		}

@@ -58,7 +58,7 @@
 						height: auto;
 						text-indent: 0;
 						&:hover,&:active,&:focus{
-							background: $mid-grey;
+							background: $midGrey;
 							@include transThreeAll;
 						}
 						@include tab{
@@ -71,7 +71,7 @@
 						&#edit-reset{
 							background: $black;
 							&:hover,&:focus,&:active{
-								background: $mid-grey;
+								background: $midGrey;
 							}
 						}
 					}
@@ -82,7 +82,7 @@
 				margin-top: 2em;
 				@include safeFlexSize(0,0,100%);
 				padding-bottom: .5em;
-				border-bottom: 1px solid $border-rule;
+				border-bottom: 1px solid $borderRule;
 				margin-bottom: .5em;
 			}
 			.view-content,.view-empty{

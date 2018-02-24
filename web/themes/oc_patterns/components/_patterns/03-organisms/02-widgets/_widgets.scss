@@ -8,7 +8,7 @@
 	@include safeFlex(row,wrap,null,null);
 	//override layout padding
 	//from 01-mixins.scss
-	@include edge-to-edge;
+	@include edgeToEdge;
 	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
 	.beaker .main &,.bunsen .main &{
 		overflow: hidden;
@@ -21,18 +21,18 @@
 
 /* BACKGROUND TEXT STYLING MIXINS
 ----------------- */
-@mixin light-back {
+@mixin lightBack {
 	h2,h3,h4,h5,h6,p,div {
 		color: $black;
 		&.pane-title{
-			border-color: $border-rule;
+			border-color: $borderRule;
 		}
 	}
 	:before,:after{
 		color: $black;
 	}
 	a{
-		color: $transparent-black;
+		color: $transBlack;
 		&:hover,&:focus{
 			color: $black;
 			//from 02-animations.scss
@@ -42,17 +42,17 @@
 	.widget-title > a{
 		color: $black;
 		&:hover,&:focus{
-			color: $transparent-black;
+			color: $transBlack;
 			//from 02-animations.scss
 			@include transThreeAll;
 		}
 	}
 	figcaption {
-		color: $dark-grey;
+		color: $darkGrey;
 	}
 }
 
-@mixin dark-back {
+@mixin darkBack {
 	h2,h3,h4,h5,h6,p,div {
 		color: $white;
 		&.pane-title{
@@ -63,7 +63,7 @@
 		color: $white;
 	}
 	a{
-		color: $transparent-white;
+		color: $transWhite;
 		&:hover,&:focus{
 			color: $white;
 			//from 02-animations.scss
@@ -73,7 +73,7 @@
 	.widget-title > a{
 		color: $white;
 		&:hover,&:focus{
-			color: $transparent-white;
+			color: $transWhite;
 			//from 02-animations.scss
 			@include transThreeAll;
 		}
@@ -90,25 +90,25 @@
 	padding: 3em 20px;
 	//dk grey style
 	&.grey{
-		background-color: $dark-grey;
-		@include dark-back;
+		background-color: $darkGrey;
+		@include darkBack;
 	}
 	//dk grey style
 	&.blue{
 		background-color: $blue;
-		@include dark-back;
+		@include darkBack;
 	}
 	//dk grey style
 	&.orange{
 		background-color: $gold;
-		@include light-back;
+		@include lightBack;
 	}
 }
 
 //image
 .paragraph > .image{
 	padding: 3em 20px;
-	@include dark-back;
+	@include darkBack;
 	position: relative;
 	background-position: center !important;
 	background-size: cover !important;
@@ -123,13 +123,13 @@
 		h2 > a{
 			color: $white;
 			&:hover,&:focus{
-				color: $transparent-white;
+				color: $transWhite;
 			}
 		}
 		.field-oc-link a{
 			color: $white;
 			&:hover,&:focus{
-				background-color: $transparent-white;
+				background-color: $transWhite;
 				color: $black;
 				border-color: $white;
 			}

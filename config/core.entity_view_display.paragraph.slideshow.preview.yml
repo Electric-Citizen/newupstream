@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.slideshow.field_admin_description
     - field.field.paragraph.slideshow.field_layout
     - field.field.paragraph.slideshow.field_oc_image_multi
-    - field.field.paragraph.slideshow.field_viewfield
     - field.field.paragraph.slideshow.field_widget_title
     - paragraphs.paragraphs_type.slideshow
   module:
@@ -36,5 +35,4 @@ content:
     region: content
 hidden:
   field_oc_image_multi: true
-  field_viewfield: true
   field_widget_title: true

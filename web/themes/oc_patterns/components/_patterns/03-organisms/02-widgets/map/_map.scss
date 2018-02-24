@@ -5,19 +5,19 @@
 .paragraph--type--map{
 	//override default text width wrapper sizing
 	.wrapper{
-		max-width: $maxwidth !important;
+		max-width: $maxWidth !important;
 	}
 	//map summary
 	.field-oc-long-text{
 		margin-top: 1em;
-		max-width: $maxwidthtext;
+		max-width: $maxWidthText;
 		@include auto;
 	}
 	//allow map to override layout margins on mobile
 	.field-location{
-		@include onlysmall{
+		@include onlySmall{
 			//from 01-mixins.scss
-			@include edge-to-edge;
+			@include edgeToEdge;
 			//from 01-mixins.scss
 			@include calc(max-width, "100% + 40px");
 		}
@@ -32,9 +32,9 @@
 	img.placeholder{
 		width: 100%;
 		max-width: 200%;
-		@include onlysmall{
+		@include onlySmall{
 			//from 01-mixins.scss
-			@include edge-to-edge;
+			@include edgeToEdge;
 			//from 01-mixins.scss
 			@include calc(width, "100% + 40px");
 		}

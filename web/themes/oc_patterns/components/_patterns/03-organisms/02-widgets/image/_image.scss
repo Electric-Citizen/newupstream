@@ -6,7 +6,7 @@
 
 	//Wrapper sizing (needs to be changed when image styles are changed or added to widget)
 	.image-wrapper{
-		max-width: $maxwidth;
+		max-width: $maxWidth;
 		//from 01-mixins.scss
 		@include auto;
 		&.small{
@@ -33,9 +33,9 @@
 
 	//override layout padding on mobile
 	img{
-		@include onlysmall{
+		@include onlySmall{
 			//from 01-mixins.scss
-			@include edge-to-edge;
+			@include edgeToEdge;
 			//from 01-mixins.scss
 			@include calc(max-width, "100% + 40px");
 		}
@@ -54,7 +54,7 @@
 	.field-oc-long-text{
 		margin: 1em auto 0;
 		text-align: left;
-		max-width: $maxwidthtext;
+		max-width: $maxWidthText;
 	}
 	
 }//end image widget

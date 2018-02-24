@@ -14,13 +14,13 @@
 		background: $link;
 		color: $white;
 		&:hover,&:focus{
-			background: $hover-link;
+			background: $hoverLink;
 			@include transThreeAll;
 		}
 		&#edit-reset{
 			background: $black;
 			&:hover{
-				background: $hover-link;
+				background: $hoverLink;
 				@include transThreeAll;
 			}
 		}

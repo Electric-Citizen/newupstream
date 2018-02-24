@@ -210,6 +210,6 @@
 	@include animation('fadeIn 3s 1');
 }
 .flipY{
-	@include backface-visibility(visible);
+	@include backfaceVisibility(visible);
 	@include animation('flipY 1.5s 1 ease-in forwards');
 }

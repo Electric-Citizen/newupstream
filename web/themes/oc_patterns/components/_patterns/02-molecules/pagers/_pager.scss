@@ -10,19 +10,18 @@ $pager-line: 24px;
 
 ///mixin - pagerTiemStyle
 @mixin pagerItemStyle{
-	color: $mid-teal;
+	color: $midTeal;
 	display: block;
 	width: 26px;
 	height: 26px;
 	line-height: $pager-line;
-	border: 1px solid $mid-teal;
+	border: 1px solid $midTeal;
 	text-align: center;
 	border-radius: 6px;
 	&:hover,&:focus{
 		color: $white;
-		background: $mid-teal;
+		background: $midTeal;
 		text-decoration: none;
-		//form 01-mixins.scss
 		@include transThreeAll;
 	}
 }
@@ -30,10 +29,9 @@ $pager-line: 24px;
 
 ///mixin - pagerControl
 @mixin pagerControl{
-	color: $mid-teal;
+	color: $midTeal;
 	&:hover,&:focus{
 		color: $black;
-		//from 02-animations.scss
 		@include transThreeAll;
 	}
 }
@@ -42,12 +40,10 @@ $pager-line: 24px;
 /* GLOBAL PAGER STYLING
 -------------------- */
 .js-pager__items{
-	//form 01-mixins.scss
-	@include list-reset;
+	@include listReset;
 	text-align: center;
+	@include safeFlex(row,wrap,null,null);
 	li{
-		//form 01-mixins.scss
-		@include inline-block-top;
 		*{
 			line-height: $pager-line;
 		}
@@ -68,9 +64,9 @@ $pager-line: 24px;
 		&.is-active{
 			a{
 				color: $white;
-				background: darken($mid-teal, 12%);
+				background: darken($midTeal, 12%);
 				&:hover,&:focus{
-					background: $mid-teal;
+					background: $midTeal;
 				}
 			}
 		}
@@ -116,7 +112,6 @@ nav:not(.pager){
 		li{
 			color: $black;  
 			margin: 0 .5em;
-			//from text.scss
 			@include larger;
 			line-height: 26px;
 		}
@@ -135,20 +130,16 @@ nav:not(.pager){
 /* FLIPPY PAGER
 ------------------- */
 ul.flippy{
-	@include list-reset;
-	font-size: 0;
+	@include listReset;
+	@include safeFlex(row,wrap,null,null);
 	li{
-		//form 01-mixins.scss
-		@include inline-block-top;
-		//from text.scss
-		@include base-font-size;
+		@include baseFontSize;
 		padding: 15px 0;
 		width: 50%;
 		a{
-			color: $mid-teal;
+			color: $midTeal;
 			&:hover,&:focus{
 				color: $black;
-				//from 02-animations.scss
 				@include transThreeAll;
 			}
 		}

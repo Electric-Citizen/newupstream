@@ -42,7 +42,7 @@
 	.views-field-nothing{
 		.metatext{
 			//from 01-text.scss 
-			@include text-date;
+			@include textDate;
 			margin-bottom: 1em;
 		}
 	}

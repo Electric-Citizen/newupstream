@@ -6,29 +6,25 @@
 	h2.block-title{
 		display: none;
 	}
-	//from 01-mixins.scss
-	@include safeFlexSize(0,0,100%);
-	//from 01-mixins.scss
+	width: 100%;
 	@include safeFlexOrder(1);
 	margin-bottom: 1.5em;
 	text-align: center;
 	//change the footer block order at tab and align right
 	@include tab{
-		@include safeFlexSize(0,0,70%);
+		width: 70%;
 		text-align: right;
 	}
 	ul{
 		//from 01-mixins.scss
-		@include list-reset;
+		@include listReset;
+		@include safeFlex(row,wrap,null,null);
 		li{
-			//from 01-mixins.scss
-			@include inline-block;
 			a{
 				font-size: 16px;
 				color: $gold;
 				&:hover,&:focus{
-					color: $transparent-white;
-					//from 02-animations.scss
+					color: $transWhite;
 					@include transThreeAll;
 				}
 			}
@@ -39,7 +35,7 @@
 				&:after{
 					content: '•';
 					padding-left: 8px;
-					color: $transparent-white;
+					color: $transWhite;
 				}
 			}
 		}

@@ -2,31 +2,31 @@
    HEADINGS
 ============== */
 //h1 sizes
-$h1-sm: 32px;
-$h1-mid: 46px;
-$h1-lg: 60px;
+$h1Sm: 32px;
+$h1Mid: 46px;
+$h1Lg: 60px;
 
 //h2 sizes
-$h2-sm: 26px;
-$h2-mid: 29px;
-$h2-lg: 32px;
+$h2Sm: 26px;
+$h2Md: 29px;
+$h2Lg: 32px;
 
 //h3 sizes
-$h3-sm: 23px;
-$h3-mid: 26px;
+$h3Sm: 23px;
+$h3Mid: 26px;
 
 //h4 sizes
-$h4-sm: 22px;
+$h4Sm: 22px;
 
 //h5 sizes
-$h5-sm: 20px;
+$h5Sm: 20px;
 
 //h6 sizes
-$h6-sm: 18px;
+$h6Sm: 18px;
 
 /* HEADING MIXINS
 ------------------ */
-@mixin header-globals{
+@mixin headerGlobals{
 	line-height: 1.15em;
 	margin-bottom: .5em;
 	margin-top: 0;
@@ -36,61 +36,61 @@ $h6-sm: 18px;
 }
 
 
-@mixin heading-1{
-	@include header-globals;
+@mixin heading1{
+	@include headerGlobals;
 	font-family: $display-header;
-	font-size: $h1-sm;
+	font-size: $h1Sm;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	@include tab{
-		font-size: $h1-mid;
+		font-size: $h1Mid;
 	}
-	@include maxwidth{
-		font-size: $h1-lg;
+	@include maxWidth{
+		font-size: $h1Lg;
 	}
 }
 
-@mixin heading-2 {
-	@include header-globals;
-	font-size: $h2-sm;
+@mixin heading2 {
+	@include headerGlobals;
+	font-size: $h2Sm;
 	@include tab{
-		font-size: $h2-mid;
+		font-size: $h2Md;
 	}
-	@include maxwidth{
-		font-size: $h2-lg;
+	@include maxWidth{
+		font-size: $h2Lg;
 	}
 }
 
-@mixin heading-3{
-	@include header-globals;
-	font-size: $h3-sm;
+@mixin heading3{
+	@include headerGlobals;
+	font-size: $h3Sm;
 	@include tab{
-		font-size: $h3-mid;
+		font-size: $h3Mid;
 	}
 }
 
-@mixin heading-4{
-	@include header-globals;
-	font-size: $h4-sm;
+@mixin heading4{
+	@include headerGlobals;
+	font-size: $h4Sm;
 }
 
-@mixin heading-5{
-	@include header-globals;
-	font-size: $h5-sm;
+@mixin heading5{
+	@include headerGlobals;
+	font-size: $h5Sm;
 }
 
-@mixin heading-6{
-	@include header-globals;
-	font-size: $h6-sm;
+@mixin heading6{
+	@include headerGlobals;
+	font-size: $h6Sm;
 }
 
-@mixin block-title{
-	@include header-globals;
+@mixin blockTitle{
+	@include headerGlobals;
 	font-size: 20px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
-	max-width: $maxwidth;
+	max-width: $maxWidth;
 	//from 01-mixins.scss
 	@include auto;
 }
@@ -99,27 +99,27 @@ $h6-sm: 18px;
 /* HEADING STYLING
 ------------------- */
 h1 {
-	@include heading-1;
+	@include heading1;
 }
 
 h2:not(.block-title):not(.widget-title){
-	@include heading-2;
+	@include heading2;
 }
 
 h3{
-	@include heading-3;
+	@include heading3;
 }
 
 h4{
-	@include heading-4;
+	@include heading4;
 }
 
 h5{
-	@include heading-5;
+	@include heading5;
 }
 
 h6{
-	@include heading-6;
+	@include heading6;
 }
 
 h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
@@ -130,7 +130,7 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 /* BLOCK AND WIDGET HEADINGS
 -------------------------- */
 .block-title,.widget-title{
-	@include block-title;
+	@include blockTitle;
 	.block-region-sidebar &{
 		text-align: left;
 		max-width: 100%;
@@ -142,37 +142,37 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 ---------------------- */
 .pl{
 	h1{
-		font-size: $h1-sm;
+		font-size: $h1Sm;
 		&.header-mid{
-			font-size: $h1-mid;
+			font-size: $h1Mid;
 		}
 		&.header-lg{
-			font-size: $h1-lg;
+			font-size: $h1Lg;
 		}
 	}//end h1
 	h2:not(.block-title):not(.widget-title){
-		font-size: $h2-sm;
+		font-size: $h2Sm;
 		&.header-mid{
-			font-size: $h2-mid;
+			font-size: $h2Md;
 		}
 		&.header-lg{
-			font-size: $h2-lg;
+			font-size: $h2Lg;
 		}
 	}//end h2
 	h3{
-		font-size: $h3-sm;
+		font-size: $h3Sm;
 		&.header-mid{
-			font-size: $h3-mid;
+			font-size: $h3Mid;
 		}
 	}//end h1
 	h4{
-		font-size: $h4-sm;
+		font-size: $h4Sm;
 	}//end h4
 	h5{
-		font-size: $h5-sm;
+		font-size: $h5Sm;
 	}//end h5
 	h6{
-		font-size: $h6-sm;
+		font-size: $h6Sm;
 	}//end h6
 }//end pl
 

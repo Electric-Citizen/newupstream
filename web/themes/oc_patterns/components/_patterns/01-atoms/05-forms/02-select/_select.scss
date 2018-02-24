@@ -5,7 +5,7 @@
 @mixin inputSelect{
 	width: 100%;
 	font-size: 16px;
-	border: 1px solid $border-rule;
+	border: 1px solid $borderRule;
 	border-radius: 0;
 	height: auto;
 	&.select2--container--focus{
@@ -45,7 +45,7 @@ body .select2-container--default{
 		//rendered selection
 		.select2-selection__rendered{
 			padding: 4px 32px 4px 10px;
-			color: $dark-grey;
+			color: $darkGrey;
 			text-align: left;
 		}
 		.select2-selection__arrow{
@@ -98,7 +98,7 @@ body .select2-container--default{
 				@include dropArrow;
 			}
 			input.select2-search__field{
-				color: $dark-grey;
+				color: $darkGrey;
 				//from forms.scss
 				@include placeholder;
 				&:focus{
@@ -111,7 +111,7 @@ body .select2-container--default{
 		//selected item
 		.select2-selection__choice{
 			border-radius: 0;
-			background-color: $off-white;
+			background-color: $offWhite;
 		}
 	}//end multi
 }
@@ -156,14 +156,14 @@ body .select2-container--default{
 ---------------- */
 .select2-container{
 	.select2-dropdown{
-		border: 1px solid $border-rule;
+		border: 1px solid $borderRule;
 		border-radius: 0;
 		border-top: 0;
 		padding: 0;
 	}
 }
 .select2-container--default .select2-results__option[aria-selected="true"]{
-	background-color: $off-white;
+	background-color: $offWhite;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background-color: $link !important; 

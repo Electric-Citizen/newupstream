@@ -76,7 +76,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: 'round three-column'
+          row_class: round
           default_row_class: true
       row:
         type: fields

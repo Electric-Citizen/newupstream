@@ -24,14 +24,14 @@
 	ul{
 		padding-left: 0;
 		//from 01-mixins.scss
-		@include list-reset;
+		@include listReset;
 		@include tab{
 			margin-bottom: 0;
 		}
 		li{
 			list-style: none;
 			font-size: 16px;
-			color: $transparent-white;
+			color: $transWhite;
 		}
 	}
 }//end footer-address

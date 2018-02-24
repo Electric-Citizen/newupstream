@@ -60,7 +60,7 @@
 }
 
 ///mixin - transform-origin
-@mixin transform-origin ($origin) {
+@mixin transformOrigin ($origin) {
 	-moz-transform-origin: $origin;
 	-o-transform-origin: $origin;
 	-ms-transform-origin: $origin;
@@ -69,7 +69,7 @@
 }
 
 ///mixin - backface-visibility
-@mixin backface-visibility($backface){
+@mixin backfaceVisibility($backface){
 	-webkit-backface-visiblity: $backface;
 	-moz-backface-visiblity: $backface;
 	backface-visiblity: $backface;
@@ -97,14 +97,14 @@
 }
 
 ///mixin - column-count
-@mixin column-count($column){
+@mixin columnCount($column){
 	-webkit-column-count: #{$column};
 	-moz-column-count: #{$column};
 	column-count: #{$column};
 }
 
 ///mixin - column-gap
-@mixin column-gap($gap){
+@mixin columnGap($gap){
 	-webkit-column-gap: #{$gap};
 	-moz-column-gap: #{$gap};
 	column-gap: #{$gap};
@@ -145,7 +145,7 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		background: $image-overlay;
+		background: $imgOverlay;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -155,51 +155,26 @@
 
 ///mixin - imageHover
 @mixin imageHover{
-	border: 1px solid $light-grey;
+	border: 1px solid $lightGray;
 	&:hover,&:focus{
-		border-color: $dark-grey;
+		border-color: $darkGrey;
 		@include opacity(.7);
 		@include transThreeAll;
 	}
 }
 
 
-///mixin - list-reset
-@mixin list-reset {
+///mixin - listReset
+@mixin listReset {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 
-///mixin - fauxlist
-@mixin fauxlist{
-	@include inline-block-top;
-	margin-right: 1em;
-	margin-bottom: 1em;
-	&:last-child{
-		margin-right: 0;
-	}
-}
-
-
-///mixin - more-link
-@mixin more-link {
-	a {
-		font-size: .9rem;
-		font-weight: $heavy;
-		text-decoration: none;
-
-		&::before {
-			content: "»";
-			font-size: 1.2rem;
-			margin-right: .2em;
-		}
-	}
-}
 
 ///mixin - fullback
-@mixin fullback($fullback){
+@mixin fullBack($fullback){
 	content: '';
 	display: block;
 	position: absolute;
@@ -211,6 +186,34 @@
 	background: $fullback;
 }
 
+///mixin - fullBack
+@mixin halfBack($backColor,$backSide){
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 100%;
+	background: $backColor;
+	@if $backSide == 'right'{
+		left: 0;
+	}@else{
+		right: 0;
+	}
+}
+
+///mixin - vert rule
+@mixin vertRule($rulePosition,$ruleHeight,$ruleColor) {
+	content: '';
+	display: block;
+	position: absolute;
+	#{$rulePosition}: 0;
+	top: (100% - $ruleHeight) / 2;
+	width: 1px;
+	height: $ruleHeight;
+	background: $ruleColor;
+}
 
 ///mixin - gradient
 @mixin gradient($grad-direction,$grad-start,$grad-stop) { 
@@ -231,28 +234,79 @@
 }
 
 
-@mixin triangle($tri-direction,$tri-height,$tri-width,$tri-color){
+@mixin triangle($triDirection,$triHeight,$triWidth,$triColor){
 	width: 0;
 	height: 0;
 	-webkit-transform: rotate(0.05deg);
 	-moz-transform: scale(1.1);
 	transform: rotate(0.05deg);
-	@if $tri-direction == 'up'{	
-		border-right: $tri-width double rgba(0,0,0,0);
-		border-left: $tri-width double rgba(0,0,0,0);
-		border-bottom: $tri-height solid $tri-color;
-	}@else if $tri-direction == 'down'{
-		border-right: $tri-width double rgba(0,0,0,0);
-		border-left: $tri-width double rgba(0,0,0,0);
-		border-top: $tri-height solid $tri-color;
-	}@else if $tri-direction == 'left'{
-		border-top: $tri-height double rgba(0,0,0,0);
-		border-bottom: $tri-height double rgba(0,0,0,0);
-		border-right: $tri-width solid $tri-color;
-	}@else if $tri-direction == 'right'{
-		border-top: $tri-height double rgba(0,0,0,0);
-		border-bottom: $tri-height double rgba(0,0,0,0);
-		border-left: $tri-width solid $tri-color;
+	$actualWidth: $triWidth / 2;
+	$actualHeight: $triHeight / 2;
+	@if $triDirection == 'up'{	
+		border-right: $actualWidth double rgba(0,0,0,0);
+		border-left: $actualWidth double rgba(0,0,0,0);
+		border-bottom: $triHeight solid $triColor;
+	}@else if $triDirection == 'down'{
+		border-right: $actualWidth double rgba(0,0,0,0);
+		border-left: $actualWidth double rgba(0,0,0,0);
+		border-top: $triHeight solid $triColor;
+	}@else if $triDirection == 'left'{
+		border-top: $actualHeight double rgba(0,0,0,0);
+		border-bottom: $actualHeight double rgba(0,0,0,0);
+		border-right: $triWidth solid $triColor;
+	}@else if $triDirection == 'right'{
+		border-top: $actualHeight double rgba(0,0,0,0);
+		border-bottom: $actualHeight double rgba(0,0,0,0);
+		border-left: $triWidth solid $triColor;
+	}
+}
+
+///mixin - gradient
+@mixin gradient($gradDirection,$gradStart,$gradStop) { 
+	background: -moz-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* FF3.6+ */  
+	background: -webkit-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Chrome10+,Safari5.1+ */ 
+	background: -o-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* Opera 11.10+ */ 
+	background: -ms-linear-gradient($gradDirection, $gradStart 0%,$gradStop 100%); /* IE10+ */ 
+	@if $gradDirection == 'top'{	
+		background: linear-gradient(to bottom, $gradStart 0%,$gradStop 100%); /* W3C */
+	}@else if $gradDirection == 'bottom'{
+		background: linear-gradient(to top, $gradStart 0%,$gradStop 100%); /* W3C */
+	}@else if $gradDirection == 'left'{
+		background: linear-gradient(to right, $gradStart 0%,$gradStop 100%); /* W3C */
+	}@else if $gradDirection == 'right'{
+		background: linear-gradient(to left, $gradStart 0%,$gradStop 100%); /* W3C */
+	}
+	
+}
+
+// move arrows outside of slick and change color
+@mixin outsideSliderArrows{
+	padding-left: 20px;
+	padding-right: 20px;
+
+	//override arrow padding then there are not enough slick items to have slider / have buttons
+	.slick-list:only-child{
+		@include edgeToEdge;
+	}
+	.slick-arrow{
+		&.slick-prev{
+			left: 0;
+			&:before{
+				border-right-color: $lightGrey;
+			}
+			&:hover:before{
+				border-right-color: $link;
+			}
+		}
+		&.slick-next{
+			right: 0;
+			&:before{
+				border-left-color: $lightGrey;
+			}
+			&:hover:before{
+				border-left-color: $link;
+			}
+		}
 	}
 }
 
@@ -260,8 +314,8 @@
 
 /* LAYOUT MIXINS
 -------------------- */
-$contentW: $maxwidth;
-$textW: $maxwidthtext;
+$contentW: $maxWidth;
+$textW: $maxWidthText;
 
 ///mixin - auto
 @mixin auto{
@@ -269,20 +323,20 @@ $textW: $maxwidthtext;
 	margin-right: auto;
 }
 
-///mixin - edge-to-edge
-@mixin edge-to-edge {
+///mixin - edgeToEdge
+@mixin edgeToEdge {
 	margin-left:-20px;
 	margin-right:-20px;
 }
 
-///mixin - edge-to-edge
+///mixin - edgeToEdge
 @mixin edgeReset {
 	margin-left:-20px;
 	margin-right:-20px;
 }
 
 ///mixin - clearfix
-@mixin clearfix {
+@mixin clearFix {
 	&::after {
 		clear: both;
 		content: "";
@@ -302,38 +356,6 @@ $textW: $maxwidthtext;
 	@include calc(max-width, "#{$textW} + 40px");
 	padding-left: 20px;
 	padding-right: 20px;
-}
-
-///mixin - inline-block
-@mixin inline-block{
-	display: inline-block;
-	vertical-align: middle;
-}
-
-///mixin - inline-setup
-@mixin inline-setup{
-	font-size: initial;
-	@include inline-block-top;
-	width: 100%;
-}
-
-///mixin - inline-setup-center
-@mixin inline-setup-center{
-	font-size: initial;
-	@include inline-block;
-	width: 100%;
-}
-
-///mixin - inline-block-top
-@mixin inline-block-top{
-	display: inline-block;
-	vertical-align: top;
-}
-
-///mixin - inline-block-bottom
-@mixin inline-block-bottom{
-	display: inline-block;
-	vertical-align: bottom;
 }
 
 
@@ -395,61 +417,88 @@ $textW: $maxwidthtext;
 	-ms-flex-order: $order;
 }
 
+@mixin twoColumn($xAlign,$yAlign,$colSpace){
+	width: 100%;
+	@include bleed($colSpace);
+	@include safeFlex(row,wrap,$xAlign,$yAlign);
+	& > *{
+		width: 100%;
+		padding-left: $colSpace / 2;
+		padding-right: $colSpace / 2;
+		@include smallTab{
+			width: 50%;
+		}
+	}
+}
+
 ///mixin - three-column
-@mixin three-column{
+@mixin threeColumn($xAlign,$yAlign,$colSpace){
 	width: 100%;
-	@include safeFlexSize(0,0,auto);
-	@include smalltab{
-		@include calc(width, "50% - 1.5em");
-		&:nth-of-type(odd){
-			margin-right: 1.5em;
+	@include bleed($colSpace);
+	@include safeFlex(row,wrap,$xAlign,$yAlign);
+	& > *{
+		width: 100%;
+		padding-left: $colSpace / 2;
+		padding-right: $colSpace / 2;
+		@include smallTab{
+			width: 50%;
+		}
+		@include tab{
+			width: 33.333%;
+		}	
+	}
+}
+
+///mixin - three-column
+@mixin fourColumn($xAlign,$yAlign,$colSpace){
+	width: 100%;
+	@include bleed($colSpace);
+	@include safeFlex(row,wrap,$xAlign,$yAlign);
+	& > *{
+		width: 100%;
+		padding-left: $colSpace / 2;
+		padding-right: $colSpace / 2;
+		@include smallTab{
+			width: 50%;
+		}
+		@include tab{
+			width: 33.333%;
+		}
+		@include tab{
+			width: 25%;
+		}	
+	}
+}
+
+
+/// mixin widget Full
+@mixin widgetFull{
+	@include edgeToEdge;
+	@include calc(max-width, "100% + 40px");
+	.beaker &,.bunsen &{
+		@include tab{
+			@include edgeReset;
+			max-width: 100%;
 		}
 	}
-	@include tab{
-		@include calc(width, "33.333% - 1em");
-		&:nth-of-type(3n+1){
-			margin-right: 1.5em;
-		}
-		&:nth-of-type(3n+2){
-			margin-right: 1.5em;
-		}
-		&:nth-of-type(3n+3){
-			margin-right: 0;
+	.kermit &{
+		@include maxWidth{
+			@include edgeReset;
+			max-width: 100%;
 		}
 	}
 }
 
 
-///mixin - four-column
-@mixin four-column{
-	width: 100%;
-	@include safeFlexSize(0,0,auto);
-	@include smalltab{
-		@include calc(width, "50% - 1.5em");
-		&:nth-of-type(odd){
-			margin-right: 1.5em;
-		}
-	}
-	@include tab{
-		@include calc(width, "25% - 1.125em");
-		&:nth-of-type(4n+1){
-			margin-right: 1.5em;
-		}
-		&:nth-of-type(4n+2){
-			margin-right: 1.5em;
-		}
-		&:nth-of-type(4n+3){
-			margin-right: 1.5em;
-		}
-		&:nth-of-type(4n+4){
-			margin-right: 0;
-		}
-	}
+@mixin spacer($spaceMultiplier){
+	margin-bottom: 1em * $spaceMultiplier;
 }
 
-
-
-
+@mixin bleed($bleedWidth){
+	margin-left: $bleedWidth * -0.5;
+	margin-right: $bleedWidth * -0.5;
+	@include calc(width, "100% + "$bleedWidth);
+}
 
 
 

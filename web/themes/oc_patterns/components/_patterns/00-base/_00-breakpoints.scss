@@ -12,19 +12,19 @@
 
 /* BREAKPOINT VARIABLES
 ------------------------ */
-$smalltab: 500px;
+$smallTab: 500px;
 $tab: 760px;
 $desk: 900px;
-$maxwidth: 1200px;
-$maxwidthtext: 800px;
-$onlytab: 760px 899px;
-$onlysmall: max-width 759px; 
-$mobilemenu:max-width 979px;
-$deskmenu:min-width 980px;
+$maxWidth: 1200px;
+$maxWidthText: 800px;
+$onlyTab: 760px 899px;
+$onlySmall: max-width 759px; 
+$mobileMenu:max-width 979px;
+$deskMenu:min-width 980px;
 
-/// mixin - smalltab
-@mixin smalltab {
-	@include breakpoint($smalltab) {
+/// mixin - smallTab
+@mixin smallTab {
+	@include breakpoint($smallTab) {
 		@content;
 	}
 }
@@ -43,39 +43,39 @@ $deskmenu:min-width 980px;
 	}
 }
 
-///mixin - maxwidth
-@mixin maxwidth {
-	@include breakpoint($maxwidth) {
+///mixin - maxWidth
+@mixin maxWidth {
+	@include breakpoint($maxWidth) {
 		@content;
 	}
 }
 
 
-///mixin - onlytab
-@mixin onlytab {
-	@include breakpoint($onlytab) {
+///mixin - onlyTab
+@mixin onlyTab {
+	@include breakpoint($onlyTab) {
 		@content;
 	}
 }
 
 
-///mixin - onlysmall
-@mixin onlysmall {
-	@include breakpoint($onlysmall) {
+///mixin - onlySmall
+@mixin onlySmall {
+	@include breakpoint($onlySmall) {
 		@content;
 	}
 }
 
-///mixin - mobilemenu
-@mixin mobilemenu {
-	@include breakpoint($mobilemenu) {
+///mixin - mobileMenu
+@mixin mobileMenu {
+	@include breakpoint($mobileMenu) {
 		@content;
 	}
 }
 
-///mixin - deskmenu
-@mixin deskmenu {
-	@include breakpoint($deskmenu) {
+///mixin - deskMenu
+@mixin deskMenu {
+	@include breakpoint($deskMenu) {
 		@content;
 	}
 }

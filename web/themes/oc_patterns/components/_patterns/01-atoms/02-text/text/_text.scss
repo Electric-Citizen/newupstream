@@ -5,13 +5,13 @@
 /* TEXT MIXINS
 ---------------- */
 
-/// mixin - base-font-size
-@mixin base-font-size{
+/// mixin - baseFontSize
+@mixin baseFontSize{
 	font-size: 18px;
 }
 
-/// mixin - x-smaller
-@mixin x-smaller{
+/// mixin - xSmaller
+@mixin xSmaller{
 	font-size: 80%;
 }
 
@@ -25,31 +25,20 @@
 	font-size: 120%;
 }
 
-/// mixin - text-date
-@mixin text-date{
+/// mixin - textDate
+@mixin textDate{
 	@include smaller;
 	font-style: italic;
 	font-family: $serif;
 	opacity: .7;
 }
 
-/// mixin - styled-date
-@mixin styled-date{
-	background: $light-blue;
-	padding: 10px 20px;
-	font-family: $serif;
-	font-style: italic;
-	border-radius: 10px;
-	@include tab{
-		@include larger;
-	}
-}
 
 /* TYPE STYLES
 --------------- */
 html,code{
 	font-family: $bodyfont;
-	@include base-font-size;
+	@include baseFontSize;
 	line-height: 1.4;
 }
 
@@ -75,7 +64,7 @@ strong{
 
 figcaption {
 	text-align: center;
-	color: $mid-grey;
+	color: $midGrey;
 	font-size: 15px;
 	font-style: italic;
 }
@@ -109,6 +98,6 @@ span.highlight{
 .pl{
 	.pl-long-text{
 		@include auto;
-		max-width: $maxwidthtext;
+		max-width: $maxWidthText;
 	}
 }

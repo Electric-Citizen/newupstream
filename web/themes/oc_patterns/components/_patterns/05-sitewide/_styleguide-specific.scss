@@ -31,11 +31,11 @@
 		padding-left: .5em;
 		padding-right: .5em;
 		&:not(#organisms-reveal-group){
-			background: $site-background;
+			background: $siteBack;
 		}
 	}
 	.sg-subtype{
-		background: $site-background;
+		background: $siteBack;
 		padding-left: .5em;
 		padding-right: .5em;
 		& > h2{
@@ -56,8 +56,7 @@
 
 	//in-template notes
 	&.notes{
-		//from text.scss 
-		@include x-smaller;
+		@include xSmaller;
 		opacity: .8;
 		font-style: italic;
 		margin-bottom: 2em;
@@ -81,16 +80,16 @@
 		text-align: center;
 		max-width: 60%;
 		margin: 2em auto;
-		border: 2px solid $red-bad;
+		border: 2px solid $redBad;
 		padding: 1em 2em;
-		@include onlysmall{
+		@include onlySmall{
 			display: none;
 		}
 	}
 
 	//layout region placeholders
 	.region-placeholder{
-		background: $light-grey;
+		background: $lightGray;
 		width: 100%;
 		height: 100%;
 		@include safeFlex(column,null,center,null);
@@ -101,7 +100,7 @@
 	}
 
 	.clean-list{
-		@include list-reset;
+		@include listReset;
 	}
 
 }//end pl
@@ -119,8 +118,8 @@
 /* MACROS
 ----------- */
 .pl .macro-tile{
-	//from 01-mixins.scss 
-	@include inline-block-top;
+	display: inline-block;
+	vertical-align: top;
 	width: 100%;
 	margin-bottom: 1em;
 	@include tab{
@@ -137,13 +136,13 @@
 		margin-top: 1.5em;
 	}
 	.mixin-tile{
-		//from 01-mixins.scss 
-		@include inline-block-top;
+		display: inline-block;
+		vertical-align: top;
 		width: 100%;
 		margin-bottom: 1em;
 		ul{
 			//from 01-mixins.scss 
-			@include list-reset;
+			@include listReset;
 			.include-tag{
 				color: $blue;
 			}
@@ -174,13 +173,11 @@
 ------------------- */
 .pl{
 	ul.sf-main{
-		//from 01-mixins.scss 
-		@include list-reset;
+		@include listReset;
 	}
 	.sf-desk{
 		li.sf-depth-1{
-			//from 01-mixins.scss 
-			@include inline-block;
+			display: inline-block;
 			position: relative;
 		}
 		ul.sf-hidden{
@@ -215,12 +212,12 @@
 /* SITE HEADER
 ------------------ */
 .pl .layout-container > header{
-	@include mobilemenu{
+	@include mobileMenu{
 		.sf-horizontal{
 			display: none;
 		}
 	}
-	@include deskmenu{
+	@include deskMenu{
 		.sf-accordion-toggle{
 			display: none;
 		}

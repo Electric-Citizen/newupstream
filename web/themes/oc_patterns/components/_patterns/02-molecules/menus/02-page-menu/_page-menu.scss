@@ -11,7 +11,7 @@
 	//top level
 	& > ul{
 		//from 01-mixins.scss
-		@include list-reset;
+		@include listReset;
 
 		//child menus
 		ul{
@@ -23,7 +23,7 @@
 			li{
 				//reset sub menus to base font size
 				//from text.scss
-				@include base-font-size;
+				@include baseFontSize;
 				a:hover{
 					//from 02-animations.scsss
 					@include transThreeAll;
@@ -57,7 +57,7 @@
 				background: none;
 				cursor: pointer;
 				&:hover,&:focus,&:active{
-					color: $hover-link;
+					color: $hoverLink;
 				}
 				&:before{
 					content: "+";
@@ -65,7 +65,7 @@
 			}
 			&.expanded{
 				.expander{
-					color: $hover-link;
+					color: $hoverLink;
 					&:before{
 						content: "–";
 					}
@@ -77,7 +77,7 @@
 					//from 02-animations.scss
 					@include animation(slideDown .2s 1 forwards);
 					//from 01-mixins.scss
-					@include backface-visibility(hidden);
+					@include backfaceVisibility(hidden);
 				}
 				& > a{
 					color: $black;

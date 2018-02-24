@@ -18,7 +18,7 @@ Modifier variables can change the card styling but must be manually added as cla
 	<div class="views-field views-field-nothing card-text{% for modifier in card_text_modifiers %} {{ modifier }}{% endfor %}">
 		<div class="field-content">
 			{% if card_title %}
-				{% include "@atoms/02-text/00-headings/heading-3/heading-3.twig"
+				{% include "@atoms/02-text/00-headings/heading3/heading3.twig"
 					with {
 						"heading": card_title,
 						"heading_url": card_title_link,

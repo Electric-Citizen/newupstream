@@ -2,21 +2,80 @@
    Slideshow
 =================== */
 
-//Flexsider arrows style in @Sitewide/global-styles  (set in macros.twig)
+/* GLOBAL SLIDERS
+-------------------------------- */
+
+/* SLIDER MIXINS
+------------- */
+/// TRIANGLE ARROWS
+@mixin sliderTriangle{
+	.slick-arrow{
+		height: 40px;
+		&:before{
+			content: '' !important;
+			display: block;
+		}
+		&.slick-prev:before{
+			@include triangle(left,24px,12px,$white);
+			@include tab{
+				@include triangle(left,40px,20px,$white);
+			}
+		}
+		&.slick-next:before{
+			@include triangle(right,24px,12px,$white);
+			float: right;
+			@include tab{
+				@include triangle(right,40px,20px,$white);
+			}
+		}
+		&.slick-next:hover,&.slick-next:focus{
+			&:before{
+				border-left-color: $link;
+				//from 01-mixins.scss 
+				@include transition(border-left-color, .3s, ease);
+			}
+		}
+		&.slick-prev:hover,&.slick-prev:focus{
+			&:before{
+				border-right-color: $link;
+				//from 01-mixins.scss 
+				@include transition(border-right-color, .3s, ease);
+			}
+		}
+	}//end a
+}//end triangle
+
+
+/* SLIDER STYLING
+-------------- */
+.slick-slider{
+	@include sliderTriangle;
+	.slick-list{
+		//from 01-mixins.scss 
+		@include listReset;
+	}
+
+	.slick-arrow{
+		z-index: 1;
+		&.slick-prev{
+			left: 20px;
+		}
+		&.slick-next{
+			right: 20px;
+		}
+	}
+
+}//end slick-slider
+
 
 .paragraph--type--slideshow{
 	.wrapper{
-		max-width: $maxwidth !important;
+		max-width: $maxWidth !important;
 	}
 	
 	//slider container overrides layout padding on mobile
-	.views-element-container{
-		@include onlysmall{
-			//from 01-mixins.scss
-			@include edge-to-edge;
-			//from 01-mixins.scss
-			@include calc(max-width, "100% + 40px");
-		}
+	.field-oc-image-multi{
+		@include widgetFull;
 	}
 	
 }//end slideshow widget

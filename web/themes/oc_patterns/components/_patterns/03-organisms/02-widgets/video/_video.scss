@@ -4,20 +4,20 @@
 
 .paragraph--type--video{
 	.wrapper{
-		max-width: $maxwidth !important;
+		max-width: $maxWidth !important;
 	}
 	//allow video to override layout padding on mobile
 	.field-oc-video{
-		@include onlysmall{
+		@include onlySmall{
 			//from 01-mixins.scss
-			@include edge-to-edge;
+			@include edgeToEdge;
 			//from 01-mixins.scss
 			@include calc(max-width, "100% + 40px");
 		}
 	}
 	//video summary
 	.field-oc-long-text{
-		max-width: $maxwidthtext;
+		max-width: $maxWidthText;
 		//from 01-mixins.scss
 		@include auto;
 		margin-top: 1em;

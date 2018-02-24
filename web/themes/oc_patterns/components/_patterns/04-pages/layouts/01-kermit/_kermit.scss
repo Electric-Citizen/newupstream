@@ -10,7 +10,7 @@
 	.main{
 		width: 100%;
 		padding: 2em 20px 3em;
-		max-width: $maxwidth;
+		max-width: $maxWidth;
 		//from 01-mixins.scss
 		@include auto;
 	}
@@ -29,13 +29,13 @@
 			bottom: 100%;
 			left: 0;
 			z-index: -1;
-			background: $site-background;
+			background: $siteBack;
 			height: 300px;
 			width: 100%;
 		}
 	}
 	.block-region-top{
-		background: $site-background;
+		background: $siteBack;
 		&.background{
 			margin-bottom: 0;
 			padding-bottom: 2em;
@@ -52,7 +52,7 @@
 		.block-entity-fieldnodebody{
 			max-width: 100%;
 			margin-bottom: 0;
-			background: $site-background;
+			background: $siteBack;
 			.body{
 				//from 01-mixins.scss
 				@include paddedText;

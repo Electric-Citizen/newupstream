@@ -4,6 +4,6 @@
 
 input[type="submit"]{
 	//from forms.scss
-	@include form-submit;
+	@include formSubmit;
 	font-size: 15px;
 }

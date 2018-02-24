@@ -6,7 +6,7 @@ a {
 	color: $link;
 	text-decoration: none;
 	&:hover,&:focus {
-		color: $hover-link;
+		color: $hoverLink;
 		text-decoration: underline;
 		.field.body &,.field-oc-long-text &{
 			//from 02-animations.scss
