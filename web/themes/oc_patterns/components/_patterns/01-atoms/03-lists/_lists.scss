@@ -21,4 +21,10 @@ ul {
 
 ol {
 	list-style-type: decimal;
+	&[type="A"]{
+		list-style-type: lower-alpha;
+	}
+	&[type="I"]{
+		list-style-type: upper-roman;
+	}
 }

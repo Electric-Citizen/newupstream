@@ -99,8 +99,8 @@ FLEX ITEMS
 	margin-top: 1em;
 }
 //add margin to last widget if it doesn't have a background
-.single:not(.backless):last-child{
-	margin-bottom: 2em;
+.single.backless:last-child{
+	margin-bottom: 3em;
 }
 
 

@@ -3,6 +3,10 @@
 ==================== */
 
 .pl {
+	.sg-main{
+		padding-top: 2em;
+	}
+
 	//section links
 	.patternLink {
 		color: red;
@@ -41,7 +45,16 @@
 		& > h2{
 			margin-bottom: 0;
 			padding-bottom: .5em;
+			& > a{
+				cursor: default;
+				pointer-events: none;
+			}
 		}
+	}
+
+	.sg-pattern-title > a{
+		cursor: default;
+		pointer-events: none;
 	}
 
 	//icon row
@@ -229,3 +242,94 @@
 .pl #organisms-accordion{
 	padding: 0 20px;
 }
+
+
+
+/* DOCUMENTATION
+------------------- */
+.pl{
+	ol,ul{
+		&.themed{
+			& > li{
+				@include spacer(1);
+				padding: .5em 1em;
+				&:hover{
+					background: #efefef;
+				}
+				& > a{
+					font-weight: $heavy;
+					color: $black;
+					@include larger;
+					&:hover,&:focus{
+						color: $link;
+					}
+				}
+				ol,ul{
+					background: none;
+					color: $body;
+					padding-top: .5em;
+				}
+				li{
+					@include spacer(.5);
+					a{
+						color: $midGrey;
+						&:hover,&:focus{
+							color: $link;
+						}
+					}
+				}
+			}
+		}//end spaced
+	}//end ol,ul
+	.two-col{
+		@include safeFlex(row,wrap,null,null);
+		& > li{
+			display: inline-block;
+			width: 100%;
+			@include tab{
+				width: 50%;
+			}
+		}
+	}
+	.two-col-vert{
+		@include tab{
+			@include columnCount(2);
+			@include columnGap(40px);
+			& > li{
+				display: inline-block;
+				width: 100%;
+			}
+		}
+	}
+	.three-col{
+		@include safeFlex(row,wrap,null,null);
+		& > li{
+			display: inline-block;
+			width: 100%;
+			@include tab{
+				width: 33.333%;
+			}
+		}
+	}
+	.three-col-vert{
+		@include tab{
+			@include columnCount(3);
+			@include columnGap(40px);
+			& > li{
+				width: 100%;
+				display: inline-block;
+			}
+		}
+	}
+	.list-counter{
+		counter-reset: item-counter;
+		& > li:before{
+			content: counter(item-counter, decimal) ".";
+			counter-increment: item-counter;
+			margin-right: 1em;
+		}
+	}
+
+	
+}//end pl
+

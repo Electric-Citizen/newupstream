@@ -9,7 +9,7 @@
 	}
 	.main{
 		width: 100%;
-		padding: 2em 20px 3em;
+		padding: 2em 20px 0;
 		max-width: $maxWidth;
 		//from 01-mixins.scss
 		@include auto;
