@@ -44,7 +44,9 @@
 		padding-right: .5em;
 		& > h2{
 			margin-bottom: 0;
-			padding-bottom: .5em;
+			padding: .5em 0;
+			border-top: 2px solid $borderRule;
+			border-bottom: 2px solid $borderRule;
 			& > a{
 				cursor: default;
 				pointer-events: none;

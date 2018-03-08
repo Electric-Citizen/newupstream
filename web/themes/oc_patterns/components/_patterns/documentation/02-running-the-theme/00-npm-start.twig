@@ -2,5 +2,35 @@
 
 <div class="doc-text">
 	<p>NPM overview, NPM & gulp, package.json, commands run on start.</p>
+	<div class="doc-section">
+		<h4 class="doc-section-title">NPM & Node.js</h4>
+		<div class="doc-section-inner">
+			<p><a href="https://www.npmjs.com/" target="_blank">NPM</a> is used to install small packages of code that run site tasks. These are very small configuration scripts defined in a package.json file and run through the command line. The big advantage of npm scripts is that you are always up to date. If a package is updated, the run script will automatically use the updated version (unless specified otherwise).</p>
+			<p>NPM modules are defined in the package.json as dependencies and are fetched and installed by <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, which is a javascript based run-time builder. NPM Scripts in the package.json define tasks for those node modules.</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Task Runners</h4>
+		<div class="doc-section-inner">
+			<p><a href="https://gulpjs.com/" target="_blank">Gulp</a> and <a href="https://gruntjs.com/" target="_blank">Grunt</a> are common task runners. that function very similar to NPM scripts and either can be used on its own, or in combination with NPM scripts to run theme tasks.</p>
+			<p>OC Patterns takes advantage of both NPM and Gulp in order to power the theme tasks. Gulp allows use to specify unique tasks that expand npm modules installed by the theme. CRunning those tasks from a single npm command allows us to concurrently run different tasks without having to enter and re-enter mutliple Gulp commands.</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">OC Patterns NPM Start</h4>
+		<div class="doc-section-inner">
+			<p>After install (install instructions in theme Readme), OC Patterns is run using a single command line command: <strong>npm start</strong> run in the theme root folder. NPM Start kicks off these Gulp tasks:
+			<ol>
+				<li>Gulp Clean</li>
+				<li>Gulp Compile</li>
+				<li>Gulp Theme</li>
+			</ol>
+			<p>These Gulp tasks are set in the Emulsify-Gulp gulp task collection fetched as a node module from the <a href="https://github.com/fourkitchens/emulsify-gulp" target="_blank">Four Kitchen's Emulsify Gulp repo</a> when the theme is first installed. All tasks set in the default Emulsify-Gulp repo indes.js file which constructs tasks from the repo's gulp-config file that can be overridden or disabled in the local.gulp-config.js file in the theme root. New gulp tasks can also be set in the local-config file and added via the npm start command.</p>
+			<p><strong>Gulp Clean—</strong> Gulp Clean runs the Scss and ES Lint linting.</p>
+			<p><strong>Gulp Compile—</strong> Gulp Compile finds the individual icons in theme/images/icons/src and compiles them into a single sprite then builds selector classes and mixins that set the proper background position for each icon. Icon base size (80px x 80px)is set in the local.gulp-config override for this task.</p>
+			<p><strong>Gulp Theme—</strong> Gulp Theme calls the Gulp Serve task defined in the Emulsify Gulp repo's index.js file which runs the Sass & JS Compiler's, runs the Sass to Yml conversion (for colors), watchs all the pattern lab files for changes and runs the browser sync, and finally builds the local pattern lab.</p>
+			<p>Emulsify Gulp also has options for Web Speed Tests and Build/Deploy functions for GH Pages, but OC Patterns is not using those at this time.</p>
+		</div>
+	</div>
 </div>
 

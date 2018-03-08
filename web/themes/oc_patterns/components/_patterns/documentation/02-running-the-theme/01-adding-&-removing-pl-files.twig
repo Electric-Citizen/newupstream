@@ -1,0 +1,16 @@
+<a name="pl-file-changes" id="pl-file-changes"></a>
+
+<div class="doc-text">
+	<p>Using numbers in front of file names, underscore in file names, npm errors on removal / addition / name change. Drush cr all if the file is a twig file.</p>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Adding New Pattern Lab (PL) Files</h4>
+		<div class="doc-section-inner">
+			<p>New files of any type can be added to any level of Pattern Lab—although the index numbers might need to be rearranged for some sections. After a new file is added, if you are currently running the theme (npm start is active in a terminal window), depending on the type of file you are adding, you may need to quit the current theming command run (control + C in terminal) and start a new one with npm start. It is a good practice to get into doing this whether you have to for the file type you are adding or not.</p>
+			<p><strong>New Icon SVG Files—</strong> If you are adding a new svg file to the icon sprite via theme/images/icons/src, you will need to restart the theme to add the icon to the sprite. NOTE: You will also need to recreate the viewbox position x/y values for any svg tag's in twig files (cough:: Social Media widget icons) because icons are repositioned in the sprite each time it is re-generated. </br></br>Icons used as backgrounds will automatically reposition themselves to work unless the new icon(s) you added created another column or row in the sprite. Easiest way to tell is to look at the icons grid (Atoms > Images > Icons) to see if everything looks correct. If the size or placement is off, load the sprite (found in theme/dist/svg) into a browser or Adobe Illustrator and count the rows/columns and change the values for those variables at the top of Base > _03-background-sizes.scss to the new number of rows/columns. The background svg's will then fix themselves.</p>
+			<p><strong>Adding Hidden Files—</strong> By default, all files or all types (twig, sass, yml, js, md) added to Pattern Lab will be used/shown in Pattern lab. However, there are some files you do not want to use/show in Pattern lab—either because they are being only used in Drupal or are being compiled/inherited into another file. These files can hidden from Pattern Lab by including a leading _ in their file name. Scss files are a great example of this. <strong>No .scss files should be shown in Pattern Lab</strong> because they are all compiled into the css which is shown in Pattern Lab. Most .js files should also be excluded because they are primarily used in Drupal, but should be kept with their Pattern lab components.</p>
+			<p><strong>File Index Numbers—</strong> Many Pattern Lab files are preceded by an index number. This number overrides the default alphabetical file name structure to force a particualr order on files. This is very useful for forcing an atomic design approach to theme structure as well as ensuring Sass mixin inclusion.</p>
+			<p><strong>New Twig Files—</strong> New Twig files and any twig files changes that are inherited into Drupal html.twig files necessitate a site cache clear after creation/alteration in order to get the changes to show in Drupal. The same is true of chagnes made via macros.</p>
+		</div>
+	</div>
+</div>
+
