@@ -248,6 +248,19 @@
 /* DOCUMENTATION
 ------------------- */
 .pl{
+	.doc-section{
+		@include spacer(4);
+		.doc-section-title{
+			color: $link;
+			background: #dedede;
+			padding: .25em 1.5em;
+			@include spacer(2);
+		}
+		.doc-section-inner{
+			@include auto;
+			max-width: $maxWidthText;
+		}
+	}
 	ol,ul{
 		&.themed{
 			& > li{
@@ -279,8 +292,14 @@
 					}
 				}
 			}
-		}//end spaced
+		}//end themed
+		&.spaced{
+			li{
+				margin-bottom: .5em;
+			}
+		}
 	}//end ol,ul
+
 	.two-col{
 		@include safeFlex(row,wrap,null,null);
 		& > li{
@@ -291,6 +310,7 @@
 			}
 		}
 	}
+
 	.two-col-vert{
 		@include tab{
 			@include columnCount(2);
@@ -301,6 +321,7 @@
 			}
 		}
 	}
+
 	.three-col{
 		@include safeFlex(row,wrap,null,null);
 		& > li{
@@ -311,6 +332,7 @@
 			}
 		}
 	}
+
 	.three-col-vert{
 		@include tab{
 			@include columnCount(3);
@@ -321,6 +343,7 @@
 			}
 		}
 	}
+
 	.list-counter{
 		counter-reset: item-counter;
 		& > li:before{
